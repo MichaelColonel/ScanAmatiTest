@@ -1,0 +1,104 @@
+<ui>
+ <menubar name='menubar'>
+  <menu action='action-file'>
+   <menuitem action='action-file-open'/>
+   <menuitem action='action-file-save'/>
+   <menuitem action='action-file-save-as'/>
+   <menuitem action='action-file-save-archive'/>
+   <separator/>
+   <menuitem action='action-export-pdf'/>
+   <separator/>
+   <menuitem action='action-page-setup'/>
+   <menuitem action='action-preview'/>
+   <menuitem action='action-print'/>
+   <separator/>
+   <menuitem action='preferences'/>
+   <separator/>
+   <menuitem action='quit'/>
+  </menu>
+  <menu action='action-scanner'>
+   <menu action='action-scanner-device'>
+    <menuitem action='action-device-connect'/>
+    <menuitem action='action-device-disconnect'/>
+   </menu>
+   <menuitem action='action-temperature-margins'/>
+   <menuitem action="action-lining-acquisition"/>
+   <menuitem action='action-image-acquisition'/>
+   <separator/>
+   <menuitem action='action-scanner-debug'/>
+  </menu>
+  <menu action='action-edit'>
+   <menuitem action='action-edit-dicom-info'/>
+  </menu>
+  <menu action='action-image'>
+   <menu action='action-palette'>
+    <menuitem action='radioaction-palette-grayscale'/>
+    <menuitem action='radioaction-palette-inverted'/>
+    <menuitem action='radioaction-palette-rainbow'/>
+    <menuitem action='radioaction-palette-combined'/>
+    <menuitem action='radioaction-palette-hotmetal'/>
+   </menu>
+   <menu action='action-zoom'>
+    <menuitem action='action-zoom-width'/>
+    <menuitem action='action-zoom-height'/>
+    <separator/>
+    <menuitem action='action-zoom-100'/>
+    <menuitem action='action-zoom-200'/>
+    <menuitem action='action-zoom-300'/>
+   </menu>
+  </menu>
+ </menubar>
+ <toolbar name='toolbar'>
+  <toolitem action='action-file-open'/>
+  <toolitem action='action-file-save'/>
+  <toolitem action='action-file-save-as'/>
+  <separator/>
+  <toolitem action='action-new-dicom-info'/>
+  <toolitem action='action-image-acquisition'/>
+  <toolitem action='action-image-find'/>
+  <separator/>
+  <toolitem action='preferences'/>
+ </toolbar>
+ <popup name='popup-image-area'>
+  <menuitem action='action-zoom-width'/>
+  <menuitem action='action-zoom-height'/>
+  <separator/>
+  <menuitem action='action-zoom-100'/>
+  <menuitem action='action-zoom-200'/>
+  <menuitem action='action-zoom-300'/>
+ </popup>
+ <popup name='popup-menu-palette'>
+  <menuitem action='radioaction-palette-grayscale'/>
+  <menuitem action='radioaction-palette-inverted'/>
+  <menuitem action='radioaction-palette-rainbow'/>
+  <menuitem action='radioaction-palette-combined'/>
+  <menuitem action='radioaction-palette-hotmetal'/>
+ </popup>
+ <popup name='popup-files-view'>
+  <menuitem action='action-files-clear-all'/>
+ </popup>
+ <popup name='popup-file-icons'>
+  <menuitem action='action-file-save'/>
+  <menuitem action='action-file-save-as'/>
+  <menuitem action='action-file-save-archive'/>
+  <separator/>
+  <menuitem action='action-edit-dicom-info'/>
+  <menuitem action='action-remove-current'/>
+  <separator/>
+  <menuitem action='action-show-raw-data'/>
+  <menuitem action='action-show-processing-data'/>
+  <menuitem action='action-show-presentation-data'/>
+  <menu action='action-data-filter'>
+   <menuitem action='action-filter-lanczos'/>
+   <menuitem action='action-filter-cubic'/>
+   <menuitem action='action-filter-bessel'/>
+   <menuitem action='action-filter-quadratic'/>
+  </menu>
+  <menu action='action-data-calibration'>
+   <menuitem action='action-calibration-rough'/>
+   <menuitem action='action-calibration-good'/>
+   <menuitem action='action-calibration-better'/>
+   <menuitem action='action-calibration-best'/>
+  </menu>
+ </popup>
+</ui>

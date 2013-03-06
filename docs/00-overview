@@ -1,0 +1,16 @@
+This program relies on:
+  - the X11 libraries
+  - the GTK / C++ bindings (libgtkmm, libgdkmm)
+  - the glib2 (libglib-2.0)
+  - the glib2 / C++ bindings (libglibmm)
+  - the C++ signal/slot library (libsigc++)
+  - the C++ runtime libraries (libstdc++)
+  - the (X)MedCon medical image convertor library (libmdc)
+  - the CCMATH library (libccm)
+  - the ImageMagick / C++ bindings (libMagickCore, libMagick++)
+  - the DCMTK (C++ DICOM Toolkit) (libofstd, liboflog, libdcmdata)
+
+Installation:
+  ./configure --prefix=/some/prefix
+  make
+  make install

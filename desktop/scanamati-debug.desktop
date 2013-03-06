@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=ScanAmati (Debug version)
+Name[ru]=СканАмати (Отладочная версия)
+Comment=The Portable X-ray Scanner Client
+Comment[ru]=Программа управления рентгеновским сканером
+Icon=scanamati.png
+Exec=scanamati -v -x
+Terminal=false
+MimeType=application/dicom
+Categories=GTK;Application;DataVisualization;Utility;

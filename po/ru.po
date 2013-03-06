@@ -1,0 +1,2992 @@
+# Russian translations for amati package.
+# Copyright (C) 2009 THE scanamati'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the amati package.
+#  <pmk@ihep.ru>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: amati 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-05 13:21+0400\n"
+"PO-Revision-Date: 2009-09-14 15:17+0400\n"
+"Last-Translator:  <pmk@ihep.ru>\n"
+"Language-Team: Russian\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ui/main-window.glade:17 src/main_window.cpp:769
+#: src/main_window_action_handlers.cpp:119 src/main.cpp:105
+msgid "ScanAmati"
+msgstr "СканАмати"
+
+#: ui/main-window.glade:58 src/main_window_actions.cpp:193
+msgid "_Scanner"
+msgstr "_Сканер"
+
+#: ui/main-window.glade:89 ui/dicom-information-dialog.glade:1148
+msgid "_Study"
+msgstr "_Обследование"
+
+#: ui/image-acquisition-dialog.glade:43
+msgid "Run the Acquisition (Cntl+A)"
+msgstr "Сделать снимок (Cntl+A)"
+
+#: ui/image-acquisition-dialog.glade:113
+msgid "High _Voltage:"
+msgstr "_Напряжение:"
+
+#: ui/image-acquisition-dialog.glade:126
+msgid "_Exposure:"
+msgstr "_Экспозиция:"
+
+#: ui/image-acquisition-dialog.glade:172
+msgid "<b>X-ray Parameters</b>"
+msgstr "<b>Параметры излучателя</b>"
+
+#: ui/image-acquisition-dialog.glade:189
+msgid "Acquisition Parameters..."
+msgstr "Параметры сканирования и сбора данных..."
+
+#: ui/image-acquisition-dialog.glade:237
+msgid "Memory Size:"
+msgstr "Объем данных:"
+
+#: ui/image-acquisition-dialog.glade:248
+msgid "Image Height:"
+msgstr "Высота изображения:"
+
+#: ui/image-acquisition-dialog.glade:261
+msgid "Image Width:"
+msgstr "Ширина изображения:"
+
+#: ui/image-acquisition-dialog.glade:274
+msgid "Data Resize Filter:"
+msgstr "Фильтр данных:"
+
+#: ui/image-acquisition-dialog.glade:287
+msgid "Calibration:"
+msgstr "Калибровке данных:"
+
+#: ui/image-acquisition-dialog.glade:300
+msgid "Intensity:"
+msgstr "Амплитуда сигнала:"
+
+#: ui/image-acquisition-dialog.glade:392
+msgid "<b>Acquisition Parameters</b>"
+msgstr "<b>Параметры сканирования и сбора данных</b>"
+
+#: ui/image-acquisition-dialog.glade:454
+msgid "_Run"
+msgstr "Ст_арт"
+
+#: ui/image-acquisition-dialog.glade:469
+msgid "_Stop"
+msgstr "Ст_оп"
+
+#: ui/image-acquisition-dialog.glade:490
+#: ui/acquisition-parameters-dialog.glade:175
+msgid "Acquisition"
+msgstr "Снимок"
+
+#: ui/acquisition-parameters-dialog.glade:96
+msgid "Acquisition Parameters"
+msgstr "Параметры Сканирования И Сбора Данных"
+
+#: ui/acquisition-parameters-dialog.glade:127
+msgid "Linear array movement"
+msgstr "Движение детектора"
+
+#: ui/acquisition-parameters-dialog.glade:143
+msgid "X-ray source movement"
+msgstr "Движение излучателя"
+
+#: ui/acquisition-parameters-dialog.glade:159
+#: src/widgets/information_notebook.cpp:248
+#: src/widgets/information_notebook.cpp:261
+msgid "Exposure"
+msgstr "Экспозиция"
+
+#: ui/acquisition-parameters-dialog.glade:197
+msgid "<b>Run Arguments</b>"
+msgstr "<b>Параметры запуска</b>"
+
+#: ui/acquisition-parameters-dialog.glade:207
+msgid "Run Paramenters"
+msgstr "Параметры Запуска"
+
+#: ui/acquisition-parameters-dialog.glade:248
+#: ui/acquisition-parameters-dialog.glade:646
+msgid "Scanning Time:"
+msgstr "Время кадра:"
+
+#: ui/acquisition-parameters-dialog.glade:279
+#: ui/acquisition-parameters-dialog.glade:676
+msgid "Steps:"
+msgstr "Число шагов:"
+
+#: ui/acquisition-parameters-dialog.glade:332
+#: ui/acquisition-parameters-dialog.glade:728
+msgid "Array:"
+msgstr "Линейка:"
+
+#: ui/acquisition-parameters-dialog.glade:344
+#: ui/acquisition-parameters-dialog.glade:740
+msgid "X-ray:"
+msgstr "Излучатель:"
+
+#: ui/acquisition-parameters-dialog.glade:391
+#: ui/acquisition-parameters-dialog.glade:787
+msgid "<b>Delay</b>"
+msgstr "<b>Задержка</b>"
+
+#: ui/acquisition-parameters-dialog.glade:434
+#: ui/acquisition-parameters-dialog.glade:513
+#: ui/acquisition-parameters-dialog.glade:830
+#: ui/acquisition-parameters-dialog.glade:907
+msgid "Frequency:"
+msgstr "Частота:"
+
+#: ui/acquisition-parameters-dialog.glade:443
+#: ui/acquisition-parameters-dialog.glade:522
+#: ui/acquisition-parameters-dialog.glade:838
+#: ui/acquisition-parameters-dialog.glade:915
+msgid "Mode:"
+msgstr "Режим:"
+
+#: ui/acquisition-parameters-dialog.glade:492
+#: ui/acquisition-parameters-dialog.glade:887
+msgid "Array"
+msgstr "Линейка"
+
+#: ui/acquisition-parameters-dialog.glade:575
+#: ui/acquisition-parameters-dialog.glade:967
+msgid "X-ray"
+msgstr "Излучатель"
+
+#: ui/acquisition-parameters-dialog.glade:590
+#: ui/acquisition-parameters-dialog.glade:982
+msgid "<b>Speed</b>"
+msgstr "<b>Скорость</b>"
+
+#: ui/acquisition-parameters-dialog.glade:610
+msgid "<b>Forward</b>"
+msgstr "<b>Движение вперед</b>"
+
+#: ui/acquisition-parameters-dialog.glade:1002
+msgid "<b>Reverse</b>"
+msgstr "<b>Движение назад</b>"
+
+#: ui/acquisition-parameters-dialog.glade:1022
+msgid "Equal Movement"
+msgstr "Двигаться одинаково"
+
+#: ui/acquisition-parameters-dialog.glade:1044
+msgid "Movement"
+msgstr "Сканирование"
+
+#: ui/acquisition-parameters-dialog.glade:1093
+msgid "<b>Image Height</b>"
+msgstr "<b>Высота изображения</b>"
+
+#: ui/acquisition-parameters-dialog.glade:1183
+msgid "Built _In"
+msgstr "_Встроенный"
+
+#: ui/acquisition-parameters-dialog.glade:1198
+msgid "_Accurate"
+msgstr "_Точный"
+
+#: ui/acquisition-parameters-dialog.glade:1215
+msgid "_Custom"
+msgstr "_Произвольный"
+
+#: ui/acquisition-parameters-dialog.glade:1238
+msgid "<b>Readout Memory Size</b>"
+msgstr "<b>Объем памяти</b>"
+
+#: ui/acquisition-parameters-dialog.glade:1279
+msgid "Full"
+msgstr "Полная"
+
+#: ui/acquisition-parameters-dialog.glade:1296
+msgid "Half"
+msgstr "Половина"
+
+#: ui/acquisition-parameters-dialog.glade:1313
+msgid "Quarter"
+msgstr "Четверть"
+
+#: ui/acquisition-parameters-dialog.glade:1336
+msgid "<b>Image Width</b>"
+msgstr "<b>Ширина изображения</b>"
+
+#: ui/acquisition-parameters-dialog.glade:1364
+#: src/dialogs/image_acquisition.cpp:375 src/main_window_actions.cpp:256
+msgid "Lanczos"
+msgstr "Алгоритм Lanczos"
+
+#: ui/acquisition-parameters-dialog.glade:1381
+#: src/dialogs/image_acquisition.cpp:378 src/main_window_actions.cpp:260
+msgid "Cubic"
+msgstr "Кубический"
+
+#: ui/acquisition-parameters-dialog.glade:1398
+#: src/dialogs/image_acquisition.cpp:384 src/main_window_actions.cpp:264
+msgid "Bessel"
+msgstr "Бесселя"
+
+#: ui/acquisition-parameters-dialog.glade:1415
+#: src/dialogs/image_acquisition.cpp:381 src/main_window_actions.cpp:268
+msgid "Quadratic"
+msgstr "Квадратический"
+
+#: ui/acquisition-parameters-dialog.glade:1438
+msgid "<b>Filter Type</b>"
+msgstr "<b>Фильтр сглаживания</b>"
+
+#: ui/acquisition-parameters-dialog.glade:1476
+msgid "<b>Postprocess</b>"
+msgstr "<b>Обработка</b>"
+
+#: ui/acquisition-parameters-dialog.glade:1526
+#: src/dialogs/image_acquisition.cpp:401 src/main_window_actions.cpp:275
+msgid "Rough"
+msgstr "Грубая"
+
+#: ui/acquisition-parameters-dialog.glade:1543
+#: src/dialogs/image_acquisition.cpp:398 src/main_window_actions.cpp:279
+msgid "Good"
+msgstr "Хорошая"
+
+#: ui/acquisition-parameters-dialog.glade:1560
+#: src/dialogs/image_acquisition.cpp:395 src/main_window_actions.cpp:283
+msgid "Better"
+msgstr "Оптимальная"
+
+#: ui/acquisition-parameters-dialog.glade:1577
+#: src/dialogs/image_acquisition.cpp:392 src/main_window_actions.cpp:287
+msgid "Best"
+msgstr "Наилучшая"
+
+#: ui/acquisition-parameters-dialog.glade:1600
+msgid "<b>Calibration Type</b>"
+msgstr "<b>Тип калибровки</b>"
+
+#: ui/acquisition-parameters-dialog.glade:1628
+#: src/dialogs/image_acquisition.cpp:415
+msgid "Original"
+msgstr "Исходная"
+
+#: ui/acquisition-parameters-dialog.glade:1645
+#: src/dialogs/image_acquisition.cpp:409
+msgid "Linear"
+msgstr "Линейная"
+
+#: ui/acquisition-parameters-dialog.glade:1662
+msgid "Locarithmic"
+msgstr "Логарифмическая"
+
+#: ui/acquisition-parameters-dialog.glade:1685
+msgid "<b>Intensity Type</b>"
+msgstr "<b>Яркость пикселов</b>"
+
+#: ui/acquisition-parameters-dialog.glade:1712
+msgid "Image"
+msgstr "Изображение"
+
+#: ui/lining-acquisition-dialog.glade:16
+msgid "Lining Acquisition (Cntl+L)"
+msgstr "Выравнивание пьедесталов (Cntl+L)"
+
+#: ui/lining-acquisition-dialog.glade:67
+msgid "ADC _count:"
+msgstr "_Счет АЦП:"
+
+#: ui/lining-acquisition-dialog.glade:110
+msgid "_Start"
+msgstr "_Старт"
+
+#: ui/lining-acquisition-dialog.glade:125
+msgid "S_top"
+msgstr "С_топ"
+
+#: ui/lining-acquisition-dialog.glade:165
+msgid "_Rough"
+msgstr "_Грубая"
+
+#: ui/lining-acquisition-dialog.glade:182
+msgid "_Optimal"
+msgstr "_Оптимальная"
+
+#: ui/lining-acquisition-dialog.glade:199
+msgid "_Precise"
+msgstr "_Наилучшая"
+
+#: ui/lining-acquisition-dialog.glade:220
+msgid "Accuracy"
+msgstr "Точность"
+
+#: ui/conquest-archive-dialog.glade:8
+msgid "Find Image On The Conquest Archive Server (Cntl+F)"
+msgstr "Найти изображение на местном сервере Conquest (Cntl+F)"
+
+#: ui/conquest-archive-dialog.glade:35
+msgid "Patient _Name:"
+msgstr "Ф. И. О. _пациента:"
+
+#: ui/conquest-archive-dialog.glade:48
+msgid "_Patient ID:"
+msgstr "№ _карты:"
+
+#: ui/conquest-archive-dialog.glade:63
+msgid "_Study ID:"
+msgstr "Код _обследование:"
+
+#: ui/conquest-archive-dialog.glade:185
+msgid "_Case Sensitive"
+msgstr "У_читывать регистр букв"
+
+#: ui/conquest-archive-dialog.glade:201
+msgid "Additional Query _Parameters"
+msgstr "Дополнительные параметры запроса"
+
+#: ui/chip-capacities-dialog.glade:8
+msgid "Chip Capacities"
+msgstr "Емкости чипа"
+
+#: ui/chip-capacities-dialog.glade:59
+msgid "1,0 pF"
+msgstr "1,0 пФ"
+
+#: ui/chip-capacities-dialog.glade:75
+msgid "2,5 pF"
+msgstr "2,5 пФ"
+
+#: ui/chip-capacities-dialog.glade:91
+msgid "3,5 pF"
+msgstr "3,5 пФ"
+
+#: ui/chip-capacities-dialog.glade:107
+msgid "6,0 pF"
+msgstr "6,0 пФ"
+
+#: ui/chip-capacities-dialog.glade:123
+msgid "7,0 pF"
+msgstr "7,0 пФ"
+
+#: ui/chip-capacities-dialog.glade:139
+msgid "8,5 pF"
+msgstr "8,5 пФ"
+
+#: ui/chip-capacities-dialog.glade:155
+msgid "9,5 pF"
+msgstr "9,5 пФ"
+
+#: ui/c-move-dialog.glade:9
+msgid "Move Image From The DICOM Server"
+msgstr "Получить изображение с сервера DICOM"
+
+#: ui/c-store-dialog.glade:8
+msgid "Store Image on The DICOM Server"
+msgstr "Сохранить изображение на сервере DICOM"
+
+#: ui/c-store-dialog.glade:54
+msgid "Server:"
+msgstr "Сервер:"
+
+#: ui/c-store-dialog.glade:83
+msgid "Store"
+msgstr "Сохранить"
+
+#: ui/c-store-dialog.glade:152
+msgid "<b>Status</b>"
+msgstr "<b>Состояние</b>"
+
+#: ui/c-store-dialog.glade:193
+msgid "<b>Errors</b>"
+msgstr "<b>Ошибки</b>"
+
+#: ui/c-store-dialog.glade:209
+msgid "Conquest Log"
+msgstr "Сообщения"
+
+#: ui/temperature-margins-dialog.glade:22
+msgid "Temperature Margins"
+msgstr "Температурные границы"
+
+#: ui/lining-adjustment-dialog.glade:25
+msgid "Adjustment"
+msgstr "Подстройка"
+
+#: ui/lining-adjustment-dialog.glade:86
+msgid "_Chip:"
+msgstr "_Чип:"
+
+#: ui/lining-adjustment-dialog.glade:99
+msgid "_Strip:"
+msgstr "_Стрип:"
+
+#: ui/lining-adjustment-dialog.glade:172
+msgid "_Code:"
+msgstr "_Код:"
+
+#: ui/lining-adjustment-dialog.glade:198
+msgid "_Broadcast:"
+msgstr "_Во все:"
+
+#: ui/lining-adjustment-dialog.glade:236
+msgid "<b>Chip Lining Codes</b>"
+msgstr "<b>Коды Подстройки</b>"
+
+#: ui/lining-adjustment-dialog.glade:279
+msgid "Load lining codes from file"
+msgstr "Загрузить коды подстройки из файла"
+
+#: ui/lining-adjustment-dialog.glade:290
+msgid "Restore lining codes of the current chip"
+msgstr "Восстановить коды для текущего чипа"
+
+#: ui/lining-adjustment-dialog.glade:291
+msgid "Restore Current"
+msgstr "Восстановить коды чипа"
+
+#: ui/lining-adjustment-dialog.glade:299
+msgid "Restore lining codes of all chips"
+msgstr "Восстановить коды всех чипов"
+
+#: ui/lining-adjustment-dialog.glade:300
+msgid "Restore All"
+msgstr "Восстановить коды чипов"
+
+#: ui/lining-adjustment-dialog.glade:318
+msgid "Write a current chip codes"
+msgstr "Запись кодов выбранного чипа"
+
+#: ui/lining-adjustment-dialog.glade:319
+msgid "Write"
+msgstr "Запись в чип"
+
+#: ui/lining-adjustment-dialog.glade:329
+msgid "Write all chips codes"
+msgstr "Запись кодов во все чипы"
+
+#: ui/lining-adjustment-dialog.glade:330
+msgid "Write All"
+msgstr "Запись во все чипы"
+
+#: ui/scanner-debug-dialog.glade:8
+msgid "Scanner Debug Actions"
+msgstr "Отладочные комманды сканера"
+
+#: ui/scanner-debug-dialog.glade:54
+msgid "Reset Altera FPGA"
+msgstr "Сброс Альтеры"
+
+#: ui/scanner-debug-dialog.glade:68
+msgid "Reset Array Chips"
+msgstr "Сброс чипов детектирующей линейки"
+
+#: ui/scanner-debug-dialog.glade:82
+msgid "Write Lining Codes..."
+msgstr "Записать пьедесталы..."
+
+#: ui/scanner-debug-dialog.glade:96
+msgid "Adjust Lining Codes..."
+msgstr "Подстройка пьедесталов..."
+
+#: ui/scanner-debug-dialog.glade:110
+msgid "Select Chip Capacities..."
+msgstr "Выбор емкости чипа..."
+
+#: ui/scanner-debug-dialog.glade:124
+msgid "Turn Off Peltier Elements"
+msgstr "Выключить элементы пельтье"
+
+#: ui/scanner-debug-dialog.glade:138
+msgid "Temperature Control"
+msgstr "Контроль температуры"
+
+#: ui/preferences-dialog.glade:14
+msgid "ScanAmati Preferences (Shift+Cntl+P)"
+msgstr "Настроить СканАмати (Shift+Cntl+P)"
+
+#: ui/preferences-dialog.glade:103
+msgid "AE _Title:"
+msgstr "_Название (AE Title):"
+
+#: ui/preferences-dialog.glade:115
+msgid "_Port:"
+msgstr "_Порт:"
+
+#: ui/preferences-dialog.glade:170
+msgid "<b>Entity</b>"
+msgstr "<b>DICOM сущность</b>"
+
+#: ui/preferences-dialog.glade:187
+msgid "Application"
+msgstr "Приложение"
+
+#: ui/preferences-dialog.glade:220
+msgid "_Conquest Server Directory:"
+msgstr "_Директория сервера Conquest:"
+
+#: ui/preferences-dialog.glade:270
+msgid "<b>Localhost</b>"
+msgstr "<b>Местный узел</b>"
+
+#: ui/preferences-dialog.glade:331
+msgid "Test Connection"
+msgstr "Проверить соединение"
+
+#: ui/preferences-dialog.glade:336
+msgid "Execute C-ECHO command for selected PACS."
+msgstr "Выполнить комманду C-ECHO для выбранного сервера."
+
+#: ui/preferences-dialog.glade:420
+msgid "<b>Network</b>"
+msgstr "<b>Сетевые узлы</b>"
+
+#: ui/preferences-dialog.glade:440
+msgid "DICOM Servers"
+msgstr "DICOM Серверы"
+
+#: ui/dicom-server-dialog.glade:15
+msgid "New Server"
+msgstr "Новый сервер"
+
+#: ui/dicom-server-dialog.glade:82 ui/dicom-information-dialog.glade:344
+#: ui/dicom-information-dialog.glade:946
+msgid "Name:"
+msgstr "Имя:"
+
+#: ui/dicom-server-dialog.glade:93
+msgid "IP / Host:"
+msgstr "IP / Узел:"
+
+#: ui/dicom-server-dialog.glade:106
+msgid "AE Title:"
+msgstr "Название:"
+
+#: ui/dicom-server-dialog.glade:119
+msgid "Port:"
+msgstr "Порт:"
+
+#: ui/dicom-information-dialog.glade:20
+msgid "DICOM Information"
+msgstr "Данные формата DICOM"
+
+#: ui/dicom-information-dialog.glade:94
+msgid "Sex:"
+msgstr "Пол:"
+
+#: ui/dicom-information-dialog.glade:109
+msgid "Female"
+msgstr "Женщина"
+
+#: ui/dicom-information-dialog.glade:125
+msgid "Male"
+msgstr "Мужчина"
+
+#: ui/dicom-information-dialog.glade:141
+msgid "Other"
+msgstr "Другой"
+
+#: ui/dicom-information-dialog.glade:168
+msgid "Birth Date:"
+msgstr "Дата рождения:"
+
+#: ui/dicom-information-dialog.glade:186
+msgid "DD.MM.YYYY"
+msgstr "ДД.ММ.ГГГГ"
+
+#: ui/dicom-information-dialog.glade:200
+msgid "_Choose..."
+msgstr "Вы_брать..."
+
+#: ui/dicom-information-dialog.glade:227
+msgid "Age:"
+msgstr "Возраст:"
+
+#: ui/dicom-information-dialog.glade:240 ui/dicom-information-dialog.glade:835
+msgid "ID:"
+msgstr "Идентификатор:"
+
+#: ui/dicom-information-dialog.glade:317
+msgid "_DICOM Value"
+msgstr "Значение _DICOM"
+
+#: ui/dicom-information-dialog.glade:438
+msgid "Other Names:"
+msgstr "Другие имена:"
+
+#: ui/dicom-information-dialog.glade:451
+msgid "Ethnic Group:"
+msgstr "Этнос:"
+
+#: ui/dicom-information-dialog.glade:500
+msgid "Other IDs:"
+msgstr "Другие идентификаторы:"
+
+#: ui/dicom-information-dialog.glade:531
+msgid "Weight (kg):"
+msgstr "Вес (кг):"
+
+#: ui/dicom-information-dialog.glade:542
+msgid "Height (m):"
+msgstr "Рост (м):"
+
+#: ui/dicom-information-dialog.glade:589 ui/dicom-information-dialog.glade:957
+#: ui/dicom-information-dialog.glade:1050
+msgid "Address:"
+msgstr "Адрес:"
+
+#: ui/dicom-information-dialog.glade:602
+msgid "Telephone Numbers:"
+msgstr "Телефонные номера:"
+
+#: ui/dicom-information-dialog.glade:649
+msgid "Religious Preference:"
+msgstr "Вероисповедание:"
+
+#: ui/dicom-information-dialog.glade:717
+msgid "Comments:"
+msgstr "Комментарии:"
+
+#: ui/dicom-information-dialog.glade:751
+msgid "Occupation:"
+msgstr "Должность:"
+
+#: ui/dicom-information-dialog.glade:793
+msgid "Additional Information"
+msgstr "Дополнительная информация"
+
+#: ui/dicom-information-dialog.glade:809
+msgid "_Patient"
+msgstr "_Пациент"
+
+#: ui/dicom-information-dialog.glade:846
+#: ui/dicom-information-dialog.glade:1186
+msgid "Description:"
+msgstr "Описание:"
+
+#: ui/dicom-information-dialog.glade:859
+msgid "Accession Number:"
+msgstr "Номер доступа:"
+
+#: ui/dicom-information-dialog.glade:1005
+msgid "<b>Referring Physician</b>"
+msgstr "<b>Лечащий врач</b>"
+
+#: ui/dicom-information-dialog.glade:1039
+msgid "Name (Title):"
+msgstr "Название:"
+
+#: ui/dicom-information-dialog.glade:1095
+msgid "Department:"
+msgstr "Отделение:"
+
+#: ui/dicom-information-dialog.glade:1128
+msgid "<b>Institution</b>"
+msgstr "<b>Организация</b>"
+
+#: ui/dicom-information-dialog.glade:1175
+msgid "Number:"
+msgstr "Номер:"
+
+#: ui/dicom-information-dialog.glade:1232
+msgid "Protocol Name:"
+msgstr "Название протокола:"
+
+#: ui/dicom-information-dialog.glade:1311
+msgid "Performing Physicians Name:"
+msgstr "Имена врачей:"
+
+#: ui/dicom-information-dialog.glade:1322
+msgid "Operators Name:"
+msgstr "Имена операторов:"
+
+#: ui/dicom-information-dialog.glade:1381
+msgid "S_eries"
+msgstr "_Серия"
+
+#: ui/person-name-dialog.glade:8
+msgid "Person Name Components"
+msgstr "Элементы полного имени"
+
+#: ui/person-name-dialog.glade:72
+msgid "_Last Name:"
+msgstr "_Фамилия:"
+
+#: ui/person-name-dialog.glade:84
+msgid "_Middle Name:"
+msgstr "_Отчество:"
+
+#: ui/person-name-dialog.glade:98
+msgid "_First Name:"
+msgstr "_Имя:"
+
+#: ui/person-name-dialog.glade:112
+msgid "_Prefix:"
+msgstr "_Приставка:"
+
+#: ui/person-name-dialog.glade:126
+msgid "_Suffix:"
+msgstr "_Окончание:"
+
+#: src/dicom/user_commands.cpp:591
+msgid "Data Dictionary wasn't loaded."
+msgstr "Словарь данных DICOM не загружен."
+
+#: src/dicom/user_commands.cpp:600
+msgid "Cannot listen on port %1, insufficient privileges."
+msgstr "Невозможно подключиться к порту %1, недостаточно прав."
+
+#: src/dicom/user_commands.cpp:616
+msgid "Unable to initialize network."
+msgstr "Невозможно инициировать сетевое соединение."
+
+#: src/dicom/user_commands.cpp:623
+msgid "Unable to create parameters of the association."
+msgstr "Невозможно создать параметры ассоциации."
+
+#: src/dicom/user_commands.cpp:641 src/dicom/user_commands.cpp:729
+#: src/dicom/user_commands.cpp:930
+msgid "Unable to set application entity titles."
+msgstr "Невозможно установить AE заголовки."
+
+#: src/dicom/user_commands.cpp:652
+msgid "Unable to set presentation addresses."
+msgstr "Невозможно установить адреса презентации."
+
+#: src/dicom/user_commands.cpp:701 src/dicom/user_commands.cpp:769
+#: src/dicom/user_commands.cpp:978
+msgid "Association rejected."
+msgstr "Ассоциация отклонена."
+
+#: src/dicom/user_commands.cpp:706
+msgid "Failed to establish association."
+msgstr "Невозможно установить ассоциацию."
+
+#: src/dicom/user_commands.cpp:738 src/dicom/user_commands.cpp:939
+msgid "Unable to set type of network connection."
+msgstr "Невозможно установить теи сетевого соединения."
+
+#: src/dicom/user_commands.cpp:749
+msgid "Unable to add storage presentation contexts."
+msgstr "Невозможно добавить контекст хранения презентации."
+
+#: src/dicom/user_commands.cpp:773 src/dicom/user_commands.cpp:982
+msgid "Association request failed."
+msgstr "Запрос ассоциации отклонен."
+
+#: src/dicom/user_commands.cpp:786 src/dicom/user_commands.cpp:995
+msgid "No acceptable presentation contexts."
+msgstr "Отсутствует контекст презентации."
+
+#: src/dicom/user_commands.cpp:827
+msgid "No SOP class and instance UIDs in dataset."
+msgstr "Отсутствуют класс SOP и UID определения."
+
+#: src/dicom/user_commands.cpp:855
+msgid "Presentation context is absent."
+msgstr "Отсутствует контекст презентации."
+
+#: src/dicom/user_commands.cpp:958
+msgid "Unable to add presentation context."
+msgstr "Невозможно добавить контекст хранения презентации."
+
+#: src/dicom/user_commands.cpp:1023
+msgid "No valid presentation context ID."
+msgstr "Нет подходящего контекста презентации."
+
+#: src/dicom/user_commands.cpp:1057
+msgid "Move request failed."
+msgstr "Запрос ассоциации на перемещение (C-MOVE) отклонен."
+
+#: src/dicom/patient_age.cpp:31
+msgid "year"
+msgid_plural "years"
+msgstr[0] "год"
+msgstr[1] "года"
+msgstr[2] "лет"
+
+#: src/dicom/patient_age.cpp:34
+msgid "month"
+msgid_plural "months"
+msgstr[0] "месяц"
+msgstr[1] "месяца"
+msgstr[2] "месяцев"
+
+#: src/dicom/patient_age.cpp:37
+msgid "week"
+msgid_plural "weeks"
+msgstr[0] "неделя"
+msgstr[1] "недели"
+msgstr[2] "недель"
+
+#: src/dicom/patient_age.cpp:40
+msgid "day"
+msgid_plural "days"
+msgstr[0] "день"
+msgstr[1] "дня"
+msgstr[2] "дней"
+
+#: src/dicom/patient_age.cpp:48
+msgid "Unknown"
+msgstr "Нет данных"
+
+#: src/dialogs/image_acquisition.cpp:68
+msgid "If the x-ray source is ready press Yes otherwise press No"
+msgstr "Если излучатель готов нажмите \"Да\", если не готов - \"Нет\" "
+
+#: src/dialogs/image_acquisition.cpp:73
+msgid "X-ray Preparation"
+msgstr "Подготовка излучателя"
+
+#: src/dialogs/image_acquisition.cpp:329
+#: src/widgets/information_notebook.cpp:569
+#: src/widgets/information_notebook.cpp:644
+msgid "kV"
+msgstr "кВ"
+
+#: src/dialogs/image_acquisition.cpp:336
+#: src/widgets/information_notebook.cpp:566
+#: src/widgets/information_notebook.cpp:640
+msgid "mAs"
+msgstr "мА × c"
+
+#: src/dialogs/image_acquisition.cpp:412
+#, fuzzy
+msgid "Logarithmic"
+msgstr "Логарифмическая"
+
+#: src/dialogs/lining_adjustment.cpp:121
+msgid "Strip"
+msgstr "Стрип"
+
+#: src/dialogs/lining_adjustment.cpp:127
+msgid "Code"
+msgstr "Код"
+
+#: src/dialogs/temperature_margins.cpp:105
+msgid "<b>Unable to change temperature margins!</b>"
+msgstr "<b>Невозможно изменить температурные границы!</b>"
+
+#: src/dialogs/temperature_margins.cpp:106
+msgid "Scanner to locked for some reason."
+msgstr "Данные сканера не доступны."
+
+#: src/dialogs/save_as.cpp:36
+msgid "Save File"
+msgstr "Сохранить изображение"
+
+#: src/dialogs/save_as.cpp:81
+msgid ""
+"The file \"%1\" already exists.\n"
+"Do you want to replace it?"
+msgstr ""
+"Файл \"%1\" уже существует.\n"
+"Хотите его заменить?"
+
+#: src/dialogs/save_as.cpp:85
+msgid ""
+"The file with the same name already exists in the folder \"%1\".\n"
+"Replacing it will overwrite its current contents."
+msgstr ""
+"Файл с таким именем уже существует в каталоге \"%1\".\n"
+"Замена файла приведет к перезаписи его содержимого."
+
+#: src/dialogs/save_as.cpp:96
+msgid "Cancel"
+msgstr "Отмена"
+
+#: src/dialogs/save_as.cpp:97
+msgid "Replace"
+msgstr "Заменить"
+
+#: src/dialogs/dicom_information.cpp:46
+msgid "Text"
+msgstr "Текст"
+
+#: src/dialogs/dicom_information.cpp:47
+msgid "RFID"
+msgstr "Радио метка"
+
+#: src/dialogs/dicom_information.cpp:48
+msgid "Barcode"
+msgstr "Штрих код"
+
+#: src/dialogs/dicom_information.cpp:445
+msgid "Patient's Date of Birth"
+msgstr "Дата рождения пациента"
+
+#: src/dialogs/dicom_server.cpp:77
+msgid "Edit Server Data"
+msgstr "Изменить данные сервера"
+
+#: src/dialogs/conquest_archive.cpp:108
+msgid "Move selected image?"
+msgstr "Загрузить изображение?"
+
+#: src/dialogs/conquest_archive.cpp:113
+msgid "The query confirmation"
+msgstr "Подтверждение запроса"
+
+#: src/dialogs/conquest_archive.cpp:114
+msgid ""
+"If you want to move selected image\n"
+"from the server press \"Yes\" otherwise press \"No\"."
+msgstr ""
+"Если хотите загрузить изображение с сервера\n"
+"нажмите \"Да\", если нет - \"Нет\"."
+
+#. Study ID column
+#: src/dialogs/conquest_archive.cpp:272
+#: src/widgets/information_notebook.cpp:237
+msgctxt "Study"
+msgid "ID"
+msgstr "Код обследования"
+
+#. Study Description column
+#: src/dialogs/conquest_archive.cpp:278
+msgctxt "Study"
+msgid "Description"
+msgstr "Описание"
+
+#. Study Date column
+#: src/dialogs/conquest_archive.cpp:285
+msgctxt "Study"
+msgid "Date"
+msgstr "Дата"
+
+#. Study Time column
+#: src/dialogs/conquest_archive.cpp:294
+msgctxt "Study"
+msgid "Time"
+msgstr "Время"
+
+#. Patient's ID column
+#: src/dialogs/conquest_archive.cpp:303
+#: src/widgets/information_notebook.cpp:228
+msgctxt "Patient"
+msgid "ID"
+msgstr "№ карты"
+
+#. Patient's Name column
+#: src/dialogs/conquest_archive.cpp:309
+msgctxt "Patient"
+msgid "Name"
+msgstr "Ф. И. О."
+
+#. Patient's Date of Birth column
+#: src/dialogs/conquest_archive.cpp:316
+msgctxt "Patient"
+msgid "Date of Birth"
+msgstr "Дата рождения"
+
+#. Patient's Sex column
+#: src/dialogs/conquest_archive.cpp:326
+msgctxt "Patient"
+msgid "Sex"
+msgstr "Пол"
+
+#: src/dialogs/conquest_archive.cpp:360
+msgid "Connecting Error"
+msgstr "Ошибка Соединения"
+
+#: src/dialogs/conquest_archive.cpp:361
+msgid "Unable to establish a connection."
+msgstr "Невозможно установить соединение с базой данных."
+
+#: src/dialogs/conquest_archive.cpp:475
+msgid "file has been found"
+msgid_plural "files have been found"
+msgstr[0] "файл найден"
+msgstr[1] "файла найдено"
+msgstr[2] "файлов найдено"
+
+#: src/dialogs/conquest_archive.cpp:485
+msgid "Nothing has been found"
+msgstr "Ничего не найдено"
+
+#: src/dialogs/scanner_debug.cpp:152 src/dialogs/scanner_debug.cpp:175
+msgid "Warning"
+msgstr "Внимание"
+
+#: src/dialogs/scanner_debug.cpp:153
+msgid "Lining data unavailable in this moment."
+msgstr "Данные выравнивания недоступны в данный момент"
+
+#: src/dialogs/scanner_debug.cpp:154 src/dialogs/scanner_debug.cpp:177
+msgid "Please, try later."
+msgstr "Пожалуйста, повторите попытку позже."
+
+#: src/dialogs/scanner_debug.cpp:176
+msgid "Unable to change temperature control state."
+msgstr "Невозможно изменить состояние терморегулятора."
+
+#: src/dialogs/store_dicom.cpp:65
+msgid "\"Conquest\" - localhost DICOM server"
+msgstr "\"Conquest\" - местный DICOM сервер:"
+
+#: src/dialogs/store_dicom.cpp:301
+msgid ""
+"<b>%1</b>\n"
+"(%2) %3:%4"
+msgstr ""
+"<b>%1</b>\n"
+"(%2) %3:%4"
+
+#: src/dialogs/store_dicom.cpp:333
+msgid "File has been stored successfully!"
+msgstr "Файл успешно сохранен!"
+
+#: src/dialogs/store_dicom.cpp:343
+msgid "Have been written %1 of %2 bytes."
+msgstr "Сохраненно байт %1 из %2"
+
+#: src/dialogs/move_dicom.cpp:144
+msgid "File has been moved successfully!"
+msgstr "Файл успешно сохранен!"
+
+#: src/dialogs/move_dicom.cpp:181
+msgid "Cannot write DICOM file."
+msgstr "Невозможно записать DICOM файл на диск."
+
+#: src/dialogs/move_dicom.cpp:194
+msgid "Bad DICOM file."
+msgstr "Неверный файл DICOM."
+
+#: src/dialogs/move_dicom.cpp:198
+msgid "Data doesn't match SOP class IUD."
+msgstr "Идентификатор SOP Class не совпадает с запросом."
+
+#: src/dialogs/move_dicom.cpp:202
+msgid "Data doesn't match SOP instance IUD."
+msgstr "Идентификатор SOP Instance не совпадает с запросом."
+
+#: src/dialogs/preferences.cpp:99
+msgctxt "DICOM Server"
+msgid "Name"
+msgstr "Имя"
+
+#: src/dialogs/preferences.cpp:110
+msgid "IP / Host"
+msgstr "IP / Узел"
+
+#: src/dialogs/preferences.cpp:121
+msgid "AE Title"
+msgstr "Названия (AE)"
+
+#: src/dialogs/preferences.cpp:132
+msgid "Port"
+msgstr "Порт"
+
+#: src/dialogs/preferences.cpp:216
+msgid "Please select a directory"
+msgstr "Введите имя каталога"
+
+#: src/dialogs/preferences.cpp:352
+msgid "<b>Connection successful!</b>"
+msgstr "<b>Проверка соединения прошла успешно!</b>"
+
+#: src/dialogs/preferences.cpp:353 src/dialogs/preferences.cpp:369
+msgctxt "Connection"
+msgid "State"
+msgstr "Состояние"
+
+#: src/dialogs/preferences.cpp:361
+msgid "Connection refused by host."
+msgstr "Узел отклонил соединение."
+
+#: src/dialogs/preferences.cpp:368
+msgid "<b>Connection failed!</b>"
+msgstr "<b>Невозможно установить соединение!</b>"
+
+#: src/dialogs/preferences.cpp:375
+msgid "<b>Please select DICOM server!</b>"
+msgstr "<b>Пожалуйста, выберите DICOM сервер!</b>"
+
+#: src/widgets/status_bar.cpp:83
+msgid "Initiating the scanner."
+msgstr "Подключение сканера."
+
+#: src/widgets/status_bar.cpp:91
+msgid "Exposure has been started."
+msgstr "Процесс экспозиции запущен."
+
+#: src/widgets/status_bar.cpp:95
+msgid "Acquisition has been started."
+msgstr "Процесс чтения и обработки данных запущен."
+
+#: src/widgets/status_bar.cpp:99
+msgid "Parking has been started."
+msgstr "Парковка сканера."
+
+#: src/widgets/status_bar.cpp:103
+msgid "Image acquisition has been aborted."
+msgstr "Процесс получения изображения был прерван."
+
+#: src/widgets/status_bar.cpp:111
+msgid "Scanner has been connected."
+msgstr "Сканер подключен."
+
+#: src/widgets/status_bar.cpp:117
+msgid "Lining has been started."
+msgstr "Процесс выравнивания пьедесталов запущен."
+
+#: src/widgets/status_bar.cpp:121
+msgid "Lining acquisition has been started."
+msgstr "Процесс чтения и обработки данных пьедесталов запущен."
+
+#: src/widgets/status_bar.cpp:125
+msgid "Lining has been finished."
+msgstr "Процесс выравнивания пьедесталов окончен."
+
+#: src/widgets/status_bar.cpp:133
+msgid "Executing commands..."
+msgstr "Выполнение комманд..."
+
+#: src/widgets/status_bar.cpp:137
+msgid "Image reconstruction in progress..."
+msgstr "Выполняется реконструкция изображения..."
+
+#: src/widgets/status_bar.cpp:150
+msgid "Scanner has been disconnected."
+msgstr "Сканер отключен."
+
+#: src/widgets/information_notebook.cpp:84
+msgid "%1 \\u00B5Sv"
+msgstr "%1 мкЗв"
+
+#: src/widgets/information_notebook.cpp:227
+msgid "Name"
+msgstr "Имя"
+
+#: src/widgets/information_notebook.cpp:229
+msgid "Sex"
+msgstr "Пол"
+
+#: src/widgets/information_notebook.cpp:230
+msgid "Birthday"
+msgstr "Дата рождения"
+
+#: src/widgets/information_notebook.cpp:231
+msgid "Age"
+msgstr "Возраст"
+
+#: src/widgets/information_notebook.cpp:234
+msgid "Physician"
+msgstr "Лечащий врач"
+
+#: src/widgets/information_notebook.cpp:235
+msgid "Operator"
+msgstr "Оператор"
+
+#: src/widgets/information_notebook.cpp:236
+msgid "Description"
+msgstr "Описание"
+
+#: src/widgets/information_notebook.cpp:238
+msgid "Body part"
+msgstr "Часть тела"
+
+#: src/widgets/information_notebook.cpp:239
+msgid "Institution"
+msgstr "Организация"
+
+#: src/widgets/information_notebook.cpp:240
+msgid "Date"
+msgstr "Дата"
+
+#: src/widgets/information_notebook.cpp:241
+msgid "Time"
+msgstr "Время"
+
+#: src/widgets/information_notebook.cpp:242
+msgid "Model name"
+msgstr "Модель"
+
+#: src/widgets/information_notebook.cpp:243
+msgid "Effective dose"
+msgstr "Эффект. доза"
+
+#: src/widgets/information_notebook.cpp:246
+#: src/widgets/information_notebook.cpp:259
+msgid "High voltage"
+msgstr "Напряжение"
+
+#: src/widgets/information_notebook.cpp:247
+#: src/widgets/information_notebook.cpp:260
+msgid "Current"
+msgstr "Ток"
+
+#: src/widgets/information_notebook.cpp:252
+#: src/widgets/information_notebook.cpp:288
+msgid "Temperature"
+msgstr "Температура"
+
+#. xray.push_back(InfoItem( _("Exposure time"), ""));
+#: src/widgets/information_notebook.cpp:263
+#: src/widgets/information_notebook.cpp:456
+msgctxt "X-ray"
+msgid "State"
+msgstr "Состояние"
+
+#: src/widgets/information_notebook.cpp:266
+msgctxt "Temperature"
+msgid "Control"
+msgstr "Регулирование"
+
+#: src/widgets/information_notebook.cpp:267
+msgctxt "Temperature"
+msgid "Current"
+msgstr "Текущая"
+
+#: src/widgets/information_notebook.cpp:268
+msgctxt "Temperature"
+msgid "Margins"
+msgstr "Пределы регулирования"
+
+#: src/widgets/information_notebook.cpp:269
+msgid "TEC value"
+msgstr "Пельтье"
+
+#: src/widgets/information_notebook.cpp:272
+msgctxt "Array"
+msgid "ID"
+msgstr "Серийный номер"
+
+#: src/widgets/information_notebook.cpp:273
+msgctxt "Array"
+msgid "Capasity"
+msgstr "Емкость чипов"
+
+#: src/widgets/information_notebook.cpp:274
+msgctxt "Array"
+msgid "Chip"
+msgstr "Чип"
+
+#: src/widgets/information_notebook.cpp:277 src/icon_loader.cpp:66
+msgid "Patient"
+msgstr "Пациент"
+
+#: src/widgets/information_notebook.cpp:278
+msgid "Study"
+msgstr "Обследование"
+
+#: src/widgets/information_notebook.cpp:279
+#: src/widgets/information_notebook.cpp:285
+msgid "X-ray Source"
+msgstr "Излучатель"
+
+#: src/widgets/information_notebook.cpp:280
+#: src/widgets/information_notebook.cpp:289
+msgid "Detector Array"
+msgstr "Детектирующая линейка"
+
+#: src/widgets/information_notebook.cpp:343
+msgid "Label"
+msgstr "Пункт"
+
+#: src/widgets/information_notebook.cpp:358
+msgid "Value"
+msgstr "Значение"
+
+#: src/widgets/information_notebook.cpp:390
+#: src/widgets/information_notebook.cpp:400 src/icon_loader.cpp:67
+msgid "X-ray source"
+msgstr "Излучатель"
+
+#: src/widgets/information_notebook.cpp:404
+#: src/widgets/information_notebook.cpp:559
+msgid "Disconnected"
+msgstr "Отключен"
+
+#: src/widgets/information_notebook.cpp:420
+msgid "On"
+msgstr "Включено"
+
+#: src/widgets/information_notebook.cpp:420
+msgid "Off"
+msgstr "Выключено"
+
+#: src/widgets/information_notebook.cpp:441
+msgctxt "Chip"
+msgid "None"
+msgstr "Не выбран"
+
+#: src/widgets/information_notebook.cpp:444
+msgid "pF"
+msgstr "пФ"
+
+#: src/widgets/information_notebook.cpp:558
+msgid "Connected"
+msgstr "Подключен"
+
+#: src/widgets/information_notebook.cpp:572
+#: src/widgets/information_notebook.cpp:648
+msgid "mA"
+msgstr "мА"
+
+#: src/widgets/information_notebook.cpp:615
+msgctxt "Effective Dose"
+msgid "Unknown"
+msgstr "Неизвестна"
+
+#: src/scanner/manager.cpp:314
+msgid "Unable to load scanner data."
+msgstr "Невозможно загрузить данные сканера."
+
+#: src/scanner/manager.cpp:1031
+msgid "Wrong scanner id."
+msgstr "Неверный идентификационный номер сканера."
+
+#: src/scanner/manager.cpp:1046
+msgid "Wrong handshake response."
+msgstr "Неверный ответ на первичный запрос."
+
+#: src/scanner/manager.cpp:1071
+msgid "The device \"%1\" doesn't exist."
+msgstr "Устройство \"%1\" отсутствует."
+
+#: src/scanner/manager.cpp:1073
+msgid ""
+"Check the USB cable connection between the PC and the device, and check if "
+"the scanner power supply is turned on."
+msgstr ""
+"Проверьте соединение УСБ кабеля между сканером и компьютером, а также "
+"убедитесь, что источник питания сканера включен."
+
+#: src/scanner/manager.cpp:1079
+msgid "The user \"%1\" has no permission to open scanner device."
+msgstr "У пользователя \"%1\" не прав на открытие устройства сканера."
+
+#: src/scanner/manager.cpp:1082
+msgid "Check your permissions to open, read and write to the scanner device."
+msgstr "Проверьте права пользователя на чтение и запись в устройство сканера."
+
+#: src/scanner/manager.cpp:1088
+msgid "The device \"%1\" has been already busy."
+msgstr "Устройство \"%1\" уже занято."
+
+#: src/scanner/manager.cpp:1089
+msgid ""
+"Close other programs which use this device, and try to repeat the operation."
+msgstr ""
+"Закройте программы, которые используют это устройство и повторите операцию."
+
+#: src/scanner/manager.cpp:1092
+msgid "The device has invalid file descriptor."
+msgstr "У устройства неправильный дескриптор."
+
+#: src/scanner/manager.cpp:1095
+msgid "Command interrupted by a signal."
+msgstr "Коммада прерванна внешним сигналом."
+
+#: src/scanner/manager.cpp:1098
+msgid "Invalid function argument."
+msgstr "Неверный аргумент функции."
+
+#: src/scanner/manager.cpp:1101
+msgid ""
+"The system cannot allocate more virtual memory because it capacity is full."
+msgstr "Недостаточно памяти."
+
+#: src/scanner/manager.cpp:1105
+msgid ""
+"Resource temporarily unavailable; the call might work if you try again later."
+msgstr ""
+"Устройство временно недоступно, вызов может сработать, если вы попробуете "
+"позже."
+
+#: src/scanner/manager.cpp:1109
+msgid "You passed in a pointer to bad memory."
+msgstr "Указатель на поврежденную память."
+
+#: src/scanner/manager.cpp:1112
+msgid "Input/output error occured."
+msgstr "Ошибка ввода/вывода."
+
+#: src/scanner/manager.cpp:1115
+msgid "File descriptor is attached to a directory."
+msgstr "Дескриптор указывает на директорию."
+
+#: src/scanner/manager.cpp:1118
+msgid "No space left on device."
+msgstr "На диске кончилось место."
+
+#: src/scanner/manager.cpp:1121
+msgid "There is no process reading from the other end of a pipe."
+msgstr "Нет процесса, читающего из пайпа."
+
+#: src/scanner/manager.cpp:1125
+msgid "Unexpected error."
+msgstr "Неожиданная ошибка."
+
+#: src/scanner/manager.cpp:1127
+msgid ""
+"The scanner device can't execute this command. Please, turn off the device "
+"and try again."
+msgstr ""
+"Устройство не может выполнить эту комманду.Пожалуйста, закройте программу и "
+"повторите попытку."
+
+#: src/scanner/manager_device.cpp:90
+msgid "No data within timeout interval."
+msgstr "Нет данных в отведенный интервал времени."
+
+#: src/scanner/manager_device.cpp:118
+msgid "No more data."
+msgstr "Нет данных в устройстве."
+
+#: src/icon_loader.cpp:94
+msgid "Amati icon doesn't seem to be installed in default icon theme."
+msgstr "Иконка amati отсутствует в теме иконок по умолчанию."
+
+#: src/icon_loader.cpp:106
+msgid "Couldn't load program icon from the default icon theme. "
+msgstr "Невозможно загрузить иконку из темы иконок по умолчанию."
+
+#: src/main_window.cpp:323
+msgid "Open File"
+msgstr "Открыть файл"
+
+#: src/main_window.cpp:425
+msgid "Saving Error"
+msgstr "Ошибка сохранения"
+
+#: src/main_window.cpp:428
+msgid "Unable to save the file \"%1\"."
+msgstr "Невозможно сохранить файл \"%1\"."
+
+#: src/main_window.cpp:699
+msgid "Scanner Error"
+msgstr "Ошибка сканера"
+
+#. File menu
+#: src/main_window_actions.cpp:45
+msgid "_File"
+msgstr "_Файл"
+
+#: src/main_window_actions.cpp:48
+msgid "_Open..."
+msgstr "_Открыть..."
+
+#: src/main_window_actions.cpp:48
+msgid "Open an existing image"
+msgstr "Открыть существующее изображение"
+
+#: src/main_window_actions.cpp:51
+msgid "_Save"
+msgstr "_Сохранить"
+
+#: src/main_window_actions.cpp:52
+msgid "Save image"
+msgstr "Сохранить изображение"
+
+#: src/main_window_actions.cpp:57
+msgid "Save _As..."
+msgstr "Сохранить _как..."
+
+#: src/main_window_actions.cpp:57
+msgid "Save image under a new name"
+msgstr "Сохранить изображение под другим именем"
+
+#: src/main_window_actions.cpp:63
+msgid "_Save to Archive"
+msgstr "Сохранить в а_рхив"
+
+#: src/main_window_actions.cpp:63
+msgid "Save image to archive"
+msgstr "Сохранить изображение в архиве снимков"
+
+#: src/main_window_actions.cpp:69
+msgid "ScanAmati Preferences..."
+msgstr "Настройки СканАмати..."
+
+#: src/main_window_actions.cpp:69
+msgid "Edit global ScanAmati preferences"
+msgstr "Изменить общие настройки СканАмати"
+
+#: src/main_window_actions.cpp:91
+msgid "Export PDF..."
+msgstr "Экспортировать в PDF..."
+
+#: src/main_window_actions.cpp:101
+msgid "_Find Image..."
+msgstr "_Найти изображение..."
+
+#: src/main_window_actions.cpp:101
+msgid "Find Image In The Localhost Conquest DICOM Server"
+msgstr "Найти изображение на местном сервере Conquest"
+
+#: src/main_window_actions.cpp:105
+msgid "_Edit"
+msgstr "_Правка"
+
+#: src/main_window_actions.cpp:109
+msgid "Edit DICOM _Information..."
+msgstr "Редактировать DICOM инфор_мацию..."
+
+#: src/main_window_actions.cpp:115
+msgid "_New DICOM Information..."
+msgstr "_Новые данные DICOM..."
+
+#: src/main_window_actions.cpp:119
+msgid "_Image"
+msgstr "_Изображение"
+
+#. popup menus
+#: src/main_window_actions.cpp:122 src/main_window_actions.cpp:291
+msgid "_Palette"
+msgstr "_Палитра"
+
+#: src/main_window_actions.cpp:127
+msgctxt "Palette"
+msgid "Grayscale"
+msgstr "Серая шкала"
+
+#: src/main_window_actions.cpp:135
+msgctxt "Palette"
+msgid "Inverted"
+msgstr "Инверсия"
+
+#: src/main_window_actions.cpp:142
+msgctxt "Palette"
+msgid "Rainbow"
+msgstr "Радуга"
+
+#: src/main_window_actions.cpp:149
+msgctxt "Palette"
+msgid "Combined"
+msgstr "Комбинация"
+
+#: src/main_window_actions.cpp:156
+msgctxt "Palette"
+msgid "Hot metal"
+msgstr "Горячий метал"
+
+#: src/main_window_actions.cpp:162
+msgid "_Zoom"
+msgstr "_Масштаб"
+
+#: src/main_window_actions.cpp:166
+msgid "Image _Width"
+msgstr "_Ширина изображения:"
+
+#: src/main_window_actions.cpp:166
+msgid "Zoom to fit image width in window"
+msgstr "Масштабировать так, чтобы уместить в окне изображение по ширине"
+
+#: src/main_window_actions.cpp:172
+msgid "Image _Heigth"
+msgstr "_Высота изображения:"
+
+#: src/main_window_actions.cpp:172
+msgid "Zoom to fit image height in window"
+msgstr "Масштабировать так, чтобы целиком уместить изображение в окне"
+
+#: src/main_window_actions.cpp:178
+msgid "Zoom _1:1 (100%)"
+msgstr "Масштаб _1:1 (100%)"
+
+#: src/main_window_actions.cpp:178
+msgid "Zoom to 1:1"
+msgstr "Масштаб 1:1"
+
+#: src/main_window_actions.cpp:184
+msgid "Zoom _2:1 (200%)"
+msgstr "Масштаб _2:1 (200%)"
+
+#: src/main_window_actions.cpp:184
+msgid "Zoom to 2:1"
+msgstr "Масштаб 2:1"
+
+#: src/main_window_actions.cpp:189
+msgid "Zoom _3:1 (300%)"
+msgstr "Масштаб _3:1 (300%)"
+
+#: src/main_window_actions.cpp:189
+msgid "Zoom to 3:1"
+msgstr "Масштаб 3:1"
+
+#: src/main_window_actions.cpp:196
+msgid "_Device"
+msgstr "_Устройство"
+
+#: src/main_window_actions.cpp:200
+msgctxt "Device"
+msgid "_Connect"
+msgstr "Под_ключить"
+
+#: src/main_window_actions.cpp:200
+msgid "Connect Scanner Device"
+msgstr "Подключить сканер"
+
+#: src/main_window_actions.cpp:205
+msgctxt "Device"
+msgid "_Disconnect"
+msgstr "О_тключить"
+
+#: src/main_window_actions.cpp:205
+msgid "Disconnect Scanner Device"
+msgstr "Отключить сканер"
+
+#: src/main_window_actions.cpp:211
+msgid "_Lining Procedure..."
+msgstr "_Выравнивание пьедесталов..."
+
+#: src/main_window_actions.cpp:211
+msgid "Acquire lining coefficients"
+msgstr "Подстройка коэффициентов выравнивания пьедесталов"
+
+#: src/main_window_actions.cpp:217
+msgid "Run the _Acquisition..."
+msgstr "Сделать _cнимок..."
+
+#: src/main_window_actions.cpp:217
+msgid "Acquire a x-ray image"
+msgstr "Сделать новый снимок"
+
+#: src/main_window_actions.cpp:223
+msgid "Temperature _Margins..."
+msgstr "Температурные _границы..."
+
+#: src/main_window_actions.cpp:228
+msgid "Debug..."
+msgstr "Отладка..."
+
+#: src/main_window_actions.cpp:233
+msgid "Remove Current"
+msgstr "Удалить выбранное изображение"
+
+#: src/main_window_actions.cpp:237
+msgid "Clear All"
+msgstr "Удалить все изображения"
+
+#: src/main_window_actions.cpp:241
+msgid "Show Raw Data"
+msgstr "Исходные данные"
+
+#: src/main_window_actions.cpp:245
+msgid "Show Processing Data"
+msgstr "Данные для обработки"
+
+#: src/main_window_actions.cpp:249
+msgid "Show Presentation Data"
+msgstr "Данные для презентации"
+
+#: src/main_window_actions.cpp:253
+msgid "Data _Filter"
+msgstr "_Фильтр"
+
+#: src/main_window_actions.cpp:272
+msgid "Data _Calibration"
+msgstr "Калибровке данных"
+
+#: src/main_window_actions.cpp:294
+msgid "_Files"
+msgstr "_Файлы"
+
+#: src/main_window_actions.cpp:297
+msgid "File _Icons"
+msgstr "Иконки файлов"
+
+#: src/main_window_actions.cpp:300
+msgid "Image _Area"
+msgstr "_Область изображения"
+
+#: src/global_strings.hpp:151
+msgid "APRM"
+msgstr "АПРМ"
+
+#. namespace Scanner
+#: src/global_strings.hpp:159
+msgid "DICOM image (*.dcm)"
+msgstr "Изображение формата DICOM (*.dcm)"
+
+#: src/global_strings.hpp:160
+msgid "Studio raw file (*.raw)"
+msgstr "Файл программы Studio (*.raw)"
+
+#: src/global_strings.hpp:161
+msgid "JPEG image file (*.jpg, *jpeg)"
+msgstr "Изображение формата JPEG (*.jpg, *.jpeg)"
+
+#: src/global_strings.hpp:162
+msgid "PNG image file (*.png)"
+msgstr "Изображение формата PNG (*.png)"
+
+#: src/main.cpp:106
+msgid "ScanAmati options"
+msgstr "Параметры СканАмати"
+
+#: src/main.cpp:107
+msgid "Command-line options for scanamati"
+msgstr "Параметры коммандной строки для СканАмати"
+
+#: src/main.cpp:116
+msgid "Show version and exit"
+msgstr "Показать версию и выйти"
+
+#: src/main.cpp:122
+msgid "Set the programm be verbose"
+msgstr "Вывод дополнительной информации"
+
+#: src/main.cpp:128
+msgid "Set the programm to the extend mode"
+msgstr "Вывод дополнительной информации"
+
+#: src/main.cpp:152
+msgid "[FILE]"
+msgstr "[ФАЙЛ]"
+
+#: src/main.cpp:211
+msgid "Command-line option error:"
+msgstr "Ошибка параметра коммандной строки:"
+
+#: src/main.cpp:216
+msgid "Glib thread error:"
+msgstr "Ошибка нити Glib:"
+
+#: src/main.cpp:220
+msgid "Unhandled exception [type unknown]"
+msgstr "Необработанное исключение (тип неизвестен)"
+
+#: src/preferences.cpp:147
+msgid "Failed to save configuration file."
+msgstr "Невозможно сохранить файл настроек."
+
+#: src/preferences.cpp:148
+msgid "An error occurred while attempting to save the file "
+msgstr "Произошла ошибка при попытке сохранить файл "
+
+#: src/preferences.cpp:149
+msgid ", this file stores your preferences."
+msgstr ", хотя файл предусмотрен для хранения настроек."
+
+#: src/preferences.cpp:151
+msgid "The system reported this error as: "
+msgstr "Система опрадалила ошибку типа: "
+
+#: src/file_saver.cpp:75
+msgid "Image data is empty."
+msgstr "Нет данных изображения."
+
+#: src/file_loader.cpp:111
+msgid "Unable to load image height."
+msgstr "Невозможно загрузить количество строк изображения."
+
+#: src/file_loader.cpp:115
+msgid "Unable to load image width."
+msgstr "Невозможно загрузить количество столбцов изображения."
+
+#: src/file_loader.cpp:125
+msgid "Unable to load image data."
+msgstr "Невозможно загрузить данные изображения."
+
+#~ msgid "Half Step"
+#~ msgstr "Полушаг"
+
+#~ msgid "Full Step"
+#~ msgstr "Шаг"
+
+#~ msgid "Steppers Movement"
+#~ msgstr "Движение шаговых двигателей"
+
+#~ msgid "_Good"
+#~ msgstr "_Хорошая"
+
+#~ msgid "B_etter"
+#~ msgstr "_Оптимальная"
+
+#~ msgid "_Best"
+#~ msgstr "_Наилучшая"
+
+#~ msgid "Steppers _Movement Parameters"
+#~ msgstr "Параметры движения и двигателей"
+
+#~ msgid "<b>Acquisition</b>"
+#~ msgstr "<b>Сбор данных</b>"
+
+#~ msgid "MB"
+#~ msgstr "Мбайт"
+
+#~ msgid "Load"
+#~ msgstr "Загрузка"
+
+#~ msgid "Unable to load file."
+#~ msgstr "Невозможно загрузить файл."
+
+#~ msgid "Move DICOM Image?"
+#~ msgstr "Загрузить изображение?"
+
+#~ msgid "Get Image"
+#~ msgstr "Получение изображения"
+
+#~ msgid "Get DICOM image from the localhost server"
+#~ msgstr "Загрузить изображение с местного узла"
+
+#~ msgid "ConQuest Store"
+#~ msgstr "Запись на сервер ConQuest"
+
+#~ msgid "Network Peer Store"
+#~ msgstr "Запись на сетевой сервер"
+
+#~ msgid "<b>Storage failed!</b>"
+#~ msgstr "<b>Сохранение невозможно!</b>"
+
+#~ msgid "Storage State"
+#~ msgstr "Состояние записи"
+
+#, fuzzy
+#~ msgid "Save As"
+#~ msgstr "Сохранить _как..."
+
+#~ msgid "Connection State"
+#~ msgstr "Состояние соединения"
+
+#~ msgid "Capacities (Cntl+P)"
+#~ msgstr "Емкости (Cntl+P)"
+
+#~ msgctxt "PACS"
+#~ msgid "Name"
+#~ msgstr "Имя"
+
+#~ msgid "PACS Servers"
+#~ msgstr "PACS Серверы"
+
+#~ msgid "Test"
+#~ msgstr "Проверка соединения"
+
+#~ msgid "Reset Detector Array"
+#~ msgstr "Сброс чипов детекторных сборок"
+
+#~ msgid "_Lining Adjustment..."
+#~ msgstr "_Подстройка пьедесталов..."
+
+#~ msgid "Array Speed"
+#~ msgstr "Линейка"
+
+#~ msgid "X-ray Speed"
+#~ msgstr "Излучатель"
+
+#~ msgid "Select Capacity"
+#~ msgstr "Выбор емкости чипа"
+
+#, fuzzy
+#~ msgid "S_canner"
+#~ msgstr "Сканер"
+
+#, fuzzy
+#~ msgid "_Reset array chips"
+#~ msgstr "Сброс параметров излучателя"
+
+#, fuzzy
+#~ msgid "_Hotmetal"
+#~ msgstr "Горячий метал"
+
+#~ msgid "Checking connection with the server..."
+#~ msgstr "Проверка соединения с сервером..."
+
+#~ msgid "Sending image file to the server..."
+#~ msgstr "Передача файла изображения на сервер..."
+
+#~ msgid "Logs"
+#~ msgstr "Сообщения"
+
+#~ msgid "Loading Error"
+#~ msgstr "Ошибка загрузки"
+
+#~ msgid "_Calibration Accuracy"
+#~ msgstr "Калибровка"
+
+#~ msgid "_Data"
+#~ msgstr "_Данные"
+
+#~ msgid "_Raw"
+#~ msgstr "_Исходные"
+
+#~ msgid "_Calibrated"
+#~ msgstr "_Калиброванные"
+
+#~ msgid "_Levels..."
+#~ msgstr "_Уровни яркости..."
+
+#~ msgid "Draw _Margins"
+#~ msgstr "Рисовать _границы"
+
+#~ msgid "Show detector's margins on an image"
+#~ msgstr "Отображать границы детекторов на изображении"
+
+#~ msgid "Draw _Broken Strips"
+#~ msgstr "Рисовать «_битые» каналы"
+
+#~ msgid "Show broken strips on the image"
+#~ msgstr "Отображать «битые» каналы на изображении"
+
+#~ msgid "S_tudy"
+#~ msgstr "_Обследование"
+
+#~ msgctxt "Study"
+#~ msgid "_New Data..."
+#~ msgstr "_Новое обследование..."
+
+#~ msgid "Fill a new study data"
+#~ msgstr "Заполнить данные нового обследования"
+
+#~ msgid "Edit current study data"
+#~ msgstr "Изменить данные текущего обследования"
+
+#~ msgid "Turn off Freezing"
+#~ msgstr "Выключить охлаждение"
+
+#~ msgid "Calculate lining coefficients"
+#~ msgstr "Расчет коэффициентов выравнивания"
+
+#~ msgid "Image A_rchive..."
+#~ msgstr "_Архив снимков..."
+
+#~ msgid "Find Patient's Image In Archive"
+#~ msgstr "Найти снимок пациента в архиве"
+
+#~ msgid "cm"
+#~ msgstr "см"
+
+#~ msgid "kg"
+#~ msgstr "кг"
+
+#~ msgid "High voltage:"
+#~ msgstr "Напряжение:"
+
+#~ msgid "<span weight=\"bold\">X-ray Parameters</span>"
+#~ msgstr "<span weight='bold'>Параметры рентгеновского излучателя</span>"
+
+#~ msgid "<span weight=\"bold\">Image Width</span>"
+#~ msgstr "<span weight=\"bold\">Ширина снимка</span>"
+
+#~ msgctxt "Label"
+#~ msgid "Acquisition"
+#~ msgstr "Снимок"
+
+#~ msgid "Current Capasity"
+#~ msgstr "Емкости"
+
+#~ msgid "Adjust Image Levels"
+#~ msgstr "Регулировка уровней яркости"
+
+#~ msgid "<span weight='bold'>Before</span>"
+#~ msgstr "<span weight='bold'>До</span>"
+
+#~ msgid "<span weight='bold'>After</span>"
+#~ msgstr "<span weight='bold'>После</span>"
+
+#~ msgid "_Upper:"
+#~ msgstr "_Верхний:"
+
+#~ msgid "_Lower:"
+#~ msgstr "_Нижний:"
+
+#~ msgid "_Gamma:"
+#~ msgstr "_Гамма:"
+
+#~ msgid "Count Levels"
+#~ msgstr "Уровни (счет АЦП)"
+
+#~ msgid "Image Archive (Cntl+R)"
+#~ msgstr "Архив Снимков (Cntl+R)"
+
+#~ msgid "Device Name"
+#~ msgstr "Устройство"
+
+#~ msgid "Object File"
+#~ msgstr "Файл"
+
+#~ msgid "Calculate Lining Coefficients (Cntl+L)"
+#~ msgstr "Расчет коэффициентов выравнивания (Cntl+L)"
+
+#~ msgid "Chip codes"
+#~ msgstr "Коды чипов"
+
+#~ msgid "_Directory"
+#~ msgstr "_Каталог"
+
+#~ msgid "<span weight=\"bold\">Conquest localhost PACS server</span>"
+#~ msgstr "<span weight=\"bold\">Файлы PACS сервера conquest</span>"
+
+#~ msgid "F"
+#~ msgstr "Ж"
+
+#~ msgid "M"
+#~ msgstr "М"
+
+#~ msgid "O"
+#~ msgstr "Др."
+
+#~ msgid "IHEP"
+#~ msgstr "ИФВЭ"
+
+#~ msgid "ID - %1, %2 (%3 year of birth)"
+#~ msgstr "Номер карты — %1, %2 (%3 г.р.)"
+
+#~ msgid "Select Ch_ip..."
+#~ msgstr "Выбор _чипа..."
+
+#~ msgid "Chip Selection"
+#~ msgstr "Выбор чипа"
+
+#~ msgid "_Select"
+#~ msgstr "_Выбрать"
+
+#~ msgid "%1 (# %2)"
+#~ msgstr "%1 (№ %2)"
+
+#~ msgid "_Chip code:"
+#~ msgstr "_Код чипа:"
+
+#~ msgid "Reconstruction"
+#~ msgstr "Реконструкция"
+
+#~ msgid "Reconstruction of a new image."
+#~ msgstr "Реконструкция нового изображения."
+
+#~ msgid "Apply a new data filter."
+#~ msgstr "Используется новый фильтр для данных изображения."
+
+#~ msgid "Apply new pixels intensity."
+#~ msgstr "Изменяется интенсивность изображения."
+
+#~ msgid "Apply new image levels."
+#~ msgstr "Изменяются уровни яркости изображения."
+
+#~ msgid "Apply new image width."
+#~ msgstr "Изменяется ширина снимка."
+
+#~ msgid "Get image data."
+#~ msgstr "Получение данных изображения."
+
+#~ msgid "Apply a new calibration."
+#~ msgstr "Изменяется точность калибровки."
+
+#~ msgid "Detector"
+#~ msgstr "Детектор"
+
+#, fuzzy
+#~ msgid "Image filter."
+#~ msgstr "_Ширина изображения"
+
+#, fuzzy
+#~ msgid "Image intensity."
+#~ msgstr "_Амплитуда сигнала"
+
+#~ msgid "Change Chips Capasity"
+#~ msgstr "Изменить емкость чипов"
+
+#~ msgid "Change Readout Memory Size"
+#~ msgstr "Изменить объем считываемой памяти"
+
+#~ msgid "Patient and study data are empty."
+#~ msgstr "Нет данных обследования и пациента."
+
+#~ msgid "Collimator movement"
+#~ msgstr "Движение коллиматора"
+
+#~ msgctxt "Patient"
+#~ msgid "_Age range:"
+#~ msgstr "_Возраст:"
+
+#~ msgctxt "Study"
+#~ msgid "_Body part:"
+#~ msgstr "_Часть тела / орган:"
+
+#~ msgctxt "Study"
+#~ msgid "_Position:"
+#~ msgstr "_Положение пациента:"
+
+#~ msgctxt "Study"
+#~ msgid "_Orientation:"
+#~ msgstr "_Ориентация пациента:"
+
+#~ msgid "<span weight=\"bold\">Procedure Parameters</span>"
+#~ msgstr "<span weight='bold'>Параметры обследования</span>"
+
+#~ msgid "<span weight=\"bold\">Acquisition Parameters</span>"
+#~ msgstr "<span weight=\"bold\">Параметры сканирования</span>"
+
+#~ msgid "_Details"
+#~ msgstr "_Подробности"
+
+#~ msgid "Patient and Study Information (Cntl+S)"
+#~ msgstr "Данные пациента и обследования (Cntl+S)"
+
+#~ msgid "Anonymize _Patient"
+#~ msgstr "Анонимный _пациент"
+
+#~ msgid "Anonymize _Study"
+#~ msgstr "Анонимное _обследование"
+
+#~ msgid "Use as Default Study Data"
+#~ msgstr "_Использовать по умолчанию"
+
+#~ msgid "Required"
+#~ msgstr "Обязательные данные"
+
+#~ msgid "Commentaries, Descriptions, Diagnosis"
+#~ msgstr "Комментарии, описания, диагноз"
+
+#~ msgctxt "Patient"
+#~ msgid "_ID:"
+#~ msgstr "№ _карты:"
+
+#~ msgid "Set date of birth from a calendar"
+#~ msgstr "Указать дату рождения в календаре"
+
+#~ msgid "<span weight='bold'>Patient Data</span>"
+#~ msgstr "<span weight='bold'>Пациент</span>"
+
+#~ msgid "M_iddle Name:"
+#~ msgstr "_Отчество:"
+
+#~ msgid "<span weight='bold'>Study Data</span>"
+#~ msgstr "<span weight='bold'>Обследования</span>"
+
+#~ msgid "_Home Address:"
+#~ msgstr "А_дрес:"
+
+#~ msgid "_Phones:"
+#~ msgstr "_Телефон:"
+
+#~ msgid "<span weight='bold'>Personal Data</span>"
+#~ msgstr "<span weight='bold'>Персональные данные</span>"
+
+#~ msgid "m"
+#~ msgstr "м"
+
+#~ msgid "<span weight='bold'>Anthropometry</span>"
+#~ msgstr "<span weight='bold'>Антропометрия</span>"
+
+#~ msgid "<span weight='bold'>Institution</span>"
+#~ msgstr "<span weight='bold'>Организация</span>"
+
+#~ msgid "<span weight='bold'>Study</span>"
+#~ msgstr "<span weight='bold'>Обследование</span>"
+
+#~ msgid "_Study Description:"
+#~ msgstr "Описание о_бследования:"
+
+#~ msgid "S_eries Description:"
+#~ msgstr "Описание _серии:"
+
+#~ msgid "Supposed _Diagnoses:"
+#~ msgstr "Предполагаемый диагноз:"
+
+#~ msgid "P_atient Comments:"
+#~ msgstr "Комментарии _пациента:"
+
+#~ msgid "Reconstruction with a new data filter has been started."
+#~ msgstr "Реконструкция с новым фильром данных изображения начата."
+
+#~ msgid "Writing lining coefficients."
+#~ msgstr "Запись пьедесталов."
+
+#~ msgid "_Change"
+#~ msgstr "_Изменить"
+
+#~ msgid "High Voltage"
+#~ msgstr "Напряжение"
+
+#~ msgid "Radiation Output"
+#~ msgstr "Радиационный выход"
+
+#~ msgid ""
+#~ "High Voltage - <span weight=\"bold\">kV</span>.\n"
+#~ "Radiation Output - <span weight=\"bold\"> (mR*m*m) / (mAs)</span>."
+#~ msgstr ""
+#~ "Размерность напряжения — <span weight='bold'>кВ</span>.\n"
+#~ "Размерность радиационного выхода — <span weight='bold'>(мР × м²) × (мА × "
+#~ "с)⁻¹</span>."
+
+#~ msgid "_Radiation Output"
+#~ msgstr "_Радиационный выход"
+
+#~ msgid "Radiation Output:"
+#~ msgstr "Радиационный выход:"
+
+#~ msgctxt "Position"
+#~ msgid "Supine"
+#~ msgstr "На спине"
+
+#~ msgctxt "Position"
+#~ msgid "Prone"
+#~ msgstr "На животе"
+
+#~ msgctxt "Position"
+#~ msgid "Decubitus Left"
+#~ msgstr "На левом боку"
+
+#~ msgctxt "Position"
+#~ msgid "Decubitus Right"
+#~ msgstr "На правом боку"
+
+#~ msgctxt "Orientation"
+#~ msgid "Head First"
+#~ msgstr "Головой вперед"
+
+#~ msgctxt "Orientation"
+#~ msgid "Feet First"
+#~ msgstr "Головой назад"
+
+#~ msgid "Less than half a year"
+#~ msgstr "Менее полутора лет"
+
+#~ msgid "From half a year to 3"
+#~ msgstr "От полутора до 3 лет"
+
+#~ msgid "From 3 to 8"
+#~ msgstr "От 3 до 8 лет"
+
+#~ msgid "From 8 to 13"
+#~ msgstr "От 8 до 13 лет"
+
+#~ msgid "From 13 to 19"
+#~ msgstr "От 13 до 19 лет"
+
+#~ msgid "More than 19"
+#~ msgstr "Старше 19 лет"
+
+#~ msgid "Lungs"
+#~ msgstr "Легкие"
+
+#~ msgid "Skull"
+#~ msgstr "Череп"
+
+#~ msgid "Spine"
+#~ msgstr "Позвоночник"
+
+#~ msgid "Collar bone, Sholder"
+#~ msgstr "Плечо, Ключица"
+
+#~ msgid "Pelvis"
+#~ msgstr "Таз"
+
+#~ msgid "Hip joints"
+#~ msgstr "Тазобедр. суставы"
+
+#~ msgid "Hip"
+#~ msgstr "Бедро"
+
+#~ msgid "Abdominal space"
+#~ msgstr "Брюшная полость"
+
+#~ msgid "Pyelougraphy"
+#~ msgstr "Урография"
+
+#~ msgid "Cystography"
+#~ msgstr "Цистография"
+
+#~ msgid "Cervical spine"
+#~ msgstr "Шейный отдел позвоночника"
+
+#~ msgid "Thoracic spine"
+#~ msgstr "Грудной отдел позвоночника"
+
+#~ msgid "Lumbar spine"
+#~ msgstr "Поясничный отдел позвоночника"
+
+#~ msgid "Ribs, Breast bone"
+#~ msgstr "Ребра, Грудина"
+
+#~ msgid "Pelvis, Sacral bone"
+#~ msgstr "Таз, Крестец"
+
+#~ msgid "Stomach"
+#~ msgstr "Желудок"
+
+#~ msgid "Bowel"
+#~ msgstr "Кишечник"
+
+#~ msgid "Cholecystography"
+#~ msgstr "Холецистография"
+
+#~ msgid "Lungs fluorography"
+#~ msgstr "Флюорография легких"
+
+#~ msgid "Alimentary canal"
+#~ msgstr "Пищевод"
+
+#~ msgid ""
+#~ "File descriptor is attached to an object which is unsuitable for reading."
+#~ msgstr "ескриптор указывает на объект, непригодный для чтения."
+
+#~ msgid "All images"
+#~ msgstr "Все изображения"
+
+#~ msgid "Manufacturer"
+#~ msgstr "Оборудование"
+
+#~ msgid "Serial port error."
+#~ msgstr "Ошибка установки параметров устройства."
+
+#~ msgctxt "Dose"
+#~ msgid "Unknown"
+#~ msgstr "Нет данных"
+
+#~ msgid "μSv"
+#~ msgstr "мкЗв"
+
+#~ msgid "_Load Preset"
+#~ msgstr "_Загрузить из файла"
+
+#~ msgid "High Voltage - <span weight=\"bold\">kV</span>."
+#~ msgstr ""
+#~ "Размерность напряжения — <span weight='bold'>кВ</span>.\n"
+#~ "Размерность радиационного выхода — <span weight='bold'>(мР × м²) / (мА × "
+#~ "с)</span>."
+
+#~ msgid "High Voltage - kV"
+#~ msgstr "Высокое напряжение — кВ"
+
+#~ msgid "Radiation Output - (mR \\u00D7 m\\u00B2) / (mA \\u00D7 s)"
+#~ msgstr "Радиационный выход — (мР \\u00D7 м\\u00B2) / (мА \\u00D7 с)"
+
+#~ msgid "_Unknown"
+#~ msgstr "_Неизвестная"
+
+#~ msgid "Use Freezing"
+#~ msgstr "Включить охлаждение при запуске"
+
+#~ msgid "Choose Current Chip"
+#~ msgstr "Выбрать чип"
+
+#~ msgid "Chip %1"
+#~ msgstr "Чип %1"
+
+#~ msgid "Exposure time"
+#~ msgstr "Время экспозиции"
+
+#~ msgid "s"
+#~ msgstr "c"
+
+#~ msgid "sm"
+#~ msgstr "см"
+
+#~ msgctxt "Name"
+#~ msgid "Unknown"
+#~ msgstr "Неизвестно"
+
+#~ msgctxt "ID"
+#~ msgid "Unknown"
+#~ msgstr "Неизвестен"
+
+#~ msgctxt "Address"
+#~ msgid "Unknown"
+#~ msgstr "Неизвестен"
+
+#~ msgctxt "Date"
+#~ msgid "Unknown"
+#~ msgstr "Неизвестна"
+
+#~ msgctxt "Weight"
+#~ msgid "Unknown"
+#~ msgstr "Неизвестен"
+
+#~ msgctxt "Height"
+#~ msgid "Unknown"
+#~ msgstr "Неизвестен"
+
+#~ msgctxt "Body Part"
+#~ msgid "Unknown"
+#~ msgstr "Неизвестна"
+
+#~ msgctxt "Description"
+#~ msgid "Unknown"
+#~ msgstr "Неизвестно"
+
+#~ msgctxt "Institution"
+#~ msgid "Unknown"
+#~ msgstr "Неизвестна"
+
+#~ msgctxt "Manufacturer"
+#~ msgid "Unknown"
+#~ msgstr "Неизвестен"
+
+#~ msgctxt "Time"
+#~ msgid "Unknown"
+#~ msgstr "Неизвестно"
+
+#~ msgctxt "Orientation"
+#~ msgid "Unknown"
+#~ msgstr "Неизвестна"
+
+#~ msgctxt "Orientation"
+#~ msgid "Other"
+#~ msgstr "Другая"
+
+#~ msgctxt "Position"
+#~ msgid "Unknown"
+#~ msgstr "Неизвестно"
+
+#~ msgctxt "Position"
+#~ msgid "Other"
+#~ msgstr "Другая"
+
+#~ msgctxt "Sex"
+#~ msgid "Unknown"
+#~ msgstr "Неизвестен"
+
+#~ msgid "Wrong size of the chip lining data."
+#~ msgstr "Неверные данные пьедесталов."
+
+#~ msgid "_Get Lining"
+#~ msgstr "Данные выравнивания"
+
+#~ msgid "Exposure Time"
+#~ msgstr "Время экспозиции"
+
+#~ msgid "X-ray Check On"
+#~ msgstr "Проверка готовности"
+
+#~ msgid "X-ray Check Off"
+#~ msgstr "Отключение проверки"
+
+#~ msgid "X-ray Check"
+#~ msgstr "Проверка готовности"
+
+#~ msgid "_Amplitude"
+#~ msgstr "Амплитуда сигнала"
+
+#~ msgid ""
+#~ "File descriptor is attached to an object which is unsuitable for reading"
+#~ msgstr "ескриптор указывает на объект, непригодный для чтения."
+
+#~ msgid "Write error."
+#~ msgstr "Ошибка записи данных."
+
+#~ msgid "Parking scanner"
+#~ msgstr "Возврат сканера на старт"
+
+#~ msgid "Power supply malfunction"
+#~ msgstr "Авария источника анодного напряжения"
+
+#~ msgid "Ua invalid from below"
+#~ msgstr "Анодное напряжение ниже допустимого"
+
+#~ msgid "Ia invalid from below"
+#~ msgstr "Анодный ток ниже допустимого"
+
+#~ msgid "Ua invalid from above"
+#~ msgstr "Анодное напряжение выше допустимого"
+
+#~ msgid "Ia invalid from above"
+#~ msgstr "Анодный ток ниже допустимого"
+
+#~ msgid "+5V is invalid"
+#~ msgstr "Напряжение +5 В неверно"
+
+#~ msgid "+15V is invalid"
+#~ msgstr "Напряжение +15 В неверно"
+
+#~ msgid "Connection line damaged"
+#~ msgstr "Линия связи повреждена"
+
+#~ msgid "Exchange invalid"
+#~ msgstr "Неверный протокол обмена"
+
+#~ msgid "Unknown state"
+#~ msgstr "Неизвестное состояние"
+
+#~ msgid "Patient _position:"
+#~ msgstr "_Положение пациента:"
+
+#~ msgid "Patient _orientation:"
+#~ msgstr "_Ориентация пациента:"
+
+#~ msgid "Procedure parameters"
+#~ msgstr "Параметры процедуры"
+
+#~ msgctxt "Age"
+#~ msgid "Unknown"
+#~ msgstr "Неизвестен"
+
+#~ msgid "Error"
+#~ msgstr "Ошибка"
+
+#~ msgid "Unknown mode"
+#~ msgstr "Неизвестный режим"
+
+#~ msgid "Initiation Error"
+#~ msgstr "Ошибка инициирования"
+
+#~ msgid "Unable to run acquisition properly."
+#~ msgstr "Ошибка при старте сбора данных."
+
+#~ msgid "One bank: 8 MBytes"
+#~ msgstr "Одна ячейка: 8 МБайт"
+
+#~ msgid "Two banks: 16 MBytes"
+#~ msgstr "Две ячейки: 16 МБайт"
+
+#~ msgid "Three banks: 24 MBytes"
+#~ msgstr "Три ячейки: 24 МБайта"
+
+#~ msgid "Four banks: 32 MBytes"
+#~ msgstr "Четыре ячейки: 32 МБайта"
+
+#~ msgid "Banks:"
+#~ msgstr "Банки памяти:"
+
+#~ msgid "<span weight=\"bold\">Amount of memory to read</span>"
+#~ msgstr "<span weight='bold'>Количество вычитываемой памяти</span>"
+
+#~ msgid "_Days"
+#~ msgstr "Дн_ей"
+
+#~ msgid "_Weeks"
+#~ msgstr "Недел_ь"
+
+#~ msgid "_Months"
+#~ msgstr "Мес_яцев"
+
+#~ msgid "_Years"
+#~ msgstr "_Лет"
+
+#~ msgid "_Last Name <span foreground='red'>*</span> :"
+#~ msgstr "_Фамилия <span foreground='red'>*</span> :"
+
+#~ msgid "_First Name <span foreground='red'>*</span> :"
+#~ msgstr "_Имя <span foreground='red'>*</span> :"
+
+#~ msgid "_Middle Name <span foreground='red'>*</span> :"
+#~ msgstr "_Отчество <span foreground='red'>*</span> :"
+
+#~ msgctxt "Patient"
+#~ msgid "_ID <span foreground='red'>*</span> :"
+#~ msgstr "№ _карты <span foreground='red'>*</span> :"
+
+#~ msgid "_Birthday <span foreground='red'>*</span> :"
+#~ msgstr "Дата ро_ждения <span foreground='red'>*</span> :"
+
+#~ msgid "<span weight='bold'>Home address and phone</span>"
+#~ msgstr "<span weight='bold'>Домашний адрес и телефон</span>"
+
+#~ msgid "<span foreground='red'>*</span> - required entries"
+#~ msgstr "<span foreground='red'>*</span> — Пункты, обязательные к заполнению"
+
+#~ msgid "Patient's page"
+#~ msgstr "Данные пациента"
+
+#~ msgctxt "Study"
+#~ msgid "_ID <span foreground='red'>*</span> :"
+#~ msgstr "_Код обследования <span foreground='red'>*</span> :"
+
+#~ msgid "_Position <span foreground='red'>*</span> :"
+#~ msgstr "_Положение пациента <span foreground='red'>*</span> :"
+
+#~ msgid "_Orientation <span foreground='red'>*</span> :"
+#~ msgstr "О_риентацие пациента <span foreground='red'>*</span> :"
+
+#~ msgid "<span weight='bold'>Procedure</span>"
+#~ msgstr "<span weight='bold'>Процедура</span>"
+
+#~ msgctxt "Institution"
+#~ msgid "_Name:"
+#~ msgstr "Наз_вание:"
+
+#~ msgid "Study's page"
+#~ msgstr "Данные обследования"
+
+#~ msgid "New patient and study assistant (%1 of %2) (Cntl+N)"
+#~ msgstr "Ассистент нового обследования (%1 из %2) (Cntl+N)"
+
+#~ msgid "Study ID"
+#~ msgstr "Код обследование"
+
+#~ msgid "Study Date"
+#~ msgstr "Дата обследования"
+
+#~ msgid "Study Time"
+#~ msgstr "Время обследование"
+
+#~ msgid "Patient ID"
+#~ msgstr "№ карты"
+
+#~ msgid "Patient Sex"
+#~ msgstr "Пол пациента"
+
+#~ msgid "Unable to prepare query"
+#~ msgstr "Невозможно открыть файл."
+
+#~ msgctxt "Position"
+#~ msgid "Head First-Supine"
+#~ msgstr "На спине — Головой вперед"
+
+#~ msgctxt "Position"
+#~ msgid "Head First-Prone"
+#~ msgstr "На животе — Головой вперед"
+
+#~ msgctxt "Position"
+#~ msgid "Head First-Decubitus Left"
+#~ msgstr "На левом боку — Головой вперед"
+
+#~ msgctxt "Position"
+#~ msgid "Head First-Decubitus Right"
+#~ msgstr "На правом боку — Головой вперед"
+
+#~ msgctxt "Position"
+#~ msgid "Feet First-Supine"
+#~ msgstr "На спине — Головой назад"
+
+#~ msgctxt "Position"
+#~ msgid "Feet First-Prone"
+#~ msgstr "На животе — Головой назад"
+
+#~ msgctxt "Position"
+#~ msgid "Feet First-Decubitus Left"
+#~ msgstr "На левом боку — Головой назад"
+
+#~ msgctxt "Position"
+#~ msgid "Feet First-Decubitus Right"
+#~ msgstr "На правом боку — Головой назад"
+
+#~ msgid "_Settings file:"
+#~ msgstr "Файл _настроек:"
+
+#~ msgid "_Binary file:"
+#~ msgstr "_Исполняемый файл:"
+
+#~ msgid "X-Ray source"
+#~ msgstr "Излучатель"
+
+#~ msgid "Pa_ssword:"
+#~ msgstr "П_ароль:"
+
+#~ msgid "On the back"
+#~ msgstr "На спине"
+
+#~ msgid "On the face"
+#~ msgstr "На животе"
+
+#~ msgid "On the right side"
+#~ msgstr "На правом боку"
+
+#~ msgid "On the left side"
+#~ msgstr "На левом боку"
+
+#~ msgid "ScanAmati \\u2014 %2 (%3) : %4"
+#~ msgstr "СканАмати \\u2014 %2 (%3) : %4"
+
+#~ msgid "Error while starting exposure process"
+#~ msgstr "Ошибка при старте экспозиции"
+
+#~ msgid "Find Patient in Database"
+#~ msgstr "Поиск пациента в базе данных"
+
+#~ msgid "Patient Database (Cntl+F)"
+#~ msgstr "База данных пациентов (Shift+Cntl+P)"
+
+#~ msgctxt "Study"
+#~ msgid "_ID:"
+#~ msgstr "_Код обследования:"
+
+#~ msgid "The exposure has been stopped because of"
+#~ msgstr "Процесс экспозиции преостановлен из-за"
+
+#~ msgid "The acquisition has been stopped because of"
+#~ msgstr "Процесс чтения и обработки данных преостановлен из-за"
+
+#~ msgid "years"
+#~ msgstr "_Лет"
+
+#~ msgid "months"
+#~ msgstr "Мес_яцев"
+
+#~ msgid "weeks"
+#~ msgstr "Недел_ь"
+
+#~ msgid "days"
+#~ msgstr "Дн_ей"
+
+#~ msgid "_First Name :"
+#~ msgstr "_Имя:"
+
+#~ msgid "Set patient's additional information"
+#~ msgstr "Заполнить дополнительные данные пациента"
+
+#~ msgid "Study's page: requred information"
+#~ msgstr "Обязательные данные обследования"
+
+#~ msgid "_Aliases:"
+#~ msgstr "_Псевдонимы:"
+
+#~ msgid "Additional patient information"
+#~ msgstr "Дополнительная информация о пациенте"
+
+#~ msgid "Additional study information"
+#~ msgstr "Дополнительная информация обследования"
+
+#~ msgid "<span weight='bold'>Anthropometry</span> (in time of procedure)"
+#~ msgstr "<span weight='bold'>Антропометрия</span> (на момент обследования)"
+
+#~ msgid "<span weight='bold'>Age</span> (in time of procedure)"
+#~ msgstr "<span weight='bold'>Возраст</span> (на момент обследования)"
+
+#~ msgid "I_nstitution:"
+#~ msgstr "Ор_ганизация:"
+
+#~ msgid "_Manufacturer:"
+#~ msgstr "О_борудование:"
+
+#~ msgid "_Last Name"
+#~ msgstr "_Фамилия"
+
+#~ msgctxt "Patient"
+#~ msgid "_ID"
+#~ msgstr "№ _карты"
+
+#~ msgid "Reset x-ray source "
+#~ msgstr "Сброс параметров излучателя"
+
+#~ msgid "Return to start"
+#~ msgstr "Возвращение на старт..."
+
+#~ msgid "Cooling system"
+#~ msgstr "Охлаждение"
+
+#~ msgid "Reset x-ray source..."
+#~ msgstr "Сброс параметров излучателя..."
+
+#~ msgid "mBq"
+#~ msgstr "мкЗв"
+
+#~ msgid "Unable to read data from the file \"%1\"."
+#~ msgstr "Невозможно прочитать данные из файла \"%1\"."
+
+#~ msgid "Invalid name of the file."
+#~ msgstr "Неправильное имя файла."
+
+#~ msgid "Unsuccessful read from the file."
+#~ msgstr "Невозможно прочитать данные из файла."
+
+#~ msgid "Unsupported data format."
+#~ msgstr "Неподдерживаемый формат данных."
+
+#~ msgid "Unknown error while opening."
+#~ msgstr "Неизвестная ошибка."
+
+#~ msgid "X-Ray unknown status"
+#~ msgstr "Неизвесное состояние излучателя"
+
+#~ msgid "%1 m"
+#~ msgstr "%1 м"
+
+#~ msgid "%1 kg"
+#~ msgstr "%1 кг"
+
+#~ msgid "%1 mA"
+#~ msgstr "%1 мА"
+
+#~ msgid "%2.1f mA"
+#~ msgstr "%2.1f мА"
+
+#~ msgid "Unsupported file format."
+#~ msgstr "Неподдерживаемый формат файла."
+
+#~ msgid "Invalid or damaged file data."
+#~ msgstr "Несовместимые или поврежденные данные в файле."
+
+#~ msgid "_Preparation..."
+#~ msgstr "_Подготовка к работе..."
+
+#~ msgid "Prepare scanner to further acquisition"
+#~ msgstr "Подготовить сканер к последующей работе"
+
+#~ msgid "_Testing units..."
+#~ msgstr "П_роверка подсистем..."
+
+#~ msgid "Test scanner subsystems"
+#~ msgstr "Проверить подсистемы сканера перед работой"
+
+#~ msgid "Value of TEC"
+#~ msgstr "Код элемента Пельтье"
+
+#~ msgid "Connect scanner"
+#~ msgstr "Подключить сканер"
+
+#~ msgid "Lining first half write error."
+#~ msgstr "Ошибка при записи комманды первой половины данных выравнивания."
+
+#~ msgid "Lining second half write error."
+#~ msgstr "Ошибка при записи комманды второй половины данных выравнивания."
+
+#~ msgid "Altera counts start error."
+#~ msgstr "Ошибка при записи комманды старта счетчиков альтеры."
+
+#~ msgid "Detector zero error."
+#~ msgstr "Ошибка при записи комманды сброса детекторов."
+
+#~ msgid "Altera counts stop error."
+#~ msgstr "Ошибка при записи комманды остановки счетчиков альтеры."
+
+#~ msgid "Engines start error."
+#~ msgstr "Ошибка при записи комманды старта двигателей."
+
+#~ msgid "Engines stop error."
+#~ msgstr "Ошибка при записи комманды остановки двигателей."
+
+#~ msgid "Altera reset error."
+#~ msgstr "Ошибка при записи комманды сброса альтеры."
+
+#~ msgid "Detector reset error."
+#~ msgstr "Ошибка при записи комманды сброса детекторов."
+
+#~ msgid "Peltier code error."
+#~ msgstr "Ошибка при записи комманды сброса альтеры."
+
+#~ msgid "Peltier turn off error."
+#~ msgstr "Ошибка при записи комманды остановки счетчиков альтеры."
+
+#~ msgid "X-Ray check line error."
+#~ msgstr "Ошибка при записи комманды проверки линии связи рентгена."
+
+#~ msgid "X-Ray get state error."
+#~ msgstr "Ошибка при записи комманды проверки состояния рентгена."
+
+#~ msgid "X-Ray reset error."
+#~ msgstr "Ошибка при записи комманды сброса рентгена."
+
+#~ msgid "X-Ray start error."
+#~ msgstr "Ошибка при записи комманды старта рентгена."
+
+#~ msgid "X-Ray stop error."
+#~ msgstr "Ошибка при записи комманды остановки рентгена."
+
+#~ msgid "Exposition - %1%%"
+#~ msgstr "Экспозиция — %1%%"
+
+#~ msgid "Acquisition - %1%%"
+#~ msgstr "Чтение и обработка данных — %1%%"
+
+#~ msgid "X-ray source disconnected"
+#~ msgstr "Излучатель отключен"
+
+#~ msgid "X-ray source isn't ready"
+#~ msgstr "Излучатель не готов"
+
+#~ msgid "X-ray source is ready"
+#~ msgstr "Излучатель не готов"
+
+#~ msgid "Lining - %1%%"
+#~ msgstr "Выравнивание детекторов — %1%%"
+
+#~ msgid "X-ray source not ready"
+#~ msgstr "Излучатель не готов"
+
+#~ msgid "Basics"
+#~ msgstr "Основы"
+
+#~ msgctxt "Process"
+#~ msgid "Acquisition"
+#~ msgstr "Чтение и обработка данных"
+
+#~ msgid "The x-ray scanner has been disconnected."
+#~ msgstr "Рентгеновский сканер отключен."
+
+#~ msgctxt "Temperature"
+#~ msgid "Unknown"
+#~ msgstr "Неизвестна"
+
+#~ msgid "Scanner is ready"
+#~ msgstr "Сканер готов"
+
+#~ msgid "Scanner isn't ready"
+#~ msgstr "Сканер не готов"
+
+#~ msgctxt "Process"
+#~ msgid "Exposition"
+#~ msgstr "Экспозиция"
+
+#~ msgid "Any processes are blocked."
+#~ msgstr "Все процессы сканера остановленны."
+
+#~ msgid "Amati - %1 / %2"
+#~ msgstr "СканАмати — %1 / %2"
+
+#~ msgid "Calibration - %1%%"
+#~ msgstr "Калибровка детекторов — %1%%"
+
+#~ msgid "Calibration process is stoped."
+#~ msgstr "Процесс калибровки детекторов остановлен."
+
+#~ msgctxt "Process"
+#~ msgid "Scanner is ready"
+#~ msgstr "Сканер готов"
+
+#~ msgid "<span weight=\"bold\">Lining - %1%%</span>"
+#~ msgstr "<span weight=\"bold\">Выравнивание детекторов — %1%%</span>"
+
+#~ msgid "<span weight=\"bold\">Calibration - %1%%</span>"
+#~ msgstr "<span weight=\"bold\">Калибровка детекторов — %1%%</span>"
+
+#~ msgid "<span weight=\"bold\">Exposition - %1%%</span>"
+#~ msgstr "<span weight=\"bold\">Экспозиция — %1%%</span>"
+
+#~ msgid "<span weight=\"bold\">Acquisition - %1%%</span>"
+#~ msgstr "<span weight=\"bold\">Чтение и обработка данных — %1%%</span>"
+
+#~ msgid ""
+#~ "The x-ray scanner could not be connected because\n"
+#~ "the device \"%1\" doesn't exists."
+#~ msgstr ""
+#~ "Невозможно подключить сканер, поскольку\n"
+#~ "устройство \"%1\" не обнаруженно."
+
+#~ msgid ""
+#~ "The x-ray scanner could not be connected because\n"
+#~ "the user \"%1\" has no permission\n"
+#~ "for such operation."
+#~ msgstr ""
+#~ "Невозможно подключить сканер поскольку\n"
+#~ "у пользователя \"%1\" нет прав\n"
+#~ "для выполнения этой операции."
+
+#~ msgid "Unexpected error accurs while connecting scanner."
+#~ msgstr "Неизвестная ошибка при подключении сканера."
+
+#~ msgid ""
+#~ "The x-ray scanner could not be disconnected correctly\n"
+#~ "because device \"%1\" hasn't valid file descriptor."
+#~ msgstr ""
+#~ "Невозможно отключить сканер правильно т.к. у устройства\n"
+#~ "\"%1\" нет корректного дескриптора файла."
+
+#~ msgid ""
+#~ "The x-ray scanner could not be disconnected correctly\n"
+#~ "because a input/output error occured."
+#~ msgstr ""
+#~ "Невозможно отключить сканер\n"
+#~ "правильно из-за ошибки ввода/вывода."
+
+#~ msgid ""
+#~ "The x-ray scanner could not be disconnected correctly\n"
+#~ "besause closing was interrupted by a signal."
+#~ msgstr ""
+#~ "Невозможно отключить сканер правильно\n"
+#~ "из-за внешнего сигнала прерывания."
+
+#~ msgid ""
+#~ "The x-ray scanner could not be disconnected correctly\n"
+#~ "besause unexpected error accurs while closing scanner device."
+#~ msgstr ""
+#~ "Невозможно отключить сканер правильно\n"
+#~ "из-за неизвестной ошибки."
+
+#~ msgid "Height"
+#~ msgstr "Рост"
+
+#~ msgid "Weight"
+#~ msgstr "Вес"

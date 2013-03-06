@@ -1,0 +1,1770 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-05 13:21+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: ui/main-window.glade:17 src/main_window.cpp:769
+#: src/main_window_action_handlers.cpp:119 src/main.cpp:105
+msgid "ScanAmati"
+msgstr ""
+
+#: ui/main-window.glade:58 src/main_window_actions.cpp:193
+msgid "_Scanner"
+msgstr ""
+
+#: ui/main-window.glade:89 ui/dicom-information-dialog.glade:1148
+msgid "_Study"
+msgstr ""
+
+#: ui/image-acquisition-dialog.glade:43
+msgid "Run the Acquisition (Cntl+A)"
+msgstr ""
+
+#: ui/image-acquisition-dialog.glade:113
+msgid "High _Voltage:"
+msgstr ""
+
+#: ui/image-acquisition-dialog.glade:126
+msgid "_Exposure:"
+msgstr ""
+
+#: ui/image-acquisition-dialog.glade:172
+msgid "<b>X-ray Parameters</b>"
+msgstr ""
+
+#: ui/image-acquisition-dialog.glade:189
+msgid "Acquisition Parameters..."
+msgstr ""
+
+#: ui/image-acquisition-dialog.glade:237
+msgid "Memory Size:"
+msgstr ""
+
+#: ui/image-acquisition-dialog.glade:248
+msgid "Image Height:"
+msgstr ""
+
+#: ui/image-acquisition-dialog.glade:261
+msgid "Image Width:"
+msgstr ""
+
+#: ui/image-acquisition-dialog.glade:274
+msgid "Data Resize Filter:"
+msgstr ""
+
+#: ui/image-acquisition-dialog.glade:287
+msgid "Calibration:"
+msgstr ""
+
+#: ui/image-acquisition-dialog.glade:300
+msgid "Intensity:"
+msgstr ""
+
+#: ui/image-acquisition-dialog.glade:392
+msgid "<b>Acquisition Parameters</b>"
+msgstr ""
+
+#: ui/image-acquisition-dialog.glade:454
+msgid "_Run"
+msgstr ""
+
+#: ui/image-acquisition-dialog.glade:469
+msgid "_Stop"
+msgstr ""
+
+#: ui/image-acquisition-dialog.glade:490
+#: ui/acquisition-parameters-dialog.glade:175
+msgid "Acquisition"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:96
+msgid "Acquisition Parameters"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:127
+msgid "Linear array movement"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:143
+msgid "X-ray source movement"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:159
+#: src/widgets/information_notebook.cpp:248
+#: src/widgets/information_notebook.cpp:261
+msgid "Exposure"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:197
+msgid "<b>Run Arguments</b>"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:207
+msgid "Run Paramenters"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:248
+#: ui/acquisition-parameters-dialog.glade:646
+msgid "Scanning Time:"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:279
+#: ui/acquisition-parameters-dialog.glade:676
+msgid "Steps:"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:332
+#: ui/acquisition-parameters-dialog.glade:728
+msgid "Array:"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:344
+#: ui/acquisition-parameters-dialog.glade:740
+msgid "X-ray:"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:391
+#: ui/acquisition-parameters-dialog.glade:787
+msgid "<b>Delay</b>"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:434
+#: ui/acquisition-parameters-dialog.glade:513
+#: ui/acquisition-parameters-dialog.glade:830
+#: ui/acquisition-parameters-dialog.glade:907
+msgid "Frequency:"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:443
+#: ui/acquisition-parameters-dialog.glade:522
+#: ui/acquisition-parameters-dialog.glade:838
+#: ui/acquisition-parameters-dialog.glade:915
+msgid "Mode:"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:492
+#: ui/acquisition-parameters-dialog.glade:887
+msgid "Array"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:575
+#: ui/acquisition-parameters-dialog.glade:967
+msgid "X-ray"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:590
+#: ui/acquisition-parameters-dialog.glade:982
+msgid "<b>Speed</b>"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:610
+msgid "<b>Forward</b>"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:1002
+msgid "<b>Reverse</b>"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:1022
+msgid "Equal Movement"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:1044
+msgid "Movement"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:1093
+msgid "<b>Image Height</b>"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:1183
+msgid "Built _In"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:1198
+msgid "_Accurate"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:1215
+msgid "_Custom"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:1238
+msgid "<b>Readout Memory Size</b>"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:1279
+msgid "Full"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:1296
+msgid "Half"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:1313
+msgid "Quarter"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:1336
+msgid "<b>Image Width</b>"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:1364
+#: src/dialogs/image_acquisition.cpp:375 src/main_window_actions.cpp:256
+msgid "Lanczos"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:1381
+#: src/dialogs/image_acquisition.cpp:378 src/main_window_actions.cpp:260
+msgid "Cubic"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:1398
+#: src/dialogs/image_acquisition.cpp:384 src/main_window_actions.cpp:264
+msgid "Bessel"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:1415
+#: src/dialogs/image_acquisition.cpp:381 src/main_window_actions.cpp:268
+msgid "Quadratic"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:1438
+msgid "<b>Filter Type</b>"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:1476
+msgid "<b>Postprocess</b>"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:1526
+#: src/dialogs/image_acquisition.cpp:401 src/main_window_actions.cpp:275
+msgid "Rough"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:1543
+#: src/dialogs/image_acquisition.cpp:398 src/main_window_actions.cpp:279
+msgid "Good"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:1560
+#: src/dialogs/image_acquisition.cpp:395 src/main_window_actions.cpp:283
+msgid "Better"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:1577
+#: src/dialogs/image_acquisition.cpp:392 src/main_window_actions.cpp:287
+msgid "Best"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:1600
+msgid "<b>Calibration Type</b>"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:1628
+#: src/dialogs/image_acquisition.cpp:415
+msgid "Original"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:1645
+#: src/dialogs/image_acquisition.cpp:409
+msgid "Linear"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:1662
+msgid "Locarithmic"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:1685
+msgid "<b>Intensity Type</b>"
+msgstr ""
+
+#: ui/acquisition-parameters-dialog.glade:1712
+msgid "Image"
+msgstr ""
+
+#: ui/lining-acquisition-dialog.glade:16
+msgid "Lining Acquisition (Cntl+L)"
+msgstr ""
+
+#: ui/lining-acquisition-dialog.glade:67
+msgid "ADC _count:"
+msgstr ""
+
+#: ui/lining-acquisition-dialog.glade:110
+msgid "_Start"
+msgstr ""
+
+#: ui/lining-acquisition-dialog.glade:125
+msgid "S_top"
+msgstr ""
+
+#: ui/lining-acquisition-dialog.glade:165
+msgid "_Rough"
+msgstr ""
+
+#: ui/lining-acquisition-dialog.glade:182
+msgid "_Optimal"
+msgstr ""
+
+#: ui/lining-acquisition-dialog.glade:199
+msgid "_Precise"
+msgstr ""
+
+#: ui/lining-acquisition-dialog.glade:220
+msgid "Accuracy"
+msgstr ""
+
+#: ui/conquest-archive-dialog.glade:8
+msgid "Find Image On The Conquest Archive Server (Cntl+F)"
+msgstr ""
+
+#: ui/conquest-archive-dialog.glade:35
+msgid "Patient _Name:"
+msgstr ""
+
+#: ui/conquest-archive-dialog.glade:48
+msgid "_Patient ID:"
+msgstr ""
+
+#: ui/conquest-archive-dialog.glade:63
+msgid "_Study ID:"
+msgstr ""
+
+#: ui/conquest-archive-dialog.glade:185
+msgid "_Case Sensitive"
+msgstr ""
+
+#: ui/conquest-archive-dialog.glade:201
+msgid "Additional Query _Parameters"
+msgstr ""
+
+#: ui/chip-capacities-dialog.glade:8
+msgid "Chip Capacities"
+msgstr ""
+
+#: ui/chip-capacities-dialog.glade:59
+msgid "1,0 pF"
+msgstr ""
+
+#: ui/chip-capacities-dialog.glade:75
+msgid "2,5 pF"
+msgstr ""
+
+#: ui/chip-capacities-dialog.glade:91
+msgid "3,5 pF"
+msgstr ""
+
+#: ui/chip-capacities-dialog.glade:107
+msgid "6,0 pF"
+msgstr ""
+
+#: ui/chip-capacities-dialog.glade:123
+msgid "7,0 pF"
+msgstr ""
+
+#: ui/chip-capacities-dialog.glade:139
+msgid "8,5 pF"
+msgstr ""
+
+#: ui/chip-capacities-dialog.glade:155
+msgid "9,5 pF"
+msgstr ""
+
+#: ui/c-move-dialog.glade:9
+msgid "Move Image From The DICOM Server"
+msgstr ""
+
+#: ui/c-store-dialog.glade:8
+msgid "Store Image on The DICOM Server"
+msgstr ""
+
+#: ui/c-store-dialog.glade:54
+msgid "Server:"
+msgstr ""
+
+#: ui/c-store-dialog.glade:83
+msgid "Store"
+msgstr ""
+
+#: ui/c-store-dialog.glade:152
+msgid "<b>Status</b>"
+msgstr ""
+
+#: ui/c-store-dialog.glade:193
+msgid "<b>Errors</b>"
+msgstr ""
+
+#: ui/c-store-dialog.glade:209
+msgid "Conquest Log"
+msgstr ""
+
+#: ui/temperature-margins-dialog.glade:22
+msgid "Temperature Margins"
+msgstr ""
+
+#: ui/lining-adjustment-dialog.glade:25
+msgid "Adjustment"
+msgstr ""
+
+#: ui/lining-adjustment-dialog.glade:86
+msgid "_Chip:"
+msgstr ""
+
+#: ui/lining-adjustment-dialog.glade:99
+msgid "_Strip:"
+msgstr ""
+
+#: ui/lining-adjustment-dialog.glade:172
+msgid "_Code:"
+msgstr ""
+
+#: ui/lining-adjustment-dialog.glade:198
+msgid "_Broadcast:"
+msgstr ""
+
+#: ui/lining-adjustment-dialog.glade:236
+msgid "<b>Chip Lining Codes</b>"
+msgstr ""
+
+#: ui/lining-adjustment-dialog.glade:279
+msgid "Load lining codes from file"
+msgstr ""
+
+#: ui/lining-adjustment-dialog.glade:290
+msgid "Restore lining codes of the current chip"
+msgstr ""
+
+#: ui/lining-adjustment-dialog.glade:291
+msgid "Restore Current"
+msgstr ""
+
+#: ui/lining-adjustment-dialog.glade:299
+msgid "Restore lining codes of all chips"
+msgstr ""
+
+#: ui/lining-adjustment-dialog.glade:300
+msgid "Restore All"
+msgstr ""
+
+#: ui/lining-adjustment-dialog.glade:318
+msgid "Write a current chip codes"
+msgstr ""
+
+#: ui/lining-adjustment-dialog.glade:319
+msgid "Write"
+msgstr ""
+
+#: ui/lining-adjustment-dialog.glade:329
+msgid "Write all chips codes"
+msgstr ""
+
+#: ui/lining-adjustment-dialog.glade:330
+msgid "Write All"
+msgstr ""
+
+#: ui/scanner-debug-dialog.glade:8
+msgid "Scanner Debug Actions"
+msgstr ""
+
+#: ui/scanner-debug-dialog.glade:54
+msgid "Reset Altera FPGA"
+msgstr ""
+
+#: ui/scanner-debug-dialog.glade:68
+msgid "Reset Array Chips"
+msgstr ""
+
+#: ui/scanner-debug-dialog.glade:82
+msgid "Write Lining Codes..."
+msgstr ""
+
+#: ui/scanner-debug-dialog.glade:96
+msgid "Adjust Lining Codes..."
+msgstr ""
+
+#: ui/scanner-debug-dialog.glade:110
+msgid "Select Chip Capacities..."
+msgstr ""
+
+#: ui/scanner-debug-dialog.glade:124
+msgid "Turn Off Peltier Elements"
+msgstr ""
+
+#: ui/scanner-debug-dialog.glade:138
+msgid "Temperature Control"
+msgstr ""
+
+#: ui/preferences-dialog.glade:14
+msgid "ScanAmati Preferences (Shift+Cntl+P)"
+msgstr ""
+
+#: ui/preferences-dialog.glade:103
+msgid "AE _Title:"
+msgstr ""
+
+#: ui/preferences-dialog.glade:115
+msgid "_Port:"
+msgstr ""
+
+#: ui/preferences-dialog.glade:170
+msgid "<b>Entity</b>"
+msgstr ""
+
+#: ui/preferences-dialog.glade:187
+msgid "Application"
+msgstr ""
+
+#: ui/preferences-dialog.glade:220
+msgid "_Conquest Server Directory:"
+msgstr ""
+
+#: ui/preferences-dialog.glade:270
+msgid "<b>Localhost</b>"
+msgstr ""
+
+#: ui/preferences-dialog.glade:331
+msgid "Test Connection"
+msgstr ""
+
+#: ui/preferences-dialog.glade:336
+msgid "Execute C-ECHO command for selected PACS."
+msgstr ""
+
+#: ui/preferences-dialog.glade:420
+msgid "<b>Network</b>"
+msgstr ""
+
+#: ui/preferences-dialog.glade:440
+msgid "DICOM Servers"
+msgstr ""
+
+#: ui/dicom-server-dialog.glade:15
+msgid "New Server"
+msgstr ""
+
+#: ui/dicom-server-dialog.glade:82 ui/dicom-information-dialog.glade:344
+#: ui/dicom-information-dialog.glade:946
+msgid "Name:"
+msgstr ""
+
+#: ui/dicom-server-dialog.glade:93
+msgid "IP / Host:"
+msgstr ""
+
+#: ui/dicom-server-dialog.glade:106
+msgid "AE Title:"
+msgstr ""
+
+#: ui/dicom-server-dialog.glade:119
+msgid "Port:"
+msgstr ""
+
+#: ui/dicom-information-dialog.glade:20
+msgid "DICOM Information"
+msgstr ""
+
+#: ui/dicom-information-dialog.glade:94
+msgid "Sex:"
+msgstr ""
+
+#: ui/dicom-information-dialog.glade:109
+msgid "Female"
+msgstr ""
+
+#: ui/dicom-information-dialog.glade:125
+msgid "Male"
+msgstr ""
+
+#: ui/dicom-information-dialog.glade:141
+msgid "Other"
+msgstr ""
+
+#: ui/dicom-information-dialog.glade:168
+msgid "Birth Date:"
+msgstr ""
+
+#: ui/dicom-information-dialog.glade:186
+msgid "DD.MM.YYYY"
+msgstr ""
+
+#: ui/dicom-information-dialog.glade:200
+msgid "_Choose..."
+msgstr ""
+
+#: ui/dicom-information-dialog.glade:227
+msgid "Age:"
+msgstr ""
+
+#: ui/dicom-information-dialog.glade:240 ui/dicom-information-dialog.glade:835
+msgid "ID:"
+msgstr ""
+
+#: ui/dicom-information-dialog.glade:317
+msgid "_DICOM Value"
+msgstr ""
+
+#: ui/dicom-information-dialog.glade:438
+msgid "Other Names:"
+msgstr ""
+
+#: ui/dicom-information-dialog.glade:451
+msgid "Ethnic Group:"
+msgstr ""
+
+#: ui/dicom-information-dialog.glade:500
+msgid "Other IDs:"
+msgstr ""
+
+#: ui/dicom-information-dialog.glade:531
+msgid "Weight (kg):"
+msgstr ""
+
+#: ui/dicom-information-dialog.glade:542
+msgid "Height (m):"
+msgstr ""
+
+#: ui/dicom-information-dialog.glade:589 ui/dicom-information-dialog.glade:957
+#: ui/dicom-information-dialog.glade:1050
+msgid "Address:"
+msgstr ""
+
+#: ui/dicom-information-dialog.glade:602
+msgid "Telephone Numbers:"
+msgstr ""
+
+#: ui/dicom-information-dialog.glade:649
+msgid "Religious Preference:"
+msgstr ""
+
+#: ui/dicom-information-dialog.glade:717
+msgid "Comments:"
+msgstr ""
+
+#: ui/dicom-information-dialog.glade:751
+msgid "Occupation:"
+msgstr ""
+
+#: ui/dicom-information-dialog.glade:793
+msgid "Additional Information"
+msgstr ""
+
+#: ui/dicom-information-dialog.glade:809
+msgid "_Patient"
+msgstr ""
+
+#: ui/dicom-information-dialog.glade:846
+#: ui/dicom-information-dialog.glade:1186
+msgid "Description:"
+msgstr ""
+
+#: ui/dicom-information-dialog.glade:859
+msgid "Accession Number:"
+msgstr ""
+
+#: ui/dicom-information-dialog.glade:1005
+msgid "<b>Referring Physician</b>"
+msgstr ""
+
+#: ui/dicom-information-dialog.glade:1039
+msgid "Name (Title):"
+msgstr ""
+
+#: ui/dicom-information-dialog.glade:1095
+msgid "Department:"
+msgstr ""
+
+#: ui/dicom-information-dialog.glade:1128
+msgid "<b>Institution</b>"
+msgstr ""
+
+#: ui/dicom-information-dialog.glade:1175
+msgid "Number:"
+msgstr ""
+
+#: ui/dicom-information-dialog.glade:1232
+msgid "Protocol Name:"
+msgstr ""
+
+#: ui/dicom-information-dialog.glade:1311
+msgid "Performing Physicians Name:"
+msgstr ""
+
+#: ui/dicom-information-dialog.glade:1322
+msgid "Operators Name:"
+msgstr ""
+
+#: ui/dicom-information-dialog.glade:1381
+msgid "S_eries"
+msgstr ""
+
+#: ui/person-name-dialog.glade:8
+msgid "Person Name Components"
+msgstr ""
+
+#: ui/person-name-dialog.glade:72
+msgid "_Last Name:"
+msgstr ""
+
+#: ui/person-name-dialog.glade:84
+msgid "_Middle Name:"
+msgstr ""
+
+#: ui/person-name-dialog.glade:98
+msgid "_First Name:"
+msgstr ""
+
+#: ui/person-name-dialog.glade:112
+msgid "_Prefix:"
+msgstr ""
+
+#: ui/person-name-dialog.glade:126
+msgid "_Suffix:"
+msgstr ""
+
+#: src/dicom/user_commands.cpp:591
+msgid "Data Dictionary wasn't loaded."
+msgstr ""
+
+#: src/dicom/user_commands.cpp:600
+msgid "Cannot listen on port %1, insufficient privileges."
+msgstr ""
+
+#: src/dicom/user_commands.cpp:616
+msgid "Unable to initialize network."
+msgstr ""
+
+#: src/dicom/user_commands.cpp:623
+msgid "Unable to create parameters of the association."
+msgstr ""
+
+#: src/dicom/user_commands.cpp:641 src/dicom/user_commands.cpp:729
+#: src/dicom/user_commands.cpp:930
+msgid "Unable to set application entity titles."
+msgstr ""
+
+#: src/dicom/user_commands.cpp:652
+msgid "Unable to set presentation addresses."
+msgstr ""
+
+#: src/dicom/user_commands.cpp:701 src/dicom/user_commands.cpp:769
+#: src/dicom/user_commands.cpp:978
+msgid "Association rejected."
+msgstr ""
+
+#: src/dicom/user_commands.cpp:706
+msgid "Failed to establish association."
+msgstr ""
+
+#: src/dicom/user_commands.cpp:738 src/dicom/user_commands.cpp:939
+msgid "Unable to set type of network connection."
+msgstr ""
+
+#: src/dicom/user_commands.cpp:749
+msgid "Unable to add storage presentation contexts."
+msgstr ""
+
+#: src/dicom/user_commands.cpp:773 src/dicom/user_commands.cpp:982
+msgid "Association request failed."
+msgstr ""
+
+#: src/dicom/user_commands.cpp:786 src/dicom/user_commands.cpp:995
+msgid "No acceptable presentation contexts."
+msgstr ""
+
+#: src/dicom/user_commands.cpp:827
+msgid "No SOP class and instance UIDs in dataset."
+msgstr ""
+
+#: src/dicom/user_commands.cpp:855
+msgid "Presentation context is absent."
+msgstr ""
+
+#: src/dicom/user_commands.cpp:958
+msgid "Unable to add presentation context."
+msgstr ""
+
+#: src/dicom/user_commands.cpp:1023
+msgid "No valid presentation context ID."
+msgstr ""
+
+#: src/dicom/user_commands.cpp:1057
+msgid "Move request failed."
+msgstr ""
+
+#: src/dicom/patient_age.cpp:31
+msgid "year"
+msgid_plural "years"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/dicom/patient_age.cpp:34
+msgid "month"
+msgid_plural "months"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/dicom/patient_age.cpp:37
+msgid "week"
+msgid_plural "weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/dicom/patient_age.cpp:40
+msgid "day"
+msgid_plural "days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/dicom/patient_age.cpp:48
+msgid "Unknown"
+msgstr ""
+
+#: src/dialogs/image_acquisition.cpp:68
+msgid "If the x-ray source is ready press Yes otherwise press No"
+msgstr ""
+
+#: src/dialogs/image_acquisition.cpp:73
+msgid "X-ray Preparation"
+msgstr ""
+
+#: src/dialogs/image_acquisition.cpp:329
+#: src/widgets/information_notebook.cpp:569
+#: src/widgets/information_notebook.cpp:644
+msgid "kV"
+msgstr ""
+
+#: src/dialogs/image_acquisition.cpp:336
+#: src/widgets/information_notebook.cpp:566
+#: src/widgets/information_notebook.cpp:640
+msgid "mAs"
+msgstr ""
+
+#: src/dialogs/image_acquisition.cpp:412
+msgid "Logarithmic"
+msgstr ""
+
+#: src/dialogs/lining_adjustment.cpp:121
+msgid "Strip"
+msgstr ""
+
+#: src/dialogs/lining_adjustment.cpp:127
+msgid "Code"
+msgstr ""
+
+#: src/dialogs/temperature_margins.cpp:105
+msgid "<b>Unable to change temperature margins!</b>"
+msgstr ""
+
+#: src/dialogs/temperature_margins.cpp:106
+msgid "Scanner to locked for some reason."
+msgstr ""
+
+#: src/dialogs/save_as.cpp:36
+msgid "Save File"
+msgstr ""
+
+#: src/dialogs/save_as.cpp:81
+msgid ""
+"The file \"%1\" already exists.\n"
+"Do you want to replace it?"
+msgstr ""
+
+#: src/dialogs/save_as.cpp:85
+msgid ""
+"The file with the same name already exists in the folder \"%1\".\n"
+"Replacing it will overwrite its current contents."
+msgstr ""
+
+#: src/dialogs/save_as.cpp:96
+msgid "Cancel"
+msgstr ""
+
+#: src/dialogs/save_as.cpp:97
+msgid "Replace"
+msgstr ""
+
+#: src/dialogs/dicom_information.cpp:46
+msgid "Text"
+msgstr ""
+
+#: src/dialogs/dicom_information.cpp:47
+msgid "RFID"
+msgstr ""
+
+#: src/dialogs/dicom_information.cpp:48
+msgid "Barcode"
+msgstr ""
+
+#: src/dialogs/dicom_information.cpp:445
+msgid "Patient's Date of Birth"
+msgstr ""
+
+#: src/dialogs/dicom_server.cpp:77
+msgid "Edit Server Data"
+msgstr ""
+
+#: src/dialogs/conquest_archive.cpp:108
+msgid "Move selected image?"
+msgstr ""
+
+#: src/dialogs/conquest_archive.cpp:113
+msgid "The query confirmation"
+msgstr ""
+
+#: src/dialogs/conquest_archive.cpp:114
+msgid ""
+"If you want to move selected image\n"
+"from the server press \"Yes\" otherwise press \"No\"."
+msgstr ""
+
+#. Study ID column
+#: src/dialogs/conquest_archive.cpp:272
+#: src/widgets/information_notebook.cpp:237
+msgctxt "Study"
+msgid "ID"
+msgstr ""
+
+#. Study Description column
+#: src/dialogs/conquest_archive.cpp:278
+msgctxt "Study"
+msgid "Description"
+msgstr ""
+
+#. Study Date column
+#: src/dialogs/conquest_archive.cpp:285
+msgctxt "Study"
+msgid "Date"
+msgstr ""
+
+#. Study Time column
+#: src/dialogs/conquest_archive.cpp:294
+msgctxt "Study"
+msgid "Time"
+msgstr ""
+
+#. Patient's ID column
+#: src/dialogs/conquest_archive.cpp:303
+#: src/widgets/information_notebook.cpp:228
+msgctxt "Patient"
+msgid "ID"
+msgstr ""
+
+#. Patient's Name column
+#: src/dialogs/conquest_archive.cpp:309
+msgctxt "Patient"
+msgid "Name"
+msgstr ""
+
+#. Patient's Date of Birth column
+#: src/dialogs/conquest_archive.cpp:316
+msgctxt "Patient"
+msgid "Date of Birth"
+msgstr ""
+
+#. Patient's Sex column
+#: src/dialogs/conquest_archive.cpp:326
+msgctxt "Patient"
+msgid "Sex"
+msgstr ""
+
+#: src/dialogs/conquest_archive.cpp:360
+msgid "Connecting Error"
+msgstr ""
+
+#: src/dialogs/conquest_archive.cpp:361
+msgid "Unable to establish a connection."
+msgstr ""
+
+#: src/dialogs/conquest_archive.cpp:475
+msgid "file has been found"
+msgid_plural "files have been found"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/dialogs/conquest_archive.cpp:485
+msgid "Nothing has been found"
+msgstr ""
+
+#: src/dialogs/scanner_debug.cpp:152 src/dialogs/scanner_debug.cpp:175
+msgid "Warning"
+msgstr ""
+
+#: src/dialogs/scanner_debug.cpp:153
+msgid "Lining data unavailable in this moment."
+msgstr ""
+
+#: src/dialogs/scanner_debug.cpp:154 src/dialogs/scanner_debug.cpp:177
+msgid "Please, try later."
+msgstr ""
+
+#: src/dialogs/scanner_debug.cpp:176
+msgid "Unable to change temperature control state."
+msgstr ""
+
+#: src/dialogs/store_dicom.cpp:65
+msgid "\"Conquest\" - localhost DICOM server"
+msgstr ""
+
+#: src/dialogs/store_dicom.cpp:301
+msgid ""
+"<b>%1</b>\n"
+"(%2) %3:%4"
+msgstr ""
+
+#: src/dialogs/store_dicom.cpp:333
+msgid "File has been stored successfully!"
+msgstr ""
+
+#: src/dialogs/store_dicom.cpp:343
+msgid "Have been written %1 of %2 bytes."
+msgstr ""
+
+#: src/dialogs/move_dicom.cpp:144
+msgid "File has been moved successfully!"
+msgstr ""
+
+#: src/dialogs/move_dicom.cpp:181
+msgid "Cannot write DICOM file."
+msgstr ""
+
+#: src/dialogs/move_dicom.cpp:194
+msgid "Bad DICOM file."
+msgstr ""
+
+#: src/dialogs/move_dicom.cpp:198
+msgid "Data doesn't match SOP class IUD."
+msgstr ""
+
+#: src/dialogs/move_dicom.cpp:202
+msgid "Data doesn't match SOP instance IUD."
+msgstr ""
+
+#: src/dialogs/preferences.cpp:99
+msgctxt "DICOM Server"
+msgid "Name"
+msgstr ""
+
+#: src/dialogs/preferences.cpp:110
+msgid "IP / Host"
+msgstr ""
+
+#: src/dialogs/preferences.cpp:121
+msgid "AE Title"
+msgstr ""
+
+#: src/dialogs/preferences.cpp:132
+msgid "Port"
+msgstr ""
+
+#: src/dialogs/preferences.cpp:216
+msgid "Please select a directory"
+msgstr ""
+
+#: src/dialogs/preferences.cpp:352
+msgid "<b>Connection successful!</b>"
+msgstr ""
+
+#: src/dialogs/preferences.cpp:353 src/dialogs/preferences.cpp:369
+msgctxt "Connection"
+msgid "State"
+msgstr ""
+
+#: src/dialogs/preferences.cpp:361
+msgid "Connection refused by host."
+msgstr ""
+
+#: src/dialogs/preferences.cpp:368
+msgid "<b>Connection failed!</b>"
+msgstr ""
+
+#: src/dialogs/preferences.cpp:375
+msgid "<b>Please select DICOM server!</b>"
+msgstr ""
+
+#: src/widgets/status_bar.cpp:83
+msgid "Initiating the scanner."
+msgstr ""
+
+#: src/widgets/status_bar.cpp:91
+msgid "Exposure has been started."
+msgstr ""
+
+#: src/widgets/status_bar.cpp:95
+msgid "Acquisition has been started."
+msgstr ""
+
+#: src/widgets/status_bar.cpp:99
+msgid "Parking has been started."
+msgstr ""
+
+#: src/widgets/status_bar.cpp:103
+msgid "Image acquisition has been aborted."
+msgstr ""
+
+#: src/widgets/status_bar.cpp:111
+msgid "Scanner has been connected."
+msgstr ""
+
+#: src/widgets/status_bar.cpp:117
+msgid "Lining has been started."
+msgstr ""
+
+#: src/widgets/status_bar.cpp:121
+msgid "Lining acquisition has been started."
+msgstr ""
+
+#: src/widgets/status_bar.cpp:125
+msgid "Lining has been finished."
+msgstr ""
+
+#: src/widgets/status_bar.cpp:133
+msgid "Executing commands..."
+msgstr ""
+
+#: src/widgets/status_bar.cpp:137
+msgid "Image reconstruction in progress..."
+msgstr ""
+
+#: src/widgets/status_bar.cpp:150
+msgid "Scanner has been disconnected."
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:84
+msgid "%1 \\u00B5Sv"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:227
+msgid "Name"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:229
+msgid "Sex"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:230
+msgid "Birthday"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:231
+msgid "Age"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:234
+msgid "Physician"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:235
+msgid "Operator"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:236
+msgid "Description"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:238
+msgid "Body part"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:239
+msgid "Institution"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:240
+msgid "Date"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:241
+msgid "Time"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:242
+msgid "Model name"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:243
+msgid "Effective dose"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:246
+#: src/widgets/information_notebook.cpp:259
+msgid "High voltage"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:247
+#: src/widgets/information_notebook.cpp:260
+msgid "Current"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:252
+#: src/widgets/information_notebook.cpp:288
+msgid "Temperature"
+msgstr ""
+
+#. xray.push_back(InfoItem( _("Exposure time"), ""));
+#: src/widgets/information_notebook.cpp:263
+#: src/widgets/information_notebook.cpp:456
+msgctxt "X-ray"
+msgid "State"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:266
+msgctxt "Temperature"
+msgid "Control"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:267
+msgctxt "Temperature"
+msgid "Current"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:268
+msgctxt "Temperature"
+msgid "Margins"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:269
+msgid "TEC value"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:272
+msgctxt "Array"
+msgid "ID"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:273
+msgctxt "Array"
+msgid "Capasity"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:274
+msgctxt "Array"
+msgid "Chip"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:277 src/icon_loader.cpp:66
+msgid "Patient"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:278
+msgid "Study"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:279
+#: src/widgets/information_notebook.cpp:285
+msgid "X-ray Source"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:280
+#: src/widgets/information_notebook.cpp:289
+msgid "Detector Array"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:343
+msgid "Label"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:358
+msgid "Value"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:390
+#: src/widgets/information_notebook.cpp:400 src/icon_loader.cpp:67
+msgid "X-ray source"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:404
+#: src/widgets/information_notebook.cpp:559
+msgid "Disconnected"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:420
+msgid "On"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:420
+msgid "Off"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:441
+msgctxt "Chip"
+msgid "None"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:444
+msgid "pF"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:558
+msgid "Connected"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:572
+#: src/widgets/information_notebook.cpp:648
+msgid "mA"
+msgstr ""
+
+#: src/widgets/information_notebook.cpp:615
+msgctxt "Effective Dose"
+msgid "Unknown"
+msgstr ""
+
+#: src/scanner/manager.cpp:314
+msgid "Unable to load scanner data."
+msgstr ""
+
+#: src/scanner/manager.cpp:1031
+msgid "Wrong scanner id."
+msgstr ""
+
+#: src/scanner/manager.cpp:1046
+msgid "Wrong handshake response."
+msgstr ""
+
+#: src/scanner/manager.cpp:1071
+msgid "The device \"%1\" doesn't exist."
+msgstr ""
+
+#: src/scanner/manager.cpp:1073
+msgid ""
+"Check the USB cable connection between the PC and the device, and check if "
+"the scanner power supply is turned on."
+msgstr ""
+
+#: src/scanner/manager.cpp:1079
+msgid "The user \"%1\" has no permission to open scanner device."
+msgstr ""
+
+#: src/scanner/manager.cpp:1082
+msgid "Check your permissions to open, read and write to the scanner device."
+msgstr ""
+
+#: src/scanner/manager.cpp:1088
+msgid "The device \"%1\" has been already busy."
+msgstr ""
+
+#: src/scanner/manager.cpp:1089
+msgid ""
+"Close other programs which use this device, and try to repeat the operation."
+msgstr ""
+
+#: src/scanner/manager.cpp:1092
+msgid "The device has invalid file descriptor."
+msgstr ""
+
+#: src/scanner/manager.cpp:1095
+msgid "Command interrupted by a signal."
+msgstr ""
+
+#: src/scanner/manager.cpp:1098
+msgid "Invalid function argument."
+msgstr ""
+
+#: src/scanner/manager.cpp:1101
+msgid ""
+"The system cannot allocate more virtual memory because it capacity is full."
+msgstr ""
+
+#: src/scanner/manager.cpp:1105
+msgid ""
+"Resource temporarily unavailable; the call might work if you try again later."
+msgstr ""
+
+#: src/scanner/manager.cpp:1109
+msgid "You passed in a pointer to bad memory."
+msgstr ""
+
+#: src/scanner/manager.cpp:1112
+msgid "Input/output error occured."
+msgstr ""
+
+#: src/scanner/manager.cpp:1115
+msgid "File descriptor is attached to a directory."
+msgstr ""
+
+#: src/scanner/manager.cpp:1118
+msgid "No space left on device."
+msgstr ""
+
+#: src/scanner/manager.cpp:1121
+msgid "There is no process reading from the other end of a pipe."
+msgstr ""
+
+#: src/scanner/manager.cpp:1125
+msgid "Unexpected error."
+msgstr ""
+
+#: src/scanner/manager.cpp:1127
+msgid ""
+"The scanner device can't execute this command. Please, turn off the device "
+"and try again."
+msgstr ""
+
+#: src/scanner/manager_device.cpp:90
+msgid "No data within timeout interval."
+msgstr ""
+
+#: src/scanner/manager_device.cpp:118
+msgid "No more data."
+msgstr ""
+
+#: src/icon_loader.cpp:94
+msgid "Amati icon doesn't seem to be installed in default icon theme."
+msgstr ""
+
+#: src/icon_loader.cpp:106
+msgid "Couldn't load program icon from the default icon theme. "
+msgstr ""
+
+#: src/main_window.cpp:323
+msgid "Open File"
+msgstr ""
+
+#: src/main_window.cpp:425
+msgid "Saving Error"
+msgstr ""
+
+#: src/main_window.cpp:428
+msgid "Unable to save the file \"%1\"."
+msgstr ""
+
+#: src/main_window.cpp:699
+msgid "Scanner Error"
+msgstr ""
+
+#. File menu
+#: src/main_window_actions.cpp:45
+msgid "_File"
+msgstr ""
+
+#: src/main_window_actions.cpp:48
+msgid "_Open..."
+msgstr ""
+
+#: src/main_window_actions.cpp:48
+msgid "Open an existing image"
+msgstr ""
+
+#: src/main_window_actions.cpp:51
+msgid "_Save"
+msgstr ""
+
+#: src/main_window_actions.cpp:52
+msgid "Save image"
+msgstr ""
+
+#: src/main_window_actions.cpp:57
+msgid "Save _As..."
+msgstr ""
+
+#: src/main_window_actions.cpp:57
+msgid "Save image under a new name"
+msgstr ""
+
+#: src/main_window_actions.cpp:63
+msgid "_Save to Archive"
+msgstr ""
+
+#: src/main_window_actions.cpp:63
+msgid "Save image to archive"
+msgstr ""
+
+#: src/main_window_actions.cpp:69
+msgid "ScanAmati Preferences..."
+msgstr ""
+
+#: src/main_window_actions.cpp:69
+msgid "Edit global ScanAmati preferences"
+msgstr ""
+
+#: src/main_window_actions.cpp:91
+msgid "Export PDF..."
+msgstr ""
+
+#: src/main_window_actions.cpp:101
+msgid "_Find Image..."
+msgstr ""
+
+#: src/main_window_actions.cpp:101
+msgid "Find Image In The Localhost Conquest DICOM Server"
+msgstr ""
+
+#: src/main_window_actions.cpp:105
+msgid "_Edit"
+msgstr ""
+
+#: src/main_window_actions.cpp:109
+msgid "Edit DICOM _Information..."
+msgstr ""
+
+#: src/main_window_actions.cpp:115
+msgid "_New DICOM Information..."
+msgstr ""
+
+#: src/main_window_actions.cpp:119
+msgid "_Image"
+msgstr ""
+
+#. popup menus
+#: src/main_window_actions.cpp:122 src/main_window_actions.cpp:291
+msgid "_Palette"
+msgstr ""
+
+#: src/main_window_actions.cpp:127
+msgctxt "Palette"
+msgid "Grayscale"
+msgstr ""
+
+#: src/main_window_actions.cpp:135
+msgctxt "Palette"
+msgid "Inverted"
+msgstr ""
+
+#: src/main_window_actions.cpp:142
+msgctxt "Palette"
+msgid "Rainbow"
+msgstr ""
+
+#: src/main_window_actions.cpp:149
+msgctxt "Palette"
+msgid "Combined"
+msgstr ""
+
+#: src/main_window_actions.cpp:156
+msgctxt "Palette"
+msgid "Hot metal"
+msgstr ""
+
+#: src/main_window_actions.cpp:162
+msgid "_Zoom"
+msgstr ""
+
+#: src/main_window_actions.cpp:166
+msgid "Image _Width"
+msgstr ""
+
+#: src/main_window_actions.cpp:166
+msgid "Zoom to fit image width in window"
+msgstr ""
+
+#: src/main_window_actions.cpp:172
+msgid "Image _Heigth"
+msgstr ""
+
+#: src/main_window_actions.cpp:172
+msgid "Zoom to fit image height in window"
+msgstr ""
+
+#: src/main_window_actions.cpp:178
+msgid "Zoom _1:1 (100%)"
+msgstr ""
+
+#: src/main_window_actions.cpp:178
+msgid "Zoom to 1:1"
+msgstr ""
+
+#: src/main_window_actions.cpp:184
+msgid "Zoom _2:1 (200%)"
+msgstr ""
+
+#: src/main_window_actions.cpp:184
+msgid "Zoom to 2:1"
+msgstr ""
+
+#: src/main_window_actions.cpp:189
+msgid "Zoom _3:1 (300%)"
+msgstr ""
+
+#: src/main_window_actions.cpp:189
+msgid "Zoom to 3:1"
+msgstr ""
+
+#: src/main_window_actions.cpp:196
+msgid "_Device"
+msgstr ""
+
+#: src/main_window_actions.cpp:200
+msgctxt "Device"
+msgid "_Connect"
+msgstr ""
+
+#: src/main_window_actions.cpp:200
+msgid "Connect Scanner Device"
+msgstr ""
+
+#: src/main_window_actions.cpp:205
+msgctxt "Device"
+msgid "_Disconnect"
+msgstr ""
+
+#: src/main_window_actions.cpp:205
+msgid "Disconnect Scanner Device"
+msgstr ""
+
+#: src/main_window_actions.cpp:211
+msgid "_Lining Procedure..."
+msgstr ""
+
+#: src/main_window_actions.cpp:211
+msgid "Acquire lining coefficients"
+msgstr ""
+
+#: src/main_window_actions.cpp:217
+msgid "Run the _Acquisition..."
+msgstr ""
+
+#: src/main_window_actions.cpp:217
+msgid "Acquire a x-ray image"
+msgstr ""
+
+#: src/main_window_actions.cpp:223
+msgid "Temperature _Margins..."
+msgstr ""
+
+#: src/main_window_actions.cpp:228
+msgid "Debug..."
+msgstr ""
+
+#: src/main_window_actions.cpp:233
+msgid "Remove Current"
+msgstr ""
+
+#: src/main_window_actions.cpp:237
+msgid "Clear All"
+msgstr ""
+
+#: src/main_window_actions.cpp:241
+msgid "Show Raw Data"
+msgstr ""
+
+#: src/main_window_actions.cpp:245
+msgid "Show Processing Data"
+msgstr ""
+
+#: src/main_window_actions.cpp:249
+msgid "Show Presentation Data"
+msgstr ""
+
+#: src/main_window_actions.cpp:253
+msgid "Data _Filter"
+msgstr ""
+
+#: src/main_window_actions.cpp:272
+msgid "Data _Calibration"
+msgstr ""
+
+#: src/main_window_actions.cpp:294
+msgid "_Files"
+msgstr ""
+
+#: src/main_window_actions.cpp:297
+msgid "File _Icons"
+msgstr ""
+
+#: src/main_window_actions.cpp:300
+msgid "Image _Area"
+msgstr ""
+
+#: src/global_strings.hpp:151
+msgid "APRM"
+msgstr ""
+
+#. namespace Scanner
+#: src/global_strings.hpp:159
+msgid "DICOM image (*.dcm)"
+msgstr ""
+
+#: src/global_strings.hpp:160
+msgid "Studio raw file (*.raw)"
+msgstr ""
+
+#: src/global_strings.hpp:161
+msgid "JPEG image file (*.jpg, *jpeg)"
+msgstr ""
+
+#: src/global_strings.hpp:162
+msgid "PNG image file (*.png)"
+msgstr ""
+
+#: src/main.cpp:106
+msgid "ScanAmati options"
+msgstr ""
+
+#: src/main.cpp:107
+msgid "Command-line options for scanamati"
+msgstr ""
+
+#: src/main.cpp:116
+msgid "Show version and exit"
+msgstr ""
+
+#: src/main.cpp:122
+msgid "Set the programm be verbose"
+msgstr ""
+
+#: src/main.cpp:128
+msgid "Set the programm to the extend mode"
+msgstr ""
+
+#: src/main.cpp:152
+msgid "[FILE]"
+msgstr ""
+
+#: src/main.cpp:211
+msgid "Command-line option error:"
+msgstr ""
+
+#: src/main.cpp:216
+msgid "Glib thread error:"
+msgstr ""
+
+#: src/main.cpp:220
+msgid "Unhandled exception [type unknown]"
+msgstr ""
+
+#: src/preferences.cpp:147
+msgid "Failed to save configuration file."
+msgstr ""
+
+#: src/preferences.cpp:148
+msgid "An error occurred while attempting to save the file "
+msgstr ""
+
+#: src/preferences.cpp:149
+msgid ", this file stores your preferences."
+msgstr ""
+
+#: src/preferences.cpp:151
+msgid "The system reported this error as: "
+msgstr ""
+
+#: src/file_saver.cpp:75
+msgid "Image data is empty."
+msgstr ""
+
+#: src/file_loader.cpp:111
+msgid "Unable to load image height."
+msgstr ""
+
+#: src/file_loader.cpp:115
+msgid "Unable to load image width."
+msgstr ""
+
+#: src/file_loader.cpp:125
+msgid "Unable to load image data."
+msgstr ""

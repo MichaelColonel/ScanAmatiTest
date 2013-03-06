@@ -1,0 +1,4 @@
+DRIVERS=="usb", ATTRS{idProduct}=="6010", ATTRS{idVendor}=="0403", ATTRS{product}=="FT2232H_MM", SYMLINK+="ft2232h_mm_%n"
+SUBSYSTEM=="usb-serial", DRIVER=="ftdi_sio", ATTRS{idProduct}=="6010", ATTRS{idVendor}=="0403", ATTR{latency_timer}="2"
+ATTRS{idProduct}=="6010", ATTRS{idVendor}=="0403", RUN+="/sbin/setserial /dev/ttyUSB%n ^low_latency"
+ATTRS{idProduct}=="6010", ATTRS{idVendor}=="0403", RUN+="/bin/stty -F /dev/ttyUSB%n -iexten -echo -isig raw"

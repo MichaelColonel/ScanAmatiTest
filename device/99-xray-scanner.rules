@@ -1,0 +1,4 @@
+SUBSYSTEMS=="usb", ATTRS{idProduct}=="6001", ATTRS{idVendor}=="0403", ATTRS{product}=="USB <-> Serial", KERNEL=="ttyUSB*", SYMLINK+="xray_scanner"
+SUBSYSTEM=="usb-serial", DRIVER=="ftdi_sio", ATTRS{idProduct}=="6001", ATTRS{idVendor}=="0403",  ATTR{latency_timer}="16"
+ATTRS{idProduct}=="6001", ATTRS{idVendor}=="0403", RUN+="/sbin/setserial /dev/ttyUSB%n ^low_latency"
+ATTRS{idProduct}=="6001", ATTRS{idVendor}=="0403", RUN+="/bin/stty -F /dev/ttyUSB%n -iexten -echo -isig raw"
