@@ -1,5 +1,6 @@
 What's this?
 ============
 
-scanamati is written in C++ and uses gtkmm (the C++ wrapper for GTK+) for
-the GUI.
+ScanAmati is written in C++ and uses gtkmm (the C++ wrapper for GTK+) for the GUI.
+The program controls the GaAs linear array of the x-ray scanner.
+
