@@ -76,7 +76,7 @@ const ActionState init_actions_basic[] = {
 	{ "action-device-connect", false },
 	{ "action-device-disconnect", true },
 	{ "action-lining-acquisition", true },
-	{ "action-image-acquisition", false },
+	{ "action-image-acquisition", true },
 	{ "action-temperature-margins", true },
 	{ } // // Terminating Entry
 };
@@ -85,7 +85,7 @@ const ActionState init_actions_extend[] = {
 	{ "action-device-connect", false },
 	{ "action-device-disconnect", true },
 	{ "action-lining-acquisition", true },
-	{ "action-image-acquisition", false },
+	{ "action-image-acquisition", true },
 	{ "action-temperature-margins", true },
 	{ "action-scanner-debug", true },
 	{ } // Terminating Entry

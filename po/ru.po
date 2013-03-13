@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amati 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-05 13:21+0400\n"
+"POT-Creation-Date: 2013-03-13 11:09+0400\n"
 "PO-Revision-Date: 2009-09-14 15:17+0400\n"
 "Last-Translator:  <pmk@ihep.ru>\n"
 "Language-Team: Russian\n"
@@ -51,43 +51,43 @@ msgstr "<b>Параметры излучателя</b>"
 msgid "Acquisition Parameters..."
 msgstr "Параметры сканирования и сбора данных..."
 
-#: ui/image-acquisition-dialog.glade:237
+#: ui/image-acquisition-dialog.glade:238
 msgid "Memory Size:"
 msgstr "Объем данных:"
 
-#: ui/image-acquisition-dialog.glade:248
+#: ui/image-acquisition-dialog.glade:249
 msgid "Image Height:"
 msgstr "Высота изображения:"
 
-#: ui/image-acquisition-dialog.glade:261
+#: ui/image-acquisition-dialog.glade:262
 msgid "Image Width:"
 msgstr "Ширина изображения:"
 
-#: ui/image-acquisition-dialog.glade:274
+#: ui/image-acquisition-dialog.glade:275
 msgid "Data Resize Filter:"
 msgstr "Фильтр данных:"
 
-#: ui/image-acquisition-dialog.glade:287
+#: ui/image-acquisition-dialog.glade:288
 msgid "Calibration:"
 msgstr "Калибровке данных:"
 
-#: ui/image-acquisition-dialog.glade:300
+#: ui/image-acquisition-dialog.glade:301
 msgid "Intensity:"
 msgstr "Амплитуда сигнала:"
 
-#: ui/image-acquisition-dialog.glade:392
+#: ui/image-acquisition-dialog.glade:393
 msgid "<b>Acquisition Parameters</b>"
 msgstr "<b>Параметры сканирования и сбора данных</b>"
 
-#: ui/image-acquisition-dialog.glade:454
+#: ui/image-acquisition-dialog.glade:455
 msgid "_Run"
 msgstr "Ст_арт"
 
-#: ui/image-acquisition-dialog.glade:469
+#: ui/image-acquisition-dialog.glade:470
 msgid "_Stop"
 msgstr "Ст_оп"
 
-#: ui/image-acquisition-dialog.glade:490
+#: ui/image-acquisition-dialog.glade:491
 #: ui/acquisition-parameters-dialog.glade:175
 msgid "Acquisition"
 msgstr "Снимок"

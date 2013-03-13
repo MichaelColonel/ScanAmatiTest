@@ -115,7 +115,7 @@ ChipCapacitiesDialog::on_response(int res)
 			Scanner::Command* com = Scanner::Commands::create(capacity_);
 
 			Scanner::SharedManager manager = Scanner::Manager::instance();
-			Scanner::AcquisitionParameters params;
+			Scanner::AcquisitionParameters params(com);
 			params.value = capacity_;
 			manager->run( RUN_COMMANDS, params);
 		}
