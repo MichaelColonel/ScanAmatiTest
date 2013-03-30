@@ -1,11 +1,11 @@
 xmedcon_wrapper.o: xmedcon_wrapper.c ../../config.h /usr/include/medcon.h \
- /usr/include/stdio.h /usr/include/features.h /usr/include/sys/cdefs.h \
- /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
- /usr/include/gnu/stubs-64.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/include/stddef.h \
+ /usr/include/stdio.h /usr/include/features.h /usr/include/stdc-predef.h \
+ /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
+ /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/include/stddef.h \
  /usr/include/bits/types.h /usr/include/bits/typesizes.h \
  /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/include/stdarg.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/include/stdarg.h \
  /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
  /usr/include/bits/stdio.h /usr/include/m-defs.h /usr/include/m-config.h \
  /usr/include/m-structs.h /usr/include/m-error.h /usr/include/m-files.h \
@@ -22,7 +22,7 @@ xmedcon_wrapper.o: xmedcon_wrapper.c ../../config.h /usr/include/medcon.h \
  /usr/include/xlocale.h /usr/include/bits/string.h \
  /usr/include/bits/string2.h /usr/include/endian.h \
  /usr/include/bits/endian.h /usr/include/bits/byteswap.h \
- /usr/include/stdlib.h xmedcon_wrapper.h
+ /usr/include/bits/byteswap-16.h /usr/include/stdlib.h xmedcon_wrapper.h
 
 ../../config.h:
 
@@ -32,6 +32,8 @@ xmedcon_wrapper.o: xmedcon_wrapper.c ../../config.h /usr/include/medcon.h \
 
 /usr/include/features.h:
 
+/usr/include/stdc-predef.h:
+
 /usr/include/sys/cdefs.h:
 
 /usr/include/bits/wordsize.h:
@@ -40,7 +42,7 @@ xmedcon_wrapper.o: xmedcon_wrapper.c ../../config.h /usr/include/medcon.h \
 
 /usr/include/gnu/stubs-64.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/include/stddef.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/include/stddef.h:
 
 /usr/include/bits/types.h:
 
@@ -52,7 +54,7 @@ xmedcon_wrapper.o: xmedcon_wrapper.c ../../config.h /usr/include/medcon.h \
 
 /usr/include/wchar.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/include/stdarg.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/include/stdarg.h:
 
 /usr/include/bits/stdio_lim.h:
 
@@ -141,6 +143,8 @@ xmedcon_wrapper.o: xmedcon_wrapper.c ../../config.h /usr/include/medcon.h \
 /usr/include/bits/endian.h:
 
 /usr/include/bits/byteswap.h:
+
+/usr/include/bits/byteswap-16.h:
 
 /usr/include/stdlib.h:
 

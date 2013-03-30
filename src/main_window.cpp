@@ -533,13 +533,13 @@ void
 MainWindow::on_image_ready()
 {
 	Scanner::SharedManager manager = Scanner::Manager::instance();
-/*
+	OFLOG_DEBUG( app.log, "Image has beed ready");
+
 	if (Scanner::Data* data = manager->get_data()) {
-		Image::SummaryData tuple = data->get_summary_tuple();
-		File file(tuple);
-		files_view_->add_file( "", file, false);
+		Image::SummaryData image = data->get_summary_data();
+		files_view_->add_image_data(image);
 	}
-*/
+
 }
 
 void

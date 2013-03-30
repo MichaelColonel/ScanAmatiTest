@@ -1,11 +1,11 @@
 palette.o: palette.cpp /usr/include/medcon.h /usr/include/stdio.h \
- /usr/include/features.h /usr/include/sys/cdefs.h \
- /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
- /usr/include/gnu/stubs-64.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/include/stddef.h \
+ /usr/include/features.h /usr/include/stdc-predef.h \
+ /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
+ /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/include/stddef.h \
  /usr/include/bits/types.h /usr/include/bits/typesizes.h \
  /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/include/stdarg.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/include/stdarg.h \
  /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
  /usr/include/bits/stdio.h /usr/include/m-defs.h /usr/include/m-config.h \
  /usr/include/m-structs.h /usr/include/m-error.h /usr/include/m-files.h \
@@ -26,6 +26,8 @@ palette.o: palette.cpp /usr/include/medcon.h /usr/include/stdio.h \
 
 /usr/include/features.h:
 
+/usr/include/stdc-predef.h:
+
 /usr/include/sys/cdefs.h:
 
 /usr/include/bits/wordsize.h:
@@ -34,7 +36,7 @@ palette.o: palette.cpp /usr/include/medcon.h /usr/include/stdio.h \
 
 /usr/include/gnu/stubs-64.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/include/stddef.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/include/stddef.h:
 
 /usr/include/bits/types.h:
 
@@ -46,7 +48,7 @@ palette.o: palette.cpp /usr/include/medcon.h /usr/include/stdio.h \
 
 /usr/include/wchar.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/include/stdarg.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/include/stdarg.h:
 
 /usr/include/bits/stdio_lim.h:
 

@@ -84,13 +84,6 @@ protected:
 
 	Gtk::Button* button_acquisition_parameters_;
 
-	Gtk::Label* label_memory_size_;
-	Gtk::Label* label_image_height_;
-	Gtk::Label* label_image_width_;
-	Gtk::Label* label_filter_;
-	Gtk::Label* label_calibration_;
-	Gtk::Label* label_intensity_;
-
 private:
 	// Members:
 	std::vector<double> exposures_;

@@ -81,7 +81,7 @@ public:
 	virtual ~Data();
 	Glib::Dispatcher& signal_complete() { return signal_complete_; }
 	void run_image_reconstruction(const boost::any& arg);
-	Image::SummaryData get_summary_data();
+	Image::SummaryData get_summary_data() { return image_data_; }
 	void set_chip_lining( char chip_code, const std::vector<guint8>& lining);
 	void set_lining(const std::map< char, std::vector<guint8> >& lining);
 	AssemblyConstIter begin_assemble() { return assembly_.begin(); }

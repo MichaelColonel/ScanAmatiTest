@@ -3,16 +3,16 @@ utils.o: utils.cpp /usr/include/glibmm-2.4/glibmm/i18n.h \
  /usr/include/glib-2.0/glib/galloca.h /usr/include/glib-2.0/glib/gtypes.h \
  /usr/lib64/glib-2.0/include/glibconfig.h \
  /usr/include/glib-2.0/glib/gmacros.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/include/stddef.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/include-fixed/limits.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/include-fixed/syslimits.h \
- /usr/include/limits.h /usr/include/features.h /usr/include/sys/cdefs.h \
- /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
- /usr/include/gnu/stubs-64.h /usr/include/bits/posix1_lim.h \
- /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
- /usr/include/bits/posix2_lim.h /usr/include/bits/xopen_lim.h \
- /usr/include/bits/stdio_lim.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/include/float.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/include/stddef.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/include-fixed/limits.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/include-fixed/syslimits.h \
+ /usr/include/limits.h /usr/include/features.h /usr/include/stdc-predef.h \
+ /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
+ /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h \
+ /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h \
+ /usr/include/linux/limits.h /usr/include/bits/posix2_lim.h \
+ /usr/include/bits/xopen_lim.h /usr/include/bits/stdio_lim.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/include/float.h \
  /usr/include/glib-2.0/glib/gversionmacros.h /usr/include/time.h \
  /usr/include/bits/time.h /usr/include/bits/types.h \
  /usr/include/bits/typesizes.h /usr/include/bits/timex.h \
@@ -20,7 +20,7 @@ utils.o: utils.cpp /usr/include/glibmm-2.4/glibmm/i18n.h \
  /usr/include/glib-2.0/glib/gasyncqueue.h \
  /usr/include/glib-2.0/glib/gthread.h \
  /usr/include/glib-2.0/glib/gatomic.h /usr/include/glib-2.0/glib/gerror.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/include/stdarg.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/include/stdarg.h \
  /usr/include/glib-2.0/glib/gquark.h \
  /usr/include/glib-2.0/glib/gbacktrace.h /usr/include/signal.h \
  /usr/include/bits/sigset.h /usr/include/bits/signum.h \
@@ -41,7 +41,7 @@ utils.o: utils.cpp /usr/include/glibmm-2.4/glibmm/i18n.h \
  /usr/include/glib-2.0/glib/gfileutils.h \
  /usr/include/glib-2.0/glib/ggettext.h /usr/include/glib-2.0/glib/ghash.h \
  /usr/include/glib-2.0/glib/glist.h /usr/include/glib-2.0/glib/gmem.h \
- /usr/include/glib-2.0/glib/ghmac.h \
+ /usr/include/glib-2.0/glib/gnode.h /usr/include/glib-2.0/glib/ghmac.h \
  /usr/include/glib-2.0/glib/gchecksum.h \
  /usr/include/glib-2.0/glib/ghook.h \
  /usr/include/glib-2.0/glib/ghostutils.h \
@@ -54,7 +54,7 @@ utils.o: utils.cpp /usr/include/glibmm-2.4/glibmm/i18n.h \
  /usr/include/glib-2.0/glib/gmappedfile.h \
  /usr/include/glib-2.0/glib/gmarkup.h \
  /usr/include/glib-2.0/glib/gmessages.h \
- /usr/include/glib-2.0/glib/gnode.h /usr/include/glib-2.0/glib/goption.h \
+ /usr/include/glib-2.0/glib/goption.h \
  /usr/include/glib-2.0/glib/gpattern.h \
  /usr/include/glib-2.0/glib/gprimes.h /usr/include/glib-2.0/glib/gqsort.h \
  /usr/include/glib-2.0/glib/gqueue.h /usr/include/glib-2.0/glib/grand.h \
@@ -81,113 +81,94 @@ utils.o: utils.cpp /usr/include/glibmm-2.4/glibmm/i18n.h \
  /usr/include/glib-2.0/glib/deprecated/grel.h \
  /usr/include/glib-2.0/glib/deprecated/gthread.h /usr/include/pthread.h \
  /usr/include/endian.h /usr/include/bits/endian.h \
- /usr/include/bits/byteswap.h /usr/include/sched.h \
- /usr/include/bits/sched.h /usr/include/bits/setjmp.h \
- /usr/include/libintl.h /usr/include/string.h utils.hpp \
- /usr/include/gtkmm-2.4/gtkmm/box.h /usr/include/glibmm-2.4/glibmm.h \
+ /usr/include/bits/byteswap.h /usr/include/bits/byteswap-16.h \
+ /usr/include/sched.h /usr/include/bits/sched.h \
+ /usr/include/bits/setjmp.h /usr/include/libintl.h /usr/include/string.h \
+ utils.hpp /usr/include/gtkmm-2.4/gtkmm/box.h \
+ /usr/include/glibmm-2.4/glibmm.h \
  /usr/lib64/glibmm-2.4/include/glibmmconfig.h \
- /usr/include/glibmm-2.4/glibmm/arrayhandle.h \
- /usr/include/glibmm-2.4/glibmm/containerhandle_shared.h \
- /usr/include/glibmm-2.4/glibmm/refptr.h \
+ /usr/include/glibmm-2.4/glibmm/thread.h \
+ /usr/include/glibmm-2.4/glibmm/error.h \
+ /usr/include/glibmm-2.4/glibmm/exception.h \
  /usr/include/glibmm-2.4/glibmm/ustring.h \
  /usr/include/glibmm-2.4/glibmm/unicode.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/cctype \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/x86_64-slackware-linux/bits/c++config.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/x86_64-slackware-linux/bits/os_defines.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/x86_64-slackware-linux/bits/cpu_defines.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/cctype \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/x86_64-slackware-linux/bits/c++config.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/x86_64-slackware-linux/bits/os_defines.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/x86_64-slackware-linux/bits/cpu_defines.h \
  /usr/include/ctype.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/iosfwd \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stringfwd.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/postypes.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/cwchar \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/iosfwd \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stringfwd.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/postypes.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/cwchar \
  /usr/include/wchar.h /usr/include/stdio.h /usr/include/bits/wchar.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/iterator \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_iterator_base_types.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_iterator_base_funcs.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/concept_check.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_iterator.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/cpp_type_traits.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/ext/type_traits.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/move.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/ostream \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/ios \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/exception \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/atomic_lockfree_defines.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/char_traits.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_algobase.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/functexcept.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/exception_defines.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/ext/numeric_traits.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_pair.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/debug/debug.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/localefwd.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/x86_64-slackware-linux/bits/c++locale.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/clocale \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/iterator \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_iterator_base_types.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_iterator_base_funcs.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/concept_check.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_iterator.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/cpp_type_traits.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/ext/type_traits.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/move.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/ostream \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/ios \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/exception \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/atomic_lockfree_defines.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/char_traits.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_algobase.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/functexcept.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/exception_defines.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/ext/numeric_traits.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_pair.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/debug/debug.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/localefwd.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/x86_64-slackware-linux/bits/c++locale.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/clocale \
  /usr/include/locale.h /usr/include/bits/locale.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/ios_base.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/ext/atomicity.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/x86_64-slackware-linux/bits/gthr.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/x86_64-slackware-linux/bits/gthr-default.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/x86_64-slackware-linux/bits/atomic_word.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/locale_classes.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/string \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/allocator.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/x86_64-slackware-linux/bits/c++allocator.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/ext/new_allocator.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/new \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/ostream_insert.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/cxxabi_forced.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_function.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/backward/binders.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/range_access.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/basic_string.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/basic_string.tcc \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/locale_classes.tcc \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/streambuf \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/streambuf.tcc \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/basic_ios.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/locale_facets.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/cwctype \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/ios_base.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/ext/atomicity.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/x86_64-slackware-linux/bits/gthr.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/x86_64-slackware-linux/bits/gthr-default.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/x86_64-slackware-linux/bits/atomic_word.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/locale_classes.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/string \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/allocator.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/x86_64-slackware-linux/bits/c++allocator.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/ext/new_allocator.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/new \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/ostream_insert.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/cxxabi_forced.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_function.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/backward/binders.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/range_access.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/basic_string.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/basic_string.tcc \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/locale_classes.tcc \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/streambuf \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/streambuf.tcc \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/basic_ios.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/locale_facets.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/cwctype \
  /usr/include/wctype.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/x86_64-slackware-linux/bits/ctype_base.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/streambuf_iterator.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/x86_64-slackware-linux/bits/ctype_inline.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/locale_facets.tcc \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/basic_ios.tcc \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/ostream.tcc \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/istream \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/istream.tcc \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stream_iterator.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/sstream \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/sstream.tcc \
- /usr/include/glibmm-2.4/glibmm/wrap.h \
- /usr/include/glib-2.0/glib-object.h \
- /usr/include/glib-2.0/gobject/gbinding.h \
- /usr/include/glib-2.0/gobject/gobject.h \
- /usr/include/glib-2.0/gobject/gtype.h \
- /usr/include/glib-2.0/gobject/gvalue.h \
- /usr/include/glib-2.0/gobject/gparam.h \
- /usr/include/glib-2.0/gobject/gclosure.h \
- /usr/include/glib-2.0/gobject/gsignal.h \
- /usr/include/glib-2.0/gobject/gmarshal.h \
- /usr/include/glib-2.0/gobject/gboxed.h \
- /usr/include/glib-2.0/gobject/glib-types.h \
- /usr/include/glib-2.0/gobject/genums.h \
- /usr/include/glib-2.0/gobject/gparamspecs.h \
- /usr/include/glib-2.0/gobject/gsourceclosure.h \
- /usr/include/glib-2.0/gobject/gtypemodule.h \
- /usr/include/glib-2.0/gobject/gtypeplugin.h \
- /usr/include/glib-2.0/gobject/gvaluearray.h \
- /usr/include/glib-2.0/gobject/gvaluetypes.h \
- /usr/include/glibmm-2.4/glibmm/objectbase.h \
- /usr/include/glibmm-2.4/glibmm/signalproxy.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/x86_64-slackware-linux/bits/ctype_base.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/streambuf_iterator.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/x86_64-slackware-linux/bits/ctype_inline.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/locale_facets.tcc \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/basic_ios.tcc \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/ostream.tcc \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/istream \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/istream.tcc \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stream_iterator.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/sstream \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/sstream.tcc \
+ /usr/include/glibmm-2.4/glibmm/timeval.h \
  /usr/include/sigc++-2.0/sigc++/sigc++.h \
  /usr/include/sigc++-2.0/sigc++/signal.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/list \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_list.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/list.tcc \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/list \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_list.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/list.tcc \
  /usr/include/sigc++-2.0/sigc++/signal_base.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/cstddef \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/cstddef \
  /usr/lib64/sigc++-2.0/include/sigc++config.h \
  /usr/include/sigc++-2.0/sigc++/type_traits.h \
  /usr/include/sigc++-2.0/sigc++/trackable.h \
@@ -217,48 +198,72 @@ utils.o: utils.cpp /usr/include/glibmm-2.4/glibmm/i18n.h \
  /usr/include/sigc++-2.0/sigc++/adaptors/lambda/operator.h \
  /usr/include/sigc++-2.0/sigc++/adaptors/lambda/group.h \
  /usr/include/sigc++-2.0/sigc++/functors/functors.h \
+ /usr/include/glibmm-2.4/glibmm/threads.h \
+ /usr/include/glibmm-2.4/glibmm/arrayhandle.h \
+ /usr/include/glibmm-2.4/glibmm/containerhandle_shared.h \
+ /usr/include/glibmm-2.4/glibmm/refptr.h \
+ /usr/include/glibmm-2.4/glibmm/wrap.h \
+ /usr/include/glib-2.0/glib-object.h \
+ /usr/include/glib-2.0/gobject/gbinding.h \
+ /usr/include/glib-2.0/gobject/gobject.h \
+ /usr/include/glib-2.0/gobject/gtype.h \
+ /usr/include/glib-2.0/gobject/gvalue.h \
+ /usr/include/glib-2.0/gobject/gparam.h \
+ /usr/include/glib-2.0/gobject/gclosure.h \
+ /usr/include/glib-2.0/gobject/gsignal.h \
+ /usr/include/glib-2.0/gobject/gmarshal.h \
+ /usr/include/glib-2.0/gobject/gboxed.h \
+ /usr/include/glib-2.0/gobject/glib-types.h \
+ /usr/include/glib-2.0/gobject/genums.h \
+ /usr/include/glib-2.0/gobject/gparamspecs.h \
+ /usr/include/glib-2.0/gobject/gsourceclosure.h \
+ /usr/include/glib-2.0/gobject/gtypemodule.h \
+ /usr/include/glib-2.0/gobject/gtypeplugin.h \
+ /usr/include/glib-2.0/gobject/gvaluearray.h \
+ /usr/include/glib-2.0/gobject/gvaluetypes.h \
+ /usr/include/glibmm-2.4/glibmm/objectbase.h \
+ /usr/include/glibmm-2.4/glibmm/signalproxy.h \
  /usr/include/glibmm-2.4/glibmm/signalproxy_connectionnode.h \
  /usr/include/glibmm-2.4/glibmm/propertyproxy.h \
  /usr/include/glibmm-2.4/glibmm/propertyproxy_base.h \
  /usr/include/glibmm-2.4/glibmm/value.h \
  /usr/include/glibmm-2.4/glibmm/value_custom.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/typeinfo \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/typeinfo \
  /usr/include/glibmm-2.4/glibmm/value_basictypes.h \
  /usr/include/glibmm-2.4/glibmm/quark.h \
  /usr/include/glibmm-2.4/glibmm/debug.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/algorithm \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/utility \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_relops.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_algo.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/cstdlib \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/algorithm \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/utility \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_relops.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_algo.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/cstdlib \
  /usr/include/stdlib.h /usr/include/bits/waitflags.h \
  /usr/include/bits/waitstatus.h /usr/include/sys/types.h \
  /usr/include/sys/select.h /usr/include/bits/select.h \
  /usr/include/sys/sysmacros.h /usr/include/alloca.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/algorithmfwd.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_heap.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_tempbuf.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_construct.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/ext/alloc_traits.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/vector \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_uninitialized.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_vector.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_bvector.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/vector.tcc \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/deque \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_deque.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/deque.tcc \
+ /usr/include/bits/stdlib-float.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/algorithmfwd.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_heap.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_tempbuf.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_construct.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/ext/alloc_traits.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/vector \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_uninitialized.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_vector.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_bvector.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/vector.tcc \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/deque \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_deque.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/deque.tcc \
  /usr/include/glibmm-2.4/glibmm/balancedtree.h \
- /usr/include/glibmm-2.4/glibmm/error.h \
- /usr/include/glibmm-2.4/glibmm/exception.h \
  /usr/include/glibmm-2.4/glibmm/checksum.h \
  /usr/include/glibmm-2.4/glibmm/class.h \
  /usr/include/glibmm-2.4/glibmm/convert.h \
  /usr/include/glibmm-2.4/glibmm/date.h \
  /usr/include/glibmm-2.4/glibmm/dispatcher.h \
  /usr/include/glibmm-2.4/glibmm/main.h \
- /usr/include/glibmm-2.4/glibmm/timeval.h \
  /usr/include/glibmm-2.4/glibmm/priorities.h \
+ /usr/include/glibmm-2.4/glibmm/iochannel.h \
  /usr/include/glibmm-2.4/glibmm/exceptionhandler.h \
  /usr/include/glibmm-2.4/glibmm/fileutils.h \
  /usr/include/glibmm-2.4/glibmm/helperlist.h \
@@ -267,21 +272,20 @@ utils.o: utils.cpp /usr/include/glibmm-2.4/glibmm/i18n.h \
  /usr/include/glibmm-2.4/glibmm/interface.h \
  /usr/include/glibmm-2.4/glibmm/object.h \
  /usr/include/glibmm-2.4/glibmm/utility.h \
- /usr/include/glibmm-2.4/glibmm/iochannel.h \
  /usr/include/glibmm-2.4/glibmm/init.h \
  /usr/include/glibmm-2.4/glibmm/keyfile.h \
  /usr/include/glibmm-2.4/glibmm/streamiochannel.h \
  /usr/include/glibmm-2.4/glibmm/listhandle.h \
  /usr/include/glibmm-2.4/glibmm/markup.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/map \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_tree.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_map.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_multimap.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/map \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_tree.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_map.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_multimap.h \
  /usr/include/glibmm-2.4/glibmm/miscutils.h \
  /usr/include/glibmm-2.4/glibmm/module.h \
  /usr/include/glibmm-2.4/glibmm/nodetree.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/stack \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_stack.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/stack \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_stack.h \
  /usr/include/glibmm-2.4/glibmm/optioncontext.h \
  /usr/include/glibmm-2.4/glibmm/optionentry.h \
  /usr/include/glibmm-2.4/glibmm/optiongroup.h \
@@ -294,7 +298,6 @@ utils.o: utils.cpp /usr/include/glibmm-2.4/glibmm/i18n.h \
  /usr/include/glibmm-2.4/glibmm/slisthandle.h \
  /usr/include/glibmm-2.4/glibmm/spawn.h \
  /usr/include/glibmm-2.4/glibmm/stringutils.h \
- /usr/include/glibmm-2.4/glibmm/thread.h \
  /usr/include/glibmm-2.4/glibmm/threadpool.h \
  /usr/include/glibmm-2.4/glibmm/timer.h \
  /usr/include/glibmm-2.4/glibmm/uriutils.h \
@@ -302,7 +305,7 @@ utils.o: utils.cpp /usr/include/glibmm-2.4/glibmm/i18n.h \
  /usr/include/glibmm-2.4/glibmm/variant.h \
  /usr/include/glibmm-2.4/glibmm/varianttype.h \
  /usr/include/glibmm-2.4/glibmm/variantiter.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/stdexcept \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/stdexcept \
  /usr/include/glibmm-2.4/glibmm/variant_basictypes.h \
  /usr/include/glibmm-2.4/glibmm/vectorutils.h \
  /usr/include/gtk-2.0/gtk/gtk.h /usr/include/gtk-2.0/gdk/gdk.h \
@@ -381,6 +384,7 @@ utils.o: utils.cpp /usr/include/glibmm-2.4/glibmm/i18n.h \
  /usr/include/glib-2.0/gio/gpermission.h \
  /usr/include/glib-2.0/gio/gpollableinputstream.h \
  /usr/include/glib-2.0/gio/gpollableoutputstream.h \
+ /usr/include/glib-2.0/gio/gpollableutils.h \
  /usr/include/glib-2.0/gio/gproxy.h \
  /usr/include/glib-2.0/gio/gproxyaddress.h \
  /usr/include/glib-2.0/gio/gproxyaddressenumerator.h \
@@ -407,6 +411,7 @@ utils.o: utils.cpp /usr/include/glibmm-2.4/glibmm/i18n.h \
  /usr/include/glib-2.0/gio/gsrvtarget.h \
  /usr/include/glib-2.0/gio/gtcpconnection.h \
  /usr/include/glib-2.0/gio/gtcpwrapperconnection.h \
+ /usr/include/glib-2.0/gio/gtestdbus.h \
  /usr/include/glib-2.0/gio/gthemedicon.h \
  /usr/include/glib-2.0/gio/gthreadedsocketservice.h \
  /usr/include/glib-2.0/gio/gtlsbackend.h \
@@ -766,22 +771,22 @@ utils.o: utils.cpp /usr/include/glibmm-2.4/glibmm/i18n.h \
  /usr/include/cairomm-1.0/cairomm/pattern.h \
  /usr/include/cairomm-1.0/cairomm/path.h \
  /usr/include/cairomm-1.0/cairomm/scaledfont.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/valarray \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/cmath \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/valarray \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/cmath \
  /usr/include/math.h /usr/include/bits/huge_val.h \
  /usr/include/bits/huge_valf.h /usr/include/bits/huge_vall.h \
  /usr/include/bits/inf.h /usr/include/bits/nan.h \
  /usr/include/bits/mathdef.h /usr/include/bits/mathcalls.h \
  /usr/include/bits/mathinline.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/valarray_array.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/valarray_array.tcc \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/valarray_before.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/slice_array.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/valarray_after.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/gslice.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/gslice_array.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/mask_array.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/indirect_array.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/valarray_array.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/valarray_array.tcc \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/valarray_before.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/slice_array.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/valarray_after.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/gslice.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/gslice_array.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/mask_array.h \
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/indirect_array.h \
  /usr/include/pangomm-1.4/pangomm/layout.h \
  /usr/include/pangomm-1.4/pangomm/tabarray.h \
  /usr/include/pangomm-1.4/pangomm/layoutline.h \
@@ -879,7 +884,7 @@ utils.o: utils.cpp /usr/include/glibmm-2.4/glibmm/i18n.h \
  /usr/include/gtkmm-2.4/gtkmm/tooltip.h \
  /usr/include/gtkmm-2.4/gtkmm/comboboxentrytext.h \
  /usr/include/gtkmm-2.4/gtkmm/comboboxentry.h \
- /usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/iomanip
+ /usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/iomanip
 
 /usr/include/glibmm-2.4/glibmm/i18n.h:
 
@@ -895,15 +900,17 @@ utils.o: utils.cpp /usr/include/glibmm-2.4/glibmm/i18n.h \
 
 /usr/include/glib-2.0/glib/gmacros.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/include/stddef.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/include/stddef.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/include-fixed/limits.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/include-fixed/limits.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/include-fixed/syslimits.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/include-fixed/syslimits.h:
 
 /usr/include/limits.h:
 
 /usr/include/features.h:
+
+/usr/include/stdc-predef.h:
 
 /usr/include/sys/cdefs.h:
 
@@ -925,7 +932,7 @@ utils.o: utils.cpp /usr/include/glibmm-2.4/glibmm/i18n.h \
 
 /usr/include/bits/stdio_lim.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/include/float.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/include/float.h:
 
 /usr/include/glib-2.0/glib/gversionmacros.h:
 
@@ -951,7 +958,7 @@ utils.o: utils.cpp /usr/include/glibmm-2.4/glibmm/i18n.h \
 
 /usr/include/glib-2.0/glib/gerror.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/include/stdarg.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/include/stdarg.h:
 
 /usr/include/glib-2.0/glib/gquark.h:
 
@@ -1013,6 +1020,8 @@ utils.o: utils.cpp /usr/include/glibmm-2.4/glibmm/i18n.h \
 
 /usr/include/glib-2.0/glib/gmem.h:
 
+/usr/include/glib-2.0/glib/gnode.h:
+
 /usr/include/glib-2.0/glib/ghmac.h:
 
 /usr/include/glib-2.0/glib/gchecksum.h:
@@ -1042,8 +1051,6 @@ utils.o: utils.cpp /usr/include/glibmm-2.4/glibmm/i18n.h \
 /usr/include/glib-2.0/glib/gmarkup.h:
 
 /usr/include/glib-2.0/glib/gmessages.h:
-
-/usr/include/glib-2.0/glib/gnode.h:
 
 /usr/include/glib-2.0/glib/goption.h:
 
@@ -1111,6 +1118,8 @@ utils.o: utils.cpp /usr/include/glibmm-2.4/glibmm/i18n.h \
 
 /usr/include/bits/byteswap.h:
 
+/usr/include/bits/byteswap-16.h:
+
 /usr/include/sched.h:
 
 /usr/include/bits/sched.h:
@@ -1129,33 +1138,33 @@ utils.hpp:
 
 /usr/lib64/glibmm-2.4/include/glibmmconfig.h:
 
-/usr/include/glibmm-2.4/glibmm/arrayhandle.h:
+/usr/include/glibmm-2.4/glibmm/thread.h:
 
-/usr/include/glibmm-2.4/glibmm/containerhandle_shared.h:
+/usr/include/glibmm-2.4/glibmm/error.h:
 
-/usr/include/glibmm-2.4/glibmm/refptr.h:
+/usr/include/glibmm-2.4/glibmm/exception.h:
 
 /usr/include/glibmm-2.4/glibmm/ustring.h:
 
 /usr/include/glibmm-2.4/glibmm/unicode.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/cctype:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/cctype:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/x86_64-slackware-linux/bits/c++config.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/x86_64-slackware-linux/bits/c++config.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/x86_64-slackware-linux/bits/os_defines.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/x86_64-slackware-linux/bits/os_defines.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/x86_64-slackware-linux/bits/cpu_defines.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/x86_64-slackware-linux/bits/cpu_defines.h:
 
 /usr/include/ctype.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/iosfwd:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/iosfwd:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stringfwd.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stringfwd.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/postypes.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/postypes.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/cwchar:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/cwchar:
 
 /usr/include/wchar.h:
 
@@ -1163,181 +1172,141 @@ utils.hpp:
 
 /usr/include/bits/wchar.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/iterator:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/iterator:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_iterator_base_types.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_iterator_base_types.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_iterator_base_funcs.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_iterator_base_funcs.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/concept_check.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/concept_check.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_iterator.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_iterator.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/cpp_type_traits.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/cpp_type_traits.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/ext/type_traits.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/ext/type_traits.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/move.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/move.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/ostream:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/ostream:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/ios:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/ios:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/exception:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/exception:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/atomic_lockfree_defines.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/atomic_lockfree_defines.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/char_traits.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/char_traits.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_algobase.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_algobase.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/functexcept.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/functexcept.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/exception_defines.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/exception_defines.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/ext/numeric_traits.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/ext/numeric_traits.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_pair.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_pair.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/debug/debug.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/debug/debug.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/localefwd.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/localefwd.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/x86_64-slackware-linux/bits/c++locale.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/x86_64-slackware-linux/bits/c++locale.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/clocale:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/clocale:
 
 /usr/include/locale.h:
 
 /usr/include/bits/locale.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/ios_base.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/ios_base.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/ext/atomicity.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/ext/atomicity.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/x86_64-slackware-linux/bits/gthr.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/x86_64-slackware-linux/bits/gthr.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/x86_64-slackware-linux/bits/gthr-default.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/x86_64-slackware-linux/bits/gthr-default.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/x86_64-slackware-linux/bits/atomic_word.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/x86_64-slackware-linux/bits/atomic_word.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/locale_classes.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/locale_classes.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/string:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/string:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/allocator.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/allocator.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/x86_64-slackware-linux/bits/c++allocator.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/x86_64-slackware-linux/bits/c++allocator.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/ext/new_allocator.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/ext/new_allocator.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/new:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/new:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/ostream_insert.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/ostream_insert.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/cxxabi_forced.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/cxxabi_forced.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_function.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_function.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/backward/binders.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/backward/binders.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/range_access.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/range_access.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/basic_string.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/basic_string.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/basic_string.tcc:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/basic_string.tcc:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/locale_classes.tcc:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/locale_classes.tcc:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/streambuf:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/streambuf:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/streambuf.tcc:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/streambuf.tcc:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/basic_ios.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/basic_ios.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/locale_facets.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/locale_facets.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/cwctype:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/cwctype:
 
 /usr/include/wctype.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/x86_64-slackware-linux/bits/ctype_base.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/x86_64-slackware-linux/bits/ctype_base.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/streambuf_iterator.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/streambuf_iterator.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/x86_64-slackware-linux/bits/ctype_inline.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/x86_64-slackware-linux/bits/ctype_inline.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/locale_facets.tcc:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/locale_facets.tcc:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/basic_ios.tcc:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/basic_ios.tcc:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/ostream.tcc:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/ostream.tcc:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/istream:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/istream:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/istream.tcc:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/istream.tcc:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stream_iterator.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stream_iterator.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/sstream:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/sstream:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/sstream.tcc:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/sstream.tcc:
 
-/usr/include/glibmm-2.4/glibmm/wrap.h:
-
-/usr/include/glib-2.0/glib-object.h:
-
-/usr/include/glib-2.0/gobject/gbinding.h:
-
-/usr/include/glib-2.0/gobject/gobject.h:
-
-/usr/include/glib-2.0/gobject/gtype.h:
-
-/usr/include/glib-2.0/gobject/gvalue.h:
-
-/usr/include/glib-2.0/gobject/gparam.h:
-
-/usr/include/glib-2.0/gobject/gclosure.h:
-
-/usr/include/glib-2.0/gobject/gsignal.h:
-
-/usr/include/glib-2.0/gobject/gmarshal.h:
-
-/usr/include/glib-2.0/gobject/gboxed.h:
-
-/usr/include/glib-2.0/gobject/glib-types.h:
-
-/usr/include/glib-2.0/gobject/genums.h:
-
-/usr/include/glib-2.0/gobject/gparamspecs.h:
-
-/usr/include/glib-2.0/gobject/gsourceclosure.h:
-
-/usr/include/glib-2.0/gobject/gtypemodule.h:
-
-/usr/include/glib-2.0/gobject/gtypeplugin.h:
-
-/usr/include/glib-2.0/gobject/gvaluearray.h:
-
-/usr/include/glib-2.0/gobject/gvaluetypes.h:
-
-/usr/include/glibmm-2.4/glibmm/objectbase.h:
-
-/usr/include/glibmm-2.4/glibmm/signalproxy.h:
+/usr/include/glibmm-2.4/glibmm/timeval.h:
 
 /usr/include/sigc++-2.0/sigc++/sigc++.h:
 
 /usr/include/sigc++-2.0/sigc++/signal.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/list:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/list:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_list.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_list.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/list.tcc:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/list.tcc:
 
 /usr/include/sigc++-2.0/sigc++/signal_base.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/cstddef:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/cstddef:
 
 /usr/lib64/sigc++-2.0/include/sigc++config.h:
 
@@ -1397,6 +1366,56 @@ utils.hpp:
 
 /usr/include/sigc++-2.0/sigc++/functors/functors.h:
 
+/usr/include/glibmm-2.4/glibmm/threads.h:
+
+/usr/include/glibmm-2.4/glibmm/arrayhandle.h:
+
+/usr/include/glibmm-2.4/glibmm/containerhandle_shared.h:
+
+/usr/include/glibmm-2.4/glibmm/refptr.h:
+
+/usr/include/glibmm-2.4/glibmm/wrap.h:
+
+/usr/include/glib-2.0/glib-object.h:
+
+/usr/include/glib-2.0/gobject/gbinding.h:
+
+/usr/include/glib-2.0/gobject/gobject.h:
+
+/usr/include/glib-2.0/gobject/gtype.h:
+
+/usr/include/glib-2.0/gobject/gvalue.h:
+
+/usr/include/glib-2.0/gobject/gparam.h:
+
+/usr/include/glib-2.0/gobject/gclosure.h:
+
+/usr/include/glib-2.0/gobject/gsignal.h:
+
+/usr/include/glib-2.0/gobject/gmarshal.h:
+
+/usr/include/glib-2.0/gobject/gboxed.h:
+
+/usr/include/glib-2.0/gobject/glib-types.h:
+
+/usr/include/glib-2.0/gobject/genums.h:
+
+/usr/include/glib-2.0/gobject/gparamspecs.h:
+
+/usr/include/glib-2.0/gobject/gsourceclosure.h:
+
+/usr/include/glib-2.0/gobject/gtypemodule.h:
+
+/usr/include/glib-2.0/gobject/gtypeplugin.h:
+
+/usr/include/glib-2.0/gobject/gvaluearray.h:
+
+/usr/include/glib-2.0/gobject/gvaluetypes.h:
+
+/usr/include/glibmm-2.4/glibmm/objectbase.h:
+
+/usr/include/glibmm-2.4/glibmm/signalproxy.h:
+
 /usr/include/glibmm-2.4/glibmm/signalproxy_connectionnode.h:
 
 /usr/include/glibmm-2.4/glibmm/propertyproxy.h:
@@ -1407,7 +1426,7 @@ utils.hpp:
 
 /usr/include/glibmm-2.4/glibmm/value_custom.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/typeinfo:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/typeinfo:
 
 /usr/include/glibmm-2.4/glibmm/value_basictypes.h:
 
@@ -1415,15 +1434,15 @@ utils.hpp:
 
 /usr/include/glibmm-2.4/glibmm/debug.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/algorithm:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/algorithm:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/utility:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/utility:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_relops.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_relops.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_algo.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_algo.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/cstdlib:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/cstdlib:
 
 /usr/include/stdlib.h:
 
@@ -1441,37 +1460,35 @@ utils.hpp:
 
 /usr/include/alloca.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/algorithmfwd.h:
+/usr/include/bits/stdlib-float.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_heap.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/algorithmfwd.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_tempbuf.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_heap.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_construct.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_tempbuf.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/ext/alloc_traits.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_construct.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/vector:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/ext/alloc_traits.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_uninitialized.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/vector:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_vector.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_uninitialized.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_bvector.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_vector.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/vector.tcc:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_bvector.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/deque:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/vector.tcc:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_deque.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/deque:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/deque.tcc:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_deque.h:
+
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/deque.tcc:
 
 /usr/include/glibmm-2.4/glibmm/balancedtree.h:
-
-/usr/include/glibmm-2.4/glibmm/error.h:
-
-/usr/include/glibmm-2.4/glibmm/exception.h:
 
 /usr/include/glibmm-2.4/glibmm/checksum.h:
 
@@ -1485,9 +1502,9 @@ utils.hpp:
 
 /usr/include/glibmm-2.4/glibmm/main.h:
 
-/usr/include/glibmm-2.4/glibmm/timeval.h:
-
 /usr/include/glibmm-2.4/glibmm/priorities.h:
+
+/usr/include/glibmm-2.4/glibmm/iochannel.h:
 
 /usr/include/glibmm-2.4/glibmm/exceptionhandler.h:
 
@@ -1505,8 +1522,6 @@ utils.hpp:
 
 /usr/include/glibmm-2.4/glibmm/utility.h:
 
-/usr/include/glibmm-2.4/glibmm/iochannel.h:
-
 /usr/include/glibmm-2.4/glibmm/init.h:
 
 /usr/include/glibmm-2.4/glibmm/keyfile.h:
@@ -1517,13 +1532,13 @@ utils.hpp:
 
 /usr/include/glibmm-2.4/glibmm/markup.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/map:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/map:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_tree.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_tree.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_map.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_map.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_multimap.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_multimap.h:
 
 /usr/include/glibmm-2.4/glibmm/miscutils.h:
 
@@ -1531,9 +1546,9 @@ utils.hpp:
 
 /usr/include/glibmm-2.4/glibmm/nodetree.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/stack:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/stack:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/stl_stack.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/stl_stack.h:
 
 /usr/include/glibmm-2.4/glibmm/optioncontext.h:
 
@@ -1559,8 +1574,6 @@ utils.hpp:
 
 /usr/include/glibmm-2.4/glibmm/stringutils.h:
 
-/usr/include/glibmm-2.4/glibmm/thread.h:
-
 /usr/include/glibmm-2.4/glibmm/threadpool.h:
 
 /usr/include/glibmm-2.4/glibmm/timer.h:
@@ -1575,7 +1588,7 @@ utils.hpp:
 
 /usr/include/glibmm-2.4/glibmm/variantiter.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/stdexcept:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/stdexcept:
 
 /usr/include/glibmm-2.4/glibmm/variant_basictypes.h:
 
@@ -1751,6 +1764,8 @@ utils.hpp:
 
 /usr/include/glib-2.0/gio/gpollableoutputstream.h:
 
+/usr/include/glib-2.0/gio/gpollableutils.h:
+
 /usr/include/glib-2.0/gio/gproxy.h:
 
 /usr/include/glib-2.0/gio/gproxyaddress.h:
@@ -1802,6 +1817,8 @@ utils.hpp:
 /usr/include/glib-2.0/gio/gtcpconnection.h:
 
 /usr/include/glib-2.0/gio/gtcpwrapperconnection.h:
+
+/usr/include/glib-2.0/gio/gtestdbus.h:
 
 /usr/include/glib-2.0/gio/gthemedicon.h:
 
@@ -2599,9 +2616,9 @@ utils.hpp:
 
 /usr/include/cairomm-1.0/cairomm/scaledfont.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/valarray:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/valarray:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/cmath:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/cmath:
 
 /usr/include/math.h:
 
@@ -2621,23 +2638,23 @@ utils.hpp:
 
 /usr/include/bits/mathinline.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/valarray_array.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/valarray_array.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/valarray_array.tcc:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/valarray_array.tcc:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/valarray_before.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/valarray_before.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/slice_array.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/slice_array.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/valarray_after.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/valarray_after.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/gslice.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/gslice.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/gslice_array.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/gslice_array.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/mask_array.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/mask_array.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/bits/indirect_array.h:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/bits/indirect_array.h:
 
 /usr/include/pangomm-1.4/pangomm/layout.h:
 
@@ -2839,4 +2856,4 @@ utils.hpp:
 
 /usr/include/gtkmm-2.4/gtkmm/comboboxentry.h:
 
-/usr/lib64/gcc/x86_64-slackware-linux/4.7.1/../../../../include/c++/4.7.1/iomanip:
+/usr/lib64/gcc/x86_64-slackware-linux/4.7.2/../../../../include/c++/4.7.2/iomanip:

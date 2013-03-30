@@ -90,13 +90,7 @@ ImageAcquisitionDialog::ImageAcquisitionDialog( BaseObjectType* cobject,
 	button_acquisition_run_(0),
 	button_acquisition_stop_(0),
 	image_radiation_indicator_(0),
-	button_acquisition_parameters_(0),
-	label_memory_size_(0),
-	label_image_height_(0),
-	label_image_width_(0),
-	label_filter_(0),
-	label_calibration_(0),
-	label_intensity_(0)
+	button_acquisition_parameters_(0)
 {
 	init_ui();
 
@@ -143,13 +137,6 @@ ImageAcquisitionDialog::init_ui()
 		Gtk::IconSize::from_name(icon_size_64x64));
 
 	builder_->get_widget( "button-acquisition-parameters", button_acquisition_parameters_);
-
-	builder_->get_widget( "label-memory-size-value", label_memory_size_);
-	builder_->get_widget( "label-image-height-value", label_image_height_);
-	builder_->get_widget( "label-image-width-value", label_image_width_);
-	builder_->get_widget( "label-filter-value", label_filter_);
-	builder_->get_widget( "label-calibration-value", label_calibration_);
-	builder_->get_widget( "label-intensity-value", label_intensity_);
 
 	set_acquisition_info(acquisition_);
 
@@ -353,71 +340,6 @@ void
 ImageAcquisitionDialog::set_acquisition_info(
 	const Scanner::AcquisitionParameters& params)
 {
-	label_memory_size_->set_text(Glib::ustring::format(params.acquisition.memory_size));
-	label_image_height_->set_text(Glib::ustring::format(params.acquisition.image_height));
-
-	switch (params.width_type) {
-	case Scanner::WIDTH_FULL:
-		label_image_width_->set_text(Glib::ustring::format(IMAGE_WIDTH));
-		break;
-	case Scanner::WIDTH_HALF:
-		label_image_width_->set_text(Glib::ustring::format(IMAGE_WIDTH / 2));
-		break;
-	case Scanner::WIDTH_QUARTER:
-		label_image_width_->set_text(Glib::ustring::format(IMAGE_WIDTH / 4));
-		break;
-	default:
-		label_image_width_->set_text("");
-		break;
-	}
-	switch (params.filter_type) {
-	case Magick::LanczosFilter:
-		label_filter_->set_text(_("Lanczos"));
-		break;
-	case Magick::CubicFilter:
-		label_filter_->set_text(_("Cubic"));
-		break;
-	case Magick::QuadraticFilter:
-		label_filter_->set_text(_("Quadratic"));
-		break;
-	case Magick::BesselFilter:
-		label_filter_->set_text(_("Bessel"));
-		break;
-	default:
-		label_filter_->set_text("");
-		break;
-	}
-	switch (params.calibration_type) {
-	case Scanner::CALIBRATION_BEST:
-		label_calibration_->set_text(_("Best"));
-		break;
-	case Scanner::CALIBRATION_BETTER:
-		label_calibration_->set_text(_("Better"));
-		break;
-	case Scanner::CALIBRATION_GOOD:
-		label_calibration_->set_text(_("Good"));
-		break;
-	case Scanner::CALIBRATION_ROUGH:
-		label_calibration_->set_text(_("Rough"));
-		break;
-	default:
-		label_calibration_->set_text("");
-		break;
-	}
-	switch (params.intensity_type) {
-	case Scanner::INTENSITY_LINEAR:
-		label_intensity_->set_text(_("Linear"));
-		break;
-	case Scanner::INTENSITY_LOGARITHMIC:
-		label_intensity_->set_text(_("Logarithmic"));
-		break;
-	case Scanner::INTENSITY_ORIGINAL:
-		label_intensity_->set_text(_("Original"));
-		break;
-	default:
-		label_intensity_->set_text("");
-		break;
-	}
 }
 
 ImageAcquisitionDialog*

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-13 11:09+0400\n"
+"POT-Creation-Date: 2013-03-18 18:15+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: ui/main-window.glade:17 src/main_window.cpp:769
+#: ui/main-window.glade:17 src/main_window.cpp:770
 #: src/main_window_action_handlers.cpp:119 src/main.cpp:105
 msgid "ScanAmati"
 msgstr ""
@@ -298,35 +298,35 @@ msgstr ""
 msgid "Image"
 msgstr ""
 
-#: ui/lining-acquisition-dialog.glade:16
+#: ui/lining-acquisition-dialog.glade:15
 msgid "Lining Acquisition (Cntl+L)"
 msgstr ""
 
-#: ui/lining-acquisition-dialog.glade:67
+#: ui/lining-acquisition-dialog.glade:66
 msgid "ADC _count:"
 msgstr ""
 
-#: ui/lining-acquisition-dialog.glade:110
+#: ui/lining-acquisition-dialog.glade:109
 msgid "_Start"
 msgstr ""
 
-#: ui/lining-acquisition-dialog.glade:125
+#: ui/lining-acquisition-dialog.glade:124
 msgid "S_top"
 msgstr ""
 
-#: ui/lining-acquisition-dialog.glade:165
+#: ui/lining-acquisition-dialog.glade:164
 msgid "_Rough"
 msgstr ""
 
-#: ui/lining-acquisition-dialog.glade:182
+#: ui/lining-acquisition-dialog.glade:181
 msgid "_Optimal"
 msgstr ""
 
-#: ui/lining-acquisition-dialog.glade:199
+#: ui/lining-acquisition-dialog.glade:198
 msgid "_Precise"
 msgstr ""
 
-#: ui/lining-acquisition-dialog.glade:220
+#: ui/lining-acquisition-dialog.glade:219
 msgid "Accuracy"
 msgstr ""
 
@@ -1443,7 +1443,7 @@ msgstr ""
 msgid "Unable to save the file \"%1\"."
 msgstr ""
 
-#: src/main_window.cpp:699
+#: src/main_window.cpp:700
 msgid "Scanner Error"
 msgstr ""
 
