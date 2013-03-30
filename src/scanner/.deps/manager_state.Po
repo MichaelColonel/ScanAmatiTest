@@ -1,1 +1,0 @@
-manager_state.o: manager_state.cpp
