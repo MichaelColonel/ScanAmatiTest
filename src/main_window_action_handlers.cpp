@@ -148,20 +148,9 @@ MainWindow::on_file_view_state_type(FilesIconView::StateType type)
 }
 
 void
-MainWindow::on_file_view_data_type(Image::DataType type)
+MainWindow::on_file_view_data_type()
 {
-	switch (type) {
-	case Image::DATA_RAW:
-		set_actions_state(state_raw_data_actions);
-		break;
-	case Image::DATA_FOR_PROCESSING:
-		set_actions_state(state_processing_data_actions);
-		break;
-	case Image::DATA_FOR_PRESENTATION:
-	default:
-		set_actions_state(state_presentation_data_actions);
-		break;
-	}
+
 }
 
 } // namespace UI

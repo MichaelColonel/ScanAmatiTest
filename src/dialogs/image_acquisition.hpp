@@ -34,7 +34,6 @@ class Image;
 class ComboBox;
 class RadioButton;
 class CheckButton;
-class SpinButton;
 class Entry;
 class Label;
 } // namespace Gtk
@@ -68,7 +67,8 @@ protected:
 	Glib::ustring on_format_exposure_value(double exposure);
 	Glib::ustring on_format_voltage_value(double voltage);
 
-	void set_acquisition_info(const Scanner::AcquisitionParameters&);
+	void get_parameters(Scanner::AcquisitionParameters&);
+	void set_parameters(const Scanner::AcquisitionParameters&);
 
 	// Child widgets:
 	Gtk::HScale* scale_xray_voltage_;
@@ -81,6 +81,16 @@ protected:
 	Gtk::Button* button_acquisition_stop_;
 
 	Gtk::Image* image_radiation_indicator_;
+
+	Gtk::CheckButton* checkbutton_array_movement_;
+	Gtk::CheckButton* checkbutton_xray_movement_;
+	Gtk::CheckButton* checkbutton_exposure_;
+	Gtk::CheckButton* checkbutton_acquisition_;
+
+	Gtk::RadioButton* radiobutton_memory_8mbytes_;
+	Gtk::RadioButton* radiobutton_memory_16mbytes_;
+	Gtk::RadioButton* radiobutton_memory_24mbytes_;
+	Gtk::RadioButton* radiobutton_memory_32mbytes_;
 
 	Gtk::Button* button_acquisition_parameters_;
 

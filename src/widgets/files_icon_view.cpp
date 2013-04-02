@@ -109,13 +109,10 @@ FilesIconView::on_selection_changed()
 
 			const Image::SummaryData& image = row[model_columns.image_data];
 			const DICOM::SummaryInfo& info = row[model_columns.dicom_info];
-			Image::DataType data_type = current_data_available(image);
 
-			signal_image_data_clicked_( Image::DATA_FOR_PRESENTATION,
-				image);
+			signal_image_data_clicked_(image);
 			signal_dicom_info_clicked_(info);
 			signal_state_type_clicked_(row[model_columns.state]);
-			signal_data_type_clicked_(data_type);
 		}
 		else
 			item_selected_ = false;
@@ -143,7 +140,7 @@ FilesIconView::add_file( const std::string& filename,
 	Image::SummaryData& data = file.image_data();
 	DICOM::SummaryInfo& info = file.dicom_info();
 	Glib::RefPtr<Gdk::Pixbuf> icon = create_icon_pixbuf(
-		data.presentation_data(), data.image_buffer(), 64);
+		data.raw_data(), data.image_buffer(), 64);
 
 	Gtk::TreeRow row = *(liststore_icons_->append());
 	row[model_columns.icon] = icon;
@@ -159,7 +156,7 @@ void
 FilesIconView::add_image_data(const Image::SummaryData& image_data)
 {
 	Glib::RefPtr<Gdk::Pixbuf> icon = create_icon_pixbuf(
-		image_data.presentation_data(), image_data.image_buffer(), 64);
+		image_data.raw_data(), image_data.image_buffer(), 64);
 
 	Gtk::TreeRow row = *(liststore_icons_->append());
 	row[model_columns.icon] = icon;
@@ -197,8 +194,7 @@ FilesIconView::get_current_data(DICOM::SummaryInfo& info)
 }
 
 bool
-FilesIconView::get_current_data( DICOM::Dataset& dataset,
-	Image::DataType type)
+FilesIconView::get_current_data(DICOM::Dataset& dataset)
 {
 	bool res = false;
 
@@ -206,14 +202,12 @@ FilesIconView::get_current_data( DICOM::Dataset& dataset,
 		Gtk::TreeRow row = *(liststore_icons_->get_iter(current_path_));
 		const Image::SummaryData& data = row[model_columns.image_data];
 
-		if (data.check_available_data(type)) {
-			DcmDataset* set = &dataset;
-			DICOM::SummaryInfo info = row[model_columns.dicom_info];
-			Image::DataSharedPtr image = data.get_image();
-			info.save(set);
-			if (File::write_image_data( set, image))
-				res = true;
-		}
+		DcmDataset* set = &dataset;
+		DICOM::SummaryInfo info = row[model_columns.dicom_info];
+		const Image::DataSharedPtr& image = data.raw_data();
+		info.save(set);
+		if (File::write_image_data( set, image))
+			res = true;
 	}
 	return res;
 }
@@ -315,22 +309,7 @@ FilesIconView::create_icon_pixbuf( const Image::DataSharedPtr& img,
 	return pixbuf;
 }
 
-Image::DataType
-FilesIconView::current_data_available(const Image::SummaryData& summary)
-{
-	Image::DataType data = Image::DATA_FOR_PRESENTATION;
-
-	if (summary.check_available_data(Image::DATA_RAW))
-		data = Image::DATA_RAW;
-	else if (summary.check_available_data(Image::DATA_FOR_PROCESSING))
-		data = Image::DATA_FOR_PROCESSING;
-	else if (summary.check_available_data(Image::DATA_FOR_PRESENTATION))
-		data = Image::DATA_FOR_PRESENTATION;
-
-	return data;
-}
-
-sigc::signal< void, Image::DataType, const Image::SummaryData&>
+sigc::signal< void, const Image::SummaryData&>
 FilesIconView::signal_image_data_clicked()
 {
 	return signal_image_data_clicked_;
@@ -346,12 +325,6 @@ sigc::signal< void, FilesIconView::StateType>
 FilesIconView::signal_state_type_clicked()
 {
 	return signal_state_type_clicked_;
-}
-
-sigc::signal< void, Image::DataType>
-FilesIconView::signal_data_type_clicked()
-{
-	return signal_data_type_clicked_;
 }
 
 sigc::signal<void>

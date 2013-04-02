@@ -90,6 +90,14 @@ ImageAcquisitionDialog::ImageAcquisitionDialog( BaseObjectType* cobject,
 	button_acquisition_run_(0),
 	button_acquisition_stop_(0),
 	image_radiation_indicator_(0),
+	checkbutton_array_movement_(0),
+	checkbutton_xray_movement_(0),
+	checkbutton_exposure_(0),
+	checkbutton_acquisition_(0),
+	radiobutton_memory_8mbytes_(0),
+	radiobutton_memory_16mbytes_(0),
+	radiobutton_memory_24mbytes_(0),
+	radiobutton_memory_32mbytes_(0),
 	button_acquisition_parameters_(0)
 {
 	init_ui();
@@ -136,9 +144,19 @@ ImageAcquisitionDialog::init_ui()
 	image_radiation_indicator_->set( Gtk::StockID(icon_radiation_inactive),
 		Gtk::IconSize::from_name(icon_size_64x64));
 
+	builder_->get_widget( "checkbutton-array-movement", checkbutton_array_movement_);
+	builder_->get_widget( "checkbutton-xray-movement", checkbutton_xray_movement_);
+	builder_->get_widget( "checkbutton-exposure", checkbutton_exposure_);
+	builder_->get_widget( "checkbutton-acquisition", checkbutton_acquisition_);
+
+	builder_->get_widget( "radiobutton-8MB", radiobutton_memory_8mbytes_);
+	builder_->get_widget( "radiobutton-16MB", radiobutton_memory_16mbytes_);
+	builder_->get_widget( "radiobutton-24MB", radiobutton_memory_24mbytes_);
+	builder_->get_widget( "radiobutton-32MB", radiobutton_memory_32mbytes_);
+	
 	builder_->get_widget( "button-acquisition-parameters", button_acquisition_parameters_);
 
-	set_acquisition_info(acquisition_);
+	set_parameters(acquisition_);
 
 	if (app.extend)
 		button_acquisition_parameters_->set_sensitive(true);
@@ -328,18 +346,62 @@ ImageAcquisitionDialog::on_acquisition_parameters()
 {
 	AcquisitionParametersDialog* dialog = AcquisitionParametersDialog::create();
 	if (dialog) {
+		get_parameters(acquisition_);
 		dialog->set_parameters(acquisition_);
 		dialog->run();
 		dialog->get_parameters(acquisition_);
-		set_acquisition_info(acquisition_);
+		set_parameters(acquisition_);
 		delete dialog;
 	}
 }
 
 void
-ImageAcquisitionDialog::set_acquisition_info(
+ImageAcquisitionDialog::get_parameters(
+	Scanner::AcquisitionParameters& params)
+{
+	bool array = checkbutton_array_movement_->get_active();
+	bool xray = checkbutton_xray_movement_->get_active();
+
+	if (array && xray)
+		params.movement_type = Scanner::MOVEMENT_BOTH;
+	else if (!array && xray)
+		params.movement_type = Scanner::MOVEMENT_XRAY;
+	else if (array && !xray)
+		params.movement_type = Scanner::MOVEMENT_ARRAY;
+	else if (!array && !xray)
+		params.movement_type = Scanner::MOVEMENT_NONE;
+	else
+		params.movement_type = Scanner::MOVEMENT_NONE;
+
+	params.with_exposure = checkbutton_exposure_->get_active();
+	params.with_acquisition = checkbutton_acquisition_->get_active();
+}
+
+void
+ImageAcquisitionDialog::set_parameters(
 	const Scanner::AcquisitionParameters& params)
 {
+	bool array, xray = false;
+	switch (params.movement_type) {
+	case Scanner::MOVEMENT_BOTH:
+		array = xray = true;
+		break;
+	case Scanner::MOVEMENT_XRAY:
+		xray = true;
+		break;
+	case Scanner::MOVEMENT_ARRAY:
+		array = true;
+		break;
+	case Scanner::MOVEMENT_NONE:
+	default:
+		break;
+	}
+
+	checkbutton_array_movement_->set_active(array);
+	checkbutton_xray_movement_->set_active(xray);
+
+	checkbutton_exposure_->set_active(params.with_exposure);
+	checkbutton_acquisition_->set_active(params.with_acquisition);
 }
 
 ImageAcquisitionDialog*

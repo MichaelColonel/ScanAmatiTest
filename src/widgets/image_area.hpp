@@ -61,7 +61,7 @@ public:
 	void get_image_size( int& width, int& height) const;
 	Glib::RefPtr<Gdk::Pixbuf> get_pixbuf() const;
 	void set_palette(const Image::Palette*);
-	void set_image_data( Image::DataType, const Image::SummaryData& data);
+	void set_image_data(const Image::SummaryData& data);
 
 	sigc::signal< void, double> signal_scale_changed();
 	void set_scroll_to( int, int);

@@ -26,67 +26,11 @@ namespace ScanAmati {
 namespace Image {
 
 bool
-SummaryData::check_available_data(DataType type) const
-{
-	DataSharedPtr data;
-	switch (type) {
-	case DATA_RAW:
-		data = raw_data();
-		break;
-	case DATA_FOR_PROCESSING:
-		data = processing_data();
-		break;
-	case DATA_FOR_PRESENTATION:
-		data = presentation_data();
-		break;
-	default:
-		break;
-	}
-
-	return (data) ? true : false;
-}
-
-DataSharedPtr
-SummaryData::get_image(DataType type) const
-{
-	DataSharedPtr data;
-	switch (type) {
-	case DATA_RAW:
-		data = raw_data();
-		break;
-	case DATA_FOR_PROCESSING:
-		data = processing_data();
-		break;
-	case DATA_FOR_PRESENTATION:
-		data = presentation_data();
-		break;
-	default:
-		break;
-	}
-
-	return (data);
-}
-
-bool
-SummaryData::fill_image_buffer(DataType type)
+SummaryData::fill_image_buffer()
 {
 	bool res = false;
-	Image::DataSharedPtr image;
-
-	switch (type) {
-	case DATA_RAW:
-		image = raw_data();
-		break;
-	case DATA_FOR_PROCESSING:
-		image = processing_data();
-		break;
-	case DATA_FOR_PRESENTATION:
-		image = presentation_data();
-		break;
-	default:
-		break;
-	}
-
+	const Image::DataSharedPtr& image = raw_data();
+	
 	if (image) {
 		std::vector<guint8>& buf = image_buffer();
 		buf.resize(image->width() * image->height());

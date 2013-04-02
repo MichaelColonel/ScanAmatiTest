@@ -370,24 +370,10 @@ ImageArea::set_palette(const Image::Palette* palette)
 }
 
 void
-ImageArea::set_image_data( Image::DataType type,
-	const Image::SummaryData& data)
+ImageArea::set_image_data(const Image::SummaryData& data)
 {
 	buf_color_ = data.image_buffer();
-	Image::DataSharedPtr image;
-	switch (type) {
-	case Image::DATA_RAW:
-		image = data.raw_data();
-		break;
-	case Image::DATA_FOR_PROCESSING:
-		image = data.processing_data();
-		break;
-	case Image::DATA_FOR_PRESENTATION:
-		image = data.presentation_data();
-		break;
-	default:
-		break;
-	}
+	const Image::DataSharedPtr& image = data.raw_data();
 
 	if (image) {
 		image_height_ = image->height();

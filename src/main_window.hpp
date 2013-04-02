@@ -128,7 +128,7 @@ protected:
 	void on_file_saved(bool) {}
 	void on_file_saved_archive(bool) {}
 	void on_file_view_state_type(FilesIconView::StateType);
-	void on_file_view_data_type(Image::DataType);
+	void on_file_view_data_type();
 	void on_images_cleaned();
 	void load_file( const std::string&, bool);
 	void update_scanner_state();

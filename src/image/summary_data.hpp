@@ -27,37 +27,19 @@ namespace ScanAmati {
 namespace Image {
 
 typedef std::tr1::tuple<
-	std::vector<guint8>, // memory buffer
 	DataSharedPtr, // raw data
-	DataSharedPtr, // data for processing
-	DataSharedPtr, // data for presentation
-	CalibrationMap, // calibration data without expansion
 	std::vector<guint8> // image buffer
 > SummaryTuple;
-
-enum DataType {
-	DATA_RAW,
-	DATA_FOR_PROCESSING,
-	DATA_FOR_PRESENTATION
-};
 
 class SummaryData {
 public:
 	SummaryData() {}
 	SummaryData(const SummaryTuple& tuple) : tuple_(tuple) {}
-	std::vector<guint8>& memory() { return std::tr1::get<0>(tuple_); }
-	DataSharedPtr& raw_data() { return std::tr1::get<1>(tuple_); }
-	const DataSharedPtr& raw_data() const { return std::tr1::get<1>(tuple_); }
-	DataSharedPtr& processing_data() { return std::tr1::get<2>(tuple_); }
-	const DataSharedPtr& processing_data() const { return std::tr1::get<2>(tuple_); }
-	DataSharedPtr& presentation_data() { return std::tr1::get<3>(tuple_); }
-	const DataSharedPtr& presentation_data() const { return std::tr1::get<3>(tuple_); }
-	CalibrationMap& calibration_data() { return std::tr1::get<4>(tuple_); }
-	std::vector<guint8>& image_buffer() { return std::tr1::get<5>(tuple_); }
-	std::vector<guint8> image_buffer() const { return std::tr1::get<5>(tuple_); }
-	DataSharedPtr get_image(DataType type = DATA_FOR_PRESENTATION) const;
-	bool fill_image_buffer(DataType);
-	bool check_available_data(DataType) const;
+	DataSharedPtr& raw_data() { return std::tr1::get<0>(tuple_); }
+	const DataSharedPtr& raw_data() const { return std::tr1::get<0>(tuple_); }
+	std::vector<guint8>& image_buffer() { return std::tr1::get<1>(tuple_); }
+	std::vector<guint8> image_buffer() const { return std::tr1::get<1>(tuple_); }
+	bool fill_image_buffer();
 
 protected:
 	SummaryTuple tuple_;

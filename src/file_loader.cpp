@@ -68,8 +68,8 @@ Image::SummaryData
 FileLoader::create_image_summary(const Image::DataSharedPtr& image)
 {
 	Image::SummaryData summary;
-	summary.presentation_data() = image;
-	summary.fill_image_buffer(Image::DATA_FOR_PRESENTATION);
+	summary.raw_data() = image;
+	summary.fill_image_buffer();
 	return summary;
 }
 

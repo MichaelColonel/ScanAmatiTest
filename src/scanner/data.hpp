@@ -121,9 +121,7 @@ private:
 	std::vector<guint> form_bad_strips(WidthType) const;
 	Image::DataSharedPtr form_image(WidthType width_type = WIDTH_FULL);
 
-	void fill_image_data( Image::DataSharedPtr raw_image,
-		const Image::CalibrationMap& calibration,
-		Image::DataSharedPtr processing_image, // Processing data is a calibrated image
+	void fill_image_data( Image::DataSharedPtr& raw_image,
 		PixelIntensityType intensity);
 
 	bool check_image_data( AssemblyConstIter begin,

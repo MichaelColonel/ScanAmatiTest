@@ -76,7 +76,7 @@ const ActionState init_actions_basic[] = {
 	{ "action-device-connect", false },
 	{ "action-device-disconnect", true },
 	{ "action-lining-acquisition", true },
-	{ "action-image-acquisition", true },
+	{ "action-image-acquisition", false },
 	{ "action-temperature-margins", true },
 	{ } // // Terminating Entry
 };
@@ -85,7 +85,7 @@ const ActionState init_actions_extend[] = {
 	{ "action-device-connect", false },
 	{ "action-device-disconnect", true },
 	{ "action-lining-acquisition", true },
-	{ "action-image-acquisition", true },
+	{ "action-image-acquisition", false },
 	{ "action-temperature-margins", true },
 	{ "action-scanner-debug", true },
 	{ } // Terminating Entry
@@ -290,8 +290,6 @@ MainWindow::connect_signals()
 		*this, &MainWindow::on_dicom_info_changed));
 	files_view_->signal_state_type_clicked().connect(sigc::mem_fun(
 		*this, &MainWindow::on_file_view_state_type));
-	files_view_->signal_data_type_clicked().connect(sigc::mem_fun(
-		*this, &MainWindow::on_file_view_data_type));
 	files_view_->signal_images_cleaned().connect(sigc::mem_fun(
 		*this, &MainWindow::on_images_cleaned));
 
@@ -419,7 +417,7 @@ MainWindow::on_file_save_as()
 				*files_view_, &FilesIconView::change_current_filename));
 
 			Glib::RefPtr<Gdk::Pixbuf> pixbuf = image_area_->get_pixbuf();
-			res = saver.save( image_data.presentation_data(), pixbuf, dicom_info);
+			res = saver.save( image_data.raw_data(), pixbuf, dicom_info);
 		}
 		catch (const Exception& ex) {
 			ErrorDialog dialog_( dialog, _("Saving Error"));

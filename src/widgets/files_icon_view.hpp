@@ -66,16 +66,13 @@ public:
 	bool get_current_data( Image::SummaryData& data,
 		DICOM::SummaryInfo& dicom_summary);
 	bool get_current_data(DICOM::SummaryInfo& dicom_summary);
-	bool get_current_data( DICOM::Dataset&,
-		Image::DataType = Image::DATA_FOR_PRESENTATION);
+	bool get_current_data(DICOM::Dataset&);
 	void set_popup_menus( Gtk::Menu*, Gtk::Menu*);
 	void set_palette(const Image::Palette*);
 
-	sigc::signal< void, Image::DataType, const Image::SummaryData&>
-		signal_image_data_clicked();
+	sigc::signal< void, const Image::SummaryData&> signal_image_data_clicked();
 	sigc::signal< void, const DICOM::SummaryInfo&> signal_dicom_info_clicked();
 	sigc::signal< void, StateType> signal_state_type_clicked();
-	sigc::signal< void, Image::DataType> signal_data_type_clicked();
 	sigc::signal<void> signal_images_cleaned();
 
 protected:
@@ -87,7 +84,6 @@ protected:
 		const Image::DataSharedPtr&,
 		const std::vector<guint8>&,
 		unsigned int size = 64);
-	Image::DataType current_data_available(const Image::SummaryData&);
 
 	// Methods:
 	void init_ui();
@@ -125,11 +121,9 @@ protected:
 	DICOM::SummaryInfo new_dicom_info_;
 
 	// Signals:
-	sigc::signal< void, Image::DataType, const Image::SummaryData&>
-		signal_image_data_clicked_;
+	sigc::signal< void, const Image::SummaryData&> signal_image_data_clicked_;
 	sigc::signal< void, const DICOM::SummaryInfo&> signal_dicom_info_clicked_;
 	sigc::signal< void, StateType> signal_state_type_clicked_;
-	sigc::signal< void, Image::DataType> signal_data_type_clicked_;
 	sigc::signal<void> signal_images_cleaned_;
 };
 

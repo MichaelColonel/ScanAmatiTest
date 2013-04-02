@@ -509,8 +509,7 @@ Data::reconstruct_image_from_scratch()
 //		calibrated_image_ = result->get_horizontal_part( 0, margins[0].end);
 //		image->normalize();
 //		calibrated_image_ = image;
-		fill_image_data( image, Image::CalibrationMap(),
-			Image::DataSharedPtr(), INTENSITY_ORIGINAL);
+		fill_image_data( image, intensity_type_);
 	}
 
 	signal_complete_();
@@ -678,49 +677,43 @@ Data::form_image(WidthType width_type)
 }
 
 void
-Data::fill_image_data( Image::DataSharedPtr raw_data,
-	const Image::CalibrationMap& calibration,
-	Image::DataSharedPtr processing_data,
+Data::fill_image_data( Image::DataSharedPtr& image,
 	PixelIntensityType intensity_type)
 {
-	unsigned int w = raw_data->width();
-	unsigned int h = raw_data->height();
-
-	image_data_.raw_data() = raw_data;
-	image_data_.calibration_data() = calibration;
-
-	Image::DataSharedPtr present = Image::Data::create( w, h);
-
-	Image::DataSharedPtr& image = (processing_data) ? processing_data : raw_data;
-
-	std::vector<guint8> buf(w * h);
+	std::vector<guint8> buf(image->width() * image->height());
 
 	gint16 min = *std::min_element( image->begin(), image->end());
 	gint16 max = *std::max_element( image->begin(), image->end());
-	double mn = log(min + 1);
-	double mx = log(max + 1);
 
 	for ( gint16* pos = image->begin(); pos != image->end(); ++pos) {
-		unsigned int i = pos - image->begin();
-		double value;
+		ptrdiff_t i = pos - image->begin();
 		switch (intensity_type) {
 		case INTENSITY_LOGARITHMIC:
-			value = (log(*pos + 1) - mn) / (mx - mn);
-			buf[i] = static_cast<guint8>(UCHAR_MAX * value);
+			{
+				double mn = log(min + 1);
+				double mx = log(max + 1);
+				double value = (log(*pos + 1) - mn) / (mx - mn);
+				buf[i] = static_cast<guint8>(UCHAR_MAX * value);
+				*pos = static_cast<gint16>(SCANNER_ADC_COUNT_MAX * value);
+			}
 			break;
 		case INTENSITY_LINEAR:
-			value = double(*pos - min) / (max - min);
-			buf[i] = static_cast<guint8>(UCHAR_MAX * value);
+			{
+				double value = double(*pos - min) / (max - min);
+				buf[i] = static_cast<guint8>(UCHAR_MAX * value);
+				*pos = static_cast<gint16>(SCANNER_ADC_COUNT_MAX * value);
+			}
 			break;
 		case INTENSITY_ORIGINAL:
 		default:
-			value = double(UCHAR_MAX * *pos) / SCANNER_ADC_COUNT_MAX;
-			buf[i] = static_cast<guint8>(value);
+			{
+				double value = double(UCHAR_MAX * *pos) / SCANNER_ADC_COUNT_MAX;
+				buf[i] = static_cast<guint8>(value);
+			}
 			break;
 		}
-		present->pixel(i) = static_cast<gint16>(SCANNER_ADC_COUNT_MAX * value);
 	}
-	image_data_.presentation_data() = present;
+	image_data_.raw_data() = image;
 	image_data_.image_buffer() = buf;
 }
 
