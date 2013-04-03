@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amati 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-18 18:15+0400\n"
+"POT-Creation-Date: 2013-04-03 15:53+0400\n"
 "PO-Revision-Date: 2009-09-14 15:17+0400\n"
 "Last-Translator:  <pmk@ihep.ru>\n"
 "Language-Team: Russian\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ui/main-window.glade:17 src/main_window.cpp:770
+#: ui/main-window.glade:17 src/main_window.cpp:767
 #: src/main_window_action_handlers.cpp:119 src/main.cpp:105
 msgid "ScanAmati"
 msgstr "СканАмати"
@@ -35,62 +35,75 @@ msgstr "_Обследование"
 msgid "Run the Acquisition (Cntl+A)"
 msgstr "Сделать снимок (Cntl+A)"
 
-#: ui/image-acquisition-dialog.glade:113
+#: ui/image-acquisition-dialog.glade:112
 msgid "High _Voltage:"
 msgstr "_Напряжение:"
 
-#: ui/image-acquisition-dialog.glade:126
+#: ui/image-acquisition-dialog.glade:125
 msgid "_Exposure:"
 msgstr "_Экспозиция:"
 
-#: ui/image-acquisition-dialog.glade:172
+#: ui/image-acquisition-dialog.glade:171
 msgid "<b>X-ray Parameters</b>"
 msgstr "<b>Параметры излучателя</b>"
 
-#: ui/image-acquisition-dialog.glade:189
+#: ui/image-acquisition-dialog.glade:188
 msgid "Acquisition Parameters..."
 msgstr "Параметры сканирования и сбора данных..."
 
-#: ui/image-acquisition-dialog.glade:238
-msgid "Memory Size:"
-msgstr "Объем данных:"
+#: ui/image-acquisition-dialog.glade:233
+msgid "Detector array movement"
+msgstr "Перемещение детектора"
 
-#: ui/image-acquisition-dialog.glade:249
-msgid "Image Height:"
-msgstr "Высота изображения:"
+#: ui/image-acquisition-dialog.glade:248
+#: ui/acquisition-parameters-dialog.glade:143
+msgid "X-ray source movement"
+msgstr "Перемещение излучателя"
 
-#: ui/image-acquisition-dialog.glade:262
-msgid "Image Width:"
-msgstr "Ширина изображения:"
+#: ui/image-acquisition-dialog.glade:263
+#: ui/acquisition-parameters-dialog.glade:159
+#: src/widgets/information_notebook.cpp:248
+#: src/widgets/information_notebook.cpp:261
+msgid "Exposure"
+msgstr "Экспозиция"
 
-#: ui/image-acquisition-dialog.glade:275
-msgid "Data Resize Filter:"
-msgstr "Фильтр данных:"
-
-#: ui/image-acquisition-dialog.glade:288
-msgid "Calibration:"
-msgstr "Калибровке данных:"
-
-#: ui/image-acquisition-dialog.glade:301
-msgid "Intensity:"
-msgstr "Амплитуда сигнала:"
-
-#: ui/image-acquisition-dialog.glade:393
-msgid "<b>Acquisition Parameters</b>"
-msgstr "<b>Параметры сканирования и сбора данных</b>"
-
-#: ui/image-acquisition-dialog.glade:455
-msgid "_Run"
-msgstr "Ст_арт"
-
-#: ui/image-acquisition-dialog.glade:470
-msgid "_Stop"
-msgstr "Ст_оп"
-
-#: ui/image-acquisition-dialog.glade:491
+#: ui/image-acquisition-dialog.glade:278 ui/image-acquisition-dialog.glade:497
 #: ui/acquisition-parameters-dialog.glade:175
 msgid "Acquisition"
 msgstr "Снимок"
+
+#: ui/image-acquisition-dialog.glade:299
+#: ui/acquisition-parameters-dialog.glade:197
+msgid "<b>Run Arguments</b>"
+msgstr "<b>Параметры запуска</b>"
+
+#: ui/image-acquisition-dialog.glade:328
+msgid "8 MBytes"
+msgstr "8 МБайт"
+
+#: ui/image-acquisition-dialog.glade:343
+msgid "16 MBytes"
+msgstr "16 МБайт"
+
+#: ui/image-acquisition-dialog.glade:358
+msgid "24 MBytes"
+msgstr "24 МБайта"
+
+#: ui/image-acquisition-dialog.glade:373
+msgid "32 MBytes"
+msgstr "32 МБайта"
+
+#: ui/image-acquisition-dialog.glade:394
+msgid "<b>Memory Size</b>"
+msgstr "<b>Объем памяти</b>"
+
+#: ui/image-acquisition-dialog.glade:463
+msgid "_Run"
+msgstr "Ст_арт"
+
+#: ui/image-acquisition-dialog.glade:477
+msgid "_Stop"
+msgstr "Ст_оп"
 
 #: ui/acquisition-parameters-dialog.glade:96
 msgid "Acquisition Parameters"
@@ -99,20 +112,6 @@ msgstr "Параметры Сканирования И Сбора Данных"
 #: ui/acquisition-parameters-dialog.glade:127
 msgid "Linear array movement"
 msgstr "Движение детектора"
-
-#: ui/acquisition-parameters-dialog.glade:143
-msgid "X-ray source movement"
-msgstr "Движение излучателя"
-
-#: ui/acquisition-parameters-dialog.glade:159
-#: src/widgets/information_notebook.cpp:248
-#: src/widgets/information_notebook.cpp:261
-msgid "Exposure"
-msgstr "Экспозиция"
-
-#: ui/acquisition-parameters-dialog.glade:197
-msgid "<b>Run Arguments</b>"
-msgstr "<b>Параметры запуска</b>"
 
 #: ui/acquisition-parameters-dialog.glade:207
 msgid "Run Paramenters"
@@ -224,23 +223,19 @@ msgstr "Четверть"
 msgid "<b>Image Width</b>"
 msgstr "<b>Ширина изображения</b>"
 
-#: ui/acquisition-parameters-dialog.glade:1364
-#: src/dialogs/image_acquisition.cpp:375 src/main_window_actions.cpp:256
+#: ui/acquisition-parameters-dialog.glade:1364 src/main_window_actions.cpp:256
 msgid "Lanczos"
 msgstr "Алгоритм Lanczos"
 
-#: ui/acquisition-parameters-dialog.glade:1381
-#: src/dialogs/image_acquisition.cpp:378 src/main_window_actions.cpp:260
+#: ui/acquisition-parameters-dialog.glade:1381 src/main_window_actions.cpp:260
 msgid "Cubic"
 msgstr "Кубический"
 
-#: ui/acquisition-parameters-dialog.glade:1398
-#: src/dialogs/image_acquisition.cpp:384 src/main_window_actions.cpp:264
+#: ui/acquisition-parameters-dialog.glade:1398 src/main_window_actions.cpp:264
 msgid "Bessel"
 msgstr "Бесселя"
 
-#: ui/acquisition-parameters-dialog.glade:1415
-#: src/dialogs/image_acquisition.cpp:381 src/main_window_actions.cpp:268
+#: ui/acquisition-parameters-dialog.glade:1415 src/main_window_actions.cpp:268
 msgid "Quadratic"
 msgstr "Квадратический"
 
@@ -252,23 +247,19 @@ msgstr "<b>Фильтр сглаживания</b>"
 msgid "<b>Postprocess</b>"
 msgstr "<b>Обработка</b>"
 
-#: ui/acquisition-parameters-dialog.glade:1526
-#: src/dialogs/image_acquisition.cpp:401 src/main_window_actions.cpp:275
+#: ui/acquisition-parameters-dialog.glade:1526 src/main_window_actions.cpp:275
 msgid "Rough"
 msgstr "Грубая"
 
-#: ui/acquisition-parameters-dialog.glade:1543
-#: src/dialogs/image_acquisition.cpp:398 src/main_window_actions.cpp:279
+#: ui/acquisition-parameters-dialog.glade:1543 src/main_window_actions.cpp:279
 msgid "Good"
 msgstr "Хорошая"
 
-#: ui/acquisition-parameters-dialog.glade:1560
-#: src/dialogs/image_acquisition.cpp:395 src/main_window_actions.cpp:283
+#: ui/acquisition-parameters-dialog.glade:1560 src/main_window_actions.cpp:283
 msgid "Better"
 msgstr "Оптимальная"
 
-#: ui/acquisition-parameters-dialog.glade:1577
-#: src/dialogs/image_acquisition.cpp:392 src/main_window_actions.cpp:287
+#: ui/acquisition-parameters-dialog.glade:1577 src/main_window_actions.cpp:287
 msgid "Best"
 msgstr "Наилучшая"
 
@@ -277,12 +268,10 @@ msgid "<b>Calibration Type</b>"
 msgstr "<b>Тип калибровки</b>"
 
 #: ui/acquisition-parameters-dialog.glade:1628
-#: src/dialogs/image_acquisition.cpp:415
 msgid "Original"
 msgstr "Исходная"
 
 #: ui/acquisition-parameters-dialog.glade:1645
-#: src/dialogs/image_acquisition.cpp:409
 msgid "Linear"
 msgstr "Линейная"
 
@@ -847,22 +836,17 @@ msgstr "Если излучатель готов нажмите \"Да\", есл
 msgid "X-ray Preparation"
 msgstr "Подготовка излучателя"
 
-#: src/dialogs/image_acquisition.cpp:329
+#: src/dialogs/image_acquisition.cpp:334
 #: src/widgets/information_notebook.cpp:569
 #: src/widgets/information_notebook.cpp:644
 msgid "kV"
 msgstr "кВ"
 
-#: src/dialogs/image_acquisition.cpp:336
+#: src/dialogs/image_acquisition.cpp:341
 #: src/widgets/information_notebook.cpp:566
 #: src/widgets/information_notebook.cpp:640
 msgid "mAs"
 msgstr "мА × c"
-
-#: src/dialogs/image_acquisition.cpp:412
-#, fuzzy
-msgid "Logarithmic"
-msgstr "Логарифмическая"
 
 #: src/dialogs/lining_adjustment.cpp:121
 msgid "Strip"
@@ -1452,19 +1436,19 @@ msgstr "Иконка amati отсутствует в теме иконок по 
 msgid "Couldn't load program icon from the default icon theme. "
 msgstr "Невозможно загрузить иконку из темы иконок по умолчанию."
 
-#: src/main_window.cpp:323
+#: src/main_window.cpp:321
 msgid "Open File"
 msgstr "Открыть файл"
 
-#: src/main_window.cpp:425
+#: src/main_window.cpp:423
 msgid "Saving Error"
 msgstr "Ошибка сохранения"
 
-#: src/main_window.cpp:428
+#: src/main_window.cpp:426
 msgid "Unable to save the file \"%1\"."
 msgstr "Невозможно сохранить файл \"%1\"."
 
-#: src/main_window.cpp:700
+#: src/main_window.cpp:697
 msgid "Scanner Error"
 msgstr "Ошибка сканера"
 
@@ -1789,6 +1773,31 @@ msgstr "Невозможно загрузить количество столб�
 #: src/file_loader.cpp:125
 msgid "Unable to load image data."
 msgstr "Невозможно загрузить данные изображения."
+
+#~ msgid "Memory Size:"
+#~ msgstr "Объем данных:"
+
+#~ msgid "Image Height:"
+#~ msgstr "Высота изображения:"
+
+#~ msgid "Image Width:"
+#~ msgstr "Ширина изображения:"
+
+#~ msgid "Data Resize Filter:"
+#~ msgstr "Фильтр данных:"
+
+#~ msgid "Calibration:"
+#~ msgstr "Калибровке данных:"
+
+#~ msgid "Intensity:"
+#~ msgstr "Амплитуда сигнала:"
+
+#~ msgid "<b>Acquisition Parameters</b>"
+#~ msgstr "<b>Параметры сканирования и сбора данных</b>"
+
+#, fuzzy
+#~ msgid "Logarithmic"
+#~ msgstr "Логарифмическая"
 
 #~ msgid "Half Step"
 #~ msgstr "Полушаг"
@@ -2525,17 +2534,8 @@ msgstr "Невозможно загрузить данные изображен�
 #~ msgid "Unable to run acquisition properly."
 #~ msgstr "Ошибка при старте сбора данных."
 
-#~ msgid "One bank: 8 MBytes"
-#~ msgstr "Одна ячейка: 8 МБайт"
-
-#~ msgid "Two banks: 16 MBytes"
-#~ msgstr "Две ячейки: 16 МБайт"
-
 #~ msgid "Three banks: 24 MBytes"
 #~ msgstr "Три ячейки: 24 МБайта"
-
-#~ msgid "Four banks: 32 MBytes"
-#~ msgstr "Четыре ячейки: 32 МБайта"
 
 #~ msgid "Banks:"
 #~ msgstr "Банки памяти:"

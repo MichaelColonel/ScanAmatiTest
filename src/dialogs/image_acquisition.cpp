@@ -381,19 +381,24 @@ void
 ImageAcquisitionDialog::set_parameters(
 	const Scanner::AcquisitionParameters& params)
 {
-	bool array, xray = false;
+	acquisition_ = params;
+
+	bool array, xray;
 	switch (params.movement_type) {
 	case Scanner::MOVEMENT_BOTH:
 		array = xray = true;
 		break;
 	case Scanner::MOVEMENT_XRAY:
 		xray = true;
+		array = false;
 		break;
 	case Scanner::MOVEMENT_ARRAY:
 		array = true;
+		xray = false;
 		break;
 	case Scanner::MOVEMENT_NONE:
 	default:
+		array = xray = false;
 		break;
 	}
 

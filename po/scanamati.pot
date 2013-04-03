@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-18 18:15+0400\n"
+"POT-Creation-Date: 2013-04-03 15:53+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: ui/main-window.glade:17 src/main_window.cpp:770
+#: ui/main-window.glade:17 src/main_window.cpp:767
 #: src/main_window_action_handlers.cpp:119 src/main.cpp:105
 msgid "ScanAmati"
 msgstr ""
@@ -35,61 +35,74 @@ msgstr ""
 msgid "Run the Acquisition (Cntl+A)"
 msgstr ""
 
-#: ui/image-acquisition-dialog.glade:113
+#: ui/image-acquisition-dialog.glade:112
 msgid "High _Voltage:"
 msgstr ""
 
-#: ui/image-acquisition-dialog.glade:126
+#: ui/image-acquisition-dialog.glade:125
 msgid "_Exposure:"
 msgstr ""
 
-#: ui/image-acquisition-dialog.glade:172
+#: ui/image-acquisition-dialog.glade:171
 msgid "<b>X-ray Parameters</b>"
 msgstr ""
 
-#: ui/image-acquisition-dialog.glade:189
+#: ui/image-acquisition-dialog.glade:188
 msgid "Acquisition Parameters..."
 msgstr ""
 
-#: ui/image-acquisition-dialog.glade:238
-msgid "Memory Size:"
+#: ui/image-acquisition-dialog.glade:233
+msgid "Detector array movement"
 msgstr ""
 
-#: ui/image-acquisition-dialog.glade:249
-msgid "Image Height:"
+#: ui/image-acquisition-dialog.glade:248
+#: ui/acquisition-parameters-dialog.glade:143
+msgid "X-ray source movement"
 msgstr ""
 
-#: ui/image-acquisition-dialog.glade:262
-msgid "Image Width:"
+#: ui/image-acquisition-dialog.glade:263
+#: ui/acquisition-parameters-dialog.glade:159
+#: src/widgets/information_notebook.cpp:248
+#: src/widgets/information_notebook.cpp:261
+msgid "Exposure"
 msgstr ""
 
-#: ui/image-acquisition-dialog.glade:275
-msgid "Data Resize Filter:"
+#: ui/image-acquisition-dialog.glade:278 ui/image-acquisition-dialog.glade:497
+#: ui/acquisition-parameters-dialog.glade:175
+msgid "Acquisition"
 msgstr ""
 
-#: ui/image-acquisition-dialog.glade:288
-msgid "Calibration:"
+#: ui/image-acquisition-dialog.glade:299
+#: ui/acquisition-parameters-dialog.glade:197
+msgid "<b>Run Arguments</b>"
 msgstr ""
 
-#: ui/image-acquisition-dialog.glade:301
-msgid "Intensity:"
+#: ui/image-acquisition-dialog.glade:328
+msgid "8 MBytes"
 msgstr ""
 
-#: ui/image-acquisition-dialog.glade:393
-msgid "<b>Acquisition Parameters</b>"
+#: ui/image-acquisition-dialog.glade:343
+msgid "16 MBytes"
 msgstr ""
 
-#: ui/image-acquisition-dialog.glade:455
+#: ui/image-acquisition-dialog.glade:358
+msgid "24 MBytes"
+msgstr ""
+
+#: ui/image-acquisition-dialog.glade:373
+msgid "32 MBytes"
+msgstr ""
+
+#: ui/image-acquisition-dialog.glade:394
+msgid "<b>Memory Size</b>"
+msgstr ""
+
+#: ui/image-acquisition-dialog.glade:463
 msgid "_Run"
 msgstr ""
 
-#: ui/image-acquisition-dialog.glade:470
+#: ui/image-acquisition-dialog.glade:477
 msgid "_Stop"
-msgstr ""
-
-#: ui/image-acquisition-dialog.glade:491
-#: ui/acquisition-parameters-dialog.glade:175
-msgid "Acquisition"
 msgstr ""
 
 #: ui/acquisition-parameters-dialog.glade:96
@@ -98,20 +111,6 @@ msgstr ""
 
 #: ui/acquisition-parameters-dialog.glade:127
 msgid "Linear array movement"
-msgstr ""
-
-#: ui/acquisition-parameters-dialog.glade:143
-msgid "X-ray source movement"
-msgstr ""
-
-#: ui/acquisition-parameters-dialog.glade:159
-#: src/widgets/information_notebook.cpp:248
-#: src/widgets/information_notebook.cpp:261
-msgid "Exposure"
-msgstr ""
-
-#: ui/acquisition-parameters-dialog.glade:197
-msgid "<b>Run Arguments</b>"
 msgstr ""
 
 #: ui/acquisition-parameters-dialog.glade:207
@@ -224,23 +223,19 @@ msgstr ""
 msgid "<b>Image Width</b>"
 msgstr ""
 
-#: ui/acquisition-parameters-dialog.glade:1364
-#: src/dialogs/image_acquisition.cpp:375 src/main_window_actions.cpp:256
+#: ui/acquisition-parameters-dialog.glade:1364 src/main_window_actions.cpp:256
 msgid "Lanczos"
 msgstr ""
 
-#: ui/acquisition-parameters-dialog.glade:1381
-#: src/dialogs/image_acquisition.cpp:378 src/main_window_actions.cpp:260
+#: ui/acquisition-parameters-dialog.glade:1381 src/main_window_actions.cpp:260
 msgid "Cubic"
 msgstr ""
 
-#: ui/acquisition-parameters-dialog.glade:1398
-#: src/dialogs/image_acquisition.cpp:384 src/main_window_actions.cpp:264
+#: ui/acquisition-parameters-dialog.glade:1398 src/main_window_actions.cpp:264
 msgid "Bessel"
 msgstr ""
 
-#: ui/acquisition-parameters-dialog.glade:1415
-#: src/dialogs/image_acquisition.cpp:381 src/main_window_actions.cpp:268
+#: ui/acquisition-parameters-dialog.glade:1415 src/main_window_actions.cpp:268
 msgid "Quadratic"
 msgstr ""
 
@@ -252,23 +247,19 @@ msgstr ""
 msgid "<b>Postprocess</b>"
 msgstr ""
 
-#: ui/acquisition-parameters-dialog.glade:1526
-#: src/dialogs/image_acquisition.cpp:401 src/main_window_actions.cpp:275
+#: ui/acquisition-parameters-dialog.glade:1526 src/main_window_actions.cpp:275
 msgid "Rough"
 msgstr ""
 
-#: ui/acquisition-parameters-dialog.glade:1543
-#: src/dialogs/image_acquisition.cpp:398 src/main_window_actions.cpp:279
+#: ui/acquisition-parameters-dialog.glade:1543 src/main_window_actions.cpp:279
 msgid "Good"
 msgstr ""
 
-#: ui/acquisition-parameters-dialog.glade:1560
-#: src/dialogs/image_acquisition.cpp:395 src/main_window_actions.cpp:283
+#: ui/acquisition-parameters-dialog.glade:1560 src/main_window_actions.cpp:283
 msgid "Better"
 msgstr ""
 
-#: ui/acquisition-parameters-dialog.glade:1577
-#: src/dialogs/image_acquisition.cpp:392 src/main_window_actions.cpp:287
+#: ui/acquisition-parameters-dialog.glade:1577 src/main_window_actions.cpp:287
 msgid "Best"
 msgstr ""
 
@@ -277,12 +268,10 @@ msgid "<b>Calibration Type</b>"
 msgstr ""
 
 #: ui/acquisition-parameters-dialog.glade:1628
-#: src/dialogs/image_acquisition.cpp:415
 msgid "Original"
 msgstr ""
 
 #: ui/acquisition-parameters-dialog.glade:1645
-#: src/dialogs/image_acquisition.cpp:409
 msgid "Linear"
 msgstr ""
 
@@ -843,20 +832,16 @@ msgstr ""
 msgid "X-ray Preparation"
 msgstr ""
 
-#: src/dialogs/image_acquisition.cpp:329
+#: src/dialogs/image_acquisition.cpp:334
 #: src/widgets/information_notebook.cpp:569
 #: src/widgets/information_notebook.cpp:644
 msgid "kV"
 msgstr ""
 
-#: src/dialogs/image_acquisition.cpp:336
+#: src/dialogs/image_acquisition.cpp:341
 #: src/widgets/information_notebook.cpp:566
 #: src/widgets/information_notebook.cpp:640
 msgid "mAs"
-msgstr ""
-
-#: src/dialogs/image_acquisition.cpp:412
-msgid "Logarithmic"
 msgstr ""
 
 #: src/dialogs/lining_adjustment.cpp:121
@@ -1431,19 +1416,19 @@ msgstr ""
 msgid "Couldn't load program icon from the default icon theme. "
 msgstr ""
 
-#: src/main_window.cpp:323
+#: src/main_window.cpp:321
 msgid "Open File"
 msgstr ""
 
-#: src/main_window.cpp:425
+#: src/main_window.cpp:423
 msgid "Saving Error"
 msgstr ""
 
-#: src/main_window.cpp:428
+#: src/main_window.cpp:426
 msgid "Unable to save the file \"%1\"."
 msgstr ""
 
-#: src/main_window.cpp:700
+#: src/main_window.cpp:697
 msgid "Scanner Error"
 msgstr ""
 
