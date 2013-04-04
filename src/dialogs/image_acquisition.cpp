@@ -198,6 +198,19 @@ ImageAcquisitionDialog::on_response(int result)
 }
 
 void
+ImageAcquisitionDialog::block_interface(bool block)
+{
+	switch (block) {
+	case true:
+		break;
+	case false:
+		break;
+	default:
+		break;
+	}
+}
+
+void
 ImageAcquisitionDialog::on_acquisition_run()
 {
 	Scanner::SharedManager manager = Scanner::Manager::instance();

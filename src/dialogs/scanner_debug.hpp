@@ -40,6 +40,7 @@ public:
 		const Glib::RefPtr<Gtk::Builder>& builder);
 	virtual ~ScannerDebugDialog();
 	virtual void update_scanner_state(const Scanner::State&);
+	virtual void block_interface(bool block = true);
 
 protected:
 	// Member functions:

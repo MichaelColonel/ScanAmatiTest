@@ -37,7 +37,7 @@ public:
 		const Glib::RefPtr<Gtk::Builder>& builder);
 	virtual ~ChipCapacitiesDialog();
 	virtual void update_scanner_state(const Scanner::State&);
-
+	virtual void block_interface(bool);
 protected:
 	// Member functions:
 	void connect_signals();

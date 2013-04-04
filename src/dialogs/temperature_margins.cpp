@@ -123,6 +123,19 @@ TemperatureMarginsDialog::set_temperature_margins(const Scanner::State& state)
 	spinbutton_temperature_spread_value_->set_value(spread);
 }
 
+void
+TemperatureMarginsDialog::block_interface(bool block)
+{
+	switch (block) {
+	case true:
+		break;
+	case false:
+		break;
+	default:
+		break;
+	}
+}
+
 TemperatureMarginsDialog*
 TemperatureMarginsDialog::create()
 {

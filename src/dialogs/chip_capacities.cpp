@@ -135,6 +135,19 @@ ChipCapacitiesDialog::set_current_capacity(const Scanner::State& state)
 }
 
 void
+ChipCapacitiesDialog::block_interface(bool block)
+{
+	switch (block) {
+	case true:
+		break;
+	case false:
+		break;
+	default:
+		break;
+	}
+}
+
+void
 ChipCapacitiesDialog::insert_into_buttons_map(
 	double capacity, Gtk::RadioButton* button)
 {

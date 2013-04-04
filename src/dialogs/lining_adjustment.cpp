@@ -165,10 +165,10 @@ LiningAdjustmentDialog::update_scanner_state(const Scanner::State& state)
 
 	switch (state.manager_state().run()) {
 	case RUN_BACKGROUND:
-		set_sensitive(true);
+		block_interface(false);
 		break;
 	default:
-		set_sensitive(false);
+		block_interface(true);
 		break;
 	}
 }
@@ -177,6 +177,19 @@ void
 LiningAdjustmentDialog::on_response(int)
 {
 	hide();
+}
+
+void
+LiningAdjustmentDialog::block_interface(bool block)
+{
+	switch (block) {
+	case true:
+		break;
+	case false:
+		break;
+	default:
+		break;
+	}
 }
 
 void

@@ -35,6 +35,8 @@ public:
 		const Glib::ustring& keyname);
 	virtual ~ScannerTemplateDialog();
 	virtual void update_scanner_state(const Scanner::State&) = 0;
+	virtual void block_interface(bool) = 0;
+
 protected:
 	Glib::RefPtr<Gtk::Builder> builder_;
 	Glib::ustring keyname_;

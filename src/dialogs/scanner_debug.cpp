@@ -94,6 +94,33 @@ ScannerDebugDialog::connect_signals()
 }
 
 void
+ScannerDebugDialog::block_interface(bool block)
+{
+	switch (block) {
+	case true:
+		button_altera_reset_->set_sensitive(false);
+		button_array_reset_->set_sensitive(false);
+		button_write_lining_->set_sensitive(false);
+		button_adjust_lining_->set_sensitive(false);
+		button_select_capacity_->set_sensitive(false);
+		button_turnoff_peltier_->set_sensitive(false);
+		checkbutton_temperature_control_->set_sensitive(false);
+		break;
+	case false:
+		button_altera_reset_->set_sensitive(true);
+		button_array_reset_->set_sensitive(true);
+		button_write_lining_->set_sensitive(true);
+		button_adjust_lining_->set_sensitive(true);
+		button_select_capacity_->set_sensitive(true);
+		button_turnoff_peltier_->set_sensitive(true);
+		checkbutton_temperature_control_->set_sensitive(true);
+		break;
+	default:
+		break;
+	}
+}
+
+void
 ScannerDebugDialog::update_scanner_state(const Scanner::State& state)
 {
 	if (!ui_state_initiated_) {
@@ -105,10 +132,10 @@ ScannerDebugDialog::update_scanner_state(const Scanner::State& state)
 
 	switch (mstate.run()) {
 	case RUN_BACKGROUND:
-		set_sensitive(true);
+		block_interface(false);
 		break;
 	default:
-		set_sensitive(false);
+		block_interface();
 		break;
 	}
 	signal_scanner_state_changed_(state);
@@ -137,6 +164,7 @@ ScannerDebugDialog::on_scanner_command(Scanner::CommandType command)
 	Scanner::Command* com = Scanner::Commands::create(command);
 	Scanner::AcquisitionParameters params(com);
 	manager->run( RUN_COMMANDS, params);
+	block_interface(true);
 }
 
 void

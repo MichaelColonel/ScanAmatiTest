@@ -93,6 +93,19 @@ LiningAcquisitionDialog::connect_signals()
 }
 
 void
+LiningAcquisitionDialog::block_interface(bool block)
+{
+	switch (block) {
+	case true:
+		break;
+	case false:
+		break;
+	default:
+		break;
+	}
+}
+
+void
 LiningAcquisitionDialog::on_response(int result)
 {
 	hide();
