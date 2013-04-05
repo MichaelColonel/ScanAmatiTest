@@ -23,6 +23,7 @@
 namespace Gtk {
 class Box;
 class RadioButton;
+class Button;
 }
 
 namespace ScanAmati {
@@ -48,8 +49,11 @@ protected:
 	void insert_into_buttons_map( double capacity, Gtk::RadioButton* button);
 	virtual void on_response(int res);
 
-	std::map< double, Gtk::RadioButton*> buttons_map_;
+	typedef std::map< double, Gtk::RadioButton*> RadioButtonsMap;
+	typedef RadioButtonsMap::iterator RadioButtonsIter;
+	RadioButtonsMap buttons_map_;
 
+	Gtk::Button* button_change_capacity_;
 	double capacity_;
 };
 

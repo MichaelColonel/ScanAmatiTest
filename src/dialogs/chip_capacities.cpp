@@ -41,6 +41,7 @@ ChipCapacitiesDialog::ChipCapacitiesDialog( BaseObjectType* cobject,
 	const Glib::RefPtr<Gtk::Builder>& builder)
 	:
 	ScannerTemplateDialog( cobject, builder, "chip-capacities"),
+	button_change_capacity_(0),
 	capacity_(SCANNER_DEFAULT_CHIP_CAPACITY)
 {
 	init_ui();
@@ -57,6 +58,7 @@ ChipCapacitiesDialog::~ChipCapacitiesDialog()
 void
 ChipCapacitiesDialog::init_ui()
 {
+	builder_->get_widget( "button-change-capacity", button_change_capacity_);
 }
 
 void
@@ -98,10 +100,10 @@ ChipCapacitiesDialog::update_scanner_state(const Scanner::State& state)
 
 	switch (mstate.run()) {
 	case RUN_BACKGROUND:
-		set_sensitive(true);
+		block_interface(false);
 		break;
 	default:
-		set_sensitive(false);
+		block_interface(true);
 		break;
 	}
 }
@@ -137,10 +139,27 @@ ChipCapacitiesDialog::set_current_capacity(const Scanner::State& state)
 void
 ChipCapacitiesDialog::block_interface(bool block)
 {
+	for (RadioButtonsIter it = buttons_map_.begin();
+		it != buttons_map_.end(); ++it) {
+
+		switch (block) {
+		case true:
+			it->second->set_sensitive(false);
+			break;
+		case false:
+			it->second->set_sensitive(true);
+			break;
+		default:
+			break;
+		}
+	}
+
 	switch (block) {
 	case true:
+		button_change_capacity_->set_sensitive(false);
 		break;
 	case false:
+		button_change_capacity_->set_sensitive(true);
 		break;
 	default:
 		break;

@@ -175,6 +175,7 @@ ScannerDebugDialog::on_write_lining()
 	if (!coms.empty()) {
 		Scanner::AcquisitionParameters params(coms);
 		manager->run( RUN_COMMANDS, params);
+		block_interface(true);
 	}
 	else {
 		WarningDialog dialog( *this, _("Warning"));

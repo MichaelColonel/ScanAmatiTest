@@ -97,8 +97,18 @@ LiningAcquisitionDialog::block_interface(bool block)
 {
 	switch (block) {
 	case true:
+		button_start_->set_sensitive(false);
+		button_stop_->set_sensitive(true);
+		spinbutton_adc_count_->set_sensitive(false);
+		if (app.extend)
+			expander_accuracy_->set_sensitive(false);
 		break;
 	case false:
+		button_start_->set_sensitive(true);
+		button_stop_->set_sensitive(false);
+		spinbutton_adc_count_->set_sensitive(true);
+		if (app.extend)
+			expander_accuracy_->set_sensitive(true);
 		break;
 	default:
 		break;
@@ -121,6 +131,7 @@ LiningAcquisitionDialog::on_start()
 	params.lining_accuracy_type = accuracy_;
 	params.lining_count = count;
 	manager->run( RUN_LINING_ACQUISITION, params);
+	block_interface(true);
 }
 
 void
@@ -144,31 +155,19 @@ LiningAcquisitionDialog::update_scanner_state(const Scanner::State& state)
 
 	switch (mstate.run()) {
 	case RUN_LINING_ACQUISITION:
-		button_start_->set_sensitive(false);
-		button_stop_->set_sensitive(true);
-		spinbutton_adc_count_->set_sensitive(false);
+		block_interface(true);
 		if (mstate.process_finished()) {
 			OFLOG_DEBUG( app.log, "Lining acquisition finished");
 			signal_lining_ready_();
 		}
-		if (app.extend)
-			expander_accuracy_->set_sensitive(false);
 		break;
 	case RUN_BACKGROUND:
-		button_start_->set_sensitive(true);
-		button_stop_->set_sensitive(false);
-		spinbutton_adc_count_->set_sensitive(true);
-		if (app.extend)
-			expander_accuracy_->set_sensitive(true);
+		block_interface(false);
 		break;
 	case RUN_NONE:
 	default:
+		block_interface(true);
 		button_start_->set_sensitive(false);
-		button_stop_->set_sensitive(false);
-		spinbutton_adc_count_->set_sensitive(false);
-		if (app.extend)
-			expander_accuracy_->set_sensitive(false);
-		break;
 	}
 }
 

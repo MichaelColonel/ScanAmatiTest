@@ -97,8 +97,6 @@ LiningAdjustmentDialog::init_ui()
 	// create items
 	StripCodeVector codes;
 	for ( int i = 0; i < SCANNER_STRIPS_PER_CHIP_REAL; ++i) {
-//		strip_code.first = i + 1; // from 1 to 128
-//		strip_code.second = 0;
 		codes.push_back(StripCode( i + 1, 0));
 	}
 
@@ -184,8 +182,20 @@ LiningAdjustmentDialog::block_interface(bool block)
 {
 	switch (block) {
 	case true:
+		combobox_chip_->set_sensitive(false);
+		spinbutton_strip_->set_sensitive(false);
+		spinbutton_code_->set_sensitive(false);
+		spinbutton_broadcast_->set_sensitive(false);
+		menutoolbutton_write_current_->set_sensitive(false);
+		menutoolbutton_load_from_file_->set_sensitive(false);
 		break;
 	case false:
+		combobox_chip_->set_sensitive(true);
+		spinbutton_strip_->set_sensitive(true);
+		spinbutton_code_->set_sensitive(true);
+		spinbutton_broadcast_->set_sensitive(true);
+		menutoolbutton_write_current_->set_sensitive(true);
+		menutoolbutton_load_from_file_->set_sensitive(true);
 		break;
 	default:
 		break;
@@ -234,6 +244,7 @@ LiningAdjustmentDialog::on_chip_changed()
 		params.value = chip;
 
 		manager->run( RUN_COMMANDS, params);
+		block_interface(true);
 
 		spinbutton_strip_->set_value(0.);
 
@@ -370,6 +381,7 @@ LiningAdjustmentDialog::on_write_lining()
 				Scanner::Commands::create( chip, lining_[chip]);
 			Scanner::AcquisitionParameters params(com);
 			manager->run( RUN_COMMANDS, params);
+			block_interface(true);
 		}
 	}
 }
@@ -392,6 +404,7 @@ LiningAdjustmentDialog::on_write_all_lining()
 
 	Scanner::AcquisitionParameters params(coms);
 	manager->run( RUN_COMMANDS, params);
+	block_interface(true);
 }
 
 void
