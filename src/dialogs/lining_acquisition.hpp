@@ -17,6 +17,9 @@
 
 #pragma once
 
+#include <gtkmm/liststore.h>
+#include <gtkmm/treeselection.h>
+
 // files from src directory begin
 #include "scanner/data.hpp"
 // files from src directory end
@@ -54,8 +57,12 @@ protected:
 	void on_start();
 	void on_stop();
 	void on_accuracy_changed(Scanner::LiningAccuracyType);
+	void on_selection_changed();
+	void row_selected(const Gtk::TreeModel::iterator& iter);
+	void on_chips();
 
 	Gtk::SpinButton* spinbutton_adc_count_;
+	Gtk::Button* button_chips_;
 	Gtk::Button* button_start_;
 	Gtk::Button* button_stop_;
 
@@ -66,8 +73,12 @@ protected:
 
 	Scanner::LiningAccuracyType accuracy_;
 
+	Glib::RefPtr<Gtk::ListStore> liststore_chips_;
+	Glib::RefPtr<Gtk::TreeSelection> selection_chips_;
+
 	// Signals:
 	sigc::signal<void> signal_lining_ready_;
+	std::vector<char> chip_codes_;
 };
 
 } // namespace UI

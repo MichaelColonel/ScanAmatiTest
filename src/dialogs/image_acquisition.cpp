@@ -182,6 +182,21 @@ ImageAcquisitionDialog::connect_signals()
 
 	button_acquisition_parameters_->signal_clicked().connect(
 		sigc::mem_fun( *this, &ImageAcquisitionDialog::on_acquisition_parameters));
+
+	radiobutton_memory_8mbytes_->signal_toggled().connect(sigc::bind(
+		sigc::mem_fun( *this, &ImageAcquisitionDialog::on_memory_size_changed),
+		radiobutton_memory_8mbytes_, SCANNER_MEMORY_BANK));
+	radiobutton_memory_16mbytes_->signal_toggled().connect(sigc::bind(
+		sigc::mem_fun( *this, &ImageAcquisitionDialog::on_memory_size_changed),
+		radiobutton_memory_16mbytes_, 2 * SCANNER_MEMORY_BANK));
+	radiobutton_memory_24mbytes_->signal_toggled().connect(sigc::bind(
+		sigc::mem_fun( *this, &ImageAcquisitionDialog::on_memory_size_changed),
+		radiobutton_memory_24mbytes_, 3 * SCANNER_MEMORY_BANK));
+	radiobutton_memory_32mbytes_->signal_toggled().connect(sigc::bind(
+		sigc::mem_fun( *this, &ImageAcquisitionDialog::on_memory_size_changed),
+		radiobutton_memory_32mbytes_, 4 * SCANNER_MEMORY_BANK));
+
+	radiobutton_memory_32mbytes_->set_active();
 }
 
 void
@@ -340,6 +355,16 @@ ImageAcquisitionDialog::update_scanner_state(const Scanner::State& state)
 	}
 }
 
+void
+ImageAcquisitionDialog::on_memory_size_changed(
+	const Gtk::RadioButton* button, size_t memory_size)
+{
+	if (button->get_active()) {
+		OFLOG_DEBUG( app.log, "Memory size in bytes: " << memory_size);
+		acquisition_.acquisition.memory_size = memory_size;
+	}
+}
+
 Glib::ustring
 ImageAcquisitionDialog::on_format_voltage_value(double voltage)
 {
@@ -420,6 +445,23 @@ ImageAcquisitionDialog::set_parameters(
 
 	checkbutton_exposure_->set_active(params.with_exposure);
 	checkbutton_acquisition_->set_active(params.with_acquisition);
+
+	switch (params.acquisition.memory_size) {
+	case SCANNER_MEMORY_BANK:
+		radiobutton_memory_8mbytes_->set_active();
+		break;
+	case 2 * SCANNER_MEMORY_BANK:
+		radiobutton_memory_16mbytes_->set_active();
+		break;
+	case 3 * SCANNER_MEMORY_BANK:
+		radiobutton_memory_24mbytes_->set_active();
+		break;
+	case 4 * SCANNER_MEMORY_BANK:
+		radiobutton_memory_32mbytes_->set_active();
+		break;
+	default:
+		break;
+	}
 }
 
 ImageAcquisitionDialog*

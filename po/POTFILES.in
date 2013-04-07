@@ -20,6 +20,7 @@ src/dicom/patient_age.cpp
 src/dialogs/image_acquisition.cpp
 src/dialogs/lining_adjustment.cpp
 src/dialogs/chip_capacities.cpp
+src/dialogs/chips_lining.cpp
 src/dialogs/temperature_margins.cpp
 src/dialogs/save_as.cpp
 src/dialogs/dicom_information.cpp

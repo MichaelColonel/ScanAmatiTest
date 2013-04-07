@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amati 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-03 15:53+0400\n"
+"POT-Creation-Date: 2013-04-07 21:35+0400\n"
 "PO-Revision-Date: 2009-09-14 15:17+0400\n"
 "Last-Translator:  <pmk@ihep.ru>\n"
 "Language-Team: Russian\n"
@@ -55,53 +55,53 @@ msgstr "Параметры сканирования и сбора данных..
 msgid "Detector array movement"
 msgstr "Перемещение детектора"
 
-#: ui/image-acquisition-dialog.glade:248
+#: ui/image-acquisition-dialog.glade:247
 #: ui/acquisition-parameters-dialog.glade:143
 msgid "X-ray source movement"
 msgstr "Перемещение излучателя"
 
-#: ui/image-acquisition-dialog.glade:263
+#: ui/image-acquisition-dialog.glade:261
 #: ui/acquisition-parameters-dialog.glade:159
 #: src/widgets/information_notebook.cpp:248
 #: src/widgets/information_notebook.cpp:261
 msgid "Exposure"
 msgstr "Экспозиция"
 
-#: ui/image-acquisition-dialog.glade:278 ui/image-acquisition-dialog.glade:497
+#: ui/image-acquisition-dialog.glade:275 ui/image-acquisition-dialog.glade:494
 #: ui/acquisition-parameters-dialog.glade:175
 msgid "Acquisition"
 msgstr "Снимок"
 
-#: ui/image-acquisition-dialog.glade:299
+#: ui/image-acquisition-dialog.glade:296
 #: ui/acquisition-parameters-dialog.glade:197
 msgid "<b>Run Arguments</b>"
 msgstr "<b>Параметры запуска</b>"
 
-#: ui/image-acquisition-dialog.glade:328
+#: ui/image-acquisition-dialog.glade:325
 msgid "8 MBytes"
 msgstr "8 МБайт"
 
-#: ui/image-acquisition-dialog.glade:343
+#: ui/image-acquisition-dialog.glade:339
 msgid "16 MBytes"
 msgstr "16 МБайт"
 
-#: ui/image-acquisition-dialog.glade:358
+#: ui/image-acquisition-dialog.glade:354
 msgid "24 MBytes"
 msgstr "24 МБайта"
 
-#: ui/image-acquisition-dialog.glade:373
+#: ui/image-acquisition-dialog.glade:369
 msgid "32 MBytes"
 msgstr "32 МБайта"
 
-#: ui/image-acquisition-dialog.glade:394
+#: ui/image-acquisition-dialog.glade:391
 msgid "<b>Memory Size</b>"
 msgstr "<b>Объем памяти</b>"
 
-#: ui/image-acquisition-dialog.glade:463
+#: ui/image-acquisition-dialog.glade:460
 msgid "_Run"
 msgstr "Ст_арт"
 
-#: ui/image-acquisition-dialog.glade:477
+#: ui/image-acquisition-dialog.glade:474
 msgid "_Stop"
 msgstr "Ст_оп"
 
@@ -287,35 +287,47 @@ msgstr "<b>Яркость пикселов</b>"
 msgid "Image"
 msgstr "Изображение"
 
-#: ui/lining-acquisition-dialog.glade:15
+#: ui/lining-acquisition-dialog.glade:14
+msgid "Chips"
+msgstr "Модули"
+
+#: ui/lining-acquisition-dialog.glade:86
 msgid "Lining Acquisition (Cntl+L)"
 msgstr "Выравнивание пьедесталов (Cntl+L)"
 
-#: ui/lining-acquisition-dialog.glade:66
+#: ui/lining-acquisition-dialog.glade:136
 msgid "ADC _count:"
 msgstr "_Счет АЦП:"
 
-#: ui/lining-acquisition-dialog.glade:109
+#: ui/lining-acquisition-dialog.glade:165
+msgid "_Chips..."
+msgstr "_Модули..."
+
+#: ui/lining-acquisition-dialog.glade:170
+msgid "Chips numbers for lining."
+msgstr "Номера модулей для выравнивания."
+
+#: ui/lining-acquisition-dialog.glade:195
 msgid "_Start"
 msgstr "_Старт"
 
-#: ui/lining-acquisition-dialog.glade:124
+#: ui/lining-acquisition-dialog.glade:209
 msgid "S_top"
 msgstr "С_топ"
 
-#: ui/lining-acquisition-dialog.glade:164
+#: ui/lining-acquisition-dialog.glade:248
 msgid "_Rough"
 msgstr "_Грубая"
 
-#: ui/lining-acquisition-dialog.glade:181
+#: ui/lining-acquisition-dialog.glade:264
 msgid "_Optimal"
 msgstr "_Оптимальная"
 
-#: ui/lining-acquisition-dialog.glade:198
+#: ui/lining-acquisition-dialog.glade:280
 msgid "_Precise"
 msgstr "_Наилучшая"
 
-#: ui/lining-acquisition-dialog.glade:219
+#: ui/lining-acquisition-dialog.glade:300
 msgid "Accuracy"
 msgstr "Точность"
 
@@ -836,25 +848,29 @@ msgstr "Если излучатель готов нажмите \"Да\", есл
 msgid "X-ray Preparation"
 msgstr "Подготовка излучателя"
 
-#: src/dialogs/image_acquisition.cpp:334
+#: src/dialogs/image_acquisition.cpp:372
 #: src/widgets/information_notebook.cpp:569
 #: src/widgets/information_notebook.cpp:644
 msgid "kV"
 msgstr "кВ"
 
-#: src/dialogs/image_acquisition.cpp:341
+#: src/dialogs/image_acquisition.cpp:379
 #: src/widgets/information_notebook.cpp:566
 #: src/widgets/information_notebook.cpp:640
 msgid "mAs"
 msgstr "мА × c"
 
-#: src/dialogs/lining_adjustment.cpp:121
+#: src/dialogs/lining_adjustment.cpp:119
 msgid "Strip"
 msgstr "Стрип"
 
-#: src/dialogs/lining_adjustment.cpp:127
+#: src/dialogs/lining_adjustment.cpp:125 src/dialogs/chips_lining.cpp:98
 msgid "Code"
 msgstr "Код"
+
+#: src/dialogs/chips_lining.cpp:92
+msgid "Chip"
+msgstr "Номер модуля"
 
 #: src/dialogs/temperature_margins.cpp:105
 msgid "<b>Unable to change temperature margins!</b>"
@@ -997,19 +1013,19 @@ msgstr[2] "файлов найдено"
 msgid "Nothing has been found"
 msgstr "Ничего не найдено"
 
-#: src/dialogs/scanner_debug.cpp:152 src/dialogs/scanner_debug.cpp:175
+#: src/dialogs/scanner_debug.cpp:181 src/dialogs/scanner_debug.cpp:204
 msgid "Warning"
 msgstr "Внимание"
 
-#: src/dialogs/scanner_debug.cpp:153
+#: src/dialogs/scanner_debug.cpp:182
 msgid "Lining data unavailable in this moment."
 msgstr "Данные выравнивания недоступны в данный момент"
 
-#: src/dialogs/scanner_debug.cpp:154 src/dialogs/scanner_debug.cpp:177
+#: src/dialogs/scanner_debug.cpp:183 src/dialogs/scanner_debug.cpp:206
 msgid "Please, try later."
 msgstr "Пожалуйста, повторите попытку позже."
 
-#: src/dialogs/scanner_debug.cpp:176
+#: src/dialogs/scanner_debug.cpp:205
 msgid "Unable to change temperature control state."
 msgstr "Невозможно изменить состояние терморегулятора."
 

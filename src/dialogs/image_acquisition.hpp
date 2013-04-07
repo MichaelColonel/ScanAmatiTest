@@ -51,6 +51,7 @@ public:
 	virtual ~ImageAcquisitionDialog();
 	virtual void update_scanner_state(const Scanner::State&);
 	virtual void block_interface(bool);
+
 protected:
 	// Member functions:
 	void init_ui();
@@ -63,6 +64,7 @@ protected:
 	void on_acquisition_run();
 	void on_acquisition_stop();
 	void on_acquisition_parameters();
+	void on_memory_size_changed( const Gtk::RadioButton*, size_t);
 
 	Glib::ustring on_format_exposure_value(double exposure);
 	Glib::ustring on_format_voltage_value(double voltage);

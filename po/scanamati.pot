@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-03 15:53+0400\n"
+"POT-Creation-Date: 2013-04-07 21:35+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -55,53 +55,53 @@ msgstr ""
 msgid "Detector array movement"
 msgstr ""
 
-#: ui/image-acquisition-dialog.glade:248
+#: ui/image-acquisition-dialog.glade:247
 #: ui/acquisition-parameters-dialog.glade:143
 msgid "X-ray source movement"
 msgstr ""
 
-#: ui/image-acquisition-dialog.glade:263
+#: ui/image-acquisition-dialog.glade:261
 #: ui/acquisition-parameters-dialog.glade:159
 #: src/widgets/information_notebook.cpp:248
 #: src/widgets/information_notebook.cpp:261
 msgid "Exposure"
 msgstr ""
 
-#: ui/image-acquisition-dialog.glade:278 ui/image-acquisition-dialog.glade:497
+#: ui/image-acquisition-dialog.glade:275 ui/image-acquisition-dialog.glade:494
 #: ui/acquisition-parameters-dialog.glade:175
 msgid "Acquisition"
 msgstr ""
 
-#: ui/image-acquisition-dialog.glade:299
+#: ui/image-acquisition-dialog.glade:296
 #: ui/acquisition-parameters-dialog.glade:197
 msgid "<b>Run Arguments</b>"
 msgstr ""
 
-#: ui/image-acquisition-dialog.glade:328
+#: ui/image-acquisition-dialog.glade:325
 msgid "8 MBytes"
 msgstr ""
 
-#: ui/image-acquisition-dialog.glade:343
+#: ui/image-acquisition-dialog.glade:339
 msgid "16 MBytes"
 msgstr ""
 
-#: ui/image-acquisition-dialog.glade:358
+#: ui/image-acquisition-dialog.glade:354
 msgid "24 MBytes"
 msgstr ""
 
-#: ui/image-acquisition-dialog.glade:373
+#: ui/image-acquisition-dialog.glade:369
 msgid "32 MBytes"
 msgstr ""
 
-#: ui/image-acquisition-dialog.glade:394
+#: ui/image-acquisition-dialog.glade:391
 msgid "<b>Memory Size</b>"
 msgstr ""
 
-#: ui/image-acquisition-dialog.glade:463
+#: ui/image-acquisition-dialog.glade:460
 msgid "_Run"
 msgstr ""
 
-#: ui/image-acquisition-dialog.glade:477
+#: ui/image-acquisition-dialog.glade:474
 msgid "_Stop"
 msgstr ""
 
@@ -287,35 +287,47 @@ msgstr ""
 msgid "Image"
 msgstr ""
 
-#: ui/lining-acquisition-dialog.glade:15
+#: ui/lining-acquisition-dialog.glade:14
+msgid "Chips"
+msgstr ""
+
+#: ui/lining-acquisition-dialog.glade:86
 msgid "Lining Acquisition (Cntl+L)"
 msgstr ""
 
-#: ui/lining-acquisition-dialog.glade:66
+#: ui/lining-acquisition-dialog.glade:136
 msgid "ADC _count:"
 msgstr ""
 
-#: ui/lining-acquisition-dialog.glade:109
+#: ui/lining-acquisition-dialog.glade:165
+msgid "_Chips..."
+msgstr ""
+
+#: ui/lining-acquisition-dialog.glade:170
+msgid "Chips numbers for lining."
+msgstr ""
+
+#: ui/lining-acquisition-dialog.glade:195
 msgid "_Start"
 msgstr ""
 
-#: ui/lining-acquisition-dialog.glade:124
+#: ui/lining-acquisition-dialog.glade:209
 msgid "S_top"
 msgstr ""
 
-#: ui/lining-acquisition-dialog.glade:164
+#: ui/lining-acquisition-dialog.glade:248
 msgid "_Rough"
 msgstr ""
 
-#: ui/lining-acquisition-dialog.glade:181
+#: ui/lining-acquisition-dialog.glade:264
 msgid "_Optimal"
 msgstr ""
 
-#: ui/lining-acquisition-dialog.glade:198
+#: ui/lining-acquisition-dialog.glade:280
 msgid "_Precise"
 msgstr ""
 
-#: ui/lining-acquisition-dialog.glade:219
+#: ui/lining-acquisition-dialog.glade:300
 msgid "Accuracy"
 msgstr ""
 
@@ -832,24 +844,28 @@ msgstr ""
 msgid "X-ray Preparation"
 msgstr ""
 
-#: src/dialogs/image_acquisition.cpp:334
+#: src/dialogs/image_acquisition.cpp:372
 #: src/widgets/information_notebook.cpp:569
 #: src/widgets/information_notebook.cpp:644
 msgid "kV"
 msgstr ""
 
-#: src/dialogs/image_acquisition.cpp:341
+#: src/dialogs/image_acquisition.cpp:379
 #: src/widgets/information_notebook.cpp:566
 #: src/widgets/information_notebook.cpp:640
 msgid "mAs"
 msgstr ""
 
-#: src/dialogs/lining_adjustment.cpp:121
+#: src/dialogs/lining_adjustment.cpp:119
 msgid "Strip"
 msgstr ""
 
-#: src/dialogs/lining_adjustment.cpp:127
+#: src/dialogs/lining_adjustment.cpp:125 src/dialogs/chips_lining.cpp:98
 msgid "Code"
+msgstr ""
+
+#: src/dialogs/chips_lining.cpp:92
+msgid "Chip"
 msgstr ""
 
 #: src/dialogs/temperature_margins.cpp:105
@@ -986,19 +1002,19 @@ msgstr[1] ""
 msgid "Nothing has been found"
 msgstr ""
 
-#: src/dialogs/scanner_debug.cpp:152 src/dialogs/scanner_debug.cpp:175
+#: src/dialogs/scanner_debug.cpp:181 src/dialogs/scanner_debug.cpp:204
 msgid "Warning"
 msgstr ""
 
-#: src/dialogs/scanner_debug.cpp:153
+#: src/dialogs/scanner_debug.cpp:182
 msgid "Lining data unavailable in this moment."
 msgstr ""
 
-#: src/dialogs/scanner_debug.cpp:154 src/dialogs/scanner_debug.cpp:177
+#: src/dialogs/scanner_debug.cpp:183 src/dialogs/scanner_debug.cpp:206
 msgid "Please, try later."
 msgstr ""
 
-#: src/dialogs/scanner_debug.cpp:176
+#: src/dialogs/scanner_debug.cpp:205
 msgid "Unable to change temperature control state."
 msgstr ""
 

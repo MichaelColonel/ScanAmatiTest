@@ -6,10 +6,81 @@
     <property name="upper">16535</property>
     <property name="value">1000</property>
     <property name="step_increment">10</property>
-    <property name="page_increment">10</property>
+    <property name="page_increment">500</property>
+  </object>
+  <object class="GtkDialog" id="dialog-chips">
+    <property name="can_focus">False</property>
+    <property name="border_width">5</property>
+    <property name="title" translatable="yes">Chips</property>
+    <property name="modal">True</property>
+    <property name="destroy_with_parent">True</property>
+    <property name="type_hint">dialog</property>
+    <child internal-child="vbox">
+      <object class="GtkVBox" id="vbox-main">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child internal-child="action_area">
+          <object class="GtkHButtonBox" id="dialog-action-area">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="layout_style">center</property>
+            <child>
+              <object class="GtkButton" id="button-exit">
+                <property name="label">gtk-close</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_stock">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="pack_type">end</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow" id="scrolledwindow-chips">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="hscrollbar_policy">automatic</property>
+            <property name="vscrollbar_policy">automatic</property>
+            <property name="shadow_type">etched-in</property>
+            <child>
+              <object class="GtkTreeView" id="treeview-chips">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="model">liststore-chips</property>
+                <property name="headers_clickable">False</property>
+                <property name="rules_hint">True</property>
+                <property name="enable_search">False</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+      </object>
+    </child>
+    <action-widgets>
+      <action-widget response="0">button-exit</action-widget>
+    </action-widgets>
   </object>
   <object class="GtkDialog" id="dialog-window">
-    <property name="width_request">400</property>
+    <property name="width_request">480</property>
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
     <property name="title" translatable="yes">Lining Acquisition (Cntl+L)</property>
@@ -29,7 +100,6 @@
             <child>
               <object class="GtkButton" id="button-close">
                 <property name="label">gtk-close</property>
-                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -90,6 +160,22 @@
                     <property name="position">1</property>
                   </packing>
                 </child>
+                <child>
+                  <object class="GtkButton" id="button-chips">
+                    <property name="label" translatable="yes">_Chips...</property>
+                    <property name="visible">True</property>
+                    <property name="sensitive">False</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="tooltip_text" translatable="yes">Chips numbers for lining.</property>
+                    <property name="use_underline">True</property>
+                  </object>
+                  <packing>
+                    <property name="expand">True</property>
+                    <property name="fill">True</property>
+                    <property name="position">2</property>
+                  </packing>
+                </child>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -107,7 +193,6 @@
                 <child>
                   <object class="GtkButton" id="button-start">
                     <property name="label" translatable="yes">_Start</property>
-                    <property name="use_action_appearance">False</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
@@ -122,7 +207,6 @@
                 <child>
                   <object class="GtkButton" id="button-stop">
                     <property name="label" translatable="yes">S_top</property>
-                    <property name="use_action_appearance">False</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
@@ -162,7 +246,6 @@
                 <child>
                   <object class="GtkRadioButton" id="radiobutton-rough">
                     <property name="label" translatable="yes">_Rough</property>
-                    <property name="use_action_appearance">False</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
@@ -179,7 +262,6 @@
                 <child>
                   <object class="GtkRadioButton" id="radiobutton-optimal">
                     <property name="label" translatable="yes">_Optimal</property>
-                    <property name="use_action_appearance">False</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
@@ -196,7 +278,6 @@
                 <child>
                   <object class="GtkRadioButton" id="radiobutton-precise">
                     <property name="label" translatable="yes">_Precise</property>
-                    <property name="use_action_appearance">False</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
@@ -231,5 +312,15 @@
     <action-widgets>
       <action-widget response="0">button-close</action-widget>
     </action-widgets>
+  </object>
+  <object class="GtkListStore" id="liststore-chips">
+    <columns>
+      <!-- column-name label -->
+      <column type="gchararray"/>
+      <!-- column-name code-label -->
+      <column type="gchararray"/>
+      <!-- column-name code -->
+      <column type="gchar"/>
+    </columns>
   </object>
 </interface>

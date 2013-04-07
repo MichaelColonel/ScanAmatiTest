@@ -68,14 +68,15 @@ ARFLAGS = cru
 libdialogs_a_AR = $(AR) $(ARFLAGS)
 libdialogs_a_LIBADD =
 am_libdialogs_a_OBJECTS = acquisition_parameters.$(OBJEXT) \
-	conquest_archive.$(OBJEXT) scanner_template.$(OBJEXT) \
-	scanner_debug.$(OBJEXT) image_acquisition.$(OBJEXT) \
-	lining_acquisition.$(OBJEXT) lining_adjustment.$(OBJEXT) \
-	chip_capacities.$(OBJEXT) temperature_margins.$(OBJEXT) \
-	move_dicom.$(OBJEXT) store_dicom.$(OBJEXT) \
-	preferences.$(OBJEXT) print_parameters.$(OBJEXT) \
-	person_name.$(OBJEXT) dicom_server.$(OBJEXT) \
-	dicom_information.$(OBJEXT) save_as.$(OBJEXT) utils.$(OBJEXT)
+	conquest_archive.$(OBJEXT) chips_lining.$(OBJEXT) \
+	scanner_template.$(OBJEXT) scanner_debug.$(OBJEXT) \
+	image_acquisition.$(OBJEXT) lining_acquisition.$(OBJEXT) \
+	lining_adjustment.$(OBJEXT) chip_capacities.$(OBJEXT) \
+	temperature_margins.$(OBJEXT) move_dicom.$(OBJEXT) \
+	store_dicom.$(OBJEXT) preferences.$(OBJEXT) \
+	print_parameters.$(OBJEXT) person_name.$(OBJEXT) \
+	dicom_server.$(OBJEXT) dicom_information.$(OBJEXT) \
+	save_as.$(OBJEXT) utils.$(OBJEXT)
 libdialogs_a_OBJECTS = $(am_libdialogs_a_OBJECTS)
 DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/build-aux/depcomp
@@ -245,6 +246,8 @@ libdialogs_a_SOURCES = \
 	acquisition_parameters.cpp \
 	conquest_archive.hpp \
 	conquest_archive.cpp \
+	chips_lining.hpp \
+	chips_lining.cpp \
 	scanner_template.hpp \
 	scanner_template.cpp \
 	scanner_debug.hpp \
@@ -331,6 +334,7 @@ distclean-compile:
 
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/acquisition_parameters.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/chip_capacities.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/chips_lining.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/conquest_archive.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dicom_information.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dicom_server.Po@am__quote@

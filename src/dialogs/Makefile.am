@@ -5,6 +5,8 @@ libdialogs_a_SOURCES = \
 	acquisition_parameters.cpp \
 	conquest_archive.hpp \
 	conquest_archive.cpp \
+	chips_lining.hpp \
+	chips_lining.cpp \
 	scanner_template.hpp \
 	scanner_template.cpp \
 	scanner_debug.hpp \

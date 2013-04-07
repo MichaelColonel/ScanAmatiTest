@@ -55,7 +55,7 @@ struct AcquisitionParameters {
 	gint16 lining_count;
 	Acquisition acquisition;
 	std::vector<CommandSharedPtr> commands;
-	boost::any value; // chip capasity, chip number
+	boost::any value; // chip capasity, chip number(s), etc
 };
 
 } // namespace Scanner

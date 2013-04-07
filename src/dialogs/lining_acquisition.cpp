@@ -27,7 +27,20 @@
 // files from src directory end
 
 #include "utils.hpp"
+#include "chips_lining.hpp"
 #include "lining_acquisition.hpp"
+
+namespace {
+
+const struct ModelColumns : public Gtk::TreeModelColumnRecord {
+	Gtk::TreeModelColumn<Glib::ustring> label;
+	Gtk::TreeModelColumn<Glib::ustring> label_code;
+	Gtk::TreeModelColumn<gchar> code;
+
+	ModelColumns() { add(label); add(label_code); add(code); }
+} model_columns;
+
+}
 
 namespace ScanAmati {
 
@@ -38,13 +51,15 @@ LiningAcquisitionDialog::LiningAcquisitionDialog( BaseObjectType* cobject,
 	:
 	ScannerTemplateDialog( cobject, builder, "lining-acquisition"),
 	spinbutton_adc_count_(0),
+	button_chips_(0),
 	button_start_(0),
 	button_stop_(0),
 	expander_accuracy_(0),
 	radiobutton_accuracy_rough_(0),
 	radiobutton_accuracy_optimal_(0),
 	radiobutton_accuracy_precise_(0),
-	accuracy_(Scanner::LINING_ACCURACY_OPTIMAL)
+	accuracy_(Scanner::LINING_ACCURACY_OPTIMAL),
+	chip_codes_( Scanner::array_chip_codes, Scanner::array_chip_codes + SCANNER_CHIPS)
 {
 	init_ui();
 
@@ -61,6 +76,7 @@ void
 LiningAcquisitionDialog::init_ui()
 {
 	builder_->get_widget( "spinbutton-count", spinbutton_adc_count_);
+	builder_->get_widget( "button-chips", button_chips_);
 	builder_->get_widget( "button-start", button_start_);
 	builder_->get_widget( "button-stop", button_stop_);
 
@@ -69,13 +85,21 @@ LiningAcquisitionDialog::init_ui()
 	builder_->get_widget( "radiobutton-precise", radiobutton_accuracy_precise_);
 
 	builder_->get_widget( "expander-accuracy", expander_accuracy_);
-	if (app.extend)
+	if (app.extend) {
+		Glib::RefPtr<Glib::Object> obj;
+		obj = builder_->get_object("liststore-chips");
+		liststore_chips_ = Glib::RefPtr<Gtk::ListStore>::cast_dynamic(obj);
+
+		button_chips_->set_sensitive(true);
 		expander_accuracy_->set_sensitive(true);
+	}
 }
 
 void
 LiningAcquisitionDialog::connect_signals()
 {
+	button_chips_->signal_clicked().connect(
+		sigc::mem_fun( *this, &LiningAcquisitionDialog::on_chips));
 	button_start_->signal_clicked().connect(
 		sigc::mem_fun( *this, &LiningAcquisitionDialog::on_start));
 	button_stop_->signal_clicked().connect(
@@ -113,6 +137,42 @@ LiningAcquisitionDialog::block_interface(bool block)
 	default:
 		break;
 	}
+}
+
+void
+LiningAcquisitionDialog::on_chips()
+{
+	ChipsLiningDialog* dialog = ChipsLiningDialog::create(chip_codes_);
+	if (dialog) {
+		selection_chips_ = dialog->selection_chips();
+		selection_chips_->signal_changed().connect(
+			sigc::mem_fun( *this, &LiningAcquisitionDialog::on_selection_changed));
+
+		dialog->run();
+		delete dialog;
+	}
+}
+
+void
+LiningAcquisitionDialog::on_selection_changed()
+{
+	chip_codes_.clear();
+
+	selection_chips_->selected_foreach_iter(
+		sigc::mem_fun(*this, &LiningAcquisitionDialog::row_selected));
+
+	for ( std::vector<char>::const_iterator it = chip_codes_.begin();
+		it != chip_codes_.end(); ++it) {
+		std::cout << *it << " ";
+	}
+	std::cout << std::endl;
+}
+
+void
+LiningAcquisitionDialog::row_selected(const Gtk::TreeModel::iterator& it)
+{
+	Gtk::TreeModel::Row row = *it;
+	chip_codes_.push_back(row[model_columns.code]);
 }
 
 void

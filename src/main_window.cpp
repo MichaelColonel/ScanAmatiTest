@@ -75,8 +75,8 @@ namespace UI {
 const ActionState init_actions_basic[] = {
 	{ "action-device-connect", false },
 	{ "action-device-disconnect", true },
-	{ "action-lining-acquisition", true },
-	{ "action-image-acquisition", true },
+	{ "action-lining-acquisition", false },
+	{ "action-image-acquisition", false },
 	{ "action-temperature-margins", true },
 	{ } // // Terminating Entry
 };
@@ -84,10 +84,10 @@ const ActionState init_actions_basic[] = {
 const ActionState init_actions_extend[] = { 
 	{ "action-device-connect", false },
 	{ "action-device-disconnect", true },
-	{ "action-lining-acquisition", true },
-	{ "action-image-acquisition", true },
+	{ "action-lining-acquisition", false },
+	{ "action-image-acquisition", false },
 	{ "action-temperature-margins", true },
-	{ "action-scanner-debug", true },
+	{ "action-scanner-debug", false },
 	{ } // Terminating Entry
 };
 
