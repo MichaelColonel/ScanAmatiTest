@@ -41,6 +41,7 @@ public:
 	virtual ~ScannerDebugDialog();
 	virtual void update_scanner_state(const Scanner::State&);
 	virtual void block_interface(bool block = true);
+	sigc::signal<void> signal_write_lining();
 
 protected:
 	// Member functions:
@@ -52,10 +53,10 @@ protected:
 	virtual void on_response(int res);
 
 	void on_scanner_command(Scanner::CommandType);
-	void on_write_lining();
 	void on_temperature_control();
 	void on_adjust_lining();
 	void on_select_capacity();
+	void on_write_lining();
 
 	// Widgets:
 	Gtk::Button* button_altera_reset_;
@@ -68,6 +69,7 @@ protected:
 
 	// Signals:
 	sigc::signal< void, const Scanner::State&> signal_scanner_state_changed_;
+	sigc::signal<void> signal_write_lining_;
 };
 
 } // namespace UI

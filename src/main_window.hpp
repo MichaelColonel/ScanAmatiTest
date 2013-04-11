@@ -118,6 +118,7 @@ protected:
 	void on_print_page_setup();
 	void on_image_reconstruction(const boost::any&);
 	void on_lining_acquisition();
+	void on_write_lining();
 	void on_scanner_device(bool);
 	void on_scanner_debug();
 	void on_new_dicom_info();

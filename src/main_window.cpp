@@ -75,8 +75,8 @@ namespace UI {
 const ActionState init_actions_basic[] = {
 	{ "action-device-connect", false },
 	{ "action-device-disconnect", true },
-	{ "action-lining-acquisition", false },
-	{ "action-image-acquisition", false },
+	{ "action-lining-acquisition", true },
+	{ "action-image-acquisition", true },
 	{ "action-temperature-margins", true },
 	{ } // // Terminating Entry
 };
@@ -84,10 +84,10 @@ const ActionState init_actions_basic[] = {
 const ActionState init_actions_extend[] = { 
 	{ "action-device-connect", false },
 	{ "action-device-disconnect", true },
-	{ "action-lining-acquisition", false },
-	{ "action-image-acquisition", false },
+	{ "action-lining-acquisition", true },
+	{ "action-image-acquisition", true },
 	{ "action-temperature-margins", true },
-	{ "action-scanner-debug", false },
+	{ "action-scanner-debug", true },
 	{ } // Terminating Entry
 };
 
@@ -633,6 +633,8 @@ MainWindow::on_lining_acquisition()
 		LiningAcquisitionDialog* dialog = LiningAcquisitionDialog::create();
 		if (dialog) {
 			// Connect signals:
+			dialog->signal_lining_ready().connect(sigc::mem_fun(
+				*this, &MainWindow::on_write_lining));
 			signal_scanner_state_changed_.connect(sigc::mem_fun(
 				*dialog, &LiningAcquisitionDialog::update_scanner_state));
 			lining_acquisition_dialog_.reset(dialog);
@@ -640,6 +642,23 @@ MainWindow::on_lining_acquisition()
 	}
 	if (lining_acquisition_dialog_)
 		lining_acquisition_dialog_->run();
+}
+
+void
+MainWindow::on_write_lining()
+{
+	Scanner::SharedManager manager = Scanner::Manager::instance();
+	std::vector<Scanner::Command*> coms = manager->get_lining_commands();
+	if (!coms.empty()) {
+		Scanner::AcquisitionParameters params(coms);
+		manager->run( RUN_COMMANDS, params);
+	}
+	else {
+		WarningDialog dialog( *this, _("Warning"));
+		dialog.set_message(_("Lining data unavailable in this moment."));
+		dialog.set_secondary_text(_("Please, try later."));
+		dialog.run();
+	}
 }
 
 void
@@ -660,6 +679,8 @@ MainWindow::on_scanner_debug()
 		ScannerDebugDialog* dialog = ScannerDebugDialog::create();
 		if (dialog) {
 			// Connect signals:
+			dialog->signal_write_lining().connect(sigc::mem_fun(
+				*this, &MainWindow::on_write_lining));
 			signal_scanner_state_changed_.connect(sigc::mem_fun(
 				*dialog, &ScannerDebugDialog::update_scanner_state));
 			scanner_debug_dialog_.reset(dialog);

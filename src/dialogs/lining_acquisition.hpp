@@ -46,6 +46,7 @@ public:
 	virtual ~LiningAcquisitionDialog();
 	virtual void update_scanner_state(const Scanner::State&);
 	virtual void block_interface(bool);
+	sigc::signal<void> signal_lining_ready();
 
 protected:
 	// Member functions:

@@ -79,6 +79,9 @@ ScannerDebugDialog::connect_signals()
 	button_select_capacity_->signal_clicked().connect(sigc::mem_fun(
 		*this, &ScannerDebugDialog::on_select_capacity));
 
+	button_write_lining_->signal_clicked().connect(sigc::mem_fun(
+		*this, &ScannerDebugDialog::on_write_lining));
+
 	button_altera_reset_->signal_clicked().connect(sigc::bind( sigc::mem_fun(
 		*this, &ScannerDebugDialog::on_scanner_command),
 		Scanner::COMMAND_ALTERA_RESET));
@@ -88,9 +91,6 @@ ScannerDebugDialog::connect_signals()
 	button_turnoff_peltier_->signal_clicked().connect(sigc::bind( sigc::mem_fun(
 		*this, &ScannerDebugDialog::on_scanner_command),
 		Scanner::COMMAND_PELTIER_OFF));
-
-	button_write_lining_->signal_clicked().connect(sigc::mem_fun(
-		*this, &ScannerDebugDialog::on_write_lining));
 }
 
 void
@@ -168,24 +168,6 @@ ScannerDebugDialog::on_scanner_command(Scanner::CommandType command)
 }
 
 void
-ScannerDebugDialog::on_write_lining()
-{
-	Scanner::SharedManager manager = Scanner::Manager::instance();
-	std::vector<Scanner::Command*> coms = manager->get_lining_commands();
-	if (!coms.empty()) {
-		Scanner::AcquisitionParameters params(coms);
-		manager->run( RUN_COMMANDS, params);
-		block_interface(true);
-	}
-	else {
-		WarningDialog dialog( *this, _("Warning"));
-		dialog.set_message(_("Lining data unavailable in this moment."));
-		dialog.set_secondary_text(_("Please, try later."));
-		dialog.run();
-	}
-}
-
-void
 ScannerDebugDialog::set_temperature_control(const Scanner::State& state)
 {
 	checkbutton_temperature_control_->set_active(state.temperature_control());
@@ -221,6 +203,13 @@ ScannerDebugDialog::on_select_capacity()
 }
 
 void
+ScannerDebugDialog::on_write_lining()
+{
+	block_interface(true);
+	signal_write_lining_();
+}
+
+void
 ScannerDebugDialog::on_adjust_lining()
 {
 	LiningAdjustmentDialog* dialog = LiningAdjustmentDialog::create();
@@ -230,6 +219,12 @@ ScannerDebugDialog::on_adjust_lining()
 		dialog->run();
 		delete dialog;
 	}
+}
+
+sigc::signal<void>
+ScannerDebugDialog::signal_write_lining()
+{
+	return signal_write_lining_;
 }
 
 ScannerDebugDialog*

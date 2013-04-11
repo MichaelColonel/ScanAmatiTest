@@ -27,7 +27,6 @@
 // files from src directory end
 
 #include "utils.hpp"
-#include "chips_lining.hpp"
 #include "lining_acquisition.hpp"
 
 namespace {
@@ -142,15 +141,6 @@ LiningAcquisitionDialog::block_interface(bool block)
 void
 LiningAcquisitionDialog::on_chips()
 {
-	ChipsLiningDialog* dialog = ChipsLiningDialog::create(chip_codes_);
-	if (dialog) {
-		selection_chips_ = dialog->selection_chips();
-		selection_chips_->signal_changed().connect(
-			sigc::mem_fun( *this, &LiningAcquisitionDialog::on_selection_changed));
-
-		dialog->run();
-		delete dialog;
-	}
 }
 
 void
@@ -160,12 +150,6 @@ LiningAcquisitionDialog::on_selection_changed()
 
 	selection_chips_->selected_foreach_iter(
 		sigc::mem_fun(*this, &LiningAcquisitionDialog::row_selected));
-
-	for ( std::vector<char>::const_iterator it = chip_codes_.begin();
-		it != chip_codes_.end(); ++it) {
-		std::cout << *it << " ";
-	}
-	std::cout << std::endl;
 }
 
 void
@@ -229,6 +213,12 @@ LiningAcquisitionDialog::update_scanner_state(const Scanner::State& state)
 		block_interface(true);
 		button_start_->set_sensitive(false);
 	}
+}
+
+sigc::signal<void>
+LiningAcquisitionDialog::signal_lining_ready()
+{
+	return signal_lining_ready_;
 }
 
 LiningAcquisitionDialog*
