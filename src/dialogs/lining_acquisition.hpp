@@ -17,7 +17,6 @@
 
 #pragma once
 
-#include <gtkmm/liststore.h>
 #include <gtkmm/treeselection.h>
 
 // files from src directory begin
@@ -74,7 +73,6 @@ protected:
 
 	Scanner::LiningAccuracyType accuracy_;
 
-	Glib::RefPtr<Gtk::ListStore> liststore_chips_;
 	Glib::RefPtr<Gtk::TreeSelection> selection_chips_;
 
 	// Signals:

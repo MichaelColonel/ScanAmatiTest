@@ -86,10 +86,6 @@ LiningAcquisitionDialog::init_ui()
 
 	builder_->get_widget( "expander-accuracy", expander_accuracy_);
 	if (app.extend) {
-		Glib::RefPtr<Glib::Object> obj;
-		obj = builder_->get_object("liststore-chips");
-		liststore_chips_ = Glib::RefPtr<Gtk::ListStore>::cast_dynamic(obj);
-
 		button_chips_->set_sensitive(true);
 		expander_accuracy_->set_sensitive(true);
 	}
@@ -124,15 +120,19 @@ LiningAcquisitionDialog::block_interface(bool block)
 		button_start_->set_sensitive(false);
 		button_stop_->set_sensitive(true);
 		spinbutton_adc_count_->set_sensitive(false);
-		if (app.extend)
+		if (app.extend) {
+			button_chips_->set_sensitive(false);
 			expander_accuracy_->set_sensitive(false);
+		}
 		break;
 	case false:
 		button_start_->set_sensitive(true);
 		button_stop_->set_sensitive(false);
 		spinbutton_adc_count_->set_sensitive(true);
-		if (app.extend)
+		if (app.extend) {
+			button_chips_->set_sensitive(true);
 			expander_accuracy_->set_sensitive(true);
+		}
 		break;
 	default:
 		break;
@@ -144,6 +144,9 @@ LiningAcquisitionDialog::on_chips()
 {
 	ChipsLiningDialog* dialog = ChipsLiningDialog::create(chip_codes_);
 	if (dialog) {
+		selection_chips_ = dialog->selection_chips();
+		selection_chips_->signal_changed().connect(sigc::mem_fun(
+			*this, &LiningAcquisitionDialog::on_selection_changed));
 		dialog->run();
 	}
 	delete dialog;
@@ -156,6 +159,9 @@ LiningAcquisitionDialog::on_selection_changed()
 
 	selection_chips_->selected_foreach_iter(
 		sigc::mem_fun(*this, &LiningAcquisitionDialog::row_selected));
+
+	// Start the acquisiton only if one or more chips have been selected
+	button_start_->set_sensitive(!chip_codes_.empty());
 }
 
 void
@@ -180,6 +186,7 @@ LiningAcquisitionDialog::on_start()
 	Scanner::AcquisitionParameters params;
 	params.lining_accuracy_type = accuracy_;
 	params.lining_count = count;
+	params.value = chip_codes_;
 	manager->run( RUN_LINING_ACQUISITION, params);
 	block_interface(true);
 }

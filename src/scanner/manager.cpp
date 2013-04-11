@@ -463,6 +463,8 @@ Manager::run_lining_acquisition(const AcquisitionParameters& params)
 	std::vector<double> codes = equal_distant_points( SCANNER_LINING_CODE_MIN,
 		SCANNER_LINING_CODE_MAX, params.lining_accuracy_type);
 
+	std::vector<char> chips = boost::any_cast< std::vector<char> >(params.value);
+	
 	for ( std::vector<double>::const_iterator iter = codes.begin();
 		iter != codes.end(); ++iter) {
 		{
@@ -472,15 +474,16 @@ Manager::run_lining_acquisition(const AcquisitionParameters& params)
 		}
 
 		try {
-			for ( int j = 0; j < SCANNER_CHIPS; ++j) {
-				Command* com = Commands::create( Data::chip_code(j),
-					static_cast<guint8>(*iter));
+			for ( std::vector<char>::const_iterator it = chips.begin();
+				it != chips.end(); ++it) {
+				int j = Data::chip_number(*it);
+				Command* com = Commands::create( *it, static_cast<guint8>(*iter));
 				write_command(com);
-				Glib::usleep(50000);
+				Glib::usleep(30000);
 			}
 			Command* com = Commands::create( COMMAND_ALTERA_START, '1');
 			write_command(com);
-			Glib::usleep(300000);
+			Glib::usleep(100000);
 
 			if (!acquisition_start( params, ACQUIRE_LINING_PEDESTALS))
 				return;
