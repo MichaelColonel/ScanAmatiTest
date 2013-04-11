@@ -15,6 +15,8 @@ libdialogs_a_SOURCES = \
 	lining_acquisition.cpp \
 	lining_adjustment.hpp \
 	lining_adjustment.cpp \
+	chips_lining.hpp \
+	chips_lining.cpp \
 	chip_capacities.hpp \
 	chip_capacities.cpp \
 	temperature_margins.hpp \

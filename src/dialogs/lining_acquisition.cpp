@@ -26,6 +26,7 @@
 #include "global_strings.hpp"
 // files from src directory end
 
+#include "chips_lining.hpp"
 #include "utils.hpp"
 #include "lining_acquisition.hpp"
 
@@ -141,6 +142,11 @@ LiningAcquisitionDialog::block_interface(bool block)
 void
 LiningAcquisitionDialog::on_chips()
 {
+	ChipsLiningDialog* dialog = ChipsLiningDialog::create(chip_codes_);
+	if (dialog) {
+		dialog->run();
+	}
+	delete dialog;
 }
 
 void
