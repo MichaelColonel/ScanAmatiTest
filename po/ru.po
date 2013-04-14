@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amati 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-07 21:35+0400\n"
+"POT-Creation-Date: 2013-04-13 11:14+0400\n"
 "PO-Revision-Date: 2009-09-14 15:17+0400\n"
 "Last-Translator:  <pmk@ihep.ru>\n"
 "Language-Team: Russian\n"
@@ -18,12 +18,12 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ui/main-window.glade:17 src/main_window.cpp:767
+#: ui/main-window.glade:17 src/main_window.cpp:788
 #: src/main_window_action_handlers.cpp:119 src/main.cpp:105
 msgid "ScanAmati"
 msgstr "СканАмати"
 
-#: ui/main-window.glade:58 src/main_window_actions.cpp:193
+#: ui/main-window.glade:58 src/main_window_actions.cpp:209
 msgid "_Scanner"
 msgstr "_Сканер"
 
@@ -223,19 +223,19 @@ msgstr "Четверть"
 msgid "<b>Image Width</b>"
 msgstr "<b>Ширина изображения</b>"
 
-#: ui/acquisition-parameters-dialog.glade:1364 src/main_window_actions.cpp:256
+#: ui/acquisition-parameters-dialog.glade:1364 src/main_window_actions.cpp:272
 msgid "Lanczos"
 msgstr "Алгоритм Lanczos"
 
-#: ui/acquisition-parameters-dialog.glade:1381 src/main_window_actions.cpp:260
+#: ui/acquisition-parameters-dialog.glade:1381 src/main_window_actions.cpp:276
 msgid "Cubic"
 msgstr "Кубический"
 
-#: ui/acquisition-parameters-dialog.glade:1398 src/main_window_actions.cpp:264
+#: ui/acquisition-parameters-dialog.glade:1398 src/main_window_actions.cpp:280
 msgid "Bessel"
 msgstr "Бесселя"
 
-#: ui/acquisition-parameters-dialog.glade:1415 src/main_window_actions.cpp:268
+#: ui/acquisition-parameters-dialog.glade:1415 src/main_window_actions.cpp:284
 msgid "Quadratic"
 msgstr "Квадратический"
 
@@ -247,19 +247,19 @@ msgstr "<b>Фильтр сглаживания</b>"
 msgid "<b>Postprocess</b>"
 msgstr "<b>Обработка</b>"
 
-#: ui/acquisition-parameters-dialog.glade:1526 src/main_window_actions.cpp:275
+#: ui/acquisition-parameters-dialog.glade:1526 src/main_window_actions.cpp:291
 msgid "Rough"
 msgstr "Грубая"
 
-#: ui/acquisition-parameters-dialog.glade:1543 src/main_window_actions.cpp:279
+#: ui/acquisition-parameters-dialog.glade:1543 src/main_window_actions.cpp:295
 msgid "Good"
 msgstr "Хорошая"
 
-#: ui/acquisition-parameters-dialog.glade:1560 src/main_window_actions.cpp:283
+#: ui/acquisition-parameters-dialog.glade:1560 src/main_window_actions.cpp:299
 msgid "Better"
 msgstr "Оптимальная"
 
-#: ui/acquisition-parameters-dialog.glade:1577 src/main_window_actions.cpp:287
+#: ui/acquisition-parameters-dialog.glade:1577 src/main_window_actions.cpp:303
 msgid "Best"
 msgstr "Наилучшая"
 
@@ -1013,21 +1013,17 @@ msgstr[2] "файлов найдено"
 msgid "Nothing has been found"
 msgstr "Ничего не найдено"
 
-#: src/dialogs/scanner_debug.cpp:181 src/dialogs/scanner_debug.cpp:204
+#: src/dialogs/scanner_debug.cpp:186 src/main_window.cpp:657
 msgid "Warning"
 msgstr "Внимание"
 
-#: src/dialogs/scanner_debug.cpp:182
-msgid "Lining data unavailable in this moment."
-msgstr "Данные выравнивания недоступны в данный момент"
-
-#: src/dialogs/scanner_debug.cpp:183 src/dialogs/scanner_debug.cpp:206
-msgid "Please, try later."
-msgstr "Пожалуйста, повторите попытку позже."
-
-#: src/dialogs/scanner_debug.cpp:205
+#: src/dialogs/scanner_debug.cpp:187
 msgid "Unable to change temperature control state."
 msgstr "Невозможно изменить состояние терморегулятора."
+
+#: src/dialogs/scanner_debug.cpp:188 src/main_window.cpp:659
+msgid "Please, try later."
+msgstr "Пожалуйста, повторите попытку позже."
 
 #: src/dialogs/store_dicom.cpp:65
 msgid "\"Conquest\" - localhost DICOM server"
@@ -1342,19 +1338,19 @@ msgstr "Неизвестна"
 msgid "Unable to load scanner data."
 msgstr "Невозможно загрузить данные сканера."
 
-#: src/scanner/manager.cpp:1031
+#: src/scanner/manager.cpp:1034
 msgid "Wrong scanner id."
 msgstr "Неверный идентификационный номер сканера."
 
-#: src/scanner/manager.cpp:1046
+#: src/scanner/manager.cpp:1049
 msgid "Wrong handshake response."
 msgstr "Неверный ответ на первичный запрос."
 
-#: src/scanner/manager.cpp:1071
+#: src/scanner/manager.cpp:1074
 msgid "The device \"%1\" doesn't exist."
 msgstr "Устройство \"%1\" отсутствует."
 
-#: src/scanner/manager.cpp:1073
+#: src/scanner/manager.cpp:1076
 msgid ""
 "Check the USB cable connection between the PC and the device, and check if "
 "the scanner power supply is turned on."
@@ -1362,73 +1358,73 @@ msgstr ""
 "Проверьте соединение УСБ кабеля между сканером и компьютером, а также "
 "убедитесь, что источник питания сканера включен."
 
-#: src/scanner/manager.cpp:1079
+#: src/scanner/manager.cpp:1082
 msgid "The user \"%1\" has no permission to open scanner device."
 msgstr "У пользователя \"%1\" не прав на открытие устройства сканера."
 
-#: src/scanner/manager.cpp:1082
+#: src/scanner/manager.cpp:1085
 msgid "Check your permissions to open, read and write to the scanner device."
 msgstr "Проверьте права пользователя на чтение и запись в устройство сканера."
 
-#: src/scanner/manager.cpp:1088
+#: src/scanner/manager.cpp:1091
 msgid "The device \"%1\" has been already busy."
 msgstr "Устройство \"%1\" уже занято."
 
-#: src/scanner/manager.cpp:1089
+#: src/scanner/manager.cpp:1092
 msgid ""
 "Close other programs which use this device, and try to repeat the operation."
 msgstr ""
 "Закройте программы, которые используют это устройство и повторите операцию."
 
-#: src/scanner/manager.cpp:1092
+#: src/scanner/manager.cpp:1095
 msgid "The device has invalid file descriptor."
 msgstr "У устройства неправильный дескриптор."
 
-#: src/scanner/manager.cpp:1095
+#: src/scanner/manager.cpp:1098
 msgid "Command interrupted by a signal."
 msgstr "Коммада прерванна внешним сигналом."
 
-#: src/scanner/manager.cpp:1098
+#: src/scanner/manager.cpp:1101
 msgid "Invalid function argument."
 msgstr "Неверный аргумент функции."
 
-#: src/scanner/manager.cpp:1101
+#: src/scanner/manager.cpp:1104
 msgid ""
 "The system cannot allocate more virtual memory because it capacity is full."
 msgstr "Недостаточно памяти."
 
-#: src/scanner/manager.cpp:1105
+#: src/scanner/manager.cpp:1108
 msgid ""
 "Resource temporarily unavailable; the call might work if you try again later."
 msgstr ""
 "Устройство временно недоступно, вызов может сработать, если вы попробуете "
 "позже."
 
-#: src/scanner/manager.cpp:1109
+#: src/scanner/manager.cpp:1112
 msgid "You passed in a pointer to bad memory."
 msgstr "Указатель на поврежденную память."
 
-#: src/scanner/manager.cpp:1112
+#: src/scanner/manager.cpp:1115
 msgid "Input/output error occured."
 msgstr "Ошибка ввода/вывода."
 
-#: src/scanner/manager.cpp:1115
+#: src/scanner/manager.cpp:1118
 msgid "File descriptor is attached to a directory."
 msgstr "Дескриптор указывает на директорию."
 
-#: src/scanner/manager.cpp:1118
+#: src/scanner/manager.cpp:1121
 msgid "No space left on device."
 msgstr "На диске кончилось место."
 
-#: src/scanner/manager.cpp:1121
+#: src/scanner/manager.cpp:1124
 msgid "There is no process reading from the other end of a pipe."
 msgstr "Нет процесса, читающего из пайпа."
 
-#: src/scanner/manager.cpp:1125
+#: src/scanner/manager.cpp:1128
 msgid "Unexpected error."
 msgstr "Неожиданная ошибка."
 
-#: src/scanner/manager.cpp:1127
+#: src/scanner/manager.cpp:1130
 msgid ""
 "The scanner device can't execute this command. Please, turn off the device "
 "and try again."
@@ -1464,7 +1460,11 @@ msgstr "Ошибка сохранения"
 msgid "Unable to save the file \"%1\"."
 msgstr "Невозможно сохранить файл \"%1\"."
 
-#: src/main_window.cpp:697
+#: src/main_window.cpp:658
+msgid "Lining data unavailable in this moment."
+msgstr "Данные выравнивания недоступны в данный момент"
+
+#: src/main_window.cpp:718
 msgid "Scanner Error"
 msgstr "Ошибка сканера"
 
@@ -1542,7 +1542,7 @@ msgid "_Image"
 msgstr "_Изображение"
 
 #. popup menus
-#: src/main_window_actions.cpp:122 src/main_window_actions.cpp:291
+#: src/main_window_actions.cpp:122 src/main_window_actions.cpp:307
 msgid "_Palette"
 msgstr "_Палитра"
 
@@ -1615,89 +1615,105 @@ msgstr "Масштаб _3:1 (300%)"
 msgid "Zoom to 3:1"
 msgstr "Масштаб 3:1"
 
-#: src/main_window_actions.cpp:196
+#: src/main_window_actions.cpp:194
+msgid "Draw _Margins"
+msgstr "Рисовать _границы"
+
+#: src/main_window_actions.cpp:195
+msgid "Show detector's margins on an image"
+msgstr "Отображать границы детекторов на изображении"
+
+#: src/main_window_actions.cpp:202
+msgid "Draw _Broken Strips"
+msgstr "Рисовать «_битые» каналы"
+
+#: src/main_window_actions.cpp:203
+msgid "Show broken strips on the image"
+msgstr "Отображать «битые» каналы на изображении"
+
+#: src/main_window_actions.cpp:212
 msgid "_Device"
 msgstr "_Устройство"
 
-#: src/main_window_actions.cpp:200
+#: src/main_window_actions.cpp:216
 msgctxt "Device"
 msgid "_Connect"
 msgstr "Под_ключить"
 
-#: src/main_window_actions.cpp:200
+#: src/main_window_actions.cpp:216
 msgid "Connect Scanner Device"
 msgstr "Подключить сканер"
 
-#: src/main_window_actions.cpp:205
+#: src/main_window_actions.cpp:221
 msgctxt "Device"
 msgid "_Disconnect"
 msgstr "О_тключить"
 
-#: src/main_window_actions.cpp:205
+#: src/main_window_actions.cpp:221
 msgid "Disconnect Scanner Device"
 msgstr "Отключить сканер"
 
-#: src/main_window_actions.cpp:211
+#: src/main_window_actions.cpp:227
 msgid "_Lining Procedure..."
 msgstr "_Выравнивание пьедесталов..."
 
-#: src/main_window_actions.cpp:211
+#: src/main_window_actions.cpp:227
 msgid "Acquire lining coefficients"
 msgstr "Подстройка коэффициентов выравнивания пьедесталов"
 
-#: src/main_window_actions.cpp:217
+#: src/main_window_actions.cpp:233
 msgid "Run the _Acquisition..."
 msgstr "Сделать _cнимок..."
 
-#: src/main_window_actions.cpp:217
+#: src/main_window_actions.cpp:233
 msgid "Acquire a x-ray image"
 msgstr "Сделать новый снимок"
 
-#: src/main_window_actions.cpp:223
+#: src/main_window_actions.cpp:239
 msgid "Temperature _Margins..."
 msgstr "Температурные _границы..."
 
-#: src/main_window_actions.cpp:228
+#: src/main_window_actions.cpp:244
 msgid "Debug..."
 msgstr "Отладка..."
 
-#: src/main_window_actions.cpp:233
+#: src/main_window_actions.cpp:249
 msgid "Remove Current"
 msgstr "Удалить выбранное изображение"
 
-#: src/main_window_actions.cpp:237
+#: src/main_window_actions.cpp:253
 msgid "Clear All"
 msgstr "Удалить все изображения"
 
-#: src/main_window_actions.cpp:241
+#: src/main_window_actions.cpp:257
 msgid "Show Raw Data"
 msgstr "Исходные данные"
 
-#: src/main_window_actions.cpp:245
+#: src/main_window_actions.cpp:261
 msgid "Show Processing Data"
 msgstr "Данные для обработки"
 
-#: src/main_window_actions.cpp:249
+#: src/main_window_actions.cpp:265
 msgid "Show Presentation Data"
 msgstr "Данные для презентации"
 
-#: src/main_window_actions.cpp:253
+#: src/main_window_actions.cpp:269
 msgid "Data _Filter"
 msgstr "_Фильтр"
 
-#: src/main_window_actions.cpp:272
+#: src/main_window_actions.cpp:288
 msgid "Data _Calibration"
 msgstr "Калибровке данных"
 
-#: src/main_window_actions.cpp:294
+#: src/main_window_actions.cpp:310
 msgid "_Files"
 msgstr "_Файлы"
 
-#: src/main_window_actions.cpp:297
+#: src/main_window_actions.cpp:313
 msgid "File _Icons"
 msgstr "Иконки файлов"
 
-#: src/main_window_actions.cpp:300
+#: src/main_window_actions.cpp:316
 msgid "Image _Area"
 msgstr "_Область изображения"
 
@@ -1942,18 +1958,6 @@ msgstr "Невозможно загрузить данные изображен�
 
 #~ msgid "_Levels..."
 #~ msgstr "_Уровни яркости..."
-
-#~ msgid "Draw _Margins"
-#~ msgstr "Рисовать _границы"
-
-#~ msgid "Show detector's margins on an image"
-#~ msgstr "Отображать границы детекторов на изображении"
-
-#~ msgid "Draw _Broken Strips"
-#~ msgstr "Рисовать «_битые» каналы"
-
-#~ msgid "Show broken strips on the image"
-#~ msgstr "Отображать «битые» каналы на изображении"
 
 #~ msgid "S_tudy"
 #~ msgstr "_Обследование"

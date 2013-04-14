@@ -11,10 +11,6 @@ libscanner_a_SOURCES = defines.hpp \
 	commands.cpp \
 	data.hpp \
 	data.cpp \
-	image_calibration.hpp \
-	image_calibration.cpp \
-	image_data.hpp \
-	image_data.cpp \
 	manager_device.cpp \
 	manager.hpp \
 	manager.cpp \

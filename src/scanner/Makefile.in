@@ -69,8 +69,7 @@ libscanner_a_AR = $(AR) $(ARFLAGS)
 libscanner_a_LIBADD =
 am_libscanner_a_OBJECTS = acquisition.$(OBJEXT) adc_count.$(OBJEXT) \
 	assemble.$(OBJEXT) builtin_chip_capacities.$(OBJEXT) \
-	commands.$(OBJEXT) data.$(OBJEXT) image_calibration.$(OBJEXT) \
-	image_data.$(OBJEXT) manager_device.$(OBJEXT) \
+	commands.$(OBJEXT) data.$(OBJEXT) manager_device.$(OBJEXT) \
 	manager.$(OBJEXT) manager_state.$(OBJEXT) movement.$(OBJEXT) \
 	run_arguments.$(OBJEXT) state.$(OBJEXT) \
 	temperature_regulator.$(OBJEXT) x-ray.$(OBJEXT)
@@ -250,10 +249,6 @@ libscanner_a_SOURCES = defines.hpp \
 	commands.cpp \
 	data.hpp \
 	data.cpp \
-	image_calibration.hpp \
-	image_calibration.cpp \
-	image_data.hpp \
-	image_data.cpp \
 	manager_device.cpp \
 	manager.hpp \
 	manager.cpp \
@@ -328,8 +323,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/builtin_chip_capacities.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/commands.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/data.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/image_calibration.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/image_data.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/manager.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/manager_device.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/manager_state.Po@am__quote@

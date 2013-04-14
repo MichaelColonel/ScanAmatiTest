@@ -114,6 +114,7 @@ private:
 		const Image::DataSharedPtr& image) const;
 
 	void calculate_lining(guint8 accuracy);
+	void calculate_bad_strips( guint16 value, guint16 spread);
 
 	CodeCountsMap expand_lining_code_counts(
 		const CodeCountsMap& map) const;

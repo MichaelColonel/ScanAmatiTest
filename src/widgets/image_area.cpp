@@ -464,8 +464,8 @@ ImageArea::draw_broken_strips(
 void
 ImageArea::on_draw_margins(const Glib::RefPtr<Gtk::ToggleAction>& action)
 {
+	margins_ = action->get_active();
 	if (pixbuf_) {
-		margins_ = action->get_active();
 		update_pixmap();
 		queue_draw();
 	}

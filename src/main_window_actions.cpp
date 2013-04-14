@@ -25,6 +25,8 @@
 #include "widgets/palette_area.hpp"
 #include "widgets/scrolled_image_area.hpp"
 
+#include "application.hpp"
+
 #include "main_window.hpp"
 
 namespace ScanAmati {
@@ -189,6 +191,26 @@ MainWindow::init_actions()
 		_("Zoom _3:1 (300%)"), _("Zoom to 3:1"));
 	action_group_->add( act, sigc::bind(
 		sigc::mem_fun( *image_area_, &ImageArea::on_zoom), ZOOM_300));
+
+	Glib::RefPtr<Gtk::ToggleAction> toggle_action = Gtk::ToggleAction::create(
+		"action-draw-margins", Gtk::StockID(), _("Draw _Margins"),
+		_("Show detector's margins on an image"));
+
+	action_group_->add( toggle_action, sigc::bind(
+		sigc::mem_fun( *image_area_, &ImageArea::on_draw_margins),
+		toggle_action));
+
+	toggle_action->set_sensitive(app.extend);
+
+	toggle_action = Gtk::ToggleAction::create(
+		"action-draw-broken-strips", Gtk::StockID(), _("Draw _Broken Strips"),
+		_("Show broken strips on the image"));
+
+	action_group_->add( toggle_action, sigc::bind(
+		sigc::mem_fun( image_area_, &ImageArea::on_draw_broken_strips),
+		toggle_action));
+
+	toggle_action->set_sensitive(app.extend);
 
 	act = Gtk::Action::create( "action-scanner", _("_Scanner"));
 	action_group_->add(act);
