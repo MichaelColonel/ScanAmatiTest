@@ -228,6 +228,8 @@ ImageAcquisitionDialog::block_interface(bool block)
 void
 ImageAcquisitionDialog::on_acquisition_run()
 {
+	get_parameters(acquisition_);
+
 	Scanner::SharedManager manager = Scanner::Manager::instance();
 
 	if (acquisition_.with_exposure) {

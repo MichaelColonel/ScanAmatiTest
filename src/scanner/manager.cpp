@@ -479,11 +479,11 @@ Manager::run_lining_acquisition(const AcquisitionParameters& params)
 				int j = Data::chip_number(*it);
 				Command* com = Commands::create( *it, static_cast<guint8>(*iter));
 				write_command(com);
-				Glib::usleep(30000);
+				Glib::usleep(10000);
 			}
 			Command* com = Commands::create( COMMAND_ALTERA_START, '1');
 			write_command(com);
-			Glib::usleep(100000);
+			Glib::usleep(25000);
 
 			if (!acquisition_start( params, ACQUIRE_LINING_PEDESTALS))
 				return;
