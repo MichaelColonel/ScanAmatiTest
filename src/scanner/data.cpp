@@ -418,12 +418,12 @@ Data::reconstruct_image(const std::vector<Image::DataSharedPtr>& array)
 	guint i = 0;
 	AssemblyIter it;
 	for ( it = assembly_.begin(); it != assembly_.end(); ++it, ++i) {
-		if (it->pedestals.size()) {
+/*		if (it->pedestals.size()) {
 			array[i]->subtract_row(it->pedestals);
 			array[i]->add_value(lining_count_);
 			array[i]->normalize();
 		}
-
+*/
 		const unsigned int& rows = image_height_;
 		// resize Image
 		Magick::Image image( IMAGE_STRIPS_PER_CHIP, array[i]->height(), "I",
@@ -509,6 +509,7 @@ Data::reconstruct_image_from_scratch()
 //		calibrated_image_ = result->get_horizontal_part( 0, margins[0].end);
 //		image->normalize();
 //		calibrated_image_ = image;
+		image->fix_strips(bs);
 		fill_image_data( image, intensity_type_);
 	}
 
