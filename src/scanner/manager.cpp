@@ -316,6 +316,12 @@ Manager::run_initiation()
 
 		load_preferences(scanner_id);
 
+		{
+			Glib::Mutex::Lock lock(mutex_);
+			Command* com = Commands::create(COMMAND_ARRAY_RESET);
+			write_command(com);
+		}
+
 		for ( AssemblyConstIter it = data_.assembly_.begin();
 			it != data_.assembly_.end(); ++it) {
 			Command* com = Commands::create( it->code, it->lining);
@@ -479,11 +485,11 @@ Manager::run_lining_acquisition(const AcquisitionParameters& params)
 				int j = Data::chip_number(*it);
 				Command* com = Commands::create( *it, static_cast<guint8>(*iter));
 				write_command(com);
-				Glib::usleep(10000);
+				Glib::usleep(20000);
 			}
-			Command* com = Commands::create( COMMAND_ALTERA_START, '1');
+			Command* com = Commands::create(COMMAND_ALTERA_START_PEDESTALS);
 			write_command(com);
-			Glib::usleep(25000);
+			Glib::usleep(30000);
 
 			if (!acquisition_start( params, ACQUIRE_LINING_PEDESTALS))
 				return;
@@ -577,6 +583,8 @@ Manager::run_image_acquisition(const AcquisitionParameters& params)
 		return;
 	else
 		Glib::usleep(200000);
+
+	sleep(5);
 
 	if (params.with_acquisition) {
 		{
@@ -859,7 +867,7 @@ Manager::acquisition_abort( const AcquisitionParameters& params, bool)
 				state_.manager_state_.progress_ = i / 100.0;
 			}
 			signal_update_();
-			Glib::usleep(params.acquisition.movement_reverse.time * 10000);
+			Glib::usleep(params.acquisition.movement_reverse.time * 20000);
 		}
 
 		com = Commands::create(COMMAND_STEPPERS_STOP);
@@ -956,7 +964,7 @@ Manager::acquire_pedestals( const AcquisitionParameters& params, AcquireType acq
 	try {
 		Command* com = Commands::create( COMMAND_ALTERA_START, '1');
 		write_command(com);
-		Glib::usleep(300000);
+		Glib::usleep(50000);
 
 		if (!acquisition_start( params, acquire))
 			return false;
@@ -1029,7 +1037,7 @@ Manager::id() throw(Exception)
 
 	read( buffers_.com.buf, SCANNER_BUFFER_PART);
 
-	std::string string( buffers_.com.buf + 9, buffers_.com.buf + 16);
+	std::string string( buffers_.com.buf, buffers_.com.buf + 7);
 	if (string.find(id_template)) {
 		throw Exception(_("Wrong scanner id."));
 	}
@@ -1045,7 +1053,8 @@ Manager::handshake() throw(Exception)
 
 	read( buffers_.com.buf, SCANNER_BUFFER_WELCOME);
 
-	if (strcmp( handshake_message, buffers_.com.buf)) {
+	std::string welcome( buffers_.com.buf, buffers_.com.buf + 7);
+	if (welcome.compare(handshake_message)) {
 		throw Exception(_("Wrong handshake response."));
 	}
 }
@@ -1058,8 +1067,8 @@ Manager::temperature() throw(Exception)
 
 	read( buffers_.com.buf, SCANNER_BUFFER_PART);
 
-	return regulator_.temperature(AdcCount( buffers_.com.data[9],
-		buffers_.com.data[8]));
+	return regulator_.temperature(AdcCount( buffers_.com.data[0],
+		buffers_.com.data[1]));
 }
 
 void

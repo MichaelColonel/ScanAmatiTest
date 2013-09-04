@@ -89,6 +89,13 @@ LiningAcquisitionDialog::init_ui()
 		button_chips_->set_sensitive(true);
 		expander_accuracy_->set_sensitive(true);
 	}
+	
+	Glib::RefPtr<Glib::Object> obj = builder_->get_object("adjustment-count");
+	if (obj)
+		adjustment_lining_counts_ = Glib::RefPtr<Gtk::Adjustment>::cast_dynamic(obj);
+
+	if (adjustment_lining_counts_)
+		spinbutton_adc_count_->set_value(adjustment_lining_counts_->get_value());
 }
 
 void

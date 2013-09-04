@@ -36,7 +36,7 @@ namespace Scanner {
 void
 Manager::open(const Glib::ustring& devname) throw(Error)
 {
-	fd_ = ::open( devname.c_str(), O_RDWR);
+	fd_ = ::open( devname.c_str(), O_RDWR | O_NOCTTY | O_NDELAY);
 	if (fd_ == -1) {
 		throw Error( strerror(errno), errno);
 	}

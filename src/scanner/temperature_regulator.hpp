@@ -67,7 +67,7 @@ public:
 	void set_margins( double average, double spread);
 	void set_default_margins();
 	bool load_data(const std::string&);
-	void reset() { size_ = 0; clear(); timer_.stop(); }
+	void reset() { clear(); timer_.stop(); }
 	guint8 add(double); // add temperature
 	double temperature(const AdcCount&) const; // current temperature
 	bool code_value_changed() const { return code_value_changed_; }

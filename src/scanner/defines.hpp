@@ -32,6 +32,9 @@
 
 #define SCANNER_CHIPS                 16
 
+#define SCANNER_CHIPS_DROP_HALF       4
+#define SCANNER_CHIPS_DROP_QUARTER    6
+
 #define SCANNER_LINING_CODE_MIN       0
 #define SCANNER_LINING_CODE_MAX       255
 #define SCANNER_LINING_CODES          256

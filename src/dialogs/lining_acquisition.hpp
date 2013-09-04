@@ -18,6 +18,7 @@
 #pragma once
 
 #include <gtkmm/treeselection.h>
+#include <gtkmm/adjustment.h>
 
 // files from src directory begin
 #include "scanner/data.hpp"
@@ -74,6 +75,7 @@ protected:
 	Scanner::LiningAccuracyType accuracy_;
 
 	Glib::RefPtr<Gtk::TreeSelection> selection_chips_;
+	Glib::RefPtr<Gtk::Adjustment> adjustment_lining_counts_;
 
 	// Signals:
 	sigc::signal<void> signal_lining_ready_;

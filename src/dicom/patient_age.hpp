@@ -50,7 +50,7 @@ PatientAge::PatientAge(const Glib::ustring& age_string)
 	type_(AGE_YEARS),
 	value_(0)
 {
-	char str[4];
+	char str[4] = {};
 	age_string.copy( str, 3, 0);
 	str[3] = '\0';
 	value_ = atoi(str);

@@ -614,6 +614,9 @@ MainWindow::on_image_acquisition()
 			// Connect signals:
 			signal_scanner_state_changed_.connect(sigc::mem_fun(
 				*dialog, &ImageAcquisitionDialog::update_scanner_state));
+			dialog->signal_with_acquisition().connect(sigc::mem_fun(
+				*this, &MainWindow::on_acquisition_flag_changed));
+
 			image_acquisition_dialog_.reset(dialog);
 		}
 	}

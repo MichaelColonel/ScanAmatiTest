@@ -14,6 +14,7 @@
  *      Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
  *      MA 02110-1301, USA.
  */
+#include <sstream>
 
 #include <unistd.h>
 #include <cmath>
@@ -108,12 +109,12 @@ Data::width_iterators( WidthType width_type,
 	end = assembly_.end();
 	switch (width_type) {
 	case WIDTH_HALF:
-		begin += 4;
-		end -= 4;
+		begin += SCANNER_CHIPS_DROP_HALF;
+		end -= SCANNER_CHIPS_DROP_HALF;
 		break;
 	case WIDTH_QUARTER:
-		begin += 6;
-		end -= 6;
+		begin += SCANNER_CHIPS_DROP_QUARTER;
+		end -= SCANNER_CHIPS_DROP_QUARTER;
 		break;
 	case WIDTH_FULL:
 	default:
@@ -129,12 +130,12 @@ Data::width_iterators( WidthType width_type,
 	end = assembly_.end();
 	switch (width_type) {
 	case WIDTH_HALF:
-		begin += 4;
-		end -= 4;
+		begin += SCANNER_CHIPS_DROP_HALF;
+		end -= SCANNER_CHIPS_DROP_HALF;
 		break;
 	case WIDTH_QUARTER:
-		begin += 6;
-		end -= 6;
+		begin += SCANNER_CHIPS_DROP_QUARTER;
+		end -= SCANNER_CHIPS_DROP_QUARTER;
 		break;
 	case WIDTH_FULL:
 	default:
@@ -391,6 +392,14 @@ Data::reconstruct_pedestals( AcquireType acquire,
 {
 	guint i = 0;
 	AssemblyIter it;
+/*
+	std::stringstream ss;
+	ss << int(arg) << ".raw";
+	std::cout << ss.str() << std::endl;
+	std::ofstream file(ss.str().c_str());
+	file << array[0];
+	file.close();
+*/
 	for ( it = assembly_.begin(); it != assembly_.end(); ++it, ++i) {
 		switch (acquire) {
 		case ACQUIRE_IMAGE_PEDESTALS:
@@ -509,7 +518,7 @@ Data::reconstruct_image_from_scratch()
 //		calibrated_image_ = result->get_horizontal_part( 0, margins[0].end);
 //		image->normalize();
 //		calibrated_image_ = image;
-		image->fix_strips(bs);
+//		image->fix_strips(bs);
 		fill_image_data( image, intensity_type_);
 	}
 

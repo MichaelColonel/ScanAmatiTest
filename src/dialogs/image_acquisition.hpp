@@ -52,6 +52,8 @@ public:
 	virtual void update_scanner_state(const Scanner::State&);
 	virtual void block_interface(bool);
 
+	sigc::signal<void, bool> signal_with_acquisition();
+
 protected:
 	// Member functions:
 	void init_ui();
@@ -100,6 +102,7 @@ private:
 	// Members:
 	std::vector<double> exposures_;
 	Scanner::AcquisitionParameters acquisition_;
+	sigc::signal<void, bool> signal_with_acquisition_;
 };
 
 } // namespace UI

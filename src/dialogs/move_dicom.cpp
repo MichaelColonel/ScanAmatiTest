@@ -147,7 +147,8 @@ MoveDicomDialog::move_progress( void* callback_data,
 		{
 			double fraction = double(prog->progressBytes) / prog->totalBytes;
 			progressbar_->set_fraction(fraction);
-			Glib::ustring text = Glib::ustring::compose( "Have been read %1 of %2 bytes.",
+			Glib::ustring text = Glib::ustring::compose(
+				_("Have been read %1 of %2 bytes."),
 				Glib::ustring::format(prog->progressBytes),
 				Glib::ustring::format(prog->totalBytes));
 			progressbar_->set_text(text);

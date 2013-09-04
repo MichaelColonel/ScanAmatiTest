@@ -17,6 +17,9 @@ ui/dicom-information-dialog.glade
 ui/person-name-dialog.glade
 src/dicom/user_commands.cpp
 src/dicom/patient_age.cpp
+src/dicom/summary_information.cpp
+src/dicom/short_information.cpp
+src/dialogs/acquisition_parameters.cpp
 src/dialogs/image_acquisition.cpp
 src/dialogs/lining_adjustment.cpp
 src/dialogs/chip_capacities.cpp

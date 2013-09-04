@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-13 11:14+0400\n"
+"POT-Creation-Date: 2013-07-08 11:48+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: ui/main-window.glade:17 src/main_window.cpp:788
+#: ui/main-window.glade:17 src/main_window.cpp:791
 #: src/main_window_action_handlers.cpp:119 src/main.cpp:105
 msgid "ScanAmati"
 msgstr ""
 
-#: ui/main-window.glade:58 src/main_window_actions.cpp:209
+#: ui/main-window.glade:58 src/main_window_actions.cpp:215
 msgid "_Scanner"
 msgstr ""
 
@@ -223,19 +223,19 @@ msgstr ""
 msgid "<b>Image Width</b>"
 msgstr ""
 
-#: ui/acquisition-parameters-dialog.glade:1364 src/main_window_actions.cpp:272
+#: ui/acquisition-parameters-dialog.glade:1364 src/main_window_actions.cpp:278
 msgid "Lanczos"
 msgstr ""
 
-#: ui/acquisition-parameters-dialog.glade:1381 src/main_window_actions.cpp:276
+#: ui/acquisition-parameters-dialog.glade:1381 src/main_window_actions.cpp:282
 msgid "Cubic"
 msgstr ""
 
-#: ui/acquisition-parameters-dialog.glade:1398 src/main_window_actions.cpp:280
+#: ui/acquisition-parameters-dialog.glade:1398 src/main_window_actions.cpp:286
 msgid "Bessel"
 msgstr ""
 
-#: ui/acquisition-parameters-dialog.glade:1415 src/main_window_actions.cpp:284
+#: ui/acquisition-parameters-dialog.glade:1415 src/main_window_actions.cpp:290
 msgid "Quadratic"
 msgstr ""
 
@@ -247,19 +247,19 @@ msgstr ""
 msgid "<b>Postprocess</b>"
 msgstr ""
 
-#: ui/acquisition-parameters-dialog.glade:1526 src/main_window_actions.cpp:291
+#: ui/acquisition-parameters-dialog.glade:1526 src/main_window_actions.cpp:297
 msgid "Rough"
 msgstr ""
 
-#: ui/acquisition-parameters-dialog.glade:1543 src/main_window_actions.cpp:295
+#: ui/acquisition-parameters-dialog.glade:1543 src/main_window_actions.cpp:301
 msgid "Good"
 msgstr ""
 
-#: ui/acquisition-parameters-dialog.glade:1560 src/main_window_actions.cpp:299
+#: ui/acquisition-parameters-dialog.glade:1560 src/main_window_actions.cpp:305
 msgid "Better"
 msgstr ""
 
-#: ui/acquisition-parameters-dialog.glade:1577 src/main_window_actions.cpp:303
+#: ui/acquisition-parameters-dialog.glade:1577 src/main_window_actions.cpp:309
 msgid "Best"
 msgstr ""
 
@@ -832,8 +832,36 @@ msgid_plural "days"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/dicom/patient_age.cpp:48
+#: src/dicom/patient_age.cpp:48 src/dicom/summary_information.cpp:103
 msgid "Unknown"
+msgstr ""
+
+#: src/dicom/summary_information.cpp:109
+msgid "IHEP"
+msgstr ""
+
+#: src/dicom/summary_information.cpp:409
+msgid ""
+"Name: %1\n"
+"Study: %2\n"
+"Date: %3\n"
+"Time: %4"
+msgstr ""
+
+#: src/dicom/short_information.cpp:57 src/dicom/short_information.cpp:73
+msgid "ID - %1, %2 (%3 year of birth)"
+msgstr ""
+
+#: src/dialogs/acquisition_parameters.cpp:514
+msgid "Half Step"
+msgstr ""
+
+#: src/dialogs/acquisition_parameters.cpp:518
+msgid "Full Step"
+msgstr ""
+
+#: src/dialogs/acquisition_parameters.cpp:570
+msgid "MB"
 msgstr ""
 
 #: src/dialogs/image_acquisition.cpp:68
@@ -844,13 +872,13 @@ msgstr ""
 msgid "X-ray Preparation"
 msgstr ""
 
-#: src/dialogs/image_acquisition.cpp:372
+#: src/dialogs/image_acquisition.cpp:376
 #: src/widgets/information_notebook.cpp:569
 #: src/widgets/information_notebook.cpp:644
 msgid "kV"
 msgstr ""
 
-#: src/dialogs/image_acquisition.cpp:379
+#: src/dialogs/image_acquisition.cpp:383
 #: src/widgets/information_notebook.cpp:566
 #: src/widgets/information_notebook.cpp:640
 msgid "mAs"
@@ -1002,7 +1030,7 @@ msgstr[1] ""
 msgid "Nothing has been found"
 msgstr ""
 
-#: src/dialogs/scanner_debug.cpp:186 src/main_window.cpp:657
+#: src/dialogs/scanner_debug.cpp:186 src/main_window.cpp:660
 msgid "Warning"
 msgstr ""
 
@@ -1010,7 +1038,7 @@ msgstr ""
 msgid "Unable to change temperature control state."
 msgstr ""
 
-#: src/dialogs/scanner_debug.cpp:188 src/main_window.cpp:659
+#: src/dialogs/scanner_debug.cpp:188 src/main_window.cpp:662
 msgid "Please, try later."
 msgstr ""
 
@@ -1036,19 +1064,23 @@ msgstr ""
 msgid "File has been moved successfully!"
 msgstr ""
 
-#: src/dialogs/move_dicom.cpp:181
+#: src/dialogs/move_dicom.cpp:151
+msgid "Have been read %1 of %2 bytes."
+msgstr ""
+
+#: src/dialogs/move_dicom.cpp:182
 msgid "Cannot write DICOM file."
 msgstr ""
 
-#: src/dialogs/move_dicom.cpp:194
+#: src/dialogs/move_dicom.cpp:195
 msgid "Bad DICOM file."
 msgstr ""
 
-#: src/dialogs/move_dicom.cpp:198
+#: src/dialogs/move_dicom.cpp:199
 msgid "Data doesn't match SOP class IUD."
 msgstr ""
 
-#: src/dialogs/move_dicom.cpp:202
+#: src/dialogs/move_dicom.cpp:203
 msgid "Data doesn't match SOP instance IUD."
 msgstr ""
 
@@ -1325,88 +1357,88 @@ msgstr ""
 msgid "Unable to load scanner data."
 msgstr ""
 
-#: src/scanner/manager.cpp:1034
+#: src/scanner/manager.cpp:1036
 msgid "Wrong scanner id."
 msgstr ""
 
-#: src/scanner/manager.cpp:1049
+#: src/scanner/manager.cpp:1051
 msgid "Wrong handshake response."
 msgstr ""
 
-#: src/scanner/manager.cpp:1074
+#: src/scanner/manager.cpp:1076
 msgid "The device \"%1\" doesn't exist."
 msgstr ""
 
-#: src/scanner/manager.cpp:1076
+#: src/scanner/manager.cpp:1078
 msgid ""
 "Check the USB cable connection between the PC and the device, and check if "
 "the scanner power supply is turned on."
 msgstr ""
 
-#: src/scanner/manager.cpp:1082
+#: src/scanner/manager.cpp:1084
 msgid "The user \"%1\" has no permission to open scanner device."
 msgstr ""
 
-#: src/scanner/manager.cpp:1085
+#: src/scanner/manager.cpp:1087
 msgid "Check your permissions to open, read and write to the scanner device."
 msgstr ""
 
-#: src/scanner/manager.cpp:1091
+#: src/scanner/manager.cpp:1093
 msgid "The device \"%1\" has been already busy."
 msgstr ""
 
-#: src/scanner/manager.cpp:1092
+#: src/scanner/manager.cpp:1094
 msgid ""
 "Close other programs which use this device, and try to repeat the operation."
 msgstr ""
 
-#: src/scanner/manager.cpp:1095
+#: src/scanner/manager.cpp:1097
 msgid "The device has invalid file descriptor."
 msgstr ""
 
-#: src/scanner/manager.cpp:1098
+#: src/scanner/manager.cpp:1100
 msgid "Command interrupted by a signal."
 msgstr ""
 
-#: src/scanner/manager.cpp:1101
+#: src/scanner/manager.cpp:1103
 msgid "Invalid function argument."
 msgstr ""
 
-#: src/scanner/manager.cpp:1104
+#: src/scanner/manager.cpp:1106
 msgid ""
 "The system cannot allocate more virtual memory because it capacity is full."
 msgstr ""
 
-#: src/scanner/manager.cpp:1108
+#: src/scanner/manager.cpp:1110
 msgid ""
 "Resource temporarily unavailable; the call might work if you try again later."
 msgstr ""
 
-#: src/scanner/manager.cpp:1112
+#: src/scanner/manager.cpp:1114
 msgid "You passed in a pointer to bad memory."
 msgstr ""
 
-#: src/scanner/manager.cpp:1115
+#: src/scanner/manager.cpp:1117
 msgid "Input/output error occured."
 msgstr ""
 
-#: src/scanner/manager.cpp:1118
+#: src/scanner/manager.cpp:1120
 msgid "File descriptor is attached to a directory."
 msgstr ""
 
-#: src/scanner/manager.cpp:1121
+#: src/scanner/manager.cpp:1123
 msgid "No space left on device."
 msgstr ""
 
-#: src/scanner/manager.cpp:1124
+#: src/scanner/manager.cpp:1126
 msgid "There is no process reading from the other end of a pipe."
 msgstr ""
 
-#: src/scanner/manager.cpp:1128
+#: src/scanner/manager.cpp:1130
 msgid "Unexpected error."
 msgstr ""
 
-#: src/scanner/manager.cpp:1130
+#: src/scanner/manager.cpp:1132
 msgid ""
 "The scanner device can't execute this command. Please, turn off the device "
 "and try again."
@@ -1440,260 +1472,260 @@ msgstr ""
 msgid "Unable to save the file \"%1\"."
 msgstr ""
 
-#: src/main_window.cpp:658
+#: src/main_window.cpp:661
 msgid "Lining data unavailable in this moment."
 msgstr ""
 
-#: src/main_window.cpp:718
+#: src/main_window.cpp:721
 msgid "Scanner Error"
 msgstr ""
 
 #. File menu
-#: src/main_window_actions.cpp:45
+#: src/main_window_actions.cpp:47
 msgid "_File"
 msgstr ""
 
-#: src/main_window_actions.cpp:48
+#: src/main_window_actions.cpp:50
 msgid "_Open..."
 msgstr ""
 
-#: src/main_window_actions.cpp:48
+#: src/main_window_actions.cpp:50
 msgid "Open an existing image"
 msgstr ""
 
-#: src/main_window_actions.cpp:51
+#: src/main_window_actions.cpp:53
 msgid "_Save"
 msgstr ""
 
-#: src/main_window_actions.cpp:52
+#: src/main_window_actions.cpp:54
 msgid "Save image"
 msgstr ""
 
-#: src/main_window_actions.cpp:57
+#: src/main_window_actions.cpp:59
 msgid "Save _As..."
 msgstr ""
 
-#: src/main_window_actions.cpp:57
+#: src/main_window_actions.cpp:59
 msgid "Save image under a new name"
 msgstr ""
 
-#: src/main_window_actions.cpp:63
+#: src/main_window_actions.cpp:65
 msgid "_Save to Archive"
 msgstr ""
 
-#: src/main_window_actions.cpp:63
+#: src/main_window_actions.cpp:65
 msgid "Save image to archive"
 msgstr ""
 
-#: src/main_window_actions.cpp:69
+#: src/main_window_actions.cpp:71
 msgid "ScanAmati Preferences..."
 msgstr ""
 
-#: src/main_window_actions.cpp:69
+#: src/main_window_actions.cpp:71
 msgid "Edit global ScanAmati preferences"
 msgstr ""
 
-#: src/main_window_actions.cpp:91
+#: src/main_window_actions.cpp:93
 msgid "Export PDF..."
 msgstr ""
 
-#: src/main_window_actions.cpp:101
+#: src/main_window_actions.cpp:103
 msgid "_Find Image..."
 msgstr ""
 
-#: src/main_window_actions.cpp:101
+#: src/main_window_actions.cpp:103
 msgid "Find Image In The Localhost Conquest DICOM Server"
 msgstr ""
 
-#: src/main_window_actions.cpp:105
+#: src/main_window_actions.cpp:107
 msgid "_Edit"
 msgstr ""
 
-#: src/main_window_actions.cpp:109
+#: src/main_window_actions.cpp:111
 msgid "Edit DICOM _Information..."
 msgstr ""
 
-#: src/main_window_actions.cpp:115
+#: src/main_window_actions.cpp:117
 msgid "_New DICOM Information..."
 msgstr ""
 
-#: src/main_window_actions.cpp:119
+#: src/main_window_actions.cpp:121
 msgid "_Image"
 msgstr ""
 
 #. popup menus
-#: src/main_window_actions.cpp:122 src/main_window_actions.cpp:307
+#: src/main_window_actions.cpp:124 src/main_window_actions.cpp:313
 msgid "_Palette"
 msgstr ""
 
-#: src/main_window_actions.cpp:127
+#: src/main_window_actions.cpp:129
 msgctxt "Palette"
 msgid "Grayscale"
 msgstr ""
 
-#: src/main_window_actions.cpp:135
+#: src/main_window_actions.cpp:137
 msgctxt "Palette"
 msgid "Inverted"
 msgstr ""
 
-#: src/main_window_actions.cpp:142
+#: src/main_window_actions.cpp:144
 msgctxt "Palette"
 msgid "Rainbow"
 msgstr ""
 
-#: src/main_window_actions.cpp:149
+#: src/main_window_actions.cpp:151
 msgctxt "Palette"
 msgid "Combined"
 msgstr ""
 
-#: src/main_window_actions.cpp:156
+#: src/main_window_actions.cpp:158
 msgctxt "Palette"
 msgid "Hot metal"
 msgstr ""
 
-#: src/main_window_actions.cpp:162
+#: src/main_window_actions.cpp:164
 msgid "_Zoom"
 msgstr ""
 
-#: src/main_window_actions.cpp:166
+#: src/main_window_actions.cpp:168
 msgid "Image _Width"
 msgstr ""
 
-#: src/main_window_actions.cpp:166
+#: src/main_window_actions.cpp:168
 msgid "Zoom to fit image width in window"
 msgstr ""
 
-#: src/main_window_actions.cpp:172
+#: src/main_window_actions.cpp:174
 msgid "Image _Heigth"
 msgstr ""
 
-#: src/main_window_actions.cpp:172
+#: src/main_window_actions.cpp:174
 msgid "Zoom to fit image height in window"
 msgstr ""
 
-#: src/main_window_actions.cpp:178
+#: src/main_window_actions.cpp:180
 msgid "Zoom _1:1 (100%)"
 msgstr ""
 
-#: src/main_window_actions.cpp:178
+#: src/main_window_actions.cpp:180
 msgid "Zoom to 1:1"
 msgstr ""
 
-#: src/main_window_actions.cpp:184
+#: src/main_window_actions.cpp:186
 msgid "Zoom _2:1 (200%)"
 msgstr ""
 
-#: src/main_window_actions.cpp:184
+#: src/main_window_actions.cpp:186
 msgid "Zoom to 2:1"
 msgstr ""
 
-#: src/main_window_actions.cpp:189
+#: src/main_window_actions.cpp:191
 msgid "Zoom _3:1 (300%)"
 msgstr ""
 
-#: src/main_window_actions.cpp:189
+#: src/main_window_actions.cpp:191
 msgid "Zoom to 3:1"
 msgstr ""
 
-#: src/main_window_actions.cpp:194
+#: src/main_window_actions.cpp:196
 msgid "Draw _Margins"
 msgstr ""
 
-#: src/main_window_actions.cpp:195
+#: src/main_window_actions.cpp:197
 msgid "Show detector's margins on an image"
 msgstr ""
 
-#: src/main_window_actions.cpp:202
+#: src/main_window_actions.cpp:206
 msgid "Draw _Broken Strips"
 msgstr ""
 
-#: src/main_window_actions.cpp:203
+#: src/main_window_actions.cpp:207
 msgid "Show broken strips on the image"
 msgstr ""
 
-#: src/main_window_actions.cpp:212
+#: src/main_window_actions.cpp:218
 msgid "_Device"
 msgstr ""
 
-#: src/main_window_actions.cpp:216
+#: src/main_window_actions.cpp:222
 msgctxt "Device"
 msgid "_Connect"
 msgstr ""
 
-#: src/main_window_actions.cpp:216
+#: src/main_window_actions.cpp:222
 msgid "Connect Scanner Device"
 msgstr ""
 
-#: src/main_window_actions.cpp:221
+#: src/main_window_actions.cpp:227
 msgctxt "Device"
 msgid "_Disconnect"
 msgstr ""
 
-#: src/main_window_actions.cpp:221
+#: src/main_window_actions.cpp:227
 msgid "Disconnect Scanner Device"
 msgstr ""
 
-#: src/main_window_actions.cpp:227
+#: src/main_window_actions.cpp:233
 msgid "_Lining Procedure..."
 msgstr ""
 
-#: src/main_window_actions.cpp:227
+#: src/main_window_actions.cpp:233
 msgid "Acquire lining coefficients"
 msgstr ""
 
-#: src/main_window_actions.cpp:233
+#: src/main_window_actions.cpp:239
 msgid "Run the _Acquisition..."
 msgstr ""
 
-#: src/main_window_actions.cpp:233
+#: src/main_window_actions.cpp:239
 msgid "Acquire a x-ray image"
 msgstr ""
 
-#: src/main_window_actions.cpp:239
+#: src/main_window_actions.cpp:245
 msgid "Temperature _Margins..."
 msgstr ""
 
-#: src/main_window_actions.cpp:244
+#: src/main_window_actions.cpp:250
 msgid "Debug..."
 msgstr ""
 
-#: src/main_window_actions.cpp:249
+#: src/main_window_actions.cpp:255
 msgid "Remove Current"
 msgstr ""
 
-#: src/main_window_actions.cpp:253
+#: src/main_window_actions.cpp:259
 msgid "Clear All"
 msgstr ""
 
-#: src/main_window_actions.cpp:257
+#: src/main_window_actions.cpp:263
 msgid "Show Raw Data"
 msgstr ""
 
-#: src/main_window_actions.cpp:261
+#: src/main_window_actions.cpp:267
 msgid "Show Processing Data"
 msgstr ""
 
-#: src/main_window_actions.cpp:265
+#: src/main_window_actions.cpp:271
 msgid "Show Presentation Data"
 msgstr ""
 
-#: src/main_window_actions.cpp:269
+#: src/main_window_actions.cpp:275
 msgid "Data _Filter"
 msgstr ""
 
-#: src/main_window_actions.cpp:288
+#: src/main_window_actions.cpp:294
 msgid "Data _Calibration"
 msgstr ""
 
-#: src/main_window_actions.cpp:310
+#: src/main_window_actions.cpp:316
 msgid "_Files"
 msgstr ""
 
-#: src/main_window_actions.cpp:313
+#: src/main_window_actions.cpp:319
 msgid "File _Icons"
 msgstr ""
 
-#: src/main_window_actions.cpp:316
+#: src/main_window_actions.cpp:322
 msgid "Image _Area"
 msgstr ""
 

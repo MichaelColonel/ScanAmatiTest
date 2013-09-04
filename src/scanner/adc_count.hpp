@@ -32,7 +32,7 @@ namespace Scanner {
 union AdcCount {
 	AdcCount(guint16 v = 0) : value(v) {}
 	AdcCount( guint8 l = 0, guint8 h = 0) { byte.low = l; byte.high = h; }
-	guint16 temperature_code() const { return (byte.low << 8) | byte.high; }
+	guint16 temperature_code() const { return byte.high << 8 | byte.low; }
 	gint16 pixel() const;
 #if SCANNER_ADC_RESOLUTION == 14
 	bool data_bit() const { return byte.low & 0x80; }

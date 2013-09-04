@@ -232,6 +232,8 @@ ImageAcquisitionDialog::on_acquisition_run()
 
 	Scanner::SharedManager manager = Scanner::Manager::instance();
 
+	signal_with_acquisition_(acquisition_.with_acquisition);
+
 	if (acquisition_.with_exposure) {
 		XrayCheckDialog dialog(*this);
 		int res = dialog.run();
@@ -246,7 +248,7 @@ ImageAcquisitionDialog::on_acquisition_run()
 			{
 				Scanner::Command* com =
 					Scanner::Commands::create(Scanner::COMMAND_XRAY_CHECK_OFF);
-				Scanner::AcquisitionParameters params;
+				Scanner::AcquisitionParameters params(com);
 				manager->run( RUN_COMMANDS, params);
 			}
 			break;
@@ -479,6 +481,12 @@ ImageAcquisitionDialog::create()
 		builder->get_widget_derived( "dialog-window", dialog);
 
 	return dialog;
+}
+
+sigc::signal< void, bool>
+ImageAcquisitionDialog::signal_with_acquisition()
+{
+	return signal_with_acquisition_;
 }
 
 } // namespace UI

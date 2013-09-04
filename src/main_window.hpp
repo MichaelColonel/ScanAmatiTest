@@ -150,7 +150,7 @@ protected:
 	FilesIconView* files_view_; // widget stores icons and files data
 	Statusbar* statusbar_;
 
-	bool acquire_data_; // flag if data was acquired or wasn't
+	bool acquire_data_; // data acquisition flag
 	Glib::OptionGroup::vecustrings files_;
 
 	// dialogs

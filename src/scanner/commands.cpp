@@ -102,6 +102,7 @@ void
 BaseCommand::fill_buffer( guint8* buf, size_t& size)
 {
 	Commands::fill_buffer( buf, size);
+	std::fill( buf, buf + size, '0');
 	buf[0] = com_;
 }
 
@@ -212,7 +213,7 @@ LiningCommand::fill_buffer( guint8* buf, size_t& size)
 
 	Commands::fill_buffer( buf, size);
 
-	buf[0] = 'N';
+	buf[0] = 'D';
 	buf[1] = chip_;
 	buf[2] = '0';
 
@@ -283,13 +284,13 @@ MovementCommand::fill_buffer( guint8* buf, size_t& size)
 
 	switch (direction_type_) {
 	case DIRECTION_FORWARD:
-		buf[13] = '0'; // array
-		buf[16] = '0'; // xray
+		buf[13] = '1'; // array
+		buf[16] = '1'; // xray
 		break;
 	case DIRECTION_REVERSE:
 	default:
-		buf[13] = '1'; // array
-		buf[16] = '1'; // xray
+		buf[13] = '0'; // array
+		buf[16] = '0'; // xray
 		break;
 	}
 
@@ -311,10 +312,10 @@ Commands::create(CommandType com)
 		command = new BaseCommand('M');
 		break;
 	case COMMAND_ID:
-		command = new BaseCommand('i');
+		command = new BaseCommand('I');
 		break;
 	case COMMAND_TEMPERATURE:
-		command = new BaseCommand('t');
+		command = new BaseCommand('T');
 		break;
 	case COMMAND_ALTERA_RESET:
 		command = new BaseCommand('r');
@@ -323,7 +324,11 @@ Commands::create(CommandType com)
 		command = new BaseCommand('p');
 		break;
 	case COMMAND_ALTERA_START:
+	case COMMAND_ALTERA_START_IMAGE:
 		command = new ValueCommand( 's', '0');
+		break;
+	case COMMAND_ALTERA_START_PEDESTALS:
+		command = new ValueCommand( 's', '1');
 		break;
 	case COMMAND_ALTERA_COUNTS_START:
 		command = new ValueCommand( 'G', '0');
