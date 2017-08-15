@@ -141,7 +141,8 @@ ChipCapacitiesDialog::block_interface(bool block)
 {
 	for (RadioButtonsIter it = buttons_map_.begin();
 		it != buttons_map_.end(); ++it) {
-
+		it->second->set_sensitive(!block);
+/*
 		switch (block) {
 		case true:
 			it->second->set_sensitive(false);
@@ -152,8 +153,10 @@ ChipCapacitiesDialog::block_interface(bool block)
 		default:
 			break;
 		}
+*/
 	}
-
+	button_change_capacity_->set_sensitive(!block);
+/*
 	switch (block) {
 	case true:
 		button_change_capacity_->set_sensitive(false);
@@ -164,6 +167,7 @@ ChipCapacitiesDialog::block_interface(bool block)
 	default:
 		break;
 	}
+*/
 }
 
 void

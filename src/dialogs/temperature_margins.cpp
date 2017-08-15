@@ -126,6 +126,13 @@ TemperatureMarginsDialog::set_temperature_margins(const Scanner::State& state)
 void
 TemperatureMarginsDialog::block_interface(bool block)
 {
+	if (block) {
+		;
+	}
+	else {
+		;
+	}
+/*
 	switch (block) {
 	case true:
 		break;
@@ -134,6 +141,7 @@ TemperatureMarginsDialog::block_interface(bool block)
 	default:
 		break;
 	}
+*/
 }
 
 TemperatureMarginsDialog*

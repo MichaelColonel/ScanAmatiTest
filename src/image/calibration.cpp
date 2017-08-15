@@ -46,7 +46,10 @@ namespace Image {
 double
 Calibration::add_row( const DataVector& row, bool skip_bad_strips)
 {
-	double value = 0.;
+	double value = (skip_bad_strips) ? mean_skip(row) :
+		std::accumulate( row.begin(), row.end(), 0.) / row.size();
+
+/*
 	switch (skip_bad_strips) {
 	case false:
 		value = std::accumulate( row.begin(), row.end(), 0.) / row.size();
@@ -56,6 +59,7 @@ Calibration::add_row( const DataVector& row, bool skip_bad_strips)
 		value = mean_skip(row);
 		break;
 	}
+*/
 	add_row( value, row);
 
 	return value;
