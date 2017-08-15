@@ -29,6 +29,7 @@
 #include <glib/gstdio.h>
 
 #include "application.hpp"
+#include "exceptions.hpp"
 #include "icon_loader.hpp"
 #include "main_window.hpp"
 #include "utils.hpp"
@@ -206,6 +207,10 @@ main( int argc, char** argv)
 		}
 
 		ScanAmati::application.finish();
+	}
+	catch (const ScanAmati::Exception& ex) {
+		std::cerr << _("ScanAmati error:") << " " << ex.what() << std::endl;
+		return EXIT_FAILURE;
 	}
 	catch (const Glib::OptionError& ex) {
 		std::cerr << _("Command-line option error:") << " "

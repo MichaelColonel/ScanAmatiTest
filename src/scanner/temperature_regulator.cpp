@@ -47,6 +47,8 @@ const double default_temperature_margins[] = {
 	SCANNER_DEFAULT_TEMPERATURE_AVERAGE + SCANNER_DEFAULT_TEMPERATURE_SPREAD
 };
 
+const int regulator_timeout = 15;
+
 } // namespace
 
 namespace ScanAmati {
@@ -143,6 +145,7 @@ TemperatureRegulator::add(double temp)
 	if (size() == 1) {
 		code_ = temperature_codes_[1];
 		timer_.start();
+		code_value_changed_ = true;
 		return code_;
 	}
 
@@ -151,7 +154,7 @@ TemperatureRegulator::add(double temp)
 
 	if (temp <= temperature_margins_[2] && temp >= temperature_margins_[0])
 		code_value_changed_ = false;
-	else if (temp < temperature_margins_[0] && timer_.elapsed() > 15) {
+	else if (temp < temperature_margins_[0] && timer_.elapsed() > regulator_timeout) {
 		if (diff < 0 && code_ < temperature_codes_[2]) {
 			if (int(code_) + diff_code > temperature_codes_[2]) {
 				code_ = temperature_codes_[2];
@@ -170,7 +173,7 @@ TemperatureRegulator::add(double temp)
 		else
 			code_value_changed_ = false;
 	}
-	else if (temp > temperature_margins_[2] && timer_.elapsed() > 15) {
+	else if (temp > temperature_margins_[2] && timer_.elapsed() > regulator_timeout) {
 		if (diff > 0 && code_ > temperature_codes_[0]) {
 			if (int(code_) - diff_code < temperature_codes_[0]) {
 				code_ = temperature_codes_[0];
@@ -195,17 +198,34 @@ TemperatureRegulator::add(double temp)
 	return code_;
 }
 
+void
+TemperatureRegulator::reset()
+{
+//	double temp = deque_.at(size_ - 1);
+
+	clear();
+
+//	for ( size_t i = 0; i < size_; ++i)
+//		deque_.push_back(temp);
+
+	timer_.stop();
+}
+
 guint8
 TemperatureRegulator::base_diff_code() const
 {
 	double diff_base = fabs( front() - temperature_margins_[1]);
 
 	guint8 code;
-	if (diff_base > 2)
+	if (diff_base > 3)
+		code = 7;
+	else if (diff_base <= 3 && diff_base > 2)
 		code = 5;
 	else if (diff_base <= 2 && diff_base > 1)
+		code = 3;
+	else if (diff_base <= 1 && diff_base > 0.8)
 		code = 2;
-	else if (diff_base <= 1 && diff_base > 0.2)
+	else if (diff_base <= 0.8 && diff_base > 0.2)
 		code = 1;
 	else
 		code = 1;

@@ -84,9 +84,9 @@ const ActionState init_actions_basic[] = {
 const ActionState init_actions_extend[] = { 
 	{ "action-device-connect", false },
 	{ "action-device-disconnect", true },
-	{ "action-lining-acquisition", true },
+	{ "action-lining-acquisition", false },
 	{ "action-image-acquisition", true },
-	{ "action-temperature-margins", true },
+	{ "action-temperature-margins", false },
 	{ "action-scanner-debug", true },
 	{ } // Terminating Entry
 };
@@ -267,8 +267,6 @@ MainWindow::connect_signals()
 	// Main Window:
 	signal_device_connection_.connect(sigc::mem_fun(
 		*this, &MainWindow::init_actions_state));
-	signal_scanner_data_ready_.connect( sigc::bind( sigc::mem_fun(
-		*this, &MainWindow::on_image_reconstruction), boost::any()));
 	signal_scanner_image_ready_.connect(sigc::mem_fun(
 		*this, &MainWindow::on_image_ready));
 
@@ -616,6 +614,8 @@ MainWindow::on_image_acquisition()
 				*dialog, &ImageAcquisitionDialog::update_scanner_state));
 			dialog->signal_with_acquisition().connect(sigc::mem_fun(
 				*this, &MainWindow::on_acquisition_flag_changed));
+			dialog->signal_scanner_data_ready().connect( sigc::bind( sigc::mem_fun(
+				*this, &MainWindow::on_image_reconstruction), boost::any()));
 
 			image_acquisition_dialog_.reset(dialog);
 		}
@@ -727,42 +727,43 @@ MainWindow::update_scanner_state()
 	switch (state.run()) {
 	case RUN_INITIATION:
 		if (state.process_finished()) {
-			manager->join_run_thread();
+//			manager->join_run_thread();
 			signal_device_connection_(true);
 		}
 		break;
 	case RUN_NONE:
 		switch (state.process()) {
 		case PROCESS_NONE:
-			manager->join_run_thread();
+//			manager->join_run_thread();
 			signal_device_connection_(false);
 			break;
 		default:
 			break;
 		}
 	case RUN_COMMANDS:
-		if (state.process_finished())
-			manager->join_run_thread();
+//		if (state.process_finished())
+//			manager->join_run_thread();
 		break;
 	case RUN_IMAGE_ACQUISITION:
 		switch (state.process()) {
 		case PROCESS_START:
 			break;
 		case PROCESS_FINISH:
-			manager->join_run_thread();
-			if (acquire_data_)
-				signal_scanner_data_ready_(); // start image reconstruction
+//			manager->join_run_thread();
+//			if (acquire_data_)
+//				signal_scanner_data_ready_(); // start image reconstruction
 			break;
 		default:
 			break;
 		}
 		break;
 	case RUN_LINING_ACQUISITION:
-		if (state.process_finished())
-			manager->join_run_thread();
 		break;
 	case RUN_IMAGE_RECONSTRUCTION:
+		break;
 	case RUN_BACKGROUND:
+		manager->join_run_thread();
+		break;
 	default:
 		break;
 	}
@@ -774,9 +775,8 @@ void
 MainWindow::update_data_state()
 {
 	Scanner::SharedManager manager = Scanner::Manager::instance();
+	manager->stop(false); // stop loop thread
 	manager->join_data_thread();
-	manager->stop(false);
-
 	signal_scanner_image_ready_(); // send signal that image is ready
 }
 

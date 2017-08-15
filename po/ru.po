@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amati 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-08 11:48+0400\n"
+"POT-Creation-Date: 2014-12-05 12:00+0400\n"
 "PO-Revision-Date: 2009-09-14 15:17+0400\n"
 "Last-Translator:  <pmk@ihep.ru>\n"
 "Language-Team: Russian\n"
@@ -19,7 +19,7 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ui/main-window.glade:17 src/main_window.cpp:791
-#: src/main_window_action_handlers.cpp:119 src/main.cpp:105
+#: src/main_window_action_handlers.cpp:119 src/main.cpp:106
 msgid "ScanAmati"
 msgstr "СканАмати"
 
@@ -880,13 +880,13 @@ msgstr "Если излучатель готов нажмите \"Да\", есл
 msgid "X-ray Preparation"
 msgstr "Подготовка излучателя"
 
-#: src/dialogs/image_acquisition.cpp:376
+#: src/dialogs/image_acquisition.cpp:385
 #: src/widgets/information_notebook.cpp:569
 #: src/widgets/information_notebook.cpp:644
 msgid "kV"
 msgstr "кВ"
 
-#: src/dialogs/image_acquisition.cpp:383
+#: src/dialogs/image_acquisition.cpp:392
 #: src/widgets/information_notebook.cpp:566
 #: src/widgets/information_notebook.cpp:640
 msgid "mAs"
@@ -1370,23 +1370,23 @@ msgctxt "Effective Dose"
 msgid "Unknown"
 msgstr "Неизвестна"
 
-#: src/scanner/manager.cpp:314
+#: src/scanner/manager.cpp:326
 msgid "Unable to load scanner data."
 msgstr "Невозможно загрузить данные сканера."
 
-#: src/scanner/manager.cpp:1036
+#: src/scanner/manager.cpp:1062
 msgid "Wrong scanner id."
 msgstr "Неверный идентификационный номер сканера."
 
-#: src/scanner/manager.cpp:1051
+#: src/scanner/manager.cpp:1078
 msgid "Wrong handshake response."
 msgstr "Неверный ответ на первичный запрос."
 
-#: src/scanner/manager.cpp:1076
+#: src/scanner/manager.cpp:1103
 msgid "The device \"%1\" doesn't exist."
 msgstr "Устройство \"%1\" отсутствует."
 
-#: src/scanner/manager.cpp:1078
+#: src/scanner/manager.cpp:1105
 msgid ""
 "Check the USB cable connection between the PC and the device, and check if "
 "the scanner power supply is turned on."
@@ -1394,73 +1394,73 @@ msgstr ""
 "Проверьте соединение УСБ кабеля между сканером и компьютером, а также "
 "убедитесь, что источник питания сканера включен."
 
-#: src/scanner/manager.cpp:1084
+#: src/scanner/manager.cpp:1111
 msgid "The user \"%1\" has no permission to open scanner device."
 msgstr "У пользователя \"%1\" не прав на открытие устройства сканера."
 
-#: src/scanner/manager.cpp:1087
+#: src/scanner/manager.cpp:1114
 msgid "Check your permissions to open, read and write to the scanner device."
 msgstr "Проверьте права пользователя на чтение и запись в устройство сканера."
 
-#: src/scanner/manager.cpp:1093
+#: src/scanner/manager.cpp:1120
 msgid "The device \"%1\" has been already busy."
 msgstr "Устройство \"%1\" уже занято."
 
-#: src/scanner/manager.cpp:1094
+#: src/scanner/manager.cpp:1121
 msgid ""
 "Close other programs which use this device, and try to repeat the operation."
 msgstr ""
 "Закройте программы, которые используют это устройство и повторите операцию."
 
-#: src/scanner/manager.cpp:1097
+#: src/scanner/manager.cpp:1124
 msgid "The device has invalid file descriptor."
 msgstr "У устройства неправильный дескриптор."
 
-#: src/scanner/manager.cpp:1100
+#: src/scanner/manager.cpp:1127
 msgid "Command interrupted by a signal."
 msgstr "Коммада прерванна внешним сигналом."
 
-#: src/scanner/manager.cpp:1103
+#: src/scanner/manager.cpp:1130
 msgid "Invalid function argument."
 msgstr "Неверный аргумент функции."
 
-#: src/scanner/manager.cpp:1106
+#: src/scanner/manager.cpp:1133
 msgid ""
 "The system cannot allocate more virtual memory because it capacity is full."
 msgstr "Недостаточно памяти."
 
-#: src/scanner/manager.cpp:1110
+#: src/scanner/manager.cpp:1137
 msgid ""
 "Resource temporarily unavailable; the call might work if you try again later."
 msgstr ""
 "Устройство временно недоступно, вызов может сработать, если вы попробуете "
 "позже."
 
-#: src/scanner/manager.cpp:1114
+#: src/scanner/manager.cpp:1141
 msgid "You passed in a pointer to bad memory."
 msgstr "Указатель на поврежденную память."
 
-#: src/scanner/manager.cpp:1117
+#: src/scanner/manager.cpp:1144
 msgid "Input/output error occured."
 msgstr "Ошибка ввода/вывода."
 
-#: src/scanner/manager.cpp:1120
+#: src/scanner/manager.cpp:1147
 msgid "File descriptor is attached to a directory."
 msgstr "Дескриптор указывает на директорию."
 
-#: src/scanner/manager.cpp:1123
+#: src/scanner/manager.cpp:1150
 msgid "No space left on device."
 msgstr "На диске кончилось место."
 
-#: src/scanner/manager.cpp:1126
+#: src/scanner/manager.cpp:1153
 msgid "There is no process reading from the other end of a pipe."
 msgstr "Нет процесса, читающего из пайпа."
 
-#: src/scanner/manager.cpp:1130
+#: src/scanner/manager.cpp:1157
 msgid "Unexpected error."
 msgstr "Неожиданная ошибка."
 
-#: src/scanner/manager.cpp:1132
+#: src/scanner/manager.cpp:1159
 msgid ""
 "The scanner device can't execute this command. Please, turn off the device "
 "and try again."
@@ -1468,13 +1468,18 @@ msgstr ""
 "Устройство не может выполнить эту комманду.Пожалуйста, закройте программу и "
 "повторите попытку."
 
-#: src/scanner/manager_device.cpp:90
+#: src/scanner/manager_device.cpp:179
 msgid "No data within timeout interval."
 msgstr "Нет данных в отведенный интервал времени."
 
-#: src/scanner/manager_device.cpp:118
+#: src/scanner/manager_device.cpp:207
 msgid "No more data."
 msgstr "Нет данных в устройстве."
+
+#: src/scanner/manager_device.cpp:248 src/scanner/manager_device.cpp:278
+#, fuzzy
+msgid "Wrong lining data response."
+msgstr "Неверный ответ на первичный запрос."
 
 #: src/icon_loader.cpp:94
 msgid "Amati icon doesn't seem to be installed in default icon theme."
@@ -1484,15 +1489,15 @@ msgstr "Иконка amati отсутствует в теме иконок по 
 msgid "Couldn't load program icon from the default icon theme. "
 msgstr "Невозможно загрузить иконку из темы иконок по умолчанию."
 
-#: src/main_window.cpp:321
+#: src/main_window.cpp:319
 msgid "Open File"
 msgstr "Открыть файл"
 
-#: src/main_window.cpp:423
+#: src/main_window.cpp:421
 msgid "Saving Error"
 msgstr "Ошибка сохранения"
 
-#: src/main_window.cpp:426
+#: src/main_window.cpp:424
 msgid "Unable to save the file \"%1\"."
 msgstr "Невозможно сохранить файл \"%1\"."
 
@@ -1753,60 +1758,65 @@ msgstr "Иконки файлов"
 msgid "Image _Area"
 msgstr "_Область изображения"
 
-#: src/global_strings.hpp:151
+#: src/global_strings.hpp:152
 msgid "APRM"
 msgstr "АПРМ"
 
 #. namespace Scanner
-#: src/global_strings.hpp:159
+#: src/global_strings.hpp:160
 msgid "DICOM image (*.dcm)"
 msgstr "Изображение формата DICOM (*.dcm)"
 
-#: src/global_strings.hpp:160
+#: src/global_strings.hpp:161
 msgid "Studio raw file (*.raw)"
 msgstr "Файл программы Studio (*.raw)"
 
-#: src/global_strings.hpp:161
+#: src/global_strings.hpp:162
 msgid "JPEG image file (*.jpg, *jpeg)"
 msgstr "Изображение формата JPEG (*.jpg, *.jpeg)"
 
-#: src/global_strings.hpp:162
+#: src/global_strings.hpp:163
 msgid "PNG image file (*.png)"
 msgstr "Изображение формата PNG (*.png)"
 
-#: src/main.cpp:106
+#: src/main.cpp:107
 msgid "ScanAmati options"
 msgstr "Параметры СканАмати"
 
-#: src/main.cpp:107
+#: src/main.cpp:108
 msgid "Command-line options for scanamati"
 msgstr "Параметры коммандной строки для СканАмати"
 
-#: src/main.cpp:116
+#: src/main.cpp:117
 msgid "Show version and exit"
 msgstr "Показать версию и выйти"
 
-#: src/main.cpp:122
+#: src/main.cpp:123
 msgid "Set the programm be verbose"
 msgstr "Вывод дополнительной информации"
 
-#: src/main.cpp:128
+#: src/main.cpp:129
 msgid "Set the programm to the extend mode"
 msgstr "Вывод дополнительной информации"
 
-#: src/main.cpp:152
+#: src/main.cpp:153
 msgid "[FILE]"
 msgstr "[ФАЙЛ]"
 
-#: src/main.cpp:211
+#: src/main.cpp:212
+#, fuzzy
+msgid "ScanAmati error:"
+msgstr "СканАмати"
+
+#: src/main.cpp:216
 msgid "Command-line option error:"
 msgstr "Ошибка параметра коммандной строки:"
 
-#: src/main.cpp:216
+#: src/main.cpp:221
 msgid "Glib thread error:"
 msgstr "Ошибка нити Glib:"
 
-#: src/main.cpp:220
+#: src/main.cpp:225
 msgid "Unhandled exception [type unknown]"
 msgstr "Необработанное исключение (тип неизвестен)"
 

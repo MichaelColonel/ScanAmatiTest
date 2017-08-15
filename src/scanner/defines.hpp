@@ -49,11 +49,10 @@
 #define SCANNER_DROP_STRIPS_PER_CHIP  4
 #define SCANNER_DROP_STRIPS (SCANNER_DROP_STRIPS_PER_CHIP * SCANNER_CHIPS)
 
-#define SCANNER_HEADER          8  // header size of scanner buffer
-#define SCANNER_BUFFER         72  // buffer size
-#define SCANNER_BUFFER_FULL   256
-#define SCANNER_BUFFER_PART    16
-#define SCANNER_BUFFER_WELCOME  7
+#define SCANNER_HEADER          2  // header size of scanner buffer
+#define SCANNER_BUFFER        131  // buffer size
+#define SCANNER_ANSWER         16
+#define SCANNER_WELCOME         7
 
 #define IMAGE_STRIPS_PER_CHIP \
 	(SCANNER_STRIPS_PER_CHIP - SCANNER_DROP_STRIPS_PER_CHIP)

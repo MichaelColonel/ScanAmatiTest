@@ -22,6 +22,8 @@
 #include "commands.hpp"
 #include "builtin_chip_capacities.hpp"
 
+#define COMMAND_BUFFER_HEADER 2
+
 namespace {
 
 class MemorySizeCodes {
@@ -83,14 +85,16 @@ Commands::~Commands()
 }
 
 void
-Commands::fill_buffer( guint8* , size_t& size)
+Commands::fill_buffer( guint8*, size_t& size)
 {
-	size = buffer_size_;
+	size = data_size_;
+	size += COMMAND_BUFFER_HEADER;
 }
 
 class BaseCommand : public Commands {
 public:
-	BaseCommand(char com) : com_(com) { buffer_size_ = SCANNER_BUFFER; }
+	BaseCommand( char com, size_t size = 0) : com_(com) { data_size_ = size; }
+
 	virtual ~BaseCommand() {}
 	virtual void fill_buffer( guint8* buf, size_t& size);
 
@@ -102,53 +106,37 @@ void
 BaseCommand::fill_buffer( guint8* buf, size_t& size)
 {
 	Commands::fill_buffer( buf, size);
-	std::fill( buf, buf + size, '0');
+
 	buf[0] = com_;
+	buf[1] = static_cast<guint8>(data_size_);
 }
 
 class ValueCommand : public BaseCommand {
 public:
-	ValueCommand( char com, guint8 value)
-		: BaseCommand(com), value_(value) {}
+	ValueCommand( char com, guint8 value, size_t data_size = 1)
+		: BaseCommand( com, data_size), value1_(value) {}
 	virtual ~ValueCommand() {}
 	virtual void fill_buffer( guint8* buf, size_t& size);
 
 protected:
-	guint8 value_;
+	guint8 value1_;
 };
 
 void
 ValueCommand::fill_buffer( guint8* buf, size_t& size)
 {
 	BaseCommand::fill_buffer( buf, size);
-	buf[1] = value_;
+	buf[2] = value1_;
 }
 
-class PeltierCommand : public ValueCommand {
-public:
-	PeltierCommand(guint8 value) : ValueCommand( 'P', value) {}
-	virtual ~PeltierCommand() {}
-	virtual void fill_buffer( guint8* buf, size_t& size);
-};
-
-void
-PeltierCommand::fill_buffer( guint8* buf, size_t& size)
-{
-	BaseCommand::fill_buffer( buf, size);
-	buf[1] = '0';
-	buf[2] = '0';
-	buf[8] = value_;
-}
-
-class ThreeValueCommand : public BaseCommand {
+class ThreeValueCommand : public ValueCommand {
 public:
 	ThreeValueCommand( char com, guint8 v1, guint8 v2, guint8 v3)
-		: BaseCommand(com), value1_(v1), value2_(v2), value3_(v3) {}
+		: ValueCommand( com, v1, 3), value2_(v2), value3_(v3) {}
 	virtual ~ThreeValueCommand() {}
 	virtual void fill_buffer( guint8* buf, size_t& size);
 
 protected:
-	guint8 value1_;
 	guint8 value2_;
 	guint8 value3_;
 };
@@ -156,48 +144,27 @@ protected:
 void
 ThreeValueCommand::fill_buffer( guint8* buf, size_t& size)
 {
-	BaseCommand::fill_buffer( buf, size);
-	buf[1] = value1_;
-	buf[2] = value2_;
-	buf[3] = value3_;
+	ValueCommand::fill_buffer( buf, size);
+	buf[3] = value2_;
+	buf[4] = value3_;
 }
 
-class CapacityCommand : public ThreeValueCommand {
-public:
-	CapacityCommand(guint8 v1, guint8 v2, guint8 v3)
-		: ThreeValueCommand( 'C', v1, v2, v3) {}
-	virtual ~CapacityCommand() {}
-	virtual void fill_buffer( guint8* buf, size_t& size);
-};
-
-void
-CapacityCommand::fill_buffer( guint8* buf, size_t& size)
-{
-	ThreeValueCommand::fill_buffer( buf, size);
-}
-
-class ReadMemoryCommand : public ThreeValueCommand {
-public:
-	ReadMemoryCommand(guint8 v1, guint8 v2, guint8 v3)
-		: ThreeValueCommand( 'W', v1, v2, v3) {}
-	virtual ~ReadMemoryCommand() {}
-	virtual void fill_buffer( guint8* buf, size_t& size);
-};
-
-void
-ReadMemoryCommand::fill_buffer( guint8* buf, size_t& size)
-{
-	ThreeValueCommand::fill_buffer( buf, size);
-}
-
-class LiningCommand : public Commands {
+class LiningCommand : public BaseCommand {
 public:
 	LiningCommand( char chip, const std::vector<guint8>& lining)
-		: chip_(chip), lining_(lining) { buffer_size_ = SCANNER_BUFFER * 2; }
-	LiningCommand( char chip, guint8 value) : chip_(chip),
+		:
+		BaseCommand( 'D', SCANNER_STRIPS_PER_CHIP_REAL + 1),
+		chip_(chip),
+		lining_(lining)
+		{}
+
+	LiningCommand( char chip, guint8 value)
+		:
+		BaseCommand( 'D', SCANNER_STRIPS_PER_CHIP_REAL + 1),
+		chip_(chip),
 		lining_(SCANNER_STRIPS_PER_CHIP_REAL)
-		{ buffer_size_ = SCANNER_BUFFER * 2;
-		std::fill( lining_.begin(), lining_.end(), value); }
+		{ std::fill( lining_.begin(), lining_.end(), value); }
+
 	virtual ~LiningCommand() {}
 	virtual void fill_buffer( guint8* buf, size_t& size);
 
@@ -209,23 +176,12 @@ protected:
 void
 LiningCommand::fill_buffer( guint8* buf, size_t& size)
 {
-	const size_t half = SCANNER_STRIPS_PER_CHIP_REAL / 2;
+	BaseCommand::fill_buffer( buf, size);
 
-	Commands::fill_buffer( buf, size);
+	buf[2] = chip_;
 
-	buf[0] = 'D';
-	buf[1] = chip_;
-	buf[2] = '0';
-
-	for ( size_t i = 0; i < half; ++i)
-		buf[i + SCANNER_HEADER] = lining_[i];
-
-	buf[72] = 'D';
-	buf[73] = chip_;
-	buf[74] = '1';
-
-	for ( size_t i = 0; i < half; ++i)
-		buf[i + SCANNER_BUFFER + SCANNER_HEADER] = lining_[half + i];
+	for ( size_t i = 0; i < SCANNER_STRIPS_PER_CHIP_REAL; ++i)
+		buf[COMMAND_BUFFER_HEADER + 1 + i] = lining_[i];
 }
 
 class MovementCommand : public BaseCommand {
@@ -234,7 +190,7 @@ public:
 		MovementType movement_type,
 		DirectionType direction_type)
 			:
-			BaseCommand('m'),
+			BaseCommand( 'M', 14),
 			movement_(movement),
 			movement_type_(movement_type),
 			direction_type_(direction_type)
@@ -253,53 +209,50 @@ MovementCommand::fill_buffer( guint8* buf, size_t& size)
 {
 	BaseCommand::fill_buffer( buf, size);
 
-	buf[1] = '0';
-	buf[2] = '0';
-
 	switch (movement_type_) {
 	case MOVEMENT_ARRAY:
-		buf[6] = '1'; // array
-		buf[7] = '0'; // xray
+		buf[2] = '1'; // array
+		buf[3] = '0'; // xray
 		break;
 	case MOVEMENT_XRAY:
-		buf[6] = '0'; // array
-		buf[7] = '1'; // xray
+		buf[2] = '0'; // array
+		buf[3] = '1'; // xray
 		break;
 	case MOVEMENT_BOTH:
-		buf[6] = '1'; // array
-		buf[7] = '1'; // xray
+		buf[2] = '1'; // array
+		buf[3] = '1'; // xray
 		break;
 	case MOVEMENT_NONE:
 	default:
-		buf[6] = '0'; // array
-		buf[7] = '0'; // xray
+		buf[2] = '0'; // array
+		buf[3] = '0'; // xray
 		break;
 	}
 
-	buf[8] = (movement_.steps >> 8) & 0xFF; // first byte
-	buf[9] = movement_.steps & 0xFF; // second byte
-	buf[10] = 0;
-	buf[11] = (movement_.array_speed.freq >> 8) & 0xFF; // first byte (the only byte)
-	buf[12] = movement_.array_speed.mode + '0';
+	buf[4] = (movement_.steps >> 8) & 0xFF; // first byte
+	buf[5] = movement_.steps & 0xFF; // second byte
+	buf[6] = 0;
+	buf[7] = (movement_.array_speed.freq >> 8) & 0xFF; // first byte (the only byte)
+	buf[8] = movement_.array_speed.mode + '0';
 
 	switch (direction_type_) {
 	case DIRECTION_FORWARD:
-		buf[13] = '1'; // array
-		buf[16] = '1'; // xray
+		buf[9] = '1'; // array
+		buf[12] = '1'; // xray
 		break;
 	case DIRECTION_REVERSE:
 	default:
-		buf[13] = '0'; // array
-		buf[16] = '0'; // xray
+		buf[9] = '0'; // array
+		buf[12] = '0'; // xray
 		break;
 	}
 
-	buf[14] = movement_.xray_speed.freq;
-	buf[15] = movement_.xray_speed.mode + '0';
+	buf[10] = movement_.xray_speed.freq;
+	buf[11] = movement_.xray_speed.mode + '0';
 
-	buf[17] = movement_.array_speed.freq & 0xFF;
-	buf[18] = movement_.xray_delay;
-	buf[19] = movement_.xray_array_delay;
+	buf[13] = movement_.array_speed.freq & 0xFF;
+	buf[14] = movement_.xray_delay;
+	buf[15] = movement_.xray_array_delay;
 }
 
 Command*
@@ -309,10 +262,10 @@ Commands::create(CommandType com)
 
 	switch (com) {
 	case COMMAND_HANDSHAKE:
-		command = new BaseCommand('M');
+		command = new ValueCommand( 'I', '0');
 		break;
 	case COMMAND_ID:
-		command = new BaseCommand('I');
+		command = new ValueCommand( 'I', '1');
 		break;
 	case COMMAND_TEMPERATURE:
 		command = new BaseCommand('T');
@@ -343,19 +296,19 @@ Commands::create(CommandType com)
 		command = new BaseCommand('N');
 		break;
 	case COMMAND_READ_MEMORY_LINING:
-		command = new ReadMemoryCommand( 2, 16, 16);
+		command = new ThreeValueCommand( 'W', 2, 16, 16);
 		break;
 	case COMMAND_READ_MEMORY_ONE_BANK:
-		command = new ReadMemoryCommand( 2, 128, 128);
+		command = new ThreeValueCommand( 'W', 2, 128, 128);
 		break;
 	case COMMAND_READ_MEMORY_TWO_BANKS:
-		command = new ReadMemoryCommand( 4, 128, 128);
+		command = new ThreeValueCommand( 'W', 4, 128, 128);
 		break;
 	case COMMAND_READ_MEMORY_THREE_BANKS:
-		command = new ReadMemoryCommand( 6, 128, 128);
+		command = new ThreeValueCommand( 'W', 6, 128, 128);
 		break;
 	case COMMAND_READ_MEMORY_FULL:
-		command = new ReadMemoryCommand( 8, 128, 128);
+		command = new ThreeValueCommand( 'W', 8, 128, 128);
 		break;
 	case COMMAND_XRAY_CHECK_ON:
 		command = new ValueCommand( 'X', '1');
@@ -377,8 +330,11 @@ Commands::create( CommandType com, guint8 value)
 	Command* command = 0;
 
 	switch (com) {
+	case COMMAND_CAPACITY:
+		command = new ValueCommand( 'C', value);
+		break;
 	case COMMAND_PELTIER_ON:
-		command = new PeltierCommand(value);
+		command = new ValueCommand( 'P', value);
 		break;
 	case COMMAND_SELECT_CHIP:
 		command = new ValueCommand( 'G', value);
@@ -401,10 +357,10 @@ Commands::create( CommandType com, guint8 v1, guint8 v2, guint8 v3)
 
 	switch (com) {
 	case COMMAND_SELECT_CAPACITY:
-		command = new CapacityCommand( v1, v2, v3);
+		command = new ThreeValueCommand( 'C', v1, v2, v3);
 		break;
 	case COMMAND_READ_MEMORY:
-		command = new ReadMemoryCommand( v1, v2, v3);
+		command = new ThreeValueCommand( 'W', v1, v2, v3);
 		break;
 	default:
 		command = new BaseCommand('R');
@@ -419,16 +375,16 @@ Commands::create(size_t memory_size)
 {
 	MemorySizeCodes mem(memory_size);
 	const guint8* codes = mem.codes();
-	return (mem.check()) ? new ReadMemoryCommand( codes[0], codes[1], codes[2]) :
+	return (mem.check()) ? new ThreeValueCommand( 'W', codes[0], codes[1], codes[2]) :
 		new BaseCommand('R');
 }
 
 Command*
 Commands::create(double capacity)
 {
-	const char* codes = BuiltinCapacities::capacity_code(capacity);
-	return (codes) ? new CapacityCommand( codes[0], codes[1], codes[2]) :
-		new BaseCommand('R');
+	char value = BuiltinCapacities::capacity_char_code(capacity);
+
+	return new ValueCommand( 'C', value);
 }
 
 Command*

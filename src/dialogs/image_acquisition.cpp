@@ -98,7 +98,8 @@ ImageAcquisitionDialog::ImageAcquisitionDialog( BaseObjectType* cobject,
 	radiobutton_memory_16mbytes_(0),
 	radiobutton_memory_24mbytes_(0),
 	radiobutton_memory_32mbytes_(0),
-	button_acquisition_parameters_(0)
+	button_acquisition_parameters_(0),
+	data_ready_(false)
 {
 	init_ui();
 
@@ -323,7 +324,10 @@ ImageAcquisitionDialog::update_scanner_state(const Scanner::State& state)
 				Gtk::IconSize::from_name(icon_size_64x64));
 			break;
 		case PROCESS_PARKING:
+			break;
 		case PROCESS_FINISH:
+			data_ready_ = true;
+			std::cout << "data_ready" << std::endl;
 			button_acquisition_run_->set_sensitive(false);
 			button_acquisition_stop_->set_sensitive(false);
 			image_radiation_indicator_->set(
@@ -336,6 +340,11 @@ ImageAcquisitionDialog::update_scanner_state(const Scanner::State& state)
 		}
 		break;
 	case RUN_BACKGROUND:
+			if (data_ready_) {
+				std::cout << "data_ready_" << std::endl;
+				signal_scanner_data_ready_();
+				data_ready_ = false;
+			}
 			button_acquisition_run_->set_sensitive(true);
 			button_acquisition_stop_->set_sensitive(false);
 	
@@ -487,6 +496,12 @@ sigc::signal< void, bool>
 ImageAcquisitionDialog::signal_with_acquisition()
 {
 	return signal_with_acquisition_;
+}
+
+sigc::signal<void>
+ImageAcquisitionDialog::signal_scanner_data_ready()
+{
+	return signal_scanner_data_ready_;
 }
 
 } // namespace UI

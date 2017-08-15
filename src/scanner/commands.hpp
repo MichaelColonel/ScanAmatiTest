@@ -43,6 +43,7 @@ enum CommandType {
 	COMMAND_ALTERA_START_IMAGE,
 	COMMAND_ALTERA_START_PEDESTALS,
 	COMMAND_ARRAY_RESET,
+	COMMAND_CAPACITY,
 	COMMAND_READ_MEMORY_LINING,
 	COMMAND_READ_MEMORY_ONE_BANK,
 	COMMAND_READ_MEMORY_TWO_BANKS,
@@ -53,9 +54,6 @@ enum CommandType {
 	COMMAND_XRAY_CHECK_ON,
 	COMMAND_XRAY_CHECK_OFF
 };
-
-class Command;
-typedef std::tr1::shared_ptr<Command> CommandSharedPtr;
 
 class Command {
 public:
@@ -79,8 +77,10 @@ public:
 		MovementType movement_type = MOVEMENT_BOTH,
 		DirectionType direction_type = DIRECTION_FORWARD);
 protected:
-	size_t buffer_size_;
+	size_t data_size_;
 };
+
+typedef std::tr1::shared_ptr<Command> CommandSharedPtr;
 
 } // namespace Scanner
 

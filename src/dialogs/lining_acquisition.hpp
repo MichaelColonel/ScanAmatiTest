@@ -73,7 +73,7 @@ protected:
 	Gtk::RadioButton* radiobutton_accuracy_precise_;
 
 	Scanner::LiningAccuracyType accuracy_;
-
+	bool lining_data_ready_;
 	Glib::RefPtr<Gtk::TreeSelection> selection_chips_;
 	Glib::RefPtr<Gtk::Adjustment> adjustment_lining_counts_;
 

@@ -374,6 +374,11 @@ Data::reconstruct( AcquireType acquire, guint8 arg)
 
 	switch (acquire) {
 	case ACQUIRE_IMAGE:
+		{
+			std::ofstream file("/tmp/raw_image.raw");
+			file << image;
+			file.close();
+		}
 		reconstruct_image(array);
 		break;
 	case ACQUIRE_IMAGE_PEDESTALS:
@@ -427,12 +432,12 @@ Data::reconstruct_image(const std::vector<Image::DataSharedPtr>& array)
 	guint i = 0;
 	AssemblyIter it;
 	for ( it = assembly_.begin(); it != assembly_.end(); ++it, ++i) {
-/*		if (it->pedestals.size()) {
+		if (it->pedestals.size()) {
 			array[i]->subtract_row(it->pedestals);
 			array[i]->add_value(lining_count_);
 			array[i]->normalize();
 		}
-*/
+
 		const unsigned int& rows = image_height_;
 		// resize Image
 		Magick::Image image( IMAGE_STRIPS_PER_CHIP, array[i]->height(), "I",
@@ -441,11 +446,11 @@ Data::reconstruct_image(const std::vector<Image::DataSharedPtr>& array)
 		Magick::Geometry geom( IMAGE_STRIPS_PER_CHIP, rows);
 		geom.aspect(true);
 		image.filterType(filter_type_);
-#if (MagickLibVersion >= 0x660 && MagickLibVersion <= 0x669) 
+//#if (MagickLibVersion >= 0x660 && MagickLibVersion <= 0x669) 
 		image.resize(geom);
-#else
-		image.scale(geom);
-#endif
+//#else
+//		image.scale(geom);
+//#endif
 
 		const Magick::PixelPacket* pixel = image.getConstPixels( 0, 0,
 			IMAGE_STRIPS_PER_CHIP, rows);
@@ -758,10 +763,35 @@ Data::calculate_lining(guint8 accuracy)
 		if (accuracy != LINING_ACCURACY_PRECISE) {
 			CodeCountsMap map = it->expand_code_counts_map();
 			it->calculate_lining( map, lining_count_);
+//			it->code_counts_map = map;
+//			it->calculate_lining(lining_count_);
 		}
-		else
+		else {
+/*			gint16 value = lining_count_;
+			if (it->code == '6')
+				value += 2000;
+			if (it->code == '8')
+				value += 6000;
+*/
 			it->calculate_lining(lining_count_);
+		}
 	}
+
+	std::ofstream file;
+	file.open( "lining.csv");
+	for ( AssemblyIter it = assembly_.begin(); it != assembly_.end(); ++it) {
+		for ( CodeCountsMap::iterator iter = it->code_counts_map.begin();
+			iter != it->code_counts_map.end(); ++iter) {
+			file << it->code << " " << int(iter->first);
+			for ( Image::DataVector::iterator i = iter->second.begin();
+					i != iter->second.end(); ++i) {
+				
+				file << " " << *i;
+			}
+			file << std::endl;
+		}
+	}
+	file.close();
 }
 
 void

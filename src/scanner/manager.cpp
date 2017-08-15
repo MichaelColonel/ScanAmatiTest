@@ -52,7 +52,7 @@ Manager::Manager()
 	regulator_(10),
 	fd_(-1)
 {
-	buffers_.com.buf = new char[SCANNER_BUFFER_FULL];
+	buffers_.com.buf = new char[SCANNER_BUFFER];
 }
 
 Manager::~Manager()
@@ -79,7 +79,7 @@ Manager::run( RunType run_type, const AcquisitionParameters& params)
 		data_.width_type_ = params.width_type;
 		data_.calibration_type_ = params.calibration_type;
 		data_.intensity_type_ = params.intensity_type;
-
+		data_.filter_type_ = params.filter_type;
 		slot = sigc::bind( sigc::mem_fun( *this, &Manager::run_image_acquisition),
 			params);
 		break;
@@ -167,6 +167,8 @@ Manager::run_commands(const AcquisitionParameters& params)
 		cond_run_.wait(mutex_);
 		state_.manager_state_.process_ = PROCESS_START;
 	}
+	OFLOG_DEBUG( app.log, "Commands thread has been started");
+
 	signal_update_();
 
 	try {
@@ -181,10 +183,18 @@ Manager::run_commands(const AcquisitionParameters& params)
 				state_.manager_state_.progress_ = double(i + 1) / size;
 			}
 			signal_update_();
-			Glib::usleep(50000);
+			Glib::usleep(5000);
 		}
 	}
 	catch (const Error& er) {
+		std::cout << er.what() << std::endl;
+		set_error(er);
+		return;
+	}
+	catch (const Exception& ex) {
+		std::cout << ex.what() << std::endl;
+		set_error(ex);
+		return;
 	}
 
 	{
@@ -206,6 +216,8 @@ Manager::run_commands(const AcquisitionParameters& params)
 	}
 	signal_update_();
 	Glib::usleep(200000);
+
+	OFLOG_DEBUG( app.log, "Commands thread has been finished");
 
 	{
 		Glib::Mutex::Lock lock(mutex_);
@@ -332,7 +344,7 @@ Manager::run_initiation()
 				state_.manager_state_.progress_ = double(i + 1) / SCANNER_CHIPS;
 			}
 			signal_update_();
-			Glib::usleep(50000);
+			Glib::usleep(1000);
 		}
 
 		{
@@ -398,7 +410,8 @@ Manager::run_background()
 				break;
 		}
 
-		sleep(1);
+//		::sleep(1);
+		Glib::usleep(500000);
 
 		{
 			Glib::Mutex::Lock lock(mutex_);
@@ -416,15 +429,17 @@ Manager::run_background()
 			if (temperature_control) {
 				regulator_.add(temperature);
 				if (regulator_.code_value_changed_) {
-					{
-						Glib::Mutex::Lock lock(mutex_);
-						state_.peltier_code_ = regulator_.code_;
-					}
-					Command* com = Commands::create( COMMAND_PELTIER_ON,
-						regulator_.code_);
-					this->write_command(com);
+					Glib::Mutex::Lock lock(mutex_);
+					state_.peltier_code_ = regulator_.code_;
 				}
+				Command* com = Commands::create( COMMAND_PELTIER_ON,
+					regulator_.code_);
+				write_command(com);
 			}
+			std::cout << temperature << " " << int(regulator_.code_) << " "
+				<< regulator_.temperature_margins_[0] << " "
+				<< regulator_.temperature_margins_[1] << " "
+				<< regulator_.temperature_margins_[2] << std::endl;
 			signal_update_();
 		}
 		catch (const Error& er) {
@@ -460,12 +475,13 @@ Manager::run_lining_acquisition(const AcquisitionParameters& params)
 	}
 	signal_update_();
 
-	OFLOG_DEBUG( app.log, "Lining acquisition has been stated");
+	OFLOG_DEBUG( app.log, "Lining acquisition has been started");
 
 	for ( AssemblyIter it = data_.assembly_.begin();
 		it != data_.assembly_.end(); ++it) {
 		it->clear_for_lining_acquisition();
 	}
+
 	std::vector<double> codes = equal_distant_points( SCANNER_LINING_CODE_MIN,
 		SCANNER_LINING_CODE_MAX, params.lining_accuracy_type);
 
@@ -473,9 +489,10 @@ Manager::run_lining_acquisition(const AcquisitionParameters& params)
 	
 	for ( std::vector<double>::const_iterator iter = codes.begin();
 		iter != codes.end(); ++iter) {
+		guint8 v = static_cast<guint8>(ceil(*iter));
 		{
 			Glib::Mutex::Lock lock(mutex_);
-			state_.manager_state_.progress_ = *iter / SCANNER_LINING_CODE_MAX;
+			state_.manager_state_.progress_ = v / double(SCANNER_LINING_CODE_MAX);
 			state_.manager_state_.process_ = PROCESS_ACQUISITION;
 		}
 
@@ -483,19 +500,23 @@ Manager::run_lining_acquisition(const AcquisitionParameters& params)
 			for ( std::vector<char>::const_iterator it = chips.begin();
 				it != chips.end(); ++it) {
 				int j = Data::chip_number(*it);
-				Command* com = Commands::create( *it, static_cast<guint8>(*iter));
+				Command* com = Commands::create( *it, v);
 				write_command(com);
-				Glib::usleep(20000);
 			}
+
 			Command* com = Commands::create(COMMAND_ALTERA_START_PEDESTALS);
 			write_command(com);
-			Glib::usleep(30000);
+			Glib::usleep(40000);
 
-			if (!acquisition_start( params, ACQUIRE_LINING_PEDESTALS))
+			if (!acquisition_start( params, ACQUIRE_LINING_PEDESTALS)) {
+				std::cerr << "Acquisition start error" << std::endl;
 				return;
+			}
 
-			if (!acquire_data(ACQUIRE_LINING_PEDESTALS))
+			if (!acquire_data(ACQUIRE_LINING_PEDESTALS)) {
+				std::cerr << "Acquisition data error" << std::endl;
 				return;
+			}
 
 			{
 				Glib::Mutex::Lock lock(mutex_);
@@ -503,23 +524,25 @@ Manager::run_lining_acquisition(const AcquisitionParameters& params)
 					break;
 			}
 
-			if (*iter == SCANNER_LINING_CODE_MAX) {
-				Command* com = Commands::create(COMMAND_ALTERA_START);
-				write_command(com);
-			}
 		}
 		catch (const Error& err) {
+			std::cerr << err.what() << std::endl;
 			set_error(err);
 			return;
 		}
 		catch (const Exception& ex) {
+			std::cout << ex.what() << std::endl;
 			set_error(ex);
 			return;
 		}
+		catch (...) {
+			std::cout << "shit" << std::endl;
+			set_error(Error("shit"));
+			return;
+		}
 
-		data_.reconstruct( ACQUIRE_LINING_PEDESTALS,
-			static_cast<guint8>(*iter));
-		if (*iter == SCANNER_LINING_CODE_MAX) {
+		data_.reconstruct( ACQUIRE_LINING_PEDESTALS, v);
+		if (v == SCANNER_LINING_CODE_MAX) {
 			OFLOG_DEBUG( app.log, "Lining calculation has been started");
 			data_.calculate_lining(params.lining_accuracy_type);
 			OFLOG_DEBUG( app.log, "Lining calculation has been finished");
@@ -569,7 +592,19 @@ Manager::run_image_acquisition(const AcquisitionParameters& params)
 			write_command(com);
 		}
 	}
-
+/*
+	for ( AssemblyConstIter it = data_.assembly_.begin();
+		it != data_.assembly_.end(); ++it) {
+		Command* com = Commands::create( it->code, it->lining);
+		write_command(com);
+		{
+			Glib::Mutex::Lock lock(mutex_);
+			int i = Data::chip_number(it->code);
+			state_.manager_state_.progress_ = double(i + 1) / SCANNER_CHIPS;
+		}
+		Glib::usleep(1000);
+	}
+*/
 	try {
 		if (!exposure_start(params))
 			return;
@@ -583,8 +618,6 @@ Manager::run_image_acquisition(const AcquisitionParameters& params)
 		return;
 	else
 		Glib::usleep(200000);
-
-	sleep(5);
 
 	if (params.with_acquisition) {
 		{
@@ -1019,6 +1052,7 @@ Manager::set_temperature_margins( double temperature, double spread)
 
 		state_.temperature_average_ = temperature;
 		state_.temperature_spread_ = spread;
+		regulator_.code_value_changed_ = true;
 		regulator_.set_margins( temperature, spread);
 
 		state_.manager_state_.run_ = RUN_BACKGROUND;
@@ -1035,14 +1069,14 @@ Manager::id() throw(Exception)
 	Command* com = Commands::create(COMMAND_ID);
 	write_command(com);
 
-	read( buffers_.com.buf, SCANNER_BUFFER_PART);
+	readn( buffers_.com.buf, SCANNER_WELCOME);
 
-	std::string string( buffers_.com.buf, buffers_.com.buf + 7);
-	if (string.find(id_template)) {
+	std::string id_str( buffers_.com.buf, buffers_.com.buf + SCANNER_WELCOME);
+	if (id_str.find(id_template)) {
 		throw Exception(_("Wrong scanner id."));
 	}
 
-	return string;
+	return id_str;
 }
 
 void
@@ -1051,10 +1085,10 @@ Manager::handshake() throw(Exception)
 	Command* com = Commands::create(COMMAND_HANDSHAKE);
 	write_command(com);
 
-	read( buffers_.com.buf, SCANNER_BUFFER_WELCOME);
+	readn( buffers_.com.buf, SCANNER_WELCOME);
 
-	std::string welcome( buffers_.com.buf, buffers_.com.buf + 7);
-	if (welcome.compare(handshake_message)) {
+	std::string welcome_str( buffers_.com.buf, buffers_.com.buf + SCANNER_WELCOME);
+	if (welcome_str.compare(handshake_message)) {
 		throw Exception(_("Wrong handshake response."));
 	}
 }
@@ -1065,10 +1099,10 @@ Manager::temperature() throw(Exception)
 	Command* com = Commands::create(COMMAND_TEMPERATURE);
 	write_command(com);
 
-	read( buffers_.com.buf, SCANNER_BUFFER_PART);
+	readn( buffers_.com.buf, 6);
 
-	return regulator_.temperature(AdcCount( buffers_.com.data[0],
-		buffers_.com.data[1]));
+	return regulator_.temperature(AdcCount( buffers_.com.data[2],
+		buffers_.com.data[3]));
 }
 
 void
@@ -1229,6 +1263,7 @@ Manager::join_data_thread()
 bool
 Manager::io_handler(Glib::IOCondition io_condition)
 {
+	std::cout << "disconnect" << std::endl;
 	stop(true);
 
 	return false;

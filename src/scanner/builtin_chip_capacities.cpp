@@ -22,14 +22,15 @@ namespace {
 const struct Capacities {
 	double capacity;
 	const char* code;
+	char value;
 } builtin_capacities[] = {
-	{ 1.0, "001" }, // 1 pF
-	{ 2.5, "010" }, // 2.5 pF
-	{ 3.5, "011" }, // (1 + 2.5) pF
-	{ 6.0, "100" }, // 6 pF
-	{ 7.0, "101" }, // (6 + 1) pF
-	{ 8.5, "110" }, // (6 + 2.5) pF
-	{ 9.5, "111" }, // (6 + 2.5 + 1) pF
+	{ 1.0, "001", '1' }, // 1 pF
+	{ 2.5, "010", '2' }, // 2.5 pF
+	{ 3.5, "011", '3' }, // (1 + 2.5) pF
+	{ 6.0, "100", '4' }, // 6 pF
+	{ 7.0, "101", '5' }, // (6 + 1) pF
+	{ 8.5, "110", '6' }, // (6 + 2.5) pF
+	{ 9.5, "111", '7' }, // (6 + 2.5 + 1) pF
 	{ } // Terminating Entry
 };
 
@@ -67,6 +68,22 @@ BuiltinCapacities::capacity_code(double capacity)
 		++i;
 	}
 	return code;
+}
+
+char
+BuiltinCapacities::capacity_char_code(double capacity)
+{
+	char value = '7';
+
+	int i = 0;
+	while (builtin_capacities[i].code) {
+		if (builtin_capacities[i].capacity == capacity) {
+			value = builtin_capacities[i].value;
+			break;
+		}
+		++i;
+	}
+	return value;
 }
 
 } // namespace Scanner

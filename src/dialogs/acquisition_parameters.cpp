@@ -352,32 +352,36 @@ AcquisitionParametersDialog::set_parameters(
 	spinbutton_image_height_->set_value(params.acquisition.image_height);
 	set_memory_size(params.acquisition.memory_size);
 
+	std::cout << "WIDTH TYPE: " << params.width_type << std::endl;
+
 	switch (params.width_type) {
 	case Scanner::WIDTH_FULL:
-		radiobutton_width_full_->toggled();
+		radiobutton_width_full_->set_active();
 		break;
 	case Scanner::WIDTH_HALF:
-		radiobutton_width_half_->toggled();
+		radiobutton_width_half_->set_active();
 		break;
 	case Scanner::WIDTH_QUARTER:
-		radiobutton_width_quarter_->toggled();
+		radiobutton_width_quarter_->set_active();
 		break;
 	default:
 		break;
 	}
 
+	std::cout << "FILTER TYPE: " << params.filter_type << std::endl;
+
 	switch (params.filter_type) {
 	case Magick::LanczosFilter:
-		radiobutton_filter_lanczos_->toggled();
+		radiobutton_filter_lanczos_->set_active();
 		break;
 	case Magick::CubicFilter:
-		radiobutton_filter_cubic_->toggled();
+		radiobutton_filter_cubic_->set_active();
 		break;
 	case Magick::QuadraticFilter:
-		radiobutton_filter_quadratic_->toggled();
+		radiobutton_filter_quadratic_->set_active();
 		break;
 	case Magick::BesselFilter:
-		radiobutton_filter_bessel_->toggled();
+		radiobutton_filter_bessel_->set_active();
 		break;
 	default:
 		break;
@@ -385,16 +389,16 @@ AcquisitionParametersDialog::set_parameters(
 
 	switch (params.calibration_type) {
 	case Scanner::CALIBRATION_BEST:
-		radiobutton_calibration_best_->toggled();
+		radiobutton_calibration_best_->set_active();
 		break;
 	case Scanner::CALIBRATION_BETTER:
-		radiobutton_calibration_better_->toggled();
+		radiobutton_calibration_better_->set_active();
 		break;
 	case Scanner::CALIBRATION_GOOD:
-		radiobutton_calibration_good_->toggled();
+		radiobutton_calibration_good_->set_active();
 		break;
 	case Scanner::CALIBRATION_ROUGH:
-		radiobutton_calibration_rough_->toggled();
+		radiobutton_calibration_rough_->set_active();
 		break;
 	default:
 		break;
@@ -402,13 +406,13 @@ AcquisitionParametersDialog::set_parameters(
 
 	switch (params.intensity_type) {
 	case Scanner::INTENSITY_LINEAR:
-		radiobutton_intensity_linear_->toggled();
+		radiobutton_intensity_linear_->set_active();
 		break;
 	case Scanner::INTENSITY_LOGARITHMIC:
-		radiobutton_intensity_logarithmic_->toggled();
+		radiobutton_intensity_logarithmic_->set_active();
 		break;
 	case Scanner::INTENSITY_ORIGINAL:
-		radiobutton_intensity_original_->toggled();
+		radiobutton_intensity_original_->set_active();
 		break;
 	default:
 		break;

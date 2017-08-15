@@ -148,6 +148,7 @@ const char array_chip_codes[SCANNER_CHIPS] = {
 };
 
 const char* const handshake_message = "Welcome";
+const char* const OK_message = "OK";
 const char* const id_template = N_("APRM");
 const char* const id_default = "APRMXXX";
 

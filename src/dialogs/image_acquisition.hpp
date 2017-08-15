@@ -53,6 +53,7 @@ public:
 	virtual void block_interface(bool);
 
 	sigc::signal<void, bool> signal_with_acquisition();
+	sigc::signal<void> signal_scanner_data_ready();
 
 protected:
 	// Member functions:
@@ -102,7 +103,11 @@ private:
 	// Members:
 	std::vector<double> exposures_;
 	Scanner::AcquisitionParameters acquisition_;
+	bool data_ready_;
+
 	sigc::signal<void, bool> signal_with_acquisition_;
+	sigc::signal<void> signal_scanner_data_ready_;
+	sigc::signal<void> signal_scanner_image_ready_;
 };
 
 } // namespace UI

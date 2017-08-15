@@ -30,6 +30,7 @@ class BuiltinCapacities {
 public:
 	static std::vector<double> capacities();
 	static const char* capacity_code(double capacity);
+	static char capacity_char_code(double capacity);
 };
 
 } // namespace Scanner

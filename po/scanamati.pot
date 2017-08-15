@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-08 11:48+0400\n"
+"POT-Creation-Date: 2014-12-05 12:00+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
 #: ui/main-window.glade:17 src/main_window.cpp:791
-#: src/main_window_action_handlers.cpp:119 src/main.cpp:105
+#: src/main_window_action_handlers.cpp:119 src/main.cpp:106
 msgid "ScanAmati"
 msgstr ""
 
@@ -872,13 +872,13 @@ msgstr ""
 msgid "X-ray Preparation"
 msgstr ""
 
-#: src/dialogs/image_acquisition.cpp:376
+#: src/dialogs/image_acquisition.cpp:385
 #: src/widgets/information_notebook.cpp:569
 #: src/widgets/information_notebook.cpp:644
 msgid "kV"
 msgstr ""
 
-#: src/dialogs/image_acquisition.cpp:383
+#: src/dialogs/image_acquisition.cpp:392
 #: src/widgets/information_notebook.cpp:566
 #: src/widgets/information_notebook.cpp:640
 msgid "mAs"
@@ -1353,103 +1353,107 @@ msgctxt "Effective Dose"
 msgid "Unknown"
 msgstr ""
 
-#: src/scanner/manager.cpp:314
+#: src/scanner/manager.cpp:326
 msgid "Unable to load scanner data."
 msgstr ""
 
-#: src/scanner/manager.cpp:1036
+#: src/scanner/manager.cpp:1062
 msgid "Wrong scanner id."
 msgstr ""
 
-#: src/scanner/manager.cpp:1051
+#: src/scanner/manager.cpp:1078
 msgid "Wrong handshake response."
 msgstr ""
 
-#: src/scanner/manager.cpp:1076
+#: src/scanner/manager.cpp:1103
 msgid "The device \"%1\" doesn't exist."
 msgstr ""
 
-#: src/scanner/manager.cpp:1078
+#: src/scanner/manager.cpp:1105
 msgid ""
 "Check the USB cable connection between the PC and the device, and check if "
 "the scanner power supply is turned on."
 msgstr ""
 
-#: src/scanner/manager.cpp:1084
+#: src/scanner/manager.cpp:1111
 msgid "The user \"%1\" has no permission to open scanner device."
 msgstr ""
 
-#: src/scanner/manager.cpp:1087
+#: src/scanner/manager.cpp:1114
 msgid "Check your permissions to open, read and write to the scanner device."
 msgstr ""
 
-#: src/scanner/manager.cpp:1093
+#: src/scanner/manager.cpp:1120
 msgid "The device \"%1\" has been already busy."
 msgstr ""
 
-#: src/scanner/manager.cpp:1094
+#: src/scanner/manager.cpp:1121
 msgid ""
 "Close other programs which use this device, and try to repeat the operation."
 msgstr ""
 
-#: src/scanner/manager.cpp:1097
+#: src/scanner/manager.cpp:1124
 msgid "The device has invalid file descriptor."
 msgstr ""
 
-#: src/scanner/manager.cpp:1100
+#: src/scanner/manager.cpp:1127
 msgid "Command interrupted by a signal."
 msgstr ""
 
-#: src/scanner/manager.cpp:1103
+#: src/scanner/manager.cpp:1130
 msgid "Invalid function argument."
 msgstr ""
 
-#: src/scanner/manager.cpp:1106
+#: src/scanner/manager.cpp:1133
 msgid ""
 "The system cannot allocate more virtual memory because it capacity is full."
 msgstr ""
 
-#: src/scanner/manager.cpp:1110
+#: src/scanner/manager.cpp:1137
 msgid ""
 "Resource temporarily unavailable; the call might work if you try again later."
 msgstr ""
 
-#: src/scanner/manager.cpp:1114
+#: src/scanner/manager.cpp:1141
 msgid "You passed in a pointer to bad memory."
 msgstr ""
 
-#: src/scanner/manager.cpp:1117
+#: src/scanner/manager.cpp:1144
 msgid "Input/output error occured."
 msgstr ""
 
-#: src/scanner/manager.cpp:1120
+#: src/scanner/manager.cpp:1147
 msgid "File descriptor is attached to a directory."
 msgstr ""
 
-#: src/scanner/manager.cpp:1123
+#: src/scanner/manager.cpp:1150
 msgid "No space left on device."
 msgstr ""
 
-#: src/scanner/manager.cpp:1126
+#: src/scanner/manager.cpp:1153
 msgid "There is no process reading from the other end of a pipe."
 msgstr ""
 
-#: src/scanner/manager.cpp:1130
+#: src/scanner/manager.cpp:1157
 msgid "Unexpected error."
 msgstr ""
 
-#: src/scanner/manager.cpp:1132
+#: src/scanner/manager.cpp:1159
 msgid ""
 "The scanner device can't execute this command. Please, turn off the device "
 "and try again."
 msgstr ""
 
-#: src/scanner/manager_device.cpp:90
+#: src/scanner/manager_device.cpp:179
 msgid "No data within timeout interval."
 msgstr ""
 
-#: src/scanner/manager_device.cpp:118
+#: src/scanner/manager_device.cpp:207
 msgid "No more data."
+msgstr ""
+
+#: src/scanner/manager_device.cpp:248 src/scanner/manager_device.cpp:278
+msgid "Wrong lining data response."
 msgstr ""
 
 #: src/icon_loader.cpp:94
@@ -1460,15 +1464,15 @@ msgstr ""
 msgid "Couldn't load program icon from the default icon theme. "
 msgstr ""
 
-#: src/main_window.cpp:321
+#: src/main_window.cpp:319
 msgid "Open File"
 msgstr ""
 
-#: src/main_window.cpp:423
+#: src/main_window.cpp:421
 msgid "Saving Error"
 msgstr ""
 
-#: src/main_window.cpp:426
+#: src/main_window.cpp:424
 msgid "Unable to save the file \"%1\"."
 msgstr ""
 
@@ -1729,60 +1733,64 @@ msgstr ""
 msgid "Image _Area"
 msgstr ""
 
-#: src/global_strings.hpp:151
+#: src/global_strings.hpp:152
 msgid "APRM"
 msgstr ""
 
 #. namespace Scanner
-#: src/global_strings.hpp:159
+#: src/global_strings.hpp:160
 msgid "DICOM image (*.dcm)"
 msgstr ""
 
-#: src/global_strings.hpp:160
+#: src/global_strings.hpp:161
 msgid "Studio raw file (*.raw)"
 msgstr ""
 
-#: src/global_strings.hpp:161
+#: src/global_strings.hpp:162
 msgid "JPEG image file (*.jpg, *jpeg)"
 msgstr ""
 
-#: src/global_strings.hpp:162
+#: src/global_strings.hpp:163
 msgid "PNG image file (*.png)"
 msgstr ""
 
-#: src/main.cpp:106
+#: src/main.cpp:107
 msgid "ScanAmati options"
 msgstr ""
 
-#: src/main.cpp:107
+#: src/main.cpp:108
 msgid "Command-line options for scanamati"
 msgstr ""
 
-#: src/main.cpp:116
+#: src/main.cpp:117
 msgid "Show version and exit"
 msgstr ""
 
-#: src/main.cpp:122
+#: src/main.cpp:123
 msgid "Set the programm be verbose"
 msgstr ""
 
-#: src/main.cpp:128
+#: src/main.cpp:129
 msgid "Set the programm to the extend mode"
 msgstr ""
 
-#: src/main.cpp:152
+#: src/main.cpp:153
 msgid "[FILE]"
 msgstr ""
 
-#: src/main.cpp:211
-msgid "Command-line option error:"
+#: src/main.cpp:212
+msgid "ScanAmati error:"
 msgstr ""
 
 #: src/main.cpp:216
+msgid "Command-line option error:"
+msgstr ""
+
+#: src/main.cpp:221
 msgid "Glib thread error:"
 msgstr ""
 
-#: src/main.cpp:220
+#: src/main.cpp:225
 msgid "Unhandled exception [type unknown]"
 msgstr ""
 

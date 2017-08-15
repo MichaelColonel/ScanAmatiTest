@@ -59,6 +59,7 @@ LiningAcquisitionDialog::LiningAcquisitionDialog( BaseObjectType* cobject,
 	radiobutton_accuracy_optimal_(0),
 	radiobutton_accuracy_precise_(0),
 	accuracy_(Scanner::LINING_ACCURACY_OPTIMAL),
+	lining_data_ready_(false),
 	chip_codes_( Scanner::array_chip_codes, Scanner::array_chip_codes + SCANNER_CHIPS)
 {
 	init_ui();
@@ -88,6 +89,8 @@ LiningAcquisitionDialog::init_ui()
 	if (app.extend) {
 		button_chips_->set_sensitive(true);
 		expander_accuracy_->set_sensitive(true);
+		radiobutton_accuracy_rough_->set_active(true);
+		accuracy_ = Scanner::LINING_ACCURACY_ROUGH;
 	}
 	
 	Glib::RefPtr<Glib::Object> obj = builder_->get_object("adjustment-count");
@@ -222,11 +225,15 @@ LiningAcquisitionDialog::update_scanner_state(const Scanner::State& state)
 		block_interface(true);
 		if (mstate.process_finished()) {
 			OFLOG_DEBUG( app.log, "Lining acquisition finished");
-			signal_lining_ready_();
+			lining_data_ready_ = true;
 		}
 		break;
 	case RUN_BACKGROUND:
 		block_interface(false);
+		if (lining_data_ready_) {
+			signal_lining_ready_();
+			lining_data_ready_ = false;
+		}
 		break;
 	case RUN_NONE:
 	default:

@@ -239,7 +239,7 @@ MainWindow::init_actions()
 		_("Run the _Acquisition..."), _("Acquire a x-ray image"));
 	action_group_->add( act, Gtk::AccelKey("<control>a"),
 		sigc::mem_fun( *this, &MainWindow::on_image_acquisition));
-//	act->set_sensitive(false);
+	act->set_sensitive(false);
 
 	act = Gtk::Action::create( "action-temperature-margins", Gtk::StockID(),
 		_("Temperature _Margins..."));

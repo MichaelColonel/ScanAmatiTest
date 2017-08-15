@@ -40,7 +40,8 @@ template<typename T>
 class FixedStack : public std::deque<T> {
 public:
 	FixedStack(size_t size) : std::deque<T>(), size_(size) {}
-	virtual void push_front(const T& v);
+	virtual ~FixedStack() { std::deque<T>::clear(); }
+	void push_front(const T& v);
 
 protected:
 	size_t size_;
@@ -67,7 +68,7 @@ public:
 	void set_margins( double average, double spread);
 	void set_default_margins();
 	bool load_data(const std::string&);
-	void reset() { clear(); timer_.stop(); }
+	void reset();
 	guint8 add(double); // add temperature
 	double temperature(const AdcCount&) const; // current temperature
 	bool code_value_changed() const { return code_value_changed_; }

@@ -190,6 +190,7 @@ bool
 FileSaver::save_file_raw(const Image::DataSharedPtr& image) throw(Exception)
 {
 	std::ofstream file(filename_.c_str());
+	std::cout << "FILE SAVED" << std::endl;
 	file << image;
 	file.close();
 

@@ -52,6 +52,7 @@ struct Assemble {
 
 typedef std::vector<Assemble> AssemblyVector;
 typedef AssemblyVector::iterator AssemblyIter;
+typedef AssemblyVector::reverse_iterator AssemblyRevIter;
 typedef AssemblyVector::const_iterator AssemblyConstIter;
 
 } // namespace Scanner
