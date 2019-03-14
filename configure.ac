@@ -9,12 +9,14 @@ AC_ISC_POSIX
 AC_PROG_RANLIB
 AM_PROG_CC_STDC
 AM_PROG_CC_C_O
+AM_PROG_AR
 
 dnl****************************************************************************
 dnl C structs, typedefs, functions, headers and compiler characteristics checks
 dnl****************************************************************************
 dnl (running autoscan can help to check if everything's
 dnl here; in that case, an empty autoscan*.log should be produced).
+
 AC_HEADER_DIRENT
 AC_HEADER_STDBOOL
 AC_HEADER_STDC
@@ -73,6 +75,11 @@ PKG_CHECK_MODULES( GTKMM, gtkmm-2.4 >= 2.12.0, ,
                    AC_MSG_ERROR([gtkmm-2.12.0 or better is required]))
 AC_SUBST(GTKMM_CFLAGS)
 AC_SUBST(GTKMM_LIBS)
+
+PKG_CHECK_MODULES( LIBPQ, libpq >= 10.2, ,
+                   AC_MSG_ERROR([libpq-10.2 or better is required]))
+AC_SUBST(LIBPQ_CFLAGS)
+AC_SUBST(LIBPQ_LIBS)
 
 PKG_CHECK_MODULES( LIBPQXX, libpqxx >= 3.1, ,
                    AC_MSG_ERROR([libpqxx-3.1 or better is required]))

@@ -49,6 +49,7 @@ AM_CPPFLAGS = $(GTKMM_CFLAGS) \
 	$(DBUS_CFLAGS) \
 	$(HAL_CFLAGS) \
 	$(MAGICK_CFLAGS) \
+	$(LIBPQ_CFLAGS) \
 	$(LIBPQXX_CFLAGS)
 
 scanamati_LDADD = \
@@ -61,9 +62,9 @@ scanamati_LDADD = \
 	$(DBUS_LIBS) \
 	$(HAL_LIBS) \
 	$(DCMDATA_LIBS) \
-	$(LIBPQXX_LIBS) \
 	$(CCMATH_LIBS) \
-	-lpq \
+	$(LIBPQ_LIBS) \
+	$(LIBPQXX_LIBS) \
 	dialogs/libdialogs.a \
 	widgets/libwidgets.a \
 	scanner/libscanner.a \

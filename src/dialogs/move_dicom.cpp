@@ -187,6 +187,7 @@ MoveDicomDialog::move_progress( void* callback_data,
 				DIC_UI sopClass;
 				DIC_UI sopInstance;
 				// which SOP class and SOP instance ?
+/*
 				if (!DU_findSOPClassAndInstanceInDataSet( *image,
 					sopClass, sopInstance, OFFalse)) {
 
@@ -202,6 +203,7 @@ MoveDicomDialog::move_progress( void* callback_data,
 					response->DimseStatus = STATUS_STORE_Error_DataSetDoesNotMatchSOPClass;
 					message_ = Glib::ustring(_("Data doesn't match SOP instance IUD."));
 				}
+*/
 			}
 		}
     }

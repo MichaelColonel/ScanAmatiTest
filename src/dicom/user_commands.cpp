@@ -321,7 +321,7 @@ acceptSubAssoc( T_ASC_Network* net, T_ASC_Association** assoc)
 	cond = ASC_acceptContextsWithPreferredTransferSyntaxes( (*assoc)->params,
 		knownAbstractSyntaxes, DIM_OF(knownAbstractSyntaxes), transferSyntaxes,
 		numTransferSyntaxes);
-
+/*
 	if (cond.good()) {
 		// the array of Storage SOP Class UIDs comes from dcuid.h
 		cond = ASC_acceptContextsWithPreferredTransferSyntaxes(
@@ -329,7 +329,7 @@ acceptSubAssoc( T_ASC_Network* net, T_ASC_Association** assoc)
 			dcmAllStorageSOPClassUIDs, numberOfAllDcmStorageSOPClassUIDs,
 			transferSyntaxes, numTransferSyntaxes);
 	}
-
+*/
 	if (cond.good())
 		cond = ASC_acknowledgeAssociation(*assoc);
 	if (cond.bad()) {
@@ -435,6 +435,7 @@ storeSCPCallback(
 			*/
 			if (rsp->DimseStatus == STATUS_Success) {
 				/* which SOP class and SOP instance ? */
+/*
 				if (!DU_findSOPClassAndInstanceInDataSet( *imageDataSet,
 					sopClass, sopInstance, OFFalse)) {
 
@@ -447,6 +448,7 @@ storeSCPCallback(
 				else if (strcmp( sopInstance, req->AffectedSOPInstanceUID) != 0) {
 					rsp->DimseStatus = STATUS_STORE_Error_DataSetDoesNotMatchSOPClass;
 				}
+*/
 			}
 		}
     }
@@ -821,12 +823,13 @@ StoreCommand::run( Dataset* dataset,
 	OFLOG_DEBUG( app.log, "Sending dataset");
 
 	/* figure out which SOP class and SOP instance is encapsulated in the file */
+/*
 	if (!DU_findSOPClassAndInstanceInDataSet( set,
 		sopClass, sopInstance, OFFalse)) {
 		OFLOG_DEBUG( app.log, "No SOP Class & Instance UIDs in dataset");
 		throw Exception(_("No SOP class and instance UIDs in dataset."));
 	}
-
+*/
 	/* figure out which of the accepted presentation contexts should be used */
 	DcmXfer filexfer(set->getOriginalXfer());
 
@@ -1035,8 +1038,8 @@ MoveCommand::run( const DcmDataset& query, const char* filename,
 	req.Priority = DIMSE_PRIORITY_MEDIUM;
 	req.DataSetType = DIMSE_DATASET_PRESENT;
 
-    /* set the destination to be me */
-	ASC_getAPTitles( association_->params, req.MoveDestination, NULL, NULL);
+	/* set the destination to be me */
+//	ASC_getAPTitles( association_->params, req.MoveDestination, NULL, NULL);
 
 	OFCondition cond = DIMSE_moveUser( association_, presId, &req, dataset,
 		moveCallback, &callbackData, DIMSE_BLOCKING, 0, network_, subOpCallback,

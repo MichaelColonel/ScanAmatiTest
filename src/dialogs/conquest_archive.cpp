@@ -225,12 +225,14 @@ ConquestArchiveDialog::ConquestArchiveDialog( BaseObjectType* cobject,
 
 ConquestArchiveDialog::~ConquestArchiveDialog()
 {
+/*
 	if (conn_) {
 		conn_->disconnect();
 		delete conn_;
 		conn_ = 0;
 	}
 	save_preferences();
+*/
 }
 
 void
@@ -347,6 +349,7 @@ ConquestArchiveDialog::connect_signals()
 void
 ConquestArchiveDialog::connect_database(const char* conninfo)
 {
+/*
 	try {
 		conn_ = new pqxx::connection(conninfo);
 
@@ -367,6 +370,7 @@ ConquestArchiveDialog::connect_database(const char* conninfo)
 		delete conn_;
 		conn_ = 0;
 	}
+*/
 }
 
 void
@@ -451,6 +455,7 @@ ConquestArchiveDialog::on_clear_clicked()
 void
 ConquestArchiveDialog::on_find_clicked()
 {
+/*
 	Glib::ustring pn = entry_patient_name_->get_text();
 	Glib::ustring pi = entry_patient_id_->get_text();
 	Glib::ustring si = entry_study_id_->get_text();
@@ -524,6 +529,7 @@ ConquestArchiveDialog::on_find_clicked()
 
 	std::for_each( archive_items_.begin(), archive_items_.end(),
 		sigc::mem_fun( *this, &ConquestArchiveDialog::add_archive_item));
+*/ 
 }
 
 void

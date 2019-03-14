@@ -251,10 +251,10 @@ DicomInformationDialog::set_patient_info(const DICOM::SummaryInfo& summary)
 	set_patient_sex_type(info->get_patient_sex_type());
 	spinbutton_patient_height_->set_value(patient->get_height());
 	spinbutton_patient_weight_->set_value(patient->get_weight());
-
+/*
 	text = patient->get_LO(DCM_OtherPatientIDs);
 	entry_patient_other_ids_->set_text(text);
-
+*/
 	text = patient->get_PN(DCM_OtherPatientNames);
 	entry_patient_other_names_->set_text(text);
 
@@ -313,10 +313,10 @@ DicomInformationDialog::get_patient_info(DICOM::SummaryInfo& summary)
 
 	double height = spinbutton_patient_height_->get_value();
 	patient->set_height(height);
-
+/*
 	text = entry_patient_other_ids_->get_text();
 	patient->set_LO( DCM_OtherPatientIDs, text);
-
+*/
 	text = entry_patient_other_names_->get_text();
 	patient->set_PN( DCM_OtherPatientNames, text);
 

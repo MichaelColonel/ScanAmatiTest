@@ -643,6 +643,7 @@ XGETTEXT
 GMSGFMT
 MSGFMT_OPTS
 MSGFMT
+INTL_MACOSX_LIBS
 USE_NLS
 GETTEXT_PACKAGE
 SCANAMATI_DATADIR
@@ -656,6 +657,8 @@ XMEDCON_CFLAGS
 XMEDCON_CONFIG
 LIBPQXX_LIBS
 LIBPQXX_CFLAGS
+LIBPQ_LIBS
+LIBPQ_CFLAGS
 GTKMM_LIBS
 GTKMM_CFLAGS
 SIGCPP_LIBS
@@ -676,6 +679,8 @@ PKG_CONFIG
 EGREP
 GREP
 CPP
+ac_ct_AR
+AR
 RANLIB
 am__fastdepCXX_FALSE
 am__fastdepCXX_TRUE
@@ -690,7 +695,6 @@ am__nodep
 AMDEPBACKSLASH
 AMDEP_FALSE
 AMDEP_TRUE
-am__quote
 am__include
 DEPDIR
 OBJEXT
@@ -764,7 +768,8 @@ PACKAGE_VERSION
 PACKAGE_TARNAME
 PACKAGE_NAME
 PATH_SEPARATOR
-SHELL'
+SHELL
+am__quote'
 ac_subst_files=''
 ac_user_opts='
 enable_option_checking
@@ -791,6 +796,12 @@ CPP
 PKG_CONFIG
 PKG_CONFIG_PATH
 PKG_CONFIG_LIBDIR
+GLIB_CFLAGS
+GLIB_LIBS
+GLIB_GENMARSHAL
+GOBJECT_QUERY
+GLIB_MKENUMS
+GLIB_COMPILE_RESOURCES
 GLIBMM_CFLAGS
 GLIBMM_LIBS
 GTHREAD_CFLAGS
@@ -799,6 +810,8 @@ SIGCPP_CFLAGS
 SIGCPP_LIBS
 GTKMM_CFLAGS
 GTKMM_LIBS
+LIBPQ_CFLAGS
+LIBPQ_LIBS
 LIBPQXX_CFLAGS
 LIBPQXX_LIBS
 MAGICK_CFLAGS
@@ -1449,6 +1462,17 @@ Some influential environment variables:
               directories to add to pkg-config's search path
   PKG_CONFIG_LIBDIR
               path overriding pkg-config's built-in search path
+  GLIB_CFLAGS C compiler flags for GLIB, overriding pkg-config
+  GLIB_LIBS   linker flags for GLIB, overriding pkg-config
+  GLIB_GENMARSHAL
+              value of glib_genmarshal for glib-2.0, overriding pkg-config
+  GOBJECT_QUERY
+              value of gobject_query for glib-2.0, overriding pkg-config
+  GLIB_MKENUMS
+              value of glib_mkenums for glib-2.0, overriding pkg-config
+  GLIB_COMPILE_RESOURCES
+              value of glib_compile_resources for gio-2.0, overriding
+              pkg-config
   GLIBMM_CFLAGS
               C compiler flags for GLIBMM, overriding pkg-config
   GLIBMM_LIBS linker flags for GLIBMM, overriding pkg-config
@@ -1462,6 +1486,9 @@ Some influential environment variables:
   GTKMM_CFLAGS
               C compiler flags for GTKMM, overriding pkg-config
   GTKMM_LIBS  linker flags for GTKMM, overriding pkg-config
+  LIBPQ_CFLAGS
+              C compiler flags for LIBPQ, overriding pkg-config
+  LIBPQ_LIBS  linker flags for LIBPQ, overriding pkg-config
   LIBPQXX_CFLAGS
               C compiler flags for LIBPQXX, overriding pkg-config
   LIBPQXX_LIBS
@@ -2374,7 +2401,7 @@ ac_config_sub="$SHELL $ac_aux_dir/config.sub"  # Please don't use this var.
 ac_configure="$SHELL $ac_aux_dir/configure"  # Please don't use this var.
 
 
-am__api_version='1.14'
+am__api_version='1.16'
 
 # Find a good install program.  We prefer a C program (faster),
 # so one script is as good as another.  But avoid the broken or
@@ -2546,8 +2573,8 @@ test "$program_suffix" != NONE &&
 ac_script='s/[\\$]/&&/g;s/;s,x,x,$//'
 program_transform_name=`$as_echo "$program_transform_name" | sed "$ac_script"`
 
-# expand $ac_aux_dir to an absolute path
-am_aux_dir=`cd $ac_aux_dir && pwd`
+# Expand $ac_aux_dir to an absolute path.
+am_aux_dir=`cd "$ac_aux_dir" && pwd`
 
 if test x"${MISSING+set}" != xset; then
   case $am_aux_dir in
@@ -2566,7 +2593,7 @@ else
 $as_echo "$as_me: WARNING: 'missing' script is too old or missing" >&2;}
 fi
 
-if test x"${install_sh}" != xset; then
+if test x"${install_sh+set}" != xset; then
   case $am_aux_dir in
   *\ * | *\	*)
     install_sh="\${SHELL} '$am_aux_dir/install-sh'" ;;
@@ -2890,12 +2917,12 @@ MAKEINFO=${MAKEINFO-"${am_missing_run}makeinfo"}
 
 # For better backward compatibility.  To be removed once Automake 1.9.x
 # dies out for good.  For more background, see:
-# <http://lists.gnu.org/archive/html/automake/2012-07/msg00001.html>
-# <http://lists.gnu.org/archive/html/automake/2012-07/msg00014.html>
+# <https://lists.gnu.org/archive/html/automake/2012-07/msg00001.html>
+# <https://lists.gnu.org/archive/html/automake/2012-07/msg00014.html>
 mkdir_p='$(MKDIR_P)'
 
-# We need awk for the "check" target.  The system "awk" is bad on
-# some platforms.
+# We need awk for the "check" target (and possibly the TAP driver).  The
+# system "awk" is bad on some platforms.
 # Always define AMTAR for backward compatibility.  Yes, it's still used
 # in the wild :-(  We should find a proper way to deprecate it ...
 AMTAR='$${TAR-tar}'
@@ -2942,7 +2969,7 @@ END
 Aborting the configuration process, to ensure you take notice of the issue.
 
 You can download and install GNU coreutils to get an 'rm' implementation
-that behaves properly: <http://www.gnu.org/software/coreutils/>.
+that behaves properly: <https://www.gnu.org/software/coreutils/>.
 
 If you want to complete the configuration process using your problematic
 'rm' anyway, export the environment variable ACCEPT_INFERIOR_RM_PROGRAM
@@ -2952,6 +2979,7 @@ END
     as_fn_error $? "Your 'rm' program is bad, sorry." "$LINENO" 5
   fi
 fi
+
 
 
 ac_ext=c
@@ -3805,45 +3833,45 @@ DEPDIR="${am__leading_dot}deps"
 
 ac_config_commands="$ac_config_commands depfiles"
 
-
-am_make=${MAKE-make}
-cat > confinc << 'END'
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether ${MAKE-make} supports the include directive" >&5
+$as_echo_n "checking whether ${MAKE-make} supports the include directive... " >&6; }
+cat > confinc.mk << 'END'
 am__doit:
-	@echo this is the am__doit target
+	@echo this is the am__doit target >confinc.out
 .PHONY: am__doit
 END
-# If we don't find an include directive, just comment out the code.
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for style of include used by $am_make" >&5
-$as_echo_n "checking for style of include used by $am_make... " >&6; }
 am__include="#"
 am__quote=
-_am_result=none
-# First try GNU make style include.
-echo "include confinc" > confmf
-# Ignore all kinds of additional output from 'make'.
-case `$am_make -s -f confmf 2> /dev/null` in #(
-*the\ am__doit\ target*)
-  am__include=include
-  am__quote=
-  _am_result=GNU
-  ;;
-esac
-# Now try BSD make style include.
-if test "$am__include" = "#"; then
-   echo '.include "confinc"' > confmf
-   case `$am_make -s -f confmf 2> /dev/null` in #(
-   *the\ am__doit\ target*)
-     am__include=.include
-     am__quote="\""
-     _am_result=BSD
+# BSD make does it like this.
+echo '.include "confinc.mk" # ignored' > confmf.BSD
+# Other make implementations (GNU, Solaris 10, AIX) do it like this.
+echo 'include confinc.mk # ignored' > confmf.GNU
+_am_result=no
+for s in GNU BSD; do
+  { echo "$as_me:$LINENO: ${MAKE-make} -f confmf.$s && cat confinc.out" >&5
+   (${MAKE-make} -f confmf.$s && cat confinc.out) >&5 2>&5
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }
+  case $?:`cat confinc.out 2>/dev/null` in #(
+  '0:this is the am__doit target') :
+    case $s in #(
+  BSD) :
+    am__include='.include' am__quote='"' ;; #(
+  *) :
+    am__include='include' am__quote='' ;;
+esac ;; #(
+  *) :
      ;;
-   esac
-fi
-
-
-{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $_am_result" >&5
-$as_echo "$_am_result" >&6; }
-rm -f confinc confmf
+esac
+  if test "$am__include" != "#"; then
+    _am_result="yes ($s style)"
+    break
+  fi
+done
+rm -f confinc.* confmf.*
+{ $as_echo "$as_me:${as_lineno-$LINENO}: result: ${_am_result}" >&5
+$as_echo "${_am_result}" >&6; }
 
 # Check whether --enable-dependency-tracking was given.
 if test "${enable_dependency_tracking+set}" = set; then :
@@ -5256,6 +5284,178 @@ fi
 am_cv_prog_cc_stdc=$ac_cv_prog_cc_stdc
 
 
+if test -n "$ac_tool_prefix"; then
+  for ac_prog in ar lib "link -lib"
+  do
+    # Extract the first word of "$ac_tool_prefix$ac_prog", so it can be a program name with args.
+set dummy $ac_tool_prefix$ac_prog; ac_word=$2
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
+$as_echo_n "checking for $ac_word... " >&6; }
+if ${ac_cv_prog_AR+:} false; then :
+  $as_echo_n "(cached) " >&6
+else
+  if test -n "$AR"; then
+  ac_cv_prog_AR="$AR" # Let the user override the test.
+else
+as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
+for as_dir in $PATH
+do
+  IFS=$as_save_IFS
+  test -z "$as_dir" && as_dir=.
+    for ac_exec_ext in '' $ac_executable_extensions; do
+  if as_fn_executable_p "$as_dir/$ac_word$ac_exec_ext"; then
+    ac_cv_prog_AR="$ac_tool_prefix$ac_prog"
+    $as_echo "$as_me:${as_lineno-$LINENO}: found $as_dir/$ac_word$ac_exec_ext" >&5
+    break 2
+  fi
+done
+  done
+IFS=$as_save_IFS
+
+fi
+fi
+AR=$ac_cv_prog_AR
+if test -n "$AR"; then
+  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $AR" >&5
+$as_echo "$AR" >&6; }
+else
+  { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+$as_echo "no" >&6; }
+fi
+
+
+    test -n "$AR" && break
+  done
+fi
+if test -z "$AR"; then
+  ac_ct_AR=$AR
+  for ac_prog in ar lib "link -lib"
+do
+  # Extract the first word of "$ac_prog", so it can be a program name with args.
+set dummy $ac_prog; ac_word=$2
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
+$as_echo_n "checking for $ac_word... " >&6; }
+if ${ac_cv_prog_ac_ct_AR+:} false; then :
+  $as_echo_n "(cached) " >&6
+else
+  if test -n "$ac_ct_AR"; then
+  ac_cv_prog_ac_ct_AR="$ac_ct_AR" # Let the user override the test.
+else
+as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
+for as_dir in $PATH
+do
+  IFS=$as_save_IFS
+  test -z "$as_dir" && as_dir=.
+    for ac_exec_ext in '' $ac_executable_extensions; do
+  if as_fn_executable_p "$as_dir/$ac_word$ac_exec_ext"; then
+    ac_cv_prog_ac_ct_AR="$ac_prog"
+    $as_echo "$as_me:${as_lineno-$LINENO}: found $as_dir/$ac_word$ac_exec_ext" >&5
+    break 2
+  fi
+done
+  done
+IFS=$as_save_IFS
+
+fi
+fi
+ac_ct_AR=$ac_cv_prog_ac_ct_AR
+if test -n "$ac_ct_AR"; then
+  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_ct_AR" >&5
+$as_echo "$ac_ct_AR" >&6; }
+else
+  { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+$as_echo "no" >&6; }
+fi
+
+
+  test -n "$ac_ct_AR" && break
+done
+
+  if test "x$ac_ct_AR" = x; then
+    AR="false"
+  else
+    case $cross_compiling:$ac_tool_warned in
+yes:)
+{ $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: using cross tools not prefixed with host triplet" >&5
+$as_echo "$as_me: WARNING: using cross tools not prefixed with host triplet" >&2;}
+ac_tool_warned=yes ;;
+esac
+    AR=$ac_ct_AR
+  fi
+fi
+
+: ${AR=ar}
+
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking the archiver ($AR) interface" >&5
+$as_echo_n "checking the archiver ($AR) interface... " >&6; }
+if ${am_cv_ar_interface+:} false; then :
+  $as_echo_n "(cached) " >&6
+else
+  ac_ext=c
+ac_cpp='$CPP $CPPFLAGS'
+ac_compile='$CC -c $CFLAGS $CPPFLAGS conftest.$ac_ext >&5'
+ac_link='$CC -o conftest$ac_exeext $CFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS >&5'
+ac_compiler_gnu=$ac_cv_c_compiler_gnu
+
+   am_cv_ar_interface=ar
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+/* end confdefs.h.  */
+int some_variable = 0;
+_ACEOF
+if ac_fn_c_try_compile "$LINENO"; then :
+  am_ar_try='$AR cru libconftest.a conftest.$ac_objext >&5'
+      { { eval echo "\"\$as_me\":${as_lineno-$LINENO}: \"$am_ar_try\""; } >&5
+  (eval $am_ar_try) 2>&5
+  ac_status=$?
+  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+  test $ac_status = 0; }
+      if test "$ac_status" -eq 0; then
+        am_cv_ar_interface=ar
+      else
+        am_ar_try='$AR -NOLOGO -OUT:conftest.lib conftest.$ac_objext >&5'
+        { { eval echo "\"\$as_me\":${as_lineno-$LINENO}: \"$am_ar_try\""; } >&5
+  (eval $am_ar_try) 2>&5
+  ac_status=$?
+  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+  test $ac_status = 0; }
+        if test "$ac_status" -eq 0; then
+          am_cv_ar_interface=lib
+        else
+          am_cv_ar_interface=unknown
+        fi
+      fi
+      rm -f conftest.lib libconftest.a
+
+fi
+rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+   ac_ext=c
+ac_cpp='$CPP $CPPFLAGS'
+ac_compile='$CC -c $CFLAGS $CPPFLAGS conftest.$ac_ext >&5'
+ac_link='$CC -o conftest$ac_exeext $CFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS >&5'
+ac_compiler_gnu=$ac_cv_c_compiler_gnu
+
+fi
+{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $am_cv_ar_interface" >&5
+$as_echo "$am_cv_ar_interface" >&6; }
+
+case $am_cv_ar_interface in
+ar)
+  ;;
+lib)
+  # Microsoft lib, so override with the ar-lib wrapper script.
+  # FIXME: It is wrong to rewrite AR.
+  # But if we don't then we get into trouble of one sort or another.
+  # A longer-term fix would be to have automake use am__AR in this case,
+  # and then we could set am__AR="$am_aux_dir/ar-lib \$(AR)" or something
+  # similar.
+  AR="$am_aux_dir/ar-lib $AR"
+  ;;
+unknown)
+  as_fn_error $? "could not determine $AR interface" "$LINENO" 5
+  ;;
+esac
+
+
 
 ac_header_dirent=no
 for ac_hdr in dirent.h sys/ndir.h sys/dir.h ndir.h; do
@@ -6042,6 +6242,9 @@ if test "x$enable_debug" = "xyes"; then
 	CXXFLAGS="$CXXFLAGS -DDEBUG -Wall"
 fi
 
+
+
+
 # Check whether --enable-glibtest was given.
 if test "${enable_glibtest+set}" = set; then :
   enableval=$enable_glibtest;
@@ -6050,7 +6253,8 @@ else
 fi
 
 
-  pkg_config_args=glib-2.0
+  min_glib_version=2.12.0
+  pkg_config_args="glib-2.0 >= $min_glib_version"
   for module in .
   do
       case "$module" in
@@ -6200,7 +6404,171 @@ fi
     PKG_CONFIG=no
   fi
 
-  min_glib_version=2.12.0
+
+pkg_failed=no
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for $pkg_config_args" >&5
+$as_echo_n "checking for $pkg_config_args... " >&6; }
+
+if test -n "$GLIB_CFLAGS"; then
+    pkg_cv_GLIB_CFLAGS="$GLIB_CFLAGS"
+ elif test -n "$PKG_CONFIG"; then
+    if test -n "$PKG_CONFIG" && \
+    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"\$pkg_config_args\""; } >&5
+  ($PKG_CONFIG --exists --print-errors "$pkg_config_args") 2>&5
+  ac_status=$?
+  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+  test $ac_status = 0; }; then
+  pkg_cv_GLIB_CFLAGS=`$PKG_CONFIG --cflags "$pkg_config_args" 2>/dev/null`
+		      test "x$?" != "x0" && pkg_failed=yes
+else
+  pkg_failed=yes
+fi
+ else
+    pkg_failed=untried
+fi
+if test -n "$GLIB_LIBS"; then
+    pkg_cv_GLIB_LIBS="$GLIB_LIBS"
+ elif test -n "$PKG_CONFIG"; then
+    if test -n "$PKG_CONFIG" && \
+    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"\$pkg_config_args\""; } >&5
+  ($PKG_CONFIG --exists --print-errors "$pkg_config_args") 2>&5
+  ac_status=$?
+  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+  test $ac_status = 0; }; then
+  pkg_cv_GLIB_LIBS=`$PKG_CONFIG --libs "$pkg_config_args" 2>/dev/null`
+		      test "x$?" != "x0" && pkg_failed=yes
+else
+  pkg_failed=yes
+fi
+ else
+    pkg_failed=untried
+fi
+
+
+
+if test $pkg_failed = yes; then
+        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+$as_echo "no" >&6; }
+
+if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
+        _pkg_short_errors_supported=yes
+else
+        _pkg_short_errors_supported=no
+fi
+        if test $_pkg_short_errors_supported = yes; then
+	        GLIB_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "$pkg_config_args" 2>&1`
+        else
+	        GLIB_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "$pkg_config_args" 2>&1`
+        fi
+	# Put the nasty error message in config.log where it belongs
+	echo "$GLIB_PKG_ERRORS" >&5
+
+	:
+elif test $pkg_failed = untried; then
+        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+$as_echo "no" >&6; }
+	:
+else
+	GLIB_CFLAGS=$pkg_cv_GLIB_CFLAGS
+	GLIB_LIBS=$pkg_cv_GLIB_LIBS
+        { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+$as_echo "yes" >&6; }
+	:
+fi
+
+
+if test -n "$GLIB_GENMARSHAL"; then
+    pkg_cv_GLIB_GENMARSHAL="$GLIB_GENMARSHAL"
+ elif test -n "$PKG_CONFIG"; then
+    if test -n "$PKG_CONFIG" && \
+    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"glib-2.0\""; } >&5
+  ($PKG_CONFIG --exists --print-errors "glib-2.0") 2>&5
+  ac_status=$?
+  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+  test $ac_status = 0; }; then
+  pkg_cv_GLIB_GENMARSHAL=`$PKG_CONFIG --variable="glib_genmarshal" "glib-2.0" 2>/dev/null`
+		      test "x$?" != "x0" && pkg_failed=yes
+else
+  pkg_failed=yes
+fi
+ else
+    pkg_failed=untried
+fi
+GLIB_GENMARSHAL=$pkg_cv_GLIB_GENMARSHAL
+
+if test "x$GLIB_GENMARSHAL" = x""; then :
+
+fi
+
+if test -n "$GOBJECT_QUERY"; then
+    pkg_cv_GOBJECT_QUERY="$GOBJECT_QUERY"
+ elif test -n "$PKG_CONFIG"; then
+    if test -n "$PKG_CONFIG" && \
+    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"glib-2.0\""; } >&5
+  ($PKG_CONFIG --exists --print-errors "glib-2.0") 2>&5
+  ac_status=$?
+  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+  test $ac_status = 0; }; then
+  pkg_cv_GOBJECT_QUERY=`$PKG_CONFIG --variable="gobject_query" "glib-2.0" 2>/dev/null`
+		      test "x$?" != "x0" && pkg_failed=yes
+else
+  pkg_failed=yes
+fi
+ else
+    pkg_failed=untried
+fi
+GOBJECT_QUERY=$pkg_cv_GOBJECT_QUERY
+
+if test "x$GOBJECT_QUERY" = x""; then :
+
+fi
+
+if test -n "$GLIB_MKENUMS"; then
+    pkg_cv_GLIB_MKENUMS="$GLIB_MKENUMS"
+ elif test -n "$PKG_CONFIG"; then
+    if test -n "$PKG_CONFIG" && \
+    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"glib-2.0\""; } >&5
+  ($PKG_CONFIG --exists --print-errors "glib-2.0") 2>&5
+  ac_status=$?
+  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+  test $ac_status = 0; }; then
+  pkg_cv_GLIB_MKENUMS=`$PKG_CONFIG --variable="glib_mkenums" "glib-2.0" 2>/dev/null`
+		      test "x$?" != "x0" && pkg_failed=yes
+else
+  pkg_failed=yes
+fi
+ else
+    pkg_failed=untried
+fi
+GLIB_MKENUMS=$pkg_cv_GLIB_MKENUMS
+
+if test "x$GLIB_MKENUMS" = x""; then :
+
+fi
+
+if test -n "$GLIB_COMPILE_RESOURCES"; then
+    pkg_cv_GLIB_COMPILE_RESOURCES="$GLIB_COMPILE_RESOURCES"
+ elif test -n "$PKG_CONFIG"; then
+    if test -n "$PKG_CONFIG" && \
+    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"gio-2.0\""; } >&5
+  ($PKG_CONFIG --exists --print-errors "gio-2.0") 2>&5
+  ac_status=$?
+  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+  test $ac_status = 0; }; then
+  pkg_cv_GLIB_COMPILE_RESOURCES=`$PKG_CONFIG --variable="glib_compile_resources" "gio-2.0" 2>/dev/null`
+		      test "x$?" != "x0" && pkg_failed=yes
+else
+  pkg_failed=yes
+fi
+ else
+    pkg_failed=untried
+fi
+GLIB_COMPILE_RESOURCES=$pkg_cv_GLIB_COMPILE_RESOURCES
+
+if test "x$GLIB_COMPILE_RESOURCES" = x""; then :
+
+fi
+
   { $as_echo "$as_me:${as_lineno-$LINENO}: checking for GLIB - version >= $min_glib_version" >&5
 $as_echo_n "checking for GLIB - version >= $min_glib_version... " >&6; }
 
@@ -6219,13 +6587,6 @@ $as_echo_n "checking for GLIB - version >= $min_glib_version... " >&6; }
   fi
 
   if test x"$no_glib" = x ; then
-    GLIB_GENMARSHAL=`$PKG_CONFIG --variable=glib_genmarshal glib-2.0`
-    GOBJECT_QUERY=`$PKG_CONFIG --variable=gobject_query glib-2.0`
-    GLIB_MKENUMS=`$PKG_CONFIG --variable=glib_mkenums glib-2.0`
-    GLIB_COMPILE_RESOURCES=`$PKG_CONFIG --variable=glib_compile_resources gio-2.0`
-
-    GLIB_CFLAGS=`$PKG_CONFIG --cflags $pkg_config_args`
-    GLIB_LIBS=`$PKG_CONFIG --libs $pkg_config_args`
     glib_config_major_version=`$PKG_CONFIG --modversion glib-2.0 | \
            sed 's/\([0-9]*\).\([0-9]*\).\([0-9]*\)/\1/'`
     glib_config_minor_version=`$PKG_CONFIG --modversion glib-2.0 | \
@@ -6249,7 +6610,7 @@ else
 #include <stdlib.h>
 
 int
-main ()
+main (void)
 {
   unsigned int major, minor, micro;
 
@@ -6391,19 +6752,13 @@ rm -f core conftest.err conftest.$ac_objext \
      GLIB_COMPILE_RESOURCES=""
      as_fn_error $? "glib2-2.12.0 or better is required" "$LINENO" 5
   fi
-
-
-
-
-
-
   rm -f conf.glibtest
 
 
 
 pkg_failed=no
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for GLIBMM" >&5
-$as_echo_n "checking for GLIBMM... " >&6; }
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for glibmm-2.4 >= 2.16.0" >&5
+$as_echo_n "checking for glibmm-2.4 >= 2.16.0... " >&6; }
 
 if test -n "$GLIBMM_CFLAGS"; then
     pkg_cv_GLIBMM_CFLAGS="$GLIBMM_CFLAGS"
@@ -6443,7 +6798,7 @@ fi
 
 
 if test $pkg_failed = yes; then
-   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 
 if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
@@ -6461,7 +6816,7 @@ fi
 
 	as_fn_error $? "glibmm-2.16.0 or better is required" "$LINENO" 5
 elif test $pkg_failed = untried; then
-     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 	as_fn_error $? "glibmm-2.16.0 or better is required" "$LINENO" 5
 else
@@ -6476,8 +6831,8 @@ fi
 
 
 pkg_failed=no
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for GTHREAD" >&5
-$as_echo_n "checking for GTHREAD... " >&6; }
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for gthread-2.0 >= 2.12.0" >&5
+$as_echo_n "checking for gthread-2.0 >= 2.12.0... " >&6; }
 
 if test -n "$GTHREAD_CFLAGS"; then
     pkg_cv_GTHREAD_CFLAGS="$GTHREAD_CFLAGS"
@@ -6517,7 +6872,7 @@ fi
 
 
 if test $pkg_failed = yes; then
-   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 
 if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
@@ -6535,7 +6890,7 @@ fi
 
 	as_fn_error $? "gthread-2.0 2.12.0 or better is required" "$LINENO" 5
 elif test $pkg_failed = untried; then
-     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 	as_fn_error $? "gthread-2.0 2.12.0 or better is required" "$LINENO" 5
 else
@@ -6550,8 +6905,8 @@ fi
 
 
 pkg_failed=no
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for SIGCPP" >&5
-$as_echo_n "checking for SIGCPP... " >&6; }
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for sigc++-2.0 >= 2.2.0" >&5
+$as_echo_n "checking for sigc++-2.0 >= 2.2.0... " >&6; }
 
 if test -n "$SIGCPP_CFLAGS"; then
     pkg_cv_SIGCPP_CFLAGS="$SIGCPP_CFLAGS"
@@ -6591,7 +6946,7 @@ fi
 
 
 if test $pkg_failed = yes; then
-   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 
 if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
@@ -6609,7 +6964,7 @@ fi
 
 	as_fn_error $? "sigc++-2.2.0 or better is required" "$LINENO" 5
 elif test $pkg_failed = untried; then
-     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 	as_fn_error $? "sigc++-2.2.0 or better is required" "$LINENO" 5
 else
@@ -6624,8 +6979,8 @@ fi
 
 
 pkg_failed=no
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for GTKMM" >&5
-$as_echo_n "checking for GTKMM... " >&6; }
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for gtkmm-2.4 >= 2.12.0" >&5
+$as_echo_n "checking for gtkmm-2.4 >= 2.12.0... " >&6; }
 
 if test -n "$GTKMM_CFLAGS"; then
     pkg_cv_GTKMM_CFLAGS="$GTKMM_CFLAGS"
@@ -6665,7 +7020,7 @@ fi
 
 
 if test $pkg_failed = yes; then
-   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 
 if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
@@ -6683,7 +7038,7 @@ fi
 
 	as_fn_error $? "gtkmm-2.12.0 or better is required" "$LINENO" 5
 elif test $pkg_failed = untried; then
-     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 	as_fn_error $? "gtkmm-2.12.0 or better is required" "$LINENO" 5
 else
@@ -6698,8 +7053,82 @@ fi
 
 
 pkg_failed=no
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for LIBPQXX" >&5
-$as_echo_n "checking for LIBPQXX... " >&6; }
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for libpq >= 10.2" >&5
+$as_echo_n "checking for libpq >= 10.2... " >&6; }
+
+if test -n "$LIBPQ_CFLAGS"; then
+    pkg_cv_LIBPQ_CFLAGS="$LIBPQ_CFLAGS"
+ elif test -n "$PKG_CONFIG"; then
+    if test -n "$PKG_CONFIG" && \
+    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"libpq >= 10.2\""; } >&5
+  ($PKG_CONFIG --exists --print-errors "libpq >= 10.2") 2>&5
+  ac_status=$?
+  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+  test $ac_status = 0; }; then
+  pkg_cv_LIBPQ_CFLAGS=`$PKG_CONFIG --cflags "libpq >= 10.2" 2>/dev/null`
+		      test "x$?" != "x0" && pkg_failed=yes
+else
+  pkg_failed=yes
+fi
+ else
+    pkg_failed=untried
+fi
+if test -n "$LIBPQ_LIBS"; then
+    pkg_cv_LIBPQ_LIBS="$LIBPQ_LIBS"
+ elif test -n "$PKG_CONFIG"; then
+    if test -n "$PKG_CONFIG" && \
+    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"libpq >= 10.2\""; } >&5
+  ($PKG_CONFIG --exists --print-errors "libpq >= 10.2") 2>&5
+  ac_status=$?
+  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+  test $ac_status = 0; }; then
+  pkg_cv_LIBPQ_LIBS=`$PKG_CONFIG --libs "libpq >= 10.2" 2>/dev/null`
+		      test "x$?" != "x0" && pkg_failed=yes
+else
+  pkg_failed=yes
+fi
+ else
+    pkg_failed=untried
+fi
+
+
+
+if test $pkg_failed = yes; then
+        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+$as_echo "no" >&6; }
+
+if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
+        _pkg_short_errors_supported=yes
+else
+        _pkg_short_errors_supported=no
+fi
+        if test $_pkg_short_errors_supported = yes; then
+	        LIBPQ_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "libpq >= 10.2" 2>&1`
+        else
+	        LIBPQ_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "libpq >= 10.2" 2>&1`
+        fi
+	# Put the nasty error message in config.log where it belongs
+	echo "$LIBPQ_PKG_ERRORS" >&5
+
+	as_fn_error $? "libpq-10.2 or better is required" "$LINENO" 5
+elif test $pkg_failed = untried; then
+        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+$as_echo "no" >&6; }
+	as_fn_error $? "libpq-10.2 or better is required" "$LINENO" 5
+else
+	LIBPQ_CFLAGS=$pkg_cv_LIBPQ_CFLAGS
+	LIBPQ_LIBS=$pkg_cv_LIBPQ_LIBS
+        { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+$as_echo "yes" >&6; }
+
+fi
+
+
+
+
+pkg_failed=no
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for libpqxx >= 3.1" >&5
+$as_echo_n "checking for libpqxx >= 3.1... " >&6; }
 
 if test -n "$LIBPQXX_CFLAGS"; then
     pkg_cv_LIBPQXX_CFLAGS="$LIBPQXX_CFLAGS"
@@ -6739,7 +7168,7 @@ fi
 
 
 if test $pkg_failed = yes; then
-   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 
 if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
@@ -6757,7 +7186,7 @@ fi
 
 	as_fn_error $? "libpqxx-3.1 or better is required" "$LINENO" 5
 elif test $pkg_failed = untried; then
-     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 	as_fn_error $? "libpqxx-3.1 or better is required" "$LINENO" 5
 else
@@ -7015,8 +7444,8 @@ rm -f core conftest.err conftest.$ac_objext \
 
 
 pkg_failed=no
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for MAGICK" >&5
-$as_echo_n "checking for MAGICK... " >&6; }
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for Magick++ >= 6.5.9" >&5
+$as_echo_n "checking for Magick++ >= 6.5.9... " >&6; }
 
 if test -n "$MAGICK_CFLAGS"; then
     pkg_cv_MAGICK_CFLAGS="$MAGICK_CFLAGS"
@@ -7056,7 +7485,7 @@ fi
 
 
 if test $pkg_failed = yes; then
-   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 
 if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
@@ -7083,7 +7512,7 @@ Alternatively, you may set the environment variables MAGICK_CFLAGS
 and MAGICK_LIBS to avoid the need to call pkg-config.
 See the pkg-config man page for more details." "$LINENO" 5
 elif test $pkg_failed = untried; then
-     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 	{ { $as_echo "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
 $as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
@@ -7322,6 +7751,82 @@ $as_echo "#define HAVE_LC_MESSAGES 1" >>confdefs.h
     CATOBJEXT=NONE
     XGETTEXT=:
     INTLLIBS=
+
+
+    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for CFPreferencesCopyAppValue" >&5
+$as_echo_n "checking for CFPreferencesCopyAppValue... " >&6; }
+if ${gt_cv_func_CFPreferencesCopyAppValue+:} false; then :
+  $as_echo_n "(cached) " >&6
+else
+  gt_save_LIBS="$LIBS"
+     LIBS="$LIBS -Wl,-framework -Wl,CoreFoundation"
+     cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+/* end confdefs.h.  */
+#include <CoreFoundation/CFPreferences.h>
+int
+main ()
+{
+CFPreferencesCopyAppValue(NULL, NULL)
+  ;
+  return 0;
+}
+_ACEOF
+if ac_fn_c_try_link "$LINENO"; then :
+  gt_cv_func_CFPreferencesCopyAppValue=yes
+else
+  gt_cv_func_CFPreferencesCopyAppValue=no
+fi
+rm -f core conftest.err conftest.$ac_objext \
+    conftest$ac_exeext conftest.$ac_ext
+     LIBS="$gt_save_LIBS"
+fi
+{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $gt_cv_func_CFPreferencesCopyAppValue" >&5
+$as_echo "$gt_cv_func_CFPreferencesCopyAppValue" >&6; }
+  if test $gt_cv_func_CFPreferencesCopyAppValue = yes; then
+
+$as_echo "#define HAVE_CFPREFERENCESCOPYAPPVALUE 1" >>confdefs.h
+
+  fi
+    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for CFLocaleCopyCurrent" >&5
+$as_echo_n "checking for CFLocaleCopyCurrent... " >&6; }
+if ${gt_cv_func_CFLocaleCopyCurrent+:} false; then :
+  $as_echo_n "(cached) " >&6
+else
+  gt_save_LIBS="$LIBS"
+     LIBS="$LIBS -Wl,-framework -Wl,CoreFoundation"
+     cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+/* end confdefs.h.  */
+#include <CoreFoundation/CFLocale.h>
+int
+main ()
+{
+CFLocaleCopyCurrent();
+  ;
+  return 0;
+}
+_ACEOF
+if ac_fn_c_try_link "$LINENO"; then :
+  gt_cv_func_CFLocaleCopyCurrent=yes
+else
+  gt_cv_func_CFLocaleCopyCurrent=no
+fi
+rm -f core conftest.err conftest.$ac_objext \
+    conftest$ac_exeext conftest.$ac_ext
+     LIBS="$gt_save_LIBS"
+fi
+{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $gt_cv_func_CFLocaleCopyCurrent" >&5
+$as_echo "$gt_cv_func_CFLocaleCopyCurrent" >&6; }
+  if test $gt_cv_func_CFLocaleCopyCurrent = yes; then
+
+$as_echo "#define HAVE_CFLOCALECOPYCURRENT 1" >>confdefs.h
+
+  fi
+  INTL_MACOSX_LIBS=
+  if test $gt_cv_func_CFPreferencesCopyAppValue = yes || test $gt_cv_func_CFLocaleCopyCurrent = yes; then
+    INTL_MACOSX_LIBS="-Wl,-framework -Wl,CoreFoundation"
+  fi
+
+
 
     ac_fn_c_check_header_mongrel "$LINENO" "libintl.h" "ac_cv_header_libintl_h" "$ac_includes_default"
 if test "x$ac_cv_header_libintl_h" = xyes; then :
@@ -7663,7 +8168,7 @@ done
       fi
 
       if test "$gt_cv_func_dgettext_libintl" = "yes"; then
-        INTLLIBS="-lintl $libintl_extra_libs"
+        INTLLIBS="-lintl $libintl_extra_libs $INTL_MACOSX_LIBS"
       fi
 
       if test "$gt_cv_have_gettext" = "yes"; then
@@ -8882,7 +9387,7 @@ cat >>$CONFIG_STATUS <<_ACEOF || ac_write_fail=1
 #
 # INIT-COMMANDS
 #
-AMDEP_TRUE="$AMDEP_TRUE" ac_aux_dir="$ac_aux_dir"
+AMDEP_TRUE="$AMDEP_TRUE" MAKE="${MAKE-make}"
 
 
 _ACEOF
@@ -9512,29 +10017,35 @@ $as_echo "$as_me: executing $ac_file commands" >&6;}
   # Older Autoconf quotes --file arguments for eval, but not when files
   # are listed without --file.  Let's play safe and only enable the eval
   # if we detect the quoting.
-  case $CONFIG_FILES in
-  *\'*) eval set x "$CONFIG_FILES" ;;
-  *)   set x $CONFIG_FILES ;;
-  esac
+  # TODO: see whether this extra hack can be removed once we start
+  # requiring Autoconf 2.70 or later.
+  case $CONFIG_FILES in #(
+  *\'*) :
+    eval set x "$CONFIG_FILES" ;; #(
+  *) :
+    set x $CONFIG_FILES ;; #(
+  *) :
+     ;;
+esac
   shift
-  for mf
+  # Used to flag and report bootstrapping failures.
+  am_rc=0
+  for am_mf
   do
     # Strip MF so we end up with the name of the file.
-    mf=`echo "$mf" | sed -e 's/:.*$//'`
-    # Check whether this is an Automake generated Makefile or not.
-    # We used to match only the files named 'Makefile.in', but
-    # some people rename them; so instead we look at the file content.
-    # Grep'ing the first line is not enough: some people post-process
-    # each Makefile.in and add a new line on top of each file to say so.
-    # Grep'ing the whole file is not good either: AIX grep has a line
+    am_mf=`$as_echo "$am_mf" | sed -e 's/:.*$//'`
+    # Check whether this is an Automake generated Makefile which includes
+    # dependency-tracking related rules and includes.
+    # Grep'ing the whole file directly is not great: AIX grep has a line
     # limit of 2048, but all sed's we know have understand at least 4000.
-    if sed -n 's,^#.*generated by automake.*,X,p' "$mf" | grep X >/dev/null 2>&1; then
-      dirpart=`$as_dirname -- "$mf" ||
-$as_expr X"$mf" : 'X\(.*[^/]\)//*[^/][^/]*/*$' \| \
-	 X"$mf" : 'X\(//\)[^/]' \| \
-	 X"$mf" : 'X\(//\)$' \| \
-	 X"$mf" : 'X\(/\)' \| . 2>/dev/null ||
-$as_echo X"$mf" |
+    sed -n 's,^am--depfiles:.*,X,p' "$am_mf" | grep X >/dev/null 2>&1 \
+      || continue
+    am_dirpart=`$as_dirname -- "$am_mf" ||
+$as_expr X"$am_mf" : 'X\(.*[^/]\)//*[^/][^/]*/*$' \| \
+	 X"$am_mf" : 'X\(//\)[^/]' \| \
+	 X"$am_mf" : 'X\(//\)$' \| \
+	 X"$am_mf" : 'X\(/\)' \| . 2>/dev/null ||
+$as_echo X"$am_mf" |
     sed '/^X\(.*[^/]\)\/\/*[^/][^/]*\/*$/{
 	    s//\1/
 	    q
@@ -9552,53 +10063,48 @@ $as_echo X"$mf" |
 	    q
 	  }
 	  s/.*/./; q'`
-    else
-      continue
-    fi
-    # Extract the definition of DEPDIR, am__include, and am__quote
-    # from the Makefile without running 'make'.
-    DEPDIR=`sed -n 's/^DEPDIR = //p' < "$mf"`
-    test -z "$DEPDIR" && continue
-    am__include=`sed -n 's/^am__include = //p' < "$mf"`
-    test -z "$am__include" && continue
-    am__quote=`sed -n 's/^am__quote = //p' < "$mf"`
-    # Find all dependency output files, they are included files with
-    # $(DEPDIR) in their names.  We invoke sed twice because it is the
-    # simplest approach to changing $(DEPDIR) to its actual value in the
-    # expansion.
-    for file in `sed -n "
-      s/^$am__include $am__quote\(.*(DEPDIR).*\)$am__quote"'$/\1/p' <"$mf" | \
-	 sed -e 's/\$(DEPDIR)/'"$DEPDIR"'/g'`; do
-      # Make sure the directory exists.
-      test -f "$dirpart/$file" && continue
-      fdir=`$as_dirname -- "$file" ||
-$as_expr X"$file" : 'X\(.*[^/]\)//*[^/][^/]*/*$' \| \
-	 X"$file" : 'X\(//\)[^/]' \| \
-	 X"$file" : 'X\(//\)$' \| \
-	 X"$file" : 'X\(/\)' \| . 2>/dev/null ||
-$as_echo X"$file" |
-    sed '/^X\(.*[^/]\)\/\/*[^/][^/]*\/*$/{
+    am_filepart=`$as_basename -- "$am_mf" ||
+$as_expr X/"$am_mf" : '.*/\([^/][^/]*\)/*$' \| \
+	 X"$am_mf" : 'X\(//\)$' \| \
+	 X"$am_mf" : 'X\(/\)' \| . 2>/dev/null ||
+$as_echo X/"$am_mf" |
+    sed '/^.*\/\([^/][^/]*\)\/*$/{
 	    s//\1/
 	    q
 	  }
-	  /^X\(\/\/\)[^/].*/{
+	  /^X\/\(\/\/\)$/{
 	    s//\1/
 	    q
 	  }
-	  /^X\(\/\/\)$/{
-	    s//\1/
-	    q
-	  }
-	  /^X\(\/\).*/{
+	  /^X\/\(\/\).*/{
 	    s//\1/
 	    q
 	  }
 	  s/.*/./; q'`
-      as_dir=$dirpart/$fdir; as_fn_mkdir_p
-      # echo "creating $dirpart/$file"
-      echo '# dummy' > "$dirpart/$file"
-    done
+    { echo "$as_me:$LINENO: cd "$am_dirpart" \
+      && sed -e '/# am--include-marker/d' "$am_filepart" \
+        | $MAKE -f - am--depfiles" >&5
+   (cd "$am_dirpart" \
+      && sed -e '/# am--include-marker/d' "$am_filepart" \
+        | $MAKE -f - am--depfiles) >&5 2>&5
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } || am_rc=$?
   done
+  if test $am_rc -ne 0; then
+    { { $as_echo "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
+$as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
+as_fn_error $? "Something went wrong bootstrapping makefile fragments
+    for automatic dependency tracking.  Try re-running configure with the
+    '--disable-dependency-tracking' option to at least be able to build
+    the package (albeit without support for automatic dependency tracking).
+See \`config.log' for more details" "$LINENO" 5; }
+  fi
+  { am_dirpart=; unset am_dirpart;}
+  { am_filepart=; unset am_filepart;}
+  { am_mf=; unset am_mf;}
+  { am_rc=; unset am_rc;}
+  rm -f conftest-deps.mk
 }
  ;;
     "default-1":C) case "$CONFIG_FILES" in *po/Makefile.in*)
